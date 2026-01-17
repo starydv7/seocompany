@@ -1,57 +1,73 @@
 import Link from "next/link";
-import { teamMembers } from "@/app/(site)/team/data";
+import type { Metadata } from "next";
+import { Linkedin } from "lucide-react";
+import { teamMembers } from "./data";
+
+export const metadata: Metadata = {
+  title: "Our Team | SEO Company",
+};
 
 export default function TeamPage() {
   return (
     <section className="px-4 pb-20 pt-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl space-y-10">
-        <div className="max-w-2xl space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
-            Team
+        <div className="max-w-3xl space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
+            The Team
           </p>
           <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            The team behind the growth systems.
+            Senior specialists behind every strategy.
           </h1>
           <p className="text-sm text-slate-600 sm:text-base">
-            A small, senior group leading SEO, paid, social and automation end-to-end. Click into
-            any profile to see how they think and what they&apos;ve shipped.
+            Strategy, execution and reporting are handled by the people you see here – no handoffs
+            to anonymous juniors. Click into any profile to see exactly how they think and work.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {teamMembers.map((member) => (
-            <Link
+            <article
               key={member.slug}
-              href={`/team/${member.slug}`}
-              className="group flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white/90 p-5 text-sm shadow-sm shadow-sky-50 transition hover:-translate-y-1 hover:border-sky-300 hover:shadow-lg hover:shadow-sky-100"
+              className="group flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white/90 p-5 text-sm shadow-sm shadow-sky-50 transition hover:-translate-y-1 hover:border-sky-200 hover:shadow-md hover:shadow-sky-100"
             >
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-sm font-semibold text-white shadow-md shadow-cyan-200">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-xs font-semibold text-white shadow-md shadow-cyan-200">
                   {member.name.charAt(0)}
-                </span>
+                </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">{member.name}</p>
-                  <p className="text-xs text-slate-500">{member.role}</p>
+                  <h2 className="text-sm font-semibold text-slate-900">{member.name}</h2>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-500">
+                    {member.experience ? `${member.experience} • ` : ""}
+                    {member.role}
+                  </p>
                 </div>
               </div>
-              <p className="mt-4 text-sm font-medium text-slate-900">{member.headline}</p>
-              <p className="mt-2 text-xs text-slate-600">{member.location}</p>
-              <p className="mt-1 text-xs text-slate-500">
-                Experience: <span className="font-semibold text-slate-800">{member.experience}</span>
-              </p>
-              <ul className="mt-3 space-y-1 text-xs text-slate-600">
-                {member.specialties.slice(0, 3).map((spec) => (
-                  <li key={spec} className="flex items-start gap-2">
-                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600" />
-                    <span>{spec}</span>
-                  </li>
-                ))}
+
+              <p className="mt-3 text-xs text-slate-600 line-clamp-3">{member.headline}</p>
+
+              <ul className="mt-3 space-y-1 text-[11px] text-slate-500">
+                <li>{member.location}</li>
+                <li>Key focus: {member.specialties[0]}</li>
               </ul>
-              <span className="mt-4 inline-flex items-center text-xs font-semibold text-sky-700">
-                View full profile
-                <span className="ml-1 transition group-hover:translate-x-0.5">↗</span>
-              </span>
-            </Link>
+
+              <div className="mt-auto pt-4 flex items-center justify-between gap-3 border-t border-slate-100">
+                <Link
+                  href={`/team/${member.slug}`}
+                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
+                >
+                  View full profile
+                </Link>
+                <a
+                  href={member.linkedIn}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full border-2 border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-sm transition hover:border-sky-400 hover:bg-sky-50 hover:text-sky-700"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn
+                </a>
+              </div>
+            </article>
           ))}
         </div>
       </div>
