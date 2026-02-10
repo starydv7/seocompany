@@ -6,9 +6,11 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Services", href: "/services" },
-  { label: "Results", href: "/results" },
-  { label: "Team", href: "/team" },
-  { label: "Contact", href: "/contact" },
+  { label: "SEO", href: "/seo" },
+  { label: "Social Media", href: "/social-media" },
+  { label: "Automation & Performance", href: "/automation-performance" },
+  { label: "Branding & Content", href: "/branding" },
+  { label: "About Us", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -27,7 +29,7 @@ export default function Navbar() {
         elevated ? "bg-white/92 shadow-lg backdrop-blur-md" : "bg-white/75 backdrop-blur"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex w-[90%] max-w-[90%] items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link
           href="/"
           className="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
@@ -79,9 +81,7 @@ export default function Navbar() {
           }`}
         >
           <div className="mb-4 flex items-center justify-between">
-            <span className="text-sm font-semibold tracking-tight text-slate-900">
-              Menu
-            </span>
+            <span className="text-sm font-semibold tracking-tight text-slate-900">Menu</span>
             <button
               onClick={() => setOpen(false)}
               className="inline-flex items-center justify-center rounded-lg p-1.5 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
@@ -118,4 +118,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 

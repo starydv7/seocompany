@@ -11,6 +11,36 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/(site)/services/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/services/page.js"
+    ],
+    "/(site)/branding/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/branding/page.js"
+    ],
+    "/(site)/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/contact/page.js"
+    ],
+    "/(site)/seo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/seo/page.js"
+    ],
+    "/(site)/social-media/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/social-media/page.js"
+    ],
+    "/(site)/automation-performance/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/automation-performance/page.js"
+    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",

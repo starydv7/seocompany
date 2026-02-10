@@ -1,3 +1,9 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(site)/contact/page": "app/(site)/contact/page.js",
+  "/(site)/seo/page": "app/(site)/seo/page.js",
+  "/(site)/social-media/page": "app/(site)/social-media/page.js",
+  "/(site)/automation-performance/page": "app/(site)/automation-performance/page.js",
+  "/page": "app/page.js",
+  "/(site)/branding/page": "app/(site)/branding/page.js"
 }
