@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BarChart3, Bot, Megaphone, Palette, Search } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Services | Digital Growth Suite",
+  title: "Our Services | BrandMarketing",
   description:
     "Precision-engineered services to elevate your brand and multiply your revenue.",
 };
@@ -117,7 +117,7 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-6xl space-y-14">
         <header className="max-w-3xl space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
-            Our Digital Growth Suite
+            BrandMarketing Services
           </p>
           <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
             Precision-engineered services to elevate your brand and multiply your revenue.

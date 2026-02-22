@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Social Media Marketing Services | BrandMarketing Digital",
+  title: "Social Media Marketing Services | BrandMarketing",
   description:
     "Social media marketing services that build brands, boost engagement, and drive measurable revenue.",
 };
@@ -24,7 +24,7 @@ export default function SocialMediaPage() {
             form, and customers decide what to buy.
           </p>
           <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
-            At Brand Digital, we don&apos;t just post content — we build social ecosystems that
+            At BrandMarketing, we don&apos;t just post content — we build social ecosystems that
             strengthen your brand, amplify your voice, and convert followers into loyal customers.
             Whether you&apos;re a local business, ecommerce brand, or enterprise organization, our
             social media marketing strategies are tailored to your audience, goals, and growth
@@ -56,7 +56,7 @@ export default function SocialMediaPage() {
               <li>Smart social strategies drive traffic, leads, and sales with measurable ROI.</li>
             </ul>
             <p className="pt-1 text-sm font-medium text-slate-800">
-              At Brand Digital, we focus on strategies that deliver both long-term brand equity and
+              At BrandMarketing, we focus on strategies that deliver both long-term brand equity and
               short-term business results.
             </p>
           </div>
@@ -208,7 +208,7 @@ export default function SocialMediaPage() {
         {/* What makes us different */}
         <section className="space-y-6 rounded-3xl border border-slate-200/80 bg-white p-8 shadow-xl shadow-indigo-50 sm:p-10">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-            What Makes Social Media At Brand Digital Different
+            What Makes Social Media At BrandMarketing Different
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-1 rounded-xl border border-slate-200/60 bg-slate-50/30 p-5">
@@ -252,7 +252,7 @@ export default function SocialMediaPage() {
             Who We Help
           </h2>
           <p className="mb-6 text-base text-slate-600">
-            Brand Digital works with:
+            BrandMarketing works with:
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-xl border border-slate-200/60 bg-slate-50/50 p-4">
@@ -295,7 +295,7 @@ export default function SocialMediaPage() {
             href="/contact"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 via-indigo-600 to-cyan-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition hover:shadow-indigo-200 hover:brightness-105"
           >
-            Book Your Free Social Strategy Consultation with BrandMarketing Digital Today
+            Book Your Free Social Strategy Consultation with BrandMarketing Today
           </Link>
         </section>
       </div>

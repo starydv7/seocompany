@@ -12,13 +12,13 @@ export default function Home() {
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700 shadow-sm shadow-sky-100 ring-1 ring-slate-200/60 backdrop-blur">
-                BrandMarketing Digital
+                BrandMarketing
               </div>
               <h1 className="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
                 Where Creativity Meets Conversion
               </h1>
               <p className="text-lg text-slate-600 sm:text-xl">
-                We don't just build brands; we build businesses. From defining your identity to dominating search results, BrandMarketing Digital is your partner in digital growth.
+                We don't just build brands; we build businesses. From defining your identity to dominating search results, BrandMarketing is your partner in digital growth.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -26,12 +26,6 @@ export default function Home() {
                   href="/contact"
                 >
                   Get Your Free Audit
-                </a>
-                <a
-                  className="inline-flex items-center justify-center rounded-full border border-slate-300/80 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-white"
-                  href="/results"
-                >
-                  View Our Work
                 </a>
               </div>
               <div className="flex flex-wrap gap-6 text-sm text-slate-500">
@@ -84,30 +78,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Section: Social Proof */}
-      <section className="px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="rounded-2xl border border-slate-200/80 bg-white/80 p-8 shadow-sm shadow-sky-50 backdrop-blur">
-            <p className="text-center text-sm font-semibold text-slate-600">
-              Trusted by ambitious brands, from startups to market leaders.
-            </p>
-            {/* Logo placeholders - grayscale strip */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-8 opacity-60 grayscale">
-              <div className="h-12 w-32 rounded bg-slate-200" />
-              <div className="h-12 w-32 rounded bg-slate-200" />
-              <div className="h-12 w-32 rounded bg-slate-200" />
-              <div className="h-12 w-32 rounded bg-slate-200" />
-              <div className="h-12 w-32 rounded bg-slate-200" />
-            </div>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500">
-              <span>Google Partner</span>
-              <span>•</span>
-              <span>Meta Business Partner</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Introduction: Who We Are */}
       <section className="px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
@@ -120,7 +90,7 @@ export default function Home() {
             </p>
             <div className="space-y-4 text-base text-slate-700">
               <p>
-                At BrandMarketing Digital, we bridge the gap between art and science. We believe
+                At BrandMarketing, we bridge the gap between art and science. We believe
                 that stunning branding is useless without visibility, and high traffic is
                 meaningless without conversion. We fuse aesthetic excellence with rigorous
                 performance tracking to ensure every dollar you spend returns value to your bottom
@@ -386,7 +356,7 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2">
             <figure className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm shadow-sky-50">
               <p className="text-sm text-slate-700">
-                &quot;BrandMarketing Digital completely overhauled our online presence. Our lead
+                &quot;BrandMarketing completely overhauled our online presence. Our lead
                 volume tripled in three months using their Performance Marketing strategy.&quot;
               </p>
               <figcaption className="mt-6 flex items-center gap-3 text-sm">
@@ -440,20 +410,13 @@ export default function Home() {
             </div>
             <div className="pt-8 space-y-3 text-sm text-slate-600">
               <div>
-                <span className="font-semibold text-slate-700">Email:</span>{" "}
-                <a href="mailto:hello@brandmarketingdigital.com" className="hover:text-slate-900">
-                  hello@brandmarketingdigital.com
-                </a>
-              </div>
-              <div>
                 <span className="font-semibold text-slate-700">Phone:</span>{" "}
-                <a href="tel:+15551234567" className="hover:text-slate-900">
-                  +1 (555) 123-4567
+                <a href="tel:+916342020264" className="hover:text-slate-900">
+                  +91 63420 20264
                 </a>
               </div>
               <div>
-                <span className="font-semibold text-slate-700">Address:</span> [Your Physical
-                Location]
+                <span className="font-semibold text-slate-700">Location:</span> Kolkata
               </div>
             </div>
           </div>

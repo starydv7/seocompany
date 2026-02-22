@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Search Engine Optimization (SEO) Services | BrandMarketing Digital",
+  title: "Search Engine Optimization (SEO) Services | BrandMarketing",
   description:
     "SEO services that drive rankings, revenue, and real business growth. Strategy-first, white-hat SEO built for Google’s future.",
 };
@@ -20,8 +20,7 @@ export default function SeoPage() {
             That Drive Rankings, Revenue &amp; Real Business Growth
           </p>
           <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
-            If your website isn&apos;t ranking on Google, it isn&apos;t competing. At BrandMarketing
-            Digital, we don&apos;t chase vanity metrics – we build search ecosystems that turn
+            If your website isn&apos;t ranking on Google, it isn&apos;t competing. At BrandMarketing, we don&apos;t chase vanity metrics – we build search ecosystems that turn
             rankings into traffic, traffic into leads, and leads into revenue.
           </p>
           <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
@@ -54,8 +53,7 @@ export default function SeoPage() {
               <li>SEO compounds results month after month.</li>
             </ul>
             <p className="pt-1 text-sm font-medium text-slate-800">
-              But only strategic, technically sound SEO works in 2025. That&apos;s where Brand
-              Digital comes in.
+              But only strategic, technically sound SEO works in 2025. That&apos;s where BrandMarketing comes in.
             </p>
           </div>
           <div className="space-y-4 rounded-2xl border border-slate-200/80 bg-slate-50/80 p-6">
@@ -83,7 +81,7 @@ export default function SeoPage() {
         {/* Comprehensive SEO Services */}
         <section className="space-y-8">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-            Comprehensive SEO Services by Brand Digital
+            Comprehensive SEO Services by BrandMarketing
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -233,7 +231,7 @@ export default function SeoPage() {
         {/* Why choose us */}
         <section className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/90 p-8 shadow-xl shadow-sky-50 sm:p-10">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-            Why Brands Choose Brand Digital Over Other SEO Agencies
+            Why Brands Choose BrandMarketing Over Other SEO Agencies
           </h2>
           <ul className="space-y-2 text-sm text-slate-700">
             <li>✔ Strategy-first, not template-based</li>
@@ -259,7 +257,7 @@ export default function SeoPage() {
             <p>Agencies &amp; enterprises</p>
           </div>
           <p className="pt-2 text-sm text-slate-700">
-            If organic growth matters to your business, BrandMarketing Digital is your SEO partner.
+            If organic growth matters to your business, BrandMarketing is your SEO partner.
           </p>
         </section>
 
@@ -273,7 +271,7 @@ export default function SeoPage() {
             authority or falling behind?
           </p>
           <p className="mb-6 text-sm font-semibold text-slate-900">
-            Let Brand Digital help you: Rank higher • Convert more • Scale faster
+            Let BrandMarketing help you: Rank higher • Convert more • Scale faster
           </p>
           <Link
             href="/contact"

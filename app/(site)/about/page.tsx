@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | BrandMarketing Digital",
+  title: "About Us | BrandMarketing",
   description:
     "Meet the minds behind the metrics — a collective of strategists, creators, and analysts obsessed with growth.",
 };
@@ -24,7 +24,7 @@ const members: AboutMember[] = [
     role: "Founder & Automation Specialist",
     quote: "Marketing is no longer about the stuff that you make, but about the stories you tell.",
     description:
-      "Dhiraj founded BrandMarketing Digital to end the war between “branding” and “sales.” He sets the north-star strategy for every client, making sure long-term positioning aligns with day-to-day execution.",
+      "Dhiraj founded BrandMarketing to end the war between “branding” and “sales.” He sets the north-star strategy for every client, making sure long-term positioning aligns with day-to-day execution.",
     superpower: "Seeing the big picture before the puzzle pieces are even out of the box.",
     favorite: { label: "Favorite Metric", value: "Customer Lifetime Value (CLV)" },
   },
@@ -49,14 +49,14 @@ const members: AboutMember[] = [
     favorite: { label: "Favorite Tool", value: "Adobe Illustrator (and a sketchbook)" },
   },
   {
-    title: "The Voice",
-    name: "Saitika Bhowmick",
-    role: "Co‑Founder & Social Media & Community Manager",
-    quote: "People don't buy from businesses; they buy from people.",
+    title: "The Performance Engine",
+    name: "Saitika Bhowmik",
+    role: "Performance Marketer",
+    quote: "If you can't measure it, you can't improve it.",
     description:
-      "Saitika is the pulse of the agency. Always on-trend, she keeps your community human — ensuring every comment, DM, and review gets a thoughtful response that builds trust and momentum.",
-    superpower: "Writing captions that stop the scroll.",
-    favorite: { label: "Favorite Platforms", value: "TikTok (trends) & LinkedIn (growth)" },
+      "Saitika brings 7 years of digital marketing and 5 years of performance marketing expertise. She designs and optimizes Google Ads strategies, manages paid social campaigns (Meta, Instagram, LinkedIn, Pinterest), and implements marketing automation for clients across USA, Australia, Canada, and domestic markets. DV360 certified with hands-on programmatic advertising experience.",
+    superpower: "Turning ad spend into predictable ROI through data-driven optimization.",
+    favorite: { label: "Certification", value: "DV360 (Display & Video 360)" },
   },
   {
     title: "The Technical Guru",

@@ -10,9 +10,9 @@ export default function Footer() {
         <div className="space-y-3 max-w-sm">
           <div className="flex items-center gap-2 text-base font-semibold tracking-tight text-slate-900">
             <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-xs font-semibold text-white shadow-md shadow-cyan-200">
-              SC
+              BM
             </span>
-            <span>BrandMarketing Digital</span>
+            <span>BrandMarketing</span>
           </div>
           <p className="text-xs text-slate-600">
             Where creativity meets conversion. We don&apos;t just build brands; we build businesses.
@@ -124,16 +124,11 @@ export default function Footer() {
             </h3>
             <ul className="space-y-1 text-xs">
               <li>
-                <a href="mailto:hello@brandmarketingdigital.com" className="hover:text-slate-900">
-                  hello@brandmarketingdigital.com
+                <a href="tel:+916342020264" className="hover:text-slate-900">
+                  +91 63420 20264
                 </a>
               </li>
-              <li>
-                <a href="tel:+15551234567" className="hover:text-slate-900">
-                  +1 (555) 123-4567
-                </a>
-              </li>
-              <li className="text-slate-500">[Your Physical Location]</li>
+              <li className="text-slate-500">Kolkata</li>
             </ul>
           </div>
         </div>
@@ -141,7 +136,7 @@ export default function Footer() {
 
       <div className="border-t border-slate-200/80 bg-white/70">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-4 text-[11px] text-slate-500 sm:flex-row sm:px-6 lg:px-8">
-          <p>© {year} BrandMarketing Digital. All rights reserved.</p>
+          <p>© {year} BrandMarketing. All rights reserved.</p>
           <p className="text-[10px]">
             Built for brands that care about strategy, execution and measurable growth.
           </p>

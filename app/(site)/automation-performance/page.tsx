@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Automation & Performance Marketing | BrandMarketing Digital",
+  title: "Automation & Performance Marketing | BrandMarketing",
   description:
     "Scale without the stress. High-velocity performance marketing with intelligent automation to turn ad spend into predictable revenue.",
 };
@@ -47,7 +47,7 @@ export default function AutomationPerformancePage() {
             needs to be faster, smarter, and more data-driven than the competition.
           </p>
           <p className="text-base leading-relaxed text-slate-700">
-            At BrandMarketing Digital, we use the math of marketing to ensure your customer
+            At BrandMarketing, we use the math of marketing to ensure your customer
             acquisition cost (CAC) stays low while your volume goes up.
           </p>
           <div className="mt-6 flex justify-center">
@@ -183,7 +183,7 @@ export default function AutomationPerformancePage() {
             The Results Speak for Themselves
           </h2>
           <blockquote className="rounded-xl border border-emerald-200/60 bg-white/80 p-6 text-sm italic leading-relaxed text-slate-700 shadow-sm">
-            &quot;BrandMarketing Digital implemented an automated lead-nurture sequence that
+            &quot;BrandMarketing implemented an automated lead-nurture sequence that
             increased our closing rate by 40% without us spending an extra dollar on ads.&quot;
             <footer className="mt-3 text-xs font-semibold not-italic text-slate-600">
               — Operations Manager, [Industry Client]

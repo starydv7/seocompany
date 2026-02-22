@@ -35,9 +35,9 @@ export default function Navbar() {
           className="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
         >
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-white shadow-md shadow-cyan-200">
-            SC
+            BM
           </span>
-          <span className="hidden sm:inline">SeoCompany</span>
+          <span className="hidden sm:inline">BrandMarketing</span>
         </Link>
 
         <div className="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">
