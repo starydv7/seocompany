@@ -411,8 +411,8 @@ export default function Home() {
             <div className="pt-8 space-y-3 text-sm text-slate-600">
               <div>
                 <span className="font-semibold text-slate-700">Phone:</span>{" "}
-                <a href="tel:+916342020264" className="hover:text-slate-900">
-                  +91 63420 20264
+                <a href="tel:+917003427553" className="hover:text-slate-900">
+                  +91 70034 27553
                 </a>
               </div>
               <div>

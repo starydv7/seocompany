@@ -124,8 +124,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-1 text-xs">
               <li>
-                <a href="tel:+916342020264" className="hover:text-slate-900">
-                  +91 63420 20264
+                <a href="tel:+917003427553" className="hover:text-slate-900">
+                  +91 70034 27553
                 </a>
               </li>
               <li className="text-slate-500">Kolkata</li>
