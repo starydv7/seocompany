@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import { ArrowRight, BarChart3, Bot, Megaphone, Palette, Search } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -203,7 +204,9 @@ export default function ServicesPage() {
 
                 <div className="mt-5 flex flex-col gap-2 sm:flex-row">
                   <Link
-                    href="/contact"
+                    href={HUBSPOT_MEETING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
                   >
                     Get a plan for this

@@ -1,4 +1,5 @@
 import { Linkedin } from "lucide-react";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
 
 const LINKEDIN_SOHAIl = "https://www.linkedin.com/in/sohail-islam-b40776181/";
 const LINKEDIN_TRISHA = "https://www.linkedin.com/in/trisha-nandy-a14688203/";
@@ -18,12 +19,14 @@ export default function Home() {
                 Where Creativity Meets Conversion
               </h1>
               <p className="text-lg text-slate-600 sm:text-xl">
-                We don't just build brands; we build businesses. From defining your identity to dominating search results, BrandMarketing is your partner in digital growth.
+                We don't just build brands, we build businesses. From defining your identity to dominating search results, BrandMarketing is your partner in digital growth.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
-                  href="/contact"
+                  href={HUBSPOT_MEETING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Get Your Free Audit
                 </a>
@@ -346,42 +349,117 @@ export default function Home() {
 
       {/* Client Testimonials */}
       <section className="px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl space-y-8">
-          <div className="mx-auto max-w-2xl space-y-2 text-center">
+        <div className="mx-auto max-w-6xl space-y-10">
+          <div className="mx-auto max-w-3xl space-y-3 text-center">
+            <p className="inline-flex items-center rounded-full border border-sky-200 bg-sky-50/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-700">
+              Client Testimonials
+            </p>
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-              Don&apos;t Just Take Our Word For It.
+              Real Feedback From Businesses We Helped Grow
             </h2>
+            <p className="text-sm text-slate-600 sm:text-base">
+              Clear communication, measurable results, and practical execution that business owners
+              can trust.
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <figure className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm shadow-sky-50">
-              <p className="text-sm text-slate-700">
-                &quot;BrandMarketing completely overhauled our online presence. Our lead
-                volume tripled in three months using their Performance Marketing strategy.&quot;
+            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-sm shadow-sky-50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-100">
+              <div className="pointer-events-none absolute right-5 top-4 text-4xl font-serif text-slate-200">
+                &quot;
+              </div>
+              <p className="text-sm leading-relaxed text-slate-700">
+                The application development support was highly professional, detail-oriented, and
+                reliable. The project was delivered with strong technical execution, clear
+                communication, and a practical understanding of healthcare workflow needs.
               </p>
-              <figcaption className="mt-6 flex items-center gap-3 text-sm">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-xs font-semibold text-white">
-                  C
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4 text-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 text-xs font-semibold text-white">
+                  DB
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">[Client Name]</p>
-                  <p className="text-slate-500">CEO of [Company]</p>
+                  <p className="font-semibold text-slate-900">Dr Biswaroop Chakarborty</p>
+                  <p className="text-slate-500">AIIMS, Delhi - Mother and Child Department</p>
                 </div>
               </figcaption>
             </figure>
 
-            <figure className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm shadow-sky-50">
-              <p className="text-sm text-slate-700">
-                &quot;Finally, an agency that understands that branding and SEO must work together.
-                Highly recommended.&quot;
+            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-sm shadow-sky-50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-100">
+              <div className="pointer-events-none absolute right-5 top-4 text-4xl font-serif text-slate-200">
+                &quot;
+              </div>
+              <p className="text-sm leading-relaxed text-slate-700">
+                As a small business owner, I had no idea about digital marketing. They guided me
+                step by step and helped me run my first successful ad campaign. Very supportive and
+                transparent.
               </p>
-              <figcaption className="mt-6 flex items-center gap-3 text-sm">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-xs font-semibold text-white">
-                  C
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4 text-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-xs font-semibold text-white">
+                  DB
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">[Client Name]</p>
-                  <p className="text-slate-500">Marketing Director at [Company]</p>
+                  <p className="font-semibold text-slate-900">Debika Banerjee</p>
+                  <p className="text-slate-500">Founder, Barfi Resturant</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-sm shadow-sky-50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-100">
+              <div className="pointer-events-none absolute right-5 top-4 text-4xl font-serif text-slate-200">
+                &quot;
+              </div>
+              <p className="text-sm leading-relaxed text-slate-700">
+                I worked with this team for lead generation campaigns and saw a noticeable
+                improvement within the first 2 weeks. The communication was clear and they
+                explained everything in simple terms. Highly recommended for anyone looking to
+                scale their business online.
+              </p>
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4 text-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-xs font-semibold text-white">
+                  SS
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Subharata Sinha</p>
+                  <p className="text-slate-500">District Yellow Pages</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-sm shadow-sky-50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-100">
+              <div className="pointer-events-none absolute right-5 top-4 text-4xl font-serif text-slate-200">
+                &quot;
+              </div>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Professional and result-oriented approach. The team understood my requirements
+                quickly and delivered beyond expectations. Looking forward to long-term
+                collaboration.
+              </p>
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4 text-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-blue-600 text-xs font-semibold text-white">
+                  PS
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Pramod Sharma</p>
+                  <p className="text-slate-500">CEO, Shifto</p>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/95 p-6 shadow-sm shadow-sky-50 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-100">
+              <div className="pointer-events-none absolute right-5 top-4 text-4xl font-serif text-slate-200">
+                &quot;
+              </div>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Even the initial consultation itself was very valuable. They pointed out gaps in my
+                marketing strategy that I had never noticed before. Great experience overall.
+              </p>
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-slate-100 pt-4 text-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-xs font-semibold text-white">
+                  K
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Kayan</p>
+                  <p className="text-slate-500">Kayan Trades</p>
                 </div>
               </figcaption>
             </figure>
@@ -402,7 +480,9 @@ export default function Home() {
             </p>
             <div className="pt-4">
               <a
-                href="/contact"
+                href={HUBSPOT_MEETING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
               >
                 Schedule a Strategy Call
@@ -416,7 +496,7 @@ export default function Home() {
                 </a>
               </div>
               <div>
-                <span className="font-semibold text-slate-700">Location:</span> Kolkata
+                <span className="font-semibold text-slate-700">Location:</span> Kolkata, India
               </div>
             </div>
           </div>

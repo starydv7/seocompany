@@ -10,6 +10,20 @@ This is the official website for BrandMarketing, showcasing services, team, and 
 - **Team** — About the team and their expertise
 - **Contact** — Free strategy call booking and contact details (phone, Kolkata)
 
+## Navigation (same links everywhere)
+
+Mobile uses a **right drawer** (max ~19rem / 85vw) with a dimmed backdrop; desktop uses the **top bar**. Labels and URLs are identical.
+
+| # | Link label | Path | Desktop (≥ md) | Mobile (drawer) |
+|---|------------|------|------------------|-------------------|
+| 1 | Services | `/services` | Top bar text link | Same |
+| 2 | SEO | `/seo` | Top bar text link | Same |
+| 3 | Social Media | `/social-media` | Top bar text link | Same |
+| 4 | Automation & Performance | `/automation-performance` | Top bar text link | Same |
+| 5 | Branding & Content | `/branding` | Top bar text link | Same |
+| 6 | About Us | `/about` | Top bar text link | Same |
+| — | Book a Call | `/contact` | Gradient button (right) | Button in drawer footer |
+
 ## Tech Stack
 
 - **Framework:** Next.js 14 (App Router)

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Search Engine Optimization (SEO) Services | BrandMarketing",
@@ -30,7 +31,9 @@ export default function SeoPage() {
           </p>
           <div className="pt-2">
             <Link
-              href="/contact"
+              href={HUBSPOT_MEETING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
             >
               Get a Free SEO Strategy Call
@@ -191,7 +194,7 @@ export default function SeoPage() {
                 🛒 Ecommerce &amp; Conversion-Focused SEO
               </h3>
               <p className="mt-3 text-slate-700">
-                SEO that sells, not just ranks — tailor-made for ecommerce and product-led brands.
+                SEO that sells, not just ranks.
               </p>
               <ul className="mt-3 space-y-1.5 text-slate-700">
                 <li>Product &amp; category page optimization</li>
@@ -233,12 +236,12 @@ export default function SeoPage() {
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             Why Brands Choose BrandMarketing Over Other SEO Agencies
           </h2>
-          <ul className="space-y-2 text-sm text-slate-700">
-            <li>✔ Strategy-first, not template-based</li>
-            <li>✔ SEO built for Google&apos;s future, not past tricks</li>
-            <li>✔ Transparent communication &amp; reporting</li>
-            <li>✔ Customized plans for every business</li>
-            <li>✔ Focus on growth, not just rankings</li>
+          <ul className="list-disc space-y-2 pl-5 text-sm text-slate-700 marker:text-slate-400">
+            <li>Strategy-first, not template-based</li>
+            <li>SEO built for Google&apos;s future, not past tricks</li>
+            <li>Transparent communication &amp; reporting</li>
+            <li>Customized plans for every business</li>
+            <li>Focus on growth, not just rankings</li>
           </ul>
           <p className="pt-1 text-sm font-semibold text-slate-900">
             We don&apos;t sell &quot;SEO packages.&quot; We build SEO assets that compound in value.
@@ -246,17 +249,25 @@ export default function SeoPage() {
         </section>
 
         {/* Who we work with */}
-        <section className="space-y-4 rounded-2xl border border-slate-200/80 bg-white/90 p-8 text-sm text-slate-700 shadow-lg shadow-sky-50 sm:p-10">
+        <section className="space-y-6 rounded-2xl border border-slate-200/80 bg-white/90 p-8 text-sm text-slate-700 shadow-lg shadow-sky-50 sm:p-10">
           <h2 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
             Who We Work With
           </h2>
-          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-            <p>Startups &amp; growing brands</p>
-            <p>Local &amp; national service businesses</p>
-            <p>Ecommerce stores</p>
-            <p>Agencies &amp; enterprises</p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
+              <p className="font-medium text-slate-800">Startups &amp; growing brands</p>
+            </div>
+            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
+              <p className="font-medium text-slate-800">Local &amp; national service businesses</p>
+            </div>
+            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
+              <p className="font-medium text-slate-800">Ecommerce stores</p>
+            </div>
+            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
+              <p className="font-medium text-slate-800">Agencies &amp; enterprises</p>
+            </div>
           </div>
-          <p className="pt-2 text-sm text-slate-700">
+          <p className="rounded-xl border border-sky-100 bg-sky-50/50 px-4 py-3 text-sm text-slate-700">
             If organic growth matters to your business, BrandMarketing is your SEO partner.
           </p>
         </section>
@@ -267,14 +278,16 @@ export default function SeoPage() {
             Ready to Outrank Your Competitors?
           </h3>
           <p className="mb-4 text-sm text-slate-700 sm:text-base">
-            Your competitors are investing in SEO right now. The question is — are you building
+            Your competitors are investing in SEO right now. The question is: are you building
             authority or falling behind?
           </p>
           <p className="mb-6 text-sm font-semibold text-slate-900">
             Let BrandMarketing help you: Rank higher • Convert more • Scale faster
           </p>
           <Link
-            href="/contact"
+            href={HUBSPOT_MEETING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
           >
             Get a Free SEO Strategy Call Today

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Social Media Marketing Services | BrandMarketing",
@@ -21,18 +22,20 @@ export default function SocialMediaPage() {
           </p>
           <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
             In today&apos;s digital world, social media is where conversations happen, communities
-            form, and customers decide what to buy.
+            form and customers decide what to buy.
           </p>
           <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
-            At BrandMarketing, we don&apos;t just post content — we build social ecosystems that
-            strengthen your brand, amplify your voice, and convert followers into loyal customers.
+            At BrandMarketing, we don&apos;t just post content, we build social ecosystems that
+            strengthen your brand, amplify your voice and convert followers into loyal customers.
             Whether you&apos;re a local business, ecommerce brand, or enterprise organization, our
-            social media marketing strategies are tailored to your audience, goals, and growth
+            social media marketing strategies are tailored to your audience, goals and growth
             ambitions.
           </p>
           <div className="pt-2">
             <Link
-              href="/contact"
+              href={HUBSPOT_MEETING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 via-indigo-600 to-cyan-500 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition hover:shadow-indigo-200 hover:brightness-105"
             >
               Book Your Free Social Strategy Consultation
@@ -292,7 +295,9 @@ export default function SocialMediaPage() {
             the conversation instead of reacting to it.
           </p>
           <Link
-            href="/contact"
+            href={HUBSPOT_MEETING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 via-indigo-600 to-cyan-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition hover:shadow-indigo-200 hover:brightness-105"
           >
             Book Your Free Social Strategy Consultation with BrandMarketing Today

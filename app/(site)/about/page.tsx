@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us | BrandMarketing",
@@ -121,7 +122,9 @@ export default function AboutPage() {
 
               <div className="mt-auto pt-5">
                 <Link
-                  href="/contact"
+                  href={HUBSPOT_MEETING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
                 >
                   Work with us

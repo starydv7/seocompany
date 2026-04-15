@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Automation & Performance Marketing | BrandMarketing",
@@ -28,7 +29,9 @@ export default function AutomationPerformancePage() {
           </p>
           <div className="pt-2">
             <Link
-              href="/contact"
+              href={HUBSPOT_MEETING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:shadow-teal-200 hover:brightness-105"
             >
               Get a Free Performance Audit
@@ -243,7 +246,9 @@ export default function AutomationPerformancePage() {
             works as hard as you do.
           </p>
           <Link
-            href="/contact"
+            href={HUBSPOT_MEETING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:shadow-teal-200 hover:brightness-105"
           >
             Book My Strategy Session

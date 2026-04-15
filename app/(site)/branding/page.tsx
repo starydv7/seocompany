@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Branding & Content Strategy | Identity with Intent",
@@ -24,7 +25,9 @@ export default function BrandingPage() {
             &quot;browsers&quot; into &quot;brand advocates.&quot;
           </p>
           <Link
-            href="/contact"
+            href={HUBSPOT_MEETING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 via-indigo-600 to-pink-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-purple-200/50 transition hover:shadow-xl hover:shadow-purple-300/50 hover:brightness-105"
           >
             Build My Brand Identity
@@ -444,7 +447,9 @@ export default function BrandingPage() {
             price. When you have a powerful brand, you compete on value.
           </p>
           <Link
-            href="/contact"
+            href={HUBSPOT_MEETING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 via-indigo-600 to-pink-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-purple-200/50 transition hover:shadow-xl hover:shadow-purple-300/50 hover:brightness-105"
           >
             Let&apos;s Define Your Brand Story
