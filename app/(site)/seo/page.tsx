@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Search Engine Optimization (SEO) Services | BrandMarketing",
@@ -10,18 +11,19 @@ export const metadata: Metadata = {
 
 export default function SeoPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-20 pt-16 sm:px-6 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div className="mx-auto max-w-6xl space-y-16">
         {/* Hero */}
-        <header className="space-y-5 text-center">
+        <Reveal>
+          <header className="space-y-5 text-center">
           <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
             Search Engine Optimization (SEO) Services
           </h1>
-          <p className="text-lg font-semibold text-slate-700 sm:text-xl">
+          <p className="text-base font-semibold text-slate-700 sm:text-xl">
             That Drive Rankings, Revenue &amp; Real Business Growth
           </p>
           <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
-            If your website isn&apos;t ranking on Google, it isn&apos;t competing. At BrandMarketing, we don&apos;t chase vanity metrics – we build search ecosystems that turn
+            If your website isn&apos;t ranking on Google, it isn&apos;t competing. At BrandMarketing, we don&apos;t chase vanity metrics, we build search ecosystems that turn
             rankings into traffic, traffic into leads, and leads into revenue.
           </p>
           <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
@@ -39,10 +41,12 @@ export default function SeoPage() {
               Get a Free SEO Strategy Call
             </Link>
           </div>
-        </header>
+          </header>
+        </Reveal>
 
         {/* Why SEO ROI */}
-        <section className="grid gap-8 rounded-3xl border border-slate-200/80 bg-white/90 p-8 text-sm text-slate-700 shadow-xl shadow-sky-50 sm:p-10 md:grid-cols-[minmax(0,1.4fr),minmax(0,1fr)]">
+        <Reveal>
+          <section className="grid gap-8 rounded-3xl border border-slate-200/80 bg-white/90 p-6 text-sm text-slate-700 shadow-xl shadow-sky-50 sm:p-10 md:grid-cols-[minmax(0,1.4fr),minmax(0,1fr)]">
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
               Why SEO Still Delivers the Highest ROI in Digital Marketing
@@ -79,10 +83,12 @@ export default function SeoPage() {
               updates.
             </p>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Comprehensive SEO Services */}
-        <section className="space-y-8">
+        <Reveal>
+          <section className="space-y-8">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             Comprehensive SEO Services by BrandMarketing
           </h2>
@@ -139,7 +145,7 @@ export default function SeoPage() {
               </p>
               <ul className="mt-3 space-y-1.5 text-slate-700">
                 <li>Page titles &amp; meta descriptions</li>
-                <li>Heading structure (H1–H6)</li>
+                <li>Heading structure (H1 to H6)</li>
                 <li>Content depth &amp; topical relevance</li>
                 <li>Internal links &amp; content flow</li>
                 <li>Image optimization &amp; accessibility</li>
@@ -155,7 +161,7 @@ export default function SeoPage() {
                 🔗 Authority Link Building &amp; Off-Page SEO
               </h3>
               <p className="mt-3 font-medium text-slate-800">
-                Backlinks still matter — but only the right ones.
+                Backlinks still matter, but only the right ones.
               </p>
               <ul className="mt-3 space-y-1.5 text-slate-700">
                 <li>High-authority editorial backlinks</li>
@@ -229,10 +235,12 @@ export default function SeoPage() {
               <p className="mt-4 text-xs font-medium text-slate-600">No fluff. Just clarity.</p>
             </article>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Why choose us */}
-        <section className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/90 p-8 shadow-xl shadow-sky-50 sm:p-10">
+        <Reveal>
+          <section className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-xl shadow-sky-50 sm:p-10">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             Why Brands Choose BrandMarketing Over Other SEO Agencies
           </h2>
@@ -246,10 +254,12 @@ export default function SeoPage() {
           <p className="pt-1 text-sm font-semibold text-slate-900">
             We don&apos;t sell &quot;SEO packages.&quot; We build SEO assets that compound in value.
           </p>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Who we work with */}
-        <section className="space-y-6 rounded-2xl border border-slate-200/80 bg-white/90 p-8 text-sm text-slate-700 shadow-lg shadow-sky-50 sm:p-10">
+        <Reveal>
+          <section className="space-y-6 rounded-2xl border border-slate-200/80 bg-white/90 p-6 text-sm text-slate-700 shadow-lg shadow-sky-50 sm:p-10">
           <h2 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
             Who We Work With
           </h2>
@@ -270,10 +280,12 @@ export default function SeoPage() {
           <p className="rounded-xl border border-sky-100 bg-sky-50/50 px-4 py-3 text-sm text-slate-700">
             If organic growth matters to your business, BrandMarketing is your SEO partner.
           </p>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Final CTA */}
-        <section className="rounded-3xl border-2 border-dashed border-sky-200 bg-gradient-to-br from-sky-50 via-indigo-50 to-cyan-50 p-8 text-center shadow-lg shadow-sky-100/50 sm:p-12">
+        <Reveal>
+          <section className="rounded-3xl border-2 border-dashed border-sky-200 bg-gradient-to-br from-sky-50 via-indigo-50 to-cyan-50 p-6 text-center shadow-lg shadow-sky-100/50 sm:p-12">
           <h3 className="mb-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             Ready to Outrank Your Competitors?
           </h3>
@@ -292,7 +304,8 @@ export default function SeoPage() {
           >
             Get a Free SEO Strategy Call Today
           </Link>
-        </section>
+          </section>
+        </Reveal>
       </div>
     </section>
   );

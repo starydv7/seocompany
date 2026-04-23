@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import { ArrowRight, BarChart3, Bot, Megaphone, Palette, Search } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Our Services | BrandMarketing",
@@ -114,9 +115,10 @@ export default function ServicesPage() {
   ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-20 pt-16 sm:px-6 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div className="mx-auto max-w-6xl space-y-14">
-        <header className="max-w-3xl space-y-4">
+        <Reveal>
+          <header className="max-w-3xl space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
             BrandMarketing Services
           </p>
@@ -127,9 +129,11 @@ export default function ServicesPage() {
             Pick what you need, or combine them into a full-funnel system. Every service is built
             around one goal: outcomes you can measure.
           </p>
-        </header>
+          </header>
+        </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+        <Reveal>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {services.map((s) => (
             <article
               key={s.id}
@@ -159,9 +163,11 @@ export default function ServicesPage() {
               </div>
             </article>
           ))}
-        </div>
+          </div>
+        </Reveal>
 
-        <div className="space-y-6 pt-2">
+        <Reveal delay={0.08}>
+          <div className="space-y-6 pt-2">
           <div className="max-w-3xl space-y-2">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
               Service details
@@ -221,7 +227,8 @@ export default function ServicesPage() {
               </section>
             ))}
           </div>
-        </div>
+          </div>
+        </Reveal>
       </div>
 
       <a id="top" className="sr-only">

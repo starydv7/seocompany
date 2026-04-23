@@ -3,22 +3,24 @@
 import Link from "next/link";
 import { Calendar, Clock, Video } from "lucide-react";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import Reveal from "@/components/Reveal";
 
 export default function ContactPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-20 pt-16 sm:px-6 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div className="mx-auto max-w-5xl space-y-12">
         {/* Header */}
-        <div className="text-center">
+        <Reveal>
+          <div className="text-center">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700 shadow-sm shadow-sky-100 ring-1 ring-slate-200/60 backdrop-blur">
             Consultation
           </div>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Book a Strategy Call
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 sm:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 sm:text-xl">
             Let&apos;s discuss your growth goals, identify opportunities, and build a roadmap tailored to
-            your business—no commitment required.
+            your business, no commitment required.
           </p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:mt-8">
             <Link
@@ -31,10 +33,12 @@ export default function ContactPage() {
             </Link>
             <p className="text-sm text-slate-500">Free and paid clients can both schedule here.</p>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         {/* Benefits */}
-        <div className="grid gap-6 sm:grid-cols-3">
+        <Reveal>
+          <div className="grid gap-6 sm:grid-cols-3">
           <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm shadow-sky-50">
             <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-200">
               <Calendar className="h-6 w-6" />
@@ -62,10 +66,12 @@ export default function ContactPage() {
               Quick but thorough. We'll cover your goals, challenges, and next steps.
             </p>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         {/* Schedule CTA */}
-        <div className="rounded-3xl border border-slate-200/80 bg-white p-8 shadow-xl shadow-sky-100/50 sm:p-12">
+        <Reveal>
+          <div className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-sky-100/50 sm:p-12">
           <div className="mb-6 text-center">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">
               Schedule Your Meeting
@@ -84,10 +90,12 @@ export default function ContactPage() {
               Schedule Meeting
             </Link>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         {/* What to Expect */}
-        <div className="rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-50 to-sky-50/30 p-8 shadow-sm">
+        <Reveal>
+          <div className="rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-50 to-sky-50/30 p-6 shadow-sm sm:p-8">
           <h2 className="mb-6 text-xl font-bold tracking-tight text-slate-900">
             What we'll cover in this call
           </h2>
@@ -137,16 +145,19 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         {/* Note */}
-        <div className="rounded-2xl border border-dashed border-slate-300/80 bg-white/80 p-6 text-center">
+        <Reveal>
+          <div className="rounded-2xl border border-dashed border-slate-300/80 bg-white/80 p-6 text-center">
           <p className="text-sm text-slate-600">
             <span className="font-semibold text-slate-900">No commitment required.</span> This is
             a free consultation to see if we're a good fit. We'll send you a recording and summary
             after the call.
           </p>
-        </div>
+          </div>
+        </Reveal>
 
       </div>
     </section>

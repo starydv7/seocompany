@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import Reveal from "@/components/Reveal";
+import {
+  BarChart3,
+  Bot,
+  BrainCircuit,
+  CircleDollarSign,
+  Gauge,
+  Rocket,
+  SearchCheck,
+  ShieldCheck,
+  Target,
+  TrendingUp,
+  Zap,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Automation & Performance Marketing | BrandMarketing",
@@ -10,24 +24,33 @@ export const metadata: Metadata = {
 
 export default function AutomationPerformancePage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-20 pt-16 sm:px-6 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(6,182,212,0.08),transparent_36%)]"
+      />
       <div className="mx-auto max-w-6xl space-y-16">
         {/* Hero */}
-        <header className="space-y-5 text-center">
-          <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+        <Reveal>
+          <header className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 text-center shadow-xl shadow-emerald-100/40 backdrop-blur sm:p-10">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
+            <Rocket className="h-3.5 w-3.5" />
+            Growth Engine
+          </div>
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
             Automation &amp; Performance Marketing
           </h1>
-          <p className="text-lg font-semibold text-slate-700 sm:text-xl">
+          <p className="mt-3 text-base font-semibold text-slate-700 sm:text-xl">
             Scale Without the Stress
           </p>
-          <p className="mx-auto max-w-3xl text-lg font-semibold text-slate-800 sm:text-xl">
+          <p className="mx-auto mt-1 max-w-3xl text-base font-semibold text-slate-800 sm:text-xl">
             Stop Guessing. Start Scaling.
           </p>
-          <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto mt-4 max-w-3xl text-sm text-slate-600 sm:text-base">
             We combine high-velocity Performance Marketing with intelligent Automation to turn your
             ad spend into a predictable revenue engine.
           </p>
-          <div className="pt-2">
+          <div className="mt-6">
             <Link
               href={HUBSPOT_MEETING_URL}
               target="_blank"
@@ -37,10 +60,26 @@ export default function AutomationPerformancePage() {
               Get a Free Performance Audit
             </Link>
           </div>
-        </header>
+          <div className="mt-6 grid gap-3 text-left sm:grid-cols-3">
+            <div className="rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Acquisition</p>
+              <p className="mt-1 text-sm font-semibold text-slate-800">Lower CAC, higher intent traffic</p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Automation</p>
+              <p className="mt-1 text-sm font-semibold text-slate-800">Hands free lead nurturing</p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">ROI</p>
+              <p className="mt-1 text-sm font-semibold text-slate-800">Measured and optimized weekly</p>
+            </div>
+          </div>
+          </header>
+        </Reveal>
 
         {/* The Performance Marketing Paradox */}
-        <section className="rounded-3xl border border-slate-200/80 bg-white p-8 shadow-xl shadow-emerald-50 sm:p-10">
+        <Reveal>
+          <section className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-emerald-50 sm:p-10">
           <h2 className="mb-4 text-center text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             The Performance Marketing Paradox
           </h2>
@@ -54,7 +93,7 @@ export default function AutomationPerformancePage() {
             acquisition cost (CAC) stays low while your volume goes up.
           </p>
           <div className="mt-6 flex justify-center">
-            <div className="inline-flex flex-col items-center rounded-xl border border-slate-200 bg-slate-50 px-6 py-4 shadow-sm">
+            <div className="inline-flex flex-col items-center rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-emerald-50/40 px-6 py-4 shadow-sm">
               <p className="mb-1 text-sm font-semibold tracking-wide text-slate-500">
                 ROI Formula
               </p>
@@ -66,24 +105,27 @@ export default function AutomationPerformancePage() {
                     <span className="border-b border-slate-400 px-2">
                       (Conversion Rate × Average Order Value) − CPA
                     </span>
-                    <span className="mt-1 text-sm">Operational Overhead</span>
+                    <span className="mt-1 text-base">Operational Overhead</span>
                   </span>
                 </span>
               </p>
             </div>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Our Core Performance Services */}
-        <section className="space-y-8">
+        <Reveal>
+          <section className="space-y-8">
           <h2 className="text-center text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             Our Core Performance Services
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {/* 1. Paid Search & Social (PPC) */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50">
-              <h3 className="text-center text-lg font-semibold text-slate-900">
-                1. Paid Search &amp; Social (PPC)
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50 transition hover:-translate-y-0.5 hover:shadow-emerald-100">
+              <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                <SearchCheck className="h-5 w-5 text-emerald-600" />
+                Paid Search &amp; Social (PPC)
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-700">
                 We dominate the platforms where your customers live. By utilizing AI-driven bidding
@@ -101,9 +143,10 @@ export default function AutomationPerformancePage() {
             </article>
 
             {/* 2. Marketing Automation & CRM Integration */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50">
-              <h3 className="text-center text-lg font-semibold text-slate-900">
-                2. Marketing Automation &amp; CRM Integration
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50 transition hover:-translate-y-0.5 hover:shadow-emerald-100">
+              <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                <Bot className="h-5 w-5 text-cyan-600" />
+                Marketing Automation &amp; CRM Integration
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-700">
                 Stop wasting time on repetitive tasks. We build &quot;set-and-forget&quot; systems
@@ -123,9 +166,10 @@ export default function AutomationPerformancePage() {
             </article>
 
             {/* 3. Conversion Rate Optimization (CRO) */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50">
-              <h3 className="text-center text-lg font-semibold text-slate-900">
-                3. Conversion Rate Optimization (CRO)
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50 transition hover:-translate-y-0.5 hover:shadow-emerald-100">
+              <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                <Gauge className="h-5 w-5 text-violet-600" />
+                Conversion Rate Optimization (CRO)
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-700">
                 Traffic is useless if your website is a leaky bucket. We use heatmaps and A/B
@@ -137,8 +181,11 @@ export default function AutomationPerformancePage() {
             </article>
 
             {/* 4. Precision Retargeting */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50">
-              <h3 className="text-center text-lg font-semibold text-slate-900">4. Precision Retargeting</h3>
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-lg shadow-emerald-50 transition hover:-translate-y-0.5 hover:shadow-emerald-100">
+              <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                <Target className="h-5 w-5 text-teal-600" />
+                Precision Retargeting
+              </h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-700">
                 Most customers don&apos;t buy on the first visit. We build intelligent retargeting
                 funnels that gently remind your prospects why they chose you, leading them back to
@@ -146,10 +193,12 @@ export default function AutomationPerformancePage() {
               </p>
             </article>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Why Automation is Your "Unfair Advantage" */}
-        <section className="rounded-3xl border border-slate-200/80 bg-white p-8 shadow-xl shadow-emerald-50 sm:p-10">
+        <Reveal>
+          <section className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-emerald-50 sm:p-10">
           <h2 className="mb-4 text-center text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             Why Automation is Your &quot;Unfair Advantage&quot;
           </h2>
@@ -158,52 +207,54 @@ export default function AutomationPerformancePage() {
             and maximizing data.
           </p>
           <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-xl border border-slate-200/60 bg-slate-50/50 p-5">
-              <p className="text-sm font-semibold text-slate-900">24/7 Lead Response</p>
+            <div className="rounded-xl border border-slate-200/60 bg-slate-50/50 p-5 transition hover:-translate-y-0.5 hover:shadow-sm">
+              <p className="flex items-center gap-2 text-sm font-semibold text-slate-900"><Zap className="h-4 w-4 text-emerald-600" />24/7 Lead Response</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 Never let a lead go cold. Automation ensures an instant touchpoint.
               </p>
             </div>
-            <div className="rounded-xl border border-slate-200/60 bg-slate-50/50 p-5">
-              <p className="text-sm font-semibold text-slate-900">Dynamic Personalization</p>
+            <div className="rounded-xl border border-slate-200/60 bg-slate-50/50 p-5 transition hover:-translate-y-0.5 hover:shadow-sm">
+              <p className="flex items-center gap-2 text-sm font-semibold text-slate-900"><BrainCircuit className="h-4 w-4 text-cyan-600" />Dynamic Personalization</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 Show different ads to different people based on their specific interests.
               </p>
             </div>
-            <div className="rounded-xl border border-slate-200/60 bg-slate-50/50 p-5">
-              <p className="text-sm font-semibold text-slate-900">Predictive Analytics</p>
+            <div className="rounded-xl border border-slate-200/60 bg-slate-50/50 p-5 transition hover:-translate-y-0.5 hover:shadow-sm">
+              <p className="flex items-center gap-2 text-sm font-semibold text-slate-900"><TrendingUp className="h-4 w-4 text-teal-600" />Predictive Analytics</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 We use scripts to pause underperforming ads and boost winners automatically, saving
                 you thousands in wasted spend.
               </p>
             </div>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* The Results Speak for Themselves */}
-        <section className="rounded-3xl border-2 border-dashed border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-8 shadow-lg shadow-emerald-100/50 sm:p-12">
+        <Reveal>
+          <section className="rounded-3xl border-2 border-dashed border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-6 shadow-lg shadow-emerald-100/50 sm:p-12">
           <h2 className="mb-4 text-center text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             The Results Speak for Themselves
           </h2>
           <blockquote className="rounded-xl border border-emerald-200/60 bg-white/80 p-6 text-sm italic leading-relaxed text-slate-700 shadow-sm">
             &quot;BrandMarketing implemented an automated lead-nurture sequence that
             increased our closing rate by 40% without us spending an extra dollar on ads.&quot;
-            <footer className="mt-3 text-xs font-semibold not-italic text-slate-600">
-              — Operations Manager, [Industry Client]
+            <footer className="mt-3 flex items-center gap-2 text-xs font-semibold not-italic text-slate-600">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-700" />
+              Operations Manager
             </footer>
           </blockquote>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Frequently Asked Questions */}
-        <section className="space-y-6 rounded-3xl border border-slate-200/80 bg-white p-8 shadow-xl shadow-emerald-50 sm:p-10">
+        <Reveal>
+          <section className="space-y-6 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-emerald-50 sm:p-10">
           <h2 className="text-center text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-            Frequently Asked Questions (FAQ for SEO)
+            Frequently Asked Questions
           </h2>
-          <p className="text-sm text-slate-600">
-            To rank for &quot;Performance Marketing Agency,&quot; we address common search queries:
-          </p>
           <div className="space-y-4">
-            <div className="rounded-xl border border-slate-200/60 bg-slate-50/30 p-5">
+            <div className="rounded-xl border border-slate-200/60 bg-slate-50/30 p-5 transition hover:border-emerald-200">
               <h3 className="text-sm font-semibold text-slate-900">
                 What is the difference between Digital Marketing and Performance Marketing?
               </h3>
@@ -213,7 +264,7 @@ export default function AutomationPerformancePage() {
                 paying only when those actions occur.
               </p>
             </div>
-            <div className="rounded-xl border border-slate-200/60 bg-slate-50/30 p-5">
+            <div className="rounded-xl border border-slate-200/60 bg-slate-50/30 p-5 transition hover:border-emerald-200">
               <h3 className="text-sm font-semibold text-slate-900">
                 How does marketing automation improve ROI?
               </h3>
@@ -223,7 +274,7 @@ export default function AutomationPerformancePage() {
                 value of a customer through automated upsells.
               </p>
             </div>
-            <div className="rounded-xl border border-slate-200/60 bg-slate-50/30 p-5">
+            <div className="rounded-xl border border-slate-200/60 bg-slate-50/30 p-5 transition hover:border-emerald-200">
               <h3 className="text-sm font-semibold text-slate-900">
                 Which platforms are best for my business?
               </h3>
@@ -234,10 +285,12 @@ export default function AutomationPerformancePage() {
               </p>
             </div>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Final CTA */}
-        <section className="rounded-3xl border-2 border-dashed border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-8 text-center shadow-lg shadow-emerald-100/50 sm:p-12">
+        <Reveal>
+          <section className="rounded-3xl border-2 border-dashed border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-6 text-center shadow-lg shadow-emerald-100/50 sm:p-12">
           <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             Ready to Automate Your Growth?
           </h2>
@@ -251,10 +304,12 @@ export default function AutomationPerformancePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:shadow-teal-200 hover:brightness-105"
           >
+            <CircleDollarSign className="mr-2 h-4 w-4" />
             Book My Strategy Session
           </Link>
           <p className="mt-4 text-xs font-semibold text-slate-600">No fluff. Just data.</p>
-        </section>
+          </section>
+        </Reveal>
       </div>
     </section>
   );

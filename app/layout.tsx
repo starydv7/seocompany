@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "BrandMarketing | SEO & Digital Growth",
-  description: "BrandMarketing — premium SEO and digital marketing delivering measurable results.",
+  description: "BrandMarketing, premium SEO and digital marketing delivering measurable results.",
 };
 
 export const viewport: Viewport = {

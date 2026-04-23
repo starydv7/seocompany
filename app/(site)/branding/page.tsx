@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Branding & Content Strategy | Identity with Intent",
@@ -10,17 +11,18 @@ export const metadata: Metadata = {
 
 export default function BrandingPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-20 pt-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl space-y-20">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+      <div className="mx-auto max-w-6xl space-y-14 sm:space-y-20">
         {/* Hero */}
-        <header className="text-center space-y-6">
+        <Reveal>
+          <header className="text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700 shadow-sm shadow-purple-100 ring-1 ring-slate-200/60 backdrop-blur">
             Branding & Content Strategy
           </div>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Don&apos;t Just Fit In. Lead the Conversation.
           </h1>
-          <p className="mx-auto max-w-3xl text-xl font-semibold text-slate-700">
+          <p className="mx-auto max-w-3xl text-base font-semibold text-slate-700 sm:text-xl">
             We craft unforgettable brand identities and high-authority content that turns
             &quot;browsers&quot; into &quot;brand advocates.&quot;
           </p>
@@ -32,10 +34,12 @@ export default function BrandingPage() {
           >
             Build My Brand Identity
           </Link>
-        </header>
+          </header>
+        </Reveal>
 
         {/* Brand Identity Prism Diagram */}
-        <div className="rounded-3xl border border-slate-200/80 bg-white p-8 shadow-xl shadow-purple-100/50 sm:p-12">
+        <Reveal>
+          <div className="rounded-3xl border border-slate-200/80 bg-white p-5 shadow-xl shadow-purple-100/50 sm:p-12">
           <h2 className="mb-8 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             BRAND IDENTITY PRISM
           </h2>
@@ -261,33 +265,37 @@ export default function BrandingPage() {
               </text>
             </svg>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         {/* Why Branding */}
-        <section className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-purple-50/30 to-indigo-50/20 p-8 shadow-xl shadow-purple-100/50 sm:p-12">
+        <Reveal>
+          <section className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-purple-50/30 to-indigo-50/20 p-6 shadow-xl shadow-purple-100/50 sm:p-12">
           <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Why Branding is Your Best Investment
           </h2>
-          <p className="text-lg leading-relaxed text-slate-700">
+          <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
             In a world of infinite choices, people don&apos;t buy products; they buy{" "}
             <span className="font-bold text-slate-900">stories</span> and{" "}
             <span className="font-bold text-slate-900">trust</span>. A strong brand reduces your
             cost-per-acquisition because your reputation does the heavy lifting before the ad even
             runs.
           </p>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Our Creative Services */}
-        <section className="space-y-10">
+        <Reveal>
+          <section className="space-y-10">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               Our Creative Services
             </h2>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             {/* 1. Brand Strategy & Positioning */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-8 text-sm shadow-lg shadow-purple-50/50">
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-purple-50/50 sm:p-8">
               <h3 className="text-xl font-bold text-slate-900">1. Brand Strategy &amp; Positioning</h3>
               <p className="mt-4 text-slate-700">
                 Before we design, we define. We find your &quot;Unique Selling Proposition&quot; (USP)
@@ -304,7 +312,7 @@ export default function BrandingPage() {
             </article>
 
             {/* 2. Visual Identity Systems */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-8 text-sm shadow-lg shadow-purple-50/50">
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-purple-50/50 sm:p-8">
               <h3 className="text-xl font-bold text-slate-900">2. Visual Identity Systems</h3>
               <p className="mt-4 text-slate-700">
                 Your visual &quot;handshake.&quot; We create a cohesive look that works across every
@@ -322,7 +330,7 @@ export default function BrandingPage() {
             </article>
 
             {/* 3. High-Authority Content Marketing */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-8 text-sm shadow-lg shadow-purple-50/50">
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-purple-50/50 sm:p-8">
               <h3 className="text-xl font-bold text-slate-900">3. High-Authority Content Marketing</h3>
               <p className="mt-4 text-slate-700">
                 Content is the fuel for your SEO and Social Media engines. We produce content that
@@ -340,7 +348,7 @@ export default function BrandingPage() {
             </article>
 
             {/* 4. Video & Motion Graphics */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-8 text-sm shadow-lg shadow-purple-50/50">
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-purple-50/50 sm:p-8">
               <h3 className="text-xl font-bold text-slate-900">4. Video &amp; Motion Graphics</h3>
               <p className="mt-4 text-slate-700">
                 Short-form video is the king of engagement. We produce high-quality Reels, TikToks,
@@ -348,14 +356,16 @@ export default function BrandingPage() {
               </p>
             </article>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* BrandMarketing Content Framework */}
-        <section className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/20 p-8 shadow-xl shadow-indigo-100/50 sm:p-12">
+        <Reveal>
+          <section className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/20 p-6 shadow-xl shadow-indigo-100/50 sm:p-12">
           <h2 className="mb-6 text-center text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            The &quot;BrandMarketing&quot; Content Framework
+            The BrandMarketing Content Framework
           </h2>
-          <p className="mb-8 text-center text-lg text-slate-700">
+          <p className="mb-8 text-center text-base text-slate-700 sm:text-lg">
             We don&apos;t just write for the sake of writing. Every piece of content we create
             follows a strategic funnel to ensure it moves the needle.
           </p>
@@ -388,10 +398,12 @@ export default function BrandingPage() {
               </tbody>
             </table>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Our Process */}
-        <section className="space-y-8">
+        <Reveal>
+          <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               Our Process: From Concept to Culture
@@ -435,14 +447,16 @@ export default function BrandingPage() {
               </p>
             </article>
           </div>
-        </section>
+          </section>
+        </Reveal>
 
         {/* Final CTA */}
-        <section className="rounded-3xl border-2 border-dashed border-purple-200 bg-gradient-to-br from-purple-50 via-indigo-50 to-pink-50 p-8 text-center shadow-lg shadow-purple-100/50 sm:p-12">
+        <Reveal>
+          <section className="rounded-3xl border-2 border-dashed border-purple-200 bg-gradient-to-br from-purple-50 via-indigo-50 to-pink-50 p-6 text-center shadow-lg shadow-purple-100/50 sm:p-12">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Stop Being a Commodity. Become a Category Leader.
           </h2>
-          <p className="mb-6 text-lg text-slate-700">
+          <p className="mb-6 text-base text-slate-700 sm:text-lg">
             If your brand looks and sounds like everyone else, you&apos;re forced to compete on
             price. When you have a powerful brand, you compete on value.
           </p>
@@ -454,7 +468,8 @@ export default function BrandingPage() {
           >
             Let&apos;s Define Your Brand Story
           </Link>
-        </section>
+          </section>
+        </Reveal>
       </div>
     </section>
   );

@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -18,13 +20,11 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-/** Same links everywhere: desktop bar + mobile menu */
 const navItems: { label: string; href: string }[] = [
   { label: "Services", href: "/services" },
   { label: "SEO", href: "/seo" },
   { label: "Social Media", href: "/social-media" },
   { label: "Automation & Performance", href: "/automation-performance" },
-  { label: "Branding & Content", href: "/branding" },
   { label: "About Us", href: "/about" },
 ];
 
@@ -37,13 +37,20 @@ const navIconByHref: Record<string, LucideIcon> = {
   "/about": Users,
 };
 
+function isActivePath(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 function MobileMenuRow({
   label,
   href,
+  isActive,
   onNavigate,
 }: {
   label: string;
   href: string;
+  isActive: boolean;
   onNavigate: () => void;
 }) {
   const Icon = navIconByHref[href] ?? Briefcase;
@@ -51,13 +58,25 @@ function MobileMenuRow({
     <Link
       href={href}
       onClick={onNavigate}
-      className="flex items-center gap-3 rounded-2xl px-3 py-3.5 transition hover:bg-white/[0.05] active:scale-[0.99]"
+      className={`flex items-center gap-3 rounded-2xl px-3 py-3.5 transition active:scale-[0.99] ${
+        isActive ? "bg-white/[0.09]" : "hover:bg-white/[0.05]"
+      }`}
     >
-      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1e2140] text-[#9B94FF]">
+      <span
+        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
+          isActive ? "bg-[#2a2f5a] text-[#B8B3FF]" : "bg-[#1e2140] text-[#9B94FF]"
+        }`}
+      >
         <Icon className="h-5 w-5" strokeWidth={1.5} />
       </span>
       <div className="min-w-0 flex-1">
-        <p className="break-words text-sm font-semibold leading-snug text-white">{label}</p>
+        <p
+          className={`break-words text-sm font-semibold leading-snug ${
+            isActive ? "text-white" : "text-white/90"
+          }`}
+        >
+          {label}
+        </p>
       </div>
       <ChevronRight className="h-5 w-5 shrink-0 text-slate-500" strokeWidth={2} />
     </Link>
@@ -65,6 +84,7 @@ function MobileMenuRow({
 }
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [elevated, setElevated] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -90,16 +110,29 @@ export default function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onEscape);
+    return () => window.removeEventListener("keydown", onEscape);
+  }, [open]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   const close = () => setOpen(false);
 
   const mobileMenu =
     mounted &&
     createPortal(
       <div
-        className={`fixed inset-0 z-[200] md:hidden ${open ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`fixed inset-0 z-[200] lg:hidden ${open ? "pointer-events-auto" : "pointer-events-none"}`}
         aria-hidden={!open}
       >
-        {/* Dimmed backdrop — tap to close; leaves strip of page visible on the left */}
+        {/* Dimmed backdrop, tap to close; leaves strip of page visible on the left */}
         <div
           className={`absolute inset-0 bg-slate-950/55 backdrop-blur-[2px] transition-opacity duration-300 ${
             open ? "opacity-100" : "opacity-0"
@@ -108,8 +141,9 @@ export default function Navbar() {
           aria-hidden
         />
 
-        {/* Narrow drawer — not full viewport width */}
+        {/* Narrow drawer, not full viewport width */}
         <div
+          id="mobile-nav-drawer"
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
@@ -145,7 +179,12 @@ export default function Navbar() {
             <ul className="mt-2 space-y-1.5 pb-2">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <MobileMenuRow label={item.label} href={item.href} onNavigate={close} />
+                  <MobileMenuRow
+                    label={item.label}
+                    href={item.href}
+                    isActive={isActivePath(pathname, item.href)}
+                    onNavigate={close}
+                  />
                 </li>
               ))}
             </ul>
@@ -164,10 +203,10 @@ export default function Navbar() {
             <p className="mt-2.5 text-center text-[12px] leading-relaxed text-slate-400">
               or email us at{" "}
               <a
-                href="mailto:hello@brandmarketing.com"
+                href="mailto:connect@brandmarketing.digital"
                 className="font-medium text-[#5B8DEF] hover:underline"
               >
-                hello@brandmarketing.com
+                connect@brandmarketing.digital
               </a>
             </p>
             <p className="mt-1.5 text-center text-[11px] text-slate-500">
@@ -190,7 +229,7 @@ export default function Navbar() {
           elevated ? "bg-white/92 shadow-lg backdrop-blur-md" : "bg-white/75 backdrop-blur"
         }`}
       >
-        <nav className="mx-auto flex w-[90%] max-w-[90%] items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-8">
           <Link
             href="/"
             className="flex min-w-0 items-center"
@@ -200,36 +239,54 @@ export default function Navbar() {
               alt="BrandMarketing logo"
               width={184}
               height={52}
-              className="h-12 w-48 shrink-0 object-contain object-left"
+              className="h-10 w-40 shrink-0 object-contain object-left sm:h-11 sm:w-44 xl:h-12 xl:w-48"
               priority
             />
           </Link>
 
-          <div className="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex">
+          <div className="ml-auto hidden items-center gap-0.5 pr-1 font-medium text-slate-700 md:flex lg:gap-1 xl:gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-lg px-3 py-2 transition hover:text-slate-900 hover:shadow-sm hover:shadow-cyan-100"
+                className={`relative whitespace-nowrap rounded-lg px-1.5 py-2 text-[clamp(10px,1.15vw,14px)] leading-none transition hover:text-slate-900 hover:shadow-sm hover:shadow-cyan-100 lg:px-2 xl:px-3 ${
+                  isActivePath(pathname, item.href)
+                    ? "bg-slate-100/90 text-slate-900 shadow-sm shadow-cyan-100"
+                    : ""
+                }`}
               >
+                <AnimatePresence>
+                  {isActivePath(pathname, item.href) ? (
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.7 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.7 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute -bottom-1 left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600"
+                    />
+                  ) : null}
+                </AnimatePresence>
                 {item.label}
               </Link>
             ))}
-            <Link
-              href={HUBSPOT_MEETING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
-            >
-              Book a Call
-            </Link>
           </div>
+
+          <Link
+            href={HUBSPOT_MEETING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden whitespace-nowrap rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-2.5 py-2 text-[11px] font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105 md:inline-flex lg:px-3 lg:text-xs xl:px-4 xl:text-sm"
+          >
+            Book a Call
+          </Link>
 
           <button
             type="button"
             onClick={() => setOpen(true)}
             className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 transition hover:bg-slate-100 md:hidden"
             aria-label="Open menu"
+            aria-controls="mobile-nav-drawer"
+            aria-expanded={open}
           >
             <Menu className="h-6 w-6" />
           </button>
