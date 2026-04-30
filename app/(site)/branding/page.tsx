@@ -30,7 +30,7 @@ export default function BrandingPage() {
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 via-indigo-600 to-pink-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-purple-200/50 transition hover:shadow-xl hover:shadow-purple-300/50 hover:brightness-105"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-4 text-base font-bold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
           >
             Build My Brand Identity
           </Link>
@@ -464,7 +464,7 @@ export default function BrandingPage() {
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 via-indigo-600 to-pink-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-purple-200/50 transition hover:shadow-xl hover:shadow-purple-300/50 hover:brightness-105"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-4 text-base font-bold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
           >
             Let&apos;s Define Your Brand Story
           </Link>

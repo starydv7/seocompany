@@ -11,12 +11,14 @@ export default function Home() {
     <>
       {/* Hero */}
       <Reveal>
-        <section className="relative isolate overflow-hidden bg-gradient-to-br from-slate-50 via-[#edf5ff] to-[#e6f2ff] px-4 pb-14 pt-10 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+        <section className="relative isolate overflow-hidden bg-gradient-to-br from-slate-50 via-[#edf5ff] to-[#e6f2ff] px-4 pb-14 pt-4 sm:px-6 sm:pb-20 sm:pt-8 lg:px-8">
         <div className="mx-auto max-w-6xl rounded-3xl border border-slate-200/80 bg-white/75 p-4 shadow-lg shadow-sky-100 backdrop-blur sm:p-6 lg:p-8">
-          <div className="grid gap-7 lg:grid-cols-[1.2fr,0.9fr] lg:items-center lg:gap-10">
+          <div className="grid gap-7 lg:grid-cols-[1.2fr,0.9fr] lg:items-start lg:gap-10">
             <div className="max-w-2xl space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#dff0ff] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2a80c9]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-bold uppercase tracking-wide shadow-sm ring-1 ring-slate-200 sm:px-6 sm:py-2.5 sm:text-base">
+                <span className="bg-gradient-to-r from-[#ddbf5d] to-[#50b444] bg-clip-text text-transparent">
                 BrandMarketing
+                </span>
               </div>
               <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl xl:text-6xl">
                 Where Creativity
@@ -29,16 +31,6 @@ export default function Home() {
                 We don't just build brands, we build businesses. From defining your identity to
                 dominating search results, BrandMarketing is your partner in digital growth.
               </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <a
-                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
-                  href={HUBSPOT_MEETING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Your Free Audit
-                </a>
-              </div>
               <div className="flex flex-wrap gap-4 text-sm text-slate-500 sm:gap-6">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600" />
@@ -91,7 +83,7 @@ export default function Home() {
                   href={HUBSPOT_MEETING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white transition hover:brightness-105"
+                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-105"
                 >
                   Request Your Free Audit
                 </a>
@@ -391,21 +383,10 @@ export default function Home() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-4 text-base font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
               >
                 Schedule a Strategy Call
               </a>
-            </div>
-            <div className="pt-8 space-y-3 text-sm text-slate-600">
-              <div>
-                <span className="font-semibold text-slate-700">Phone:</span>{" "}
-                <a href="tel:+917003427553" className="hover:text-slate-900">
-                  +91 70034 27553
-                </a>
-              </div>
-              <div>
-                <span className="font-semibold text-slate-700">Location:</span> Kolkata, India
-              </div>
             </div>
           </div>
         </div>

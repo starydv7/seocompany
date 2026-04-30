@@ -59,7 +59,7 @@ export default function SocialMediaPage() {
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 via-indigo-600 to-cyan-500 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition hover:shadow-indigo-200 hover:brightness-105"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
             >
               Book Your Free Social Strategy Consultation
             </Link>
@@ -420,7 +420,7 @@ export default function SocialMediaPage() {
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 via-indigo-600 to-cyan-500 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition hover:shadow-indigo-200 hover:brightness-105"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
           >
             Book Your Free Social Strategy Consultation with BrandMarketing Today
           </Link>

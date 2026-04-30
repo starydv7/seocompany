@@ -196,7 +196,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={close}
-              className="flex w-full items-center justify-center rounded-xl border border-white/30 bg-transparent py-3 text-[14px] font-bold text-white transition active:bg-white/5"
+              className="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#ddbf5d] to-[#50b444] py-3 text-[14px] font-bold text-white transition hover:brightness-105"
             >
               Book a Call
             </Link>
@@ -275,7 +275,7 @@ export default function Navbar() {
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden whitespace-nowrap rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-2.5 py-2 text-[11px] font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105 md:inline-flex lg:px-3 lg:text-xs xl:px-4 xl:text-sm"
+            className="hidden whitespace-nowrap rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-2.5 py-2 text-[11px] font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105 md:inline-flex lg:px-3 lg:text-xs xl:px-4 xl:text-sm"
           >
             Book a Call
           </Link>

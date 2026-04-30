@@ -213,7 +213,7 @@ export default function ServicesPage() {
                     href={HUBSPOT_MEETING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
+                    className="inline-flex flex-1 items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-5 py-3 text-sm font-semibold text-white shadow-md shadow-[#ddbf5d]/30 transition hover:brightness-105"
                   >
                     Get a plan for this
                   </Link>

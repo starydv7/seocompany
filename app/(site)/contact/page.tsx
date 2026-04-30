@@ -27,7 +27,7 @@ export default function ContactPage() {
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
             >
               Schedule Meeting
             </Link>
@@ -85,7 +85,7 @@ export default function ContactPage() {
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-cyan-200 transition hover:shadow-blue-200 hover:brightness-105"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-4 text-base font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
             >
               Schedule Meeting
             </Link>

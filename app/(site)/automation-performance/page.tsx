@@ -55,7 +55,7 @@ export default function AutomationPerformancePage() {
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:shadow-teal-200 hover:brightness-105"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
             >
               Get a Free Performance Audit
             </Link>
@@ -302,7 +302,7 @@ export default function AutomationPerformancePage() {
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-200 transition hover:shadow-teal-200 hover:brightness-105"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
           >
             <CircleDollarSign className="mr-2 h-4 w-4" />
             Book My Strategy Session
