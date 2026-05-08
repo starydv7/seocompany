@@ -25,6 +25,7 @@ const designDevelopmentLinks: FooterLink[] = [
 
 const companyLinks: FooterLink[] = [
   { label: "About Us", href: "/about" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
   { label: "Book a Call", href: HUBSPOT_MEETING_URL, external: true },
 ];

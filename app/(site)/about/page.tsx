@@ -271,7 +271,7 @@ export default function AboutPage() {
               </p>
               <div className="pt-3">
                 <Link
-                  href="/contact"
+                  href="/careers"
                   className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-5 py-3 text-sm font-semibold text-white shadow-md shadow-[#ddbf5d]/30 transition hover:brightness-105"
                 >
                   View Open Positions

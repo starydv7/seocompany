@@ -324,6 +324,7 @@ const designAside: MegaAsideContent = {
 
 function MegaMenu({
   label,
+  href,
   isActive,
   sections,
   panelId,
@@ -332,6 +333,7 @@ function MegaMenu({
   pathname,
 }: {
   label: string;
+  href: string;
   isActive: boolean;
   sections: MegaSection[];
   panelId: string;
@@ -460,8 +462,8 @@ function MegaMenu({
       onMouseEnter={openMenu}
       onMouseLeave={scheduleClose}
     >
-      <button
-        type="button"
+      <Link
+        href={href}
         aria-haspopup="true"
         aria-expanded={open}
         aria-controls={panelId}
@@ -474,8 +476,8 @@ function MegaMenu({
         }`}
       >
         {label}
-        <ChevronDown className="h-4 w-4" />
-      </button>
+        <ChevronDown className="h-4 w-4" aria-hidden />
+      </Link>
       {mounted && createPortal(panel, document.body)}
     </div>
   );
@@ -522,12 +524,12 @@ export default function Navbar() {
   }, [pathname]);
 
   const close = useCallback(() => setOpen(false), []);
-  const isServicesActive = servicesMegaSections.some((section) =>
-    isActivePath(pathname, section.href)
-  );
-  const isDesignActive = designMegaSections.some((section) =>
-    isActivePath(pathname, section.href)
-  );
+  const isServicesActive =
+    isActivePath(pathname, "/digital-marketing-services") ||
+    servicesMegaSections.some((section) => isActivePath(pathname, section.href));
+  const isDesignActive =
+    isActivePath(pathname, "/design-and-development") ||
+    designMegaSections.some((section) => isActivePath(pathname, section.href));
 
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(
     () => new Set()
@@ -710,6 +712,7 @@ export default function Navbar() {
           <div className="ml-auto hidden items-center gap-0.5 pr-1 font-medium text-slate-700 md:flex lg:gap-1 xl:gap-2">
             <MegaMenu
               label="Digital Marketing Services"
+              href="/digital-marketing-services"
               isActive={isServicesActive}
               sections={servicesMegaSections}
               panelId="mega-services-panel"
@@ -719,6 +722,7 @@ export default function Navbar() {
             />
             <MegaMenu
               label="Design and Development"
+              href="/design-and-development"
               isActive={isDesignActive}
               sections={designMegaSections}
               panelId="mega-design-panel"

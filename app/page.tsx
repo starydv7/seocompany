@@ -59,21 +59,48 @@ export default function Home() {
                 Start with a free, no-obligation consultation.
               </p>
               <div className="mt-4 space-y-2.5">
-                <input
-                  type="text"
-                  placeholder="Full Name *"
-                  className="w-full rounded-md border border-slate-200 px-3 py-2.5 text-sm text-slate-800 placeholder-slate-400 outline-none focus:border-blue-300"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address *"
-                  className="w-full rounded-md border border-slate-200 px-3 py-2.5 text-sm text-slate-800 placeholder-slate-400 outline-none focus:border-blue-300"
-                />
-                <input
-                  type="text"
-                  placeholder="Website (optional)"
-                  className="w-full rounded-md border border-slate-200 px-3 py-2.5 text-sm text-slate-800 placeholder-slate-400 outline-none focus:border-blue-300"
-                />
+                <div className="relative">
+                  <input
+                    type="text"
+                    required
+                    aria-required="true"
+                    aria-label="Full Name"
+                    placeholder=" "
+                    className="peer w-full rounded-md border border-slate-200 px-3 py-2.5 text-sm text-slate-800 outline-none focus:border-blue-300"
+                  />
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 hidden text-sm text-slate-400 peer-placeholder-shown:inline">
+                    Full Name <span className="font-semibold text-red-500">*</span>
+                  </span>
+                </div>
+
+                <div className="relative">
+                  <input
+                    type="email"
+                    required
+                    aria-required="true"
+                    aria-label="Email Address"
+                    placeholder=" "
+                    className="peer w-full rounded-md border border-slate-200 px-3 py-2.5 text-sm text-slate-800 outline-none focus:border-blue-300"
+                  />
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 hidden text-sm text-slate-400 peer-placeholder-shown:inline">
+                    Email Address <span className="font-semibold text-red-500">*</span>
+                  </span>
+                </div>
+
+                <div className="relative">
+                  <input
+                    type="text"
+                    required
+                    aria-required="true"
+                    aria-label="Website"
+                    placeholder=" "
+                    className="peer w-full rounded-md border border-slate-200 px-3 py-2.5 text-sm text-slate-800 outline-none focus:border-blue-300"
+                  />
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 hidden text-sm text-slate-400 peer-placeholder-shown:inline">
+                    Website <span className="font-semibold text-red-500">*</span>
+                  </span>
+                </div>
+
                 <input
                   type="tel"
                   placeholder="Phone Number"

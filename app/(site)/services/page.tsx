@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
-import { ArrowRight, BarChart3, Bot, Megaphone, Palette, Search } from "lucide-react";
+import { ArrowRight, BarChart3, Bot, Megaphone, Search } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -23,18 +23,18 @@ type Service = {
 export default function ServicesPage() {
   const services: Service[] = [
     {
-      id: "branding",
-      title: "Branding & Identity",
-      kicker: "The Soul of Your Business.",
+      id: "digital-marketing",
+      title: "Digital Marketing",
+      kicker: "Performance That Compounds.",
       description:
-        "We build iconic identities that resonate. From visual language to brand voice, we make sure you’re impossible to ignore.",
-      ctaLabel: "View Branding Details",
-      icon: <Palette className="h-6 w-6" />,
+        "Full-funnel digital marketing that turns clicks into customers. SEO, paid media, content and analytics — engineered for measurable growth.",
+      ctaLabel: "View Digital Marketing",
+      icon: <Megaphone className="h-6 w-6" />,
       bullets: [
-        "Brand strategy & positioning",
-        "Visual identity system (logo, color, typography)",
-        "Messaging & brand voice guidelines",
-        "Creative direction for campaigns and content",
+        "SEO & content strategy",
+        "Paid media (Google, Meta, LinkedIn)",
+        "Conversion rate optimization",
+        "Analytics, attribution & reporting",
       ],
     },
     {
