@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function SeoPage() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
-      <div className="mx-auto max-w-6xl space-y-16">
+      <div className="mx-auto w-full space-y-16">
         {/* Hero */}
         <Reveal>
           <header className="space-y-5 text-center">
@@ -22,11 +22,11 @@ export default function SeoPage() {
           <p className="text-base font-semibold text-slate-700 sm:text-xl">
             That Drive Rankings, Revenue &amp; Real Business Growth
           </p>
-          <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto w-full text-sm text-slate-600 sm:text-base">
             If your website isn&apos;t ranking on Google, it isn&apos;t competing. At BrandMarketing, we don&apos;t chase vanity metrics, we build search ecosystems that turn
             rankings into traffic, traffic into leads, and leads into revenue.
           </p>
-          <p className="mx-auto max-w-3xl text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto w-full text-sm text-slate-600 sm:text-base">
             Our SEO strategies are engineered for long-term dominance, not short-lived spikes.
             Whether you&apos;re a startup, local business, ecommerce brand, or enterprise, we help
             you own your search space.

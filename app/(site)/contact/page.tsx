@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 export default function ContactPage() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
-      <div className="mx-auto max-w-5xl space-y-12">
+      <div className="mx-auto w-full space-y-12">
         {/* Header */}
         <Reveal>
           <div className="text-center">
@@ -18,7 +18,7 @@ export default function ContactPage() {
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Book a Strategy Call
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 sm:text-xl">
+          <p className="mx-auto mt-4 w-full text-base text-slate-600 sm:text-xl">
             Let&apos;s discuss your growth goals, identify opportunities, and build a roadmap tailored to
             your business, no commitment required.
           </p>

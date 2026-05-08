@@ -32,7 +32,7 @@ export default function SocialMediaPage() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.12),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(236,72,153,0.09),transparent_35%)]"
       />
-      <div className="mx-auto max-w-6xl space-y-12 sm:space-y-16">
+      <div className="mx-auto w-full space-y-12 sm:space-y-16">
         {/* Hero */}
         <Reveal>
           <header className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 text-center shadow-xl shadow-indigo-100/40 backdrop-blur sm:p-10">
@@ -46,11 +46,11 @@ export default function SocialMediaPage() {
           <p className="mt-3 text-base font-semibold text-slate-700 sm:text-xl">
             That Build Brands, Boost Engagement and Drive Revenue
           </p>
-          <p className="mx-auto mt-4 max-w-3xl text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto mt-4 w-full text-sm text-slate-600 sm:text-base">
             In today&apos;s digital world, social media is where conversations happen, communities
             form and customers decide what to buy.
           </p>
-          <p className="mx-auto mt-2 max-w-3xl text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto mt-2 w-full text-sm text-slate-600 sm:text-base">
             At BrandMarketing, we build social ecosystems that strengthen your brand, amplify your
             voice and convert followers into loyal customers.
           </p>

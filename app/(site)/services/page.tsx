@@ -116,9 +116,9 @@ export default function ServicesPage() {
 
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
-      <div className="mx-auto max-w-6xl space-y-14">
+      <div className="mx-auto w-full space-y-14">
         <Reveal>
-          <header className="max-w-3xl space-y-4">
+          <header className="w-full space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
             BrandMarketing Services
           </p>
@@ -168,7 +168,7 @@ export default function ServicesPage() {
 
         <Reveal delay={0.08}>
           <div className="space-y-6 pt-2">
-          <div className="max-w-3xl space-y-2">
+          <div className="w-full space-y-2">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
               Service details
             </h2>

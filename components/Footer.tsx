@@ -1,156 +1,168 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { HUBSPOT_MEETING_URL } from "@/lib/site";
+
+type FooterLink = { label: string; href: string; external?: boolean };
+
+const digitalMarketingLinks: FooterLink[] = [
+  { label: "Digital Marketing", href: "/services" },
+  { label: "Search Engine Optimization", href: "/seo" },
+  { label: "Social Media Marketing", href: "/social-media" },
+  { label: "PPC & Performance", href: "/automation-performance" },
+  { label: "Content Marketing", href: "/services" },
+  { label: "eCommerce Marketing", href: "/services" },
+];
+
+const designDevelopmentLinks: FooterLink[] = [
+  { label: "Software Development", href: "/branding" },
+  { label: "Web Development", href: "/branding" },
+  { label: "Mobile App Development", href: "/branding" },
+  { label: "UI/UX Design", href: "/branding" },
+  { label: "Product Engineering", href: "/branding" },
+  { label: "Business Solutions", href: "/branding" },
+];
+
+const companyLinks: FooterLink[] = [
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Book a Call", href: HUBSPOT_MEETING_URL, external: true },
+];
+
+const socialLinks: { label: string; href: string; Icon: typeof Facebook }[] = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/brandmarketingdigital/",
+    Icon: Linkedin,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/brandmarketingdigital.official",
+    Icon: Facebook,
+  },
+];
+
+function FooterColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: FooterLink[];
+}) {
+  return (
+    <div>
+      <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-white">
+        {title}
+      </h3>
+      <ul className="mt-4 space-y-2.5 text-sm">
+        {links.map((link) => (
+          <li key={`${title}-${link.label}`}>
+            {link.external ? (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 transition hover:text-white"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                href={link.href}
+                className="text-slate-400 transition hover:text-white"
+              >
+                {link.label}
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 border-t border-slate-200/80 bg-white/80 text-sm text-slate-600 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-4 py-8 sm:px-6 lg:px-8 lg:flex-row lg:items-start lg:justify-between">
-        <div className="max-w-sm space-y-3">
-          <div className="flex w-full items-start justify-start">
-            <Image
-              src="/assets/logo.png"
-              alt="BrandMarketing logo"
-              width={176}
-              height={50}
-              className="h-12 w-48 shrink-0 object-contain object-left"
-            />
-          </div>
-          <p className="text-xs text-slate-600">
-            Where creativity meets conversion. We don&apos;t just build brands, we build businesses.
-          </p>
-          <div className="flex items-center gap-3 pt-2">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
-              aria-label="Facebook"
-            >
-              <Facebook className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
-              aria-label="Instagram"
-            >
-              <Instagram className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
-              aria-label="Twitter"
-            >
-              <Twitter className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.youtube.com"
-              target="_blank"
-              rel="noreferrer"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-600 transition hover:border-slate-400 hover:bg-slate-50 hover:text-slate-900"
-              aria-label="YouTube"
-            >
-              <Youtube className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
+    <footer className="mt-20 bg-[#0B0D17] text-slate-300">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#ddbf5d]/40 to-transparent" />
 
-        <div className="grid flex-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-          <div className="space-y-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-              Services
-            </h3>
-            <ul className="space-y-1 text-xs">
-              <li>
-                <Link href="/services" className="hover:text-slate-900">
-                  Branding & Identity
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-slate-900">
-                  Social Media Management
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-slate-900">
-                  SEO & Organic Growth
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-slate-900">
-                  Performance Marketing
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-slate-900">
-                  Paid Ads (PPC & Social)
-                </Link>
-              </li>
-            </ul>
-          </div>
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 py-14 lg:grid-cols-[1.2fr,2fr] lg:gap-16 lg:py-16">
+          <div className="space-y-5">
+            <Link href="/" className="inline-flex items-center" aria-label="Home">
+              <Image
+                src="/assets/logo.png"
+                alt="BrandMarketing logo"
+                width={192}
+                height={56}
+                className="h-12 w-auto object-contain object-left"
+              />
+            </Link>
 
-          <div className="space-y-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-              Company
-            </h3>
-            <ul className="space-y-1 text-xs">
-              <li>
-                <Link href="/about" className="hover:text-slate-900">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-slate-900">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <p className="max-w-sm text-sm leading-relaxed text-slate-400">
+              Where creativity meets conversion. We don&apos;t just build brands,
+              we build businesses.
+            </p>
 
-          <div className="space-y-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-              Contact
-            </h3>
-            <ul className="space-y-1 text-xs">
+            <ul className="space-y-2 pt-1 text-sm">
               <li>
-                <a href="tel:+917003427553" className="hover:text-slate-900">
+                <a
+                  href="mailto:connect@brandmarketing.digital"
+                  className="inline-flex items-center gap-2 text-slate-300 transition hover:text-white"
+                >
+                  <Mail className="h-4 w-4 text-[#ddbf5d]" />
+                  connect@brandmarketing.digital
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+917003427553"
+                  className="inline-flex items-center gap-2 text-slate-300 transition hover:text-white"
+                >
+                  <Phone className="h-4 w-4 text-[#ddbf5d]" />
                   +91 70034 27553
                 </a>
               </li>
-              <li className="text-slate-500">Kolkata, India</li>
+              <li className="inline-flex items-center gap-2 text-slate-400">
+                <MapPin className="h-4 w-4 text-[#ddbf5d]" />
+                Kolkata, India
+              </li>
             </ul>
+
+            <div className="flex items-center gap-2 pt-2">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-slate-300 transition hover:border-[#50b444]/60 hover:bg-white/[0.06] hover:text-white"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+            <FooterColumn title="Digital Marketing" links={digitalMarketingLinks} />
+            <FooterColumn title="Design & Development" links={designDevelopmentLinks} />
+            <FooterColumn title="Company" links={companyLinks} />
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-slate-200/80 bg-white/70">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-4 py-4 text-left text-[11px] text-slate-500 sm:flex-row sm:items-center sm:px-6 lg:px-8">
-          <p>© {year} BrandMarketing. All rights reserved.</p>
-          <p className="text-[10px]">
-            Built for brands that care about strategy, execution and measurable growth.
-          </p>
+        <div className="border-t border-white/10">
+          <div className="flex w-full flex-col items-start justify-between gap-3 py-6 text-xs text-slate-500 sm:flex-row sm:items-center">
+            <p>© {year} BrandMarketing. All rights reserved.</p>
+            <p className="text-slate-500">
+              Built for brands that care about strategy, execution and measurable growth.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-
-
-
-
-

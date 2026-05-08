@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
-import { BarChart3, Brush, Code2, Compass, Sparkles } from "lucide-react";
+import {
+  BarChart3,
+  Brush,
+  Code2,
+  Compass,
+  Sparkles,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Github,
+  Trophy,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -10,14 +22,59 @@ export const metadata: Metadata = {
     "Meet the minds behind the metrics, a collective of strategists, creators, and analysts obsessed with growth.",
 };
 
+type SocialKey = "linkedin" | "github" | "leetcode" | "facebook" | "instagram";
+
 type AboutMember = {
   title: string;
   name: string;
   role: string;
   quote: string;
   description: string;
-  superpower: string;
+  socials?: Partial<Record<SocialKey, string>>;
 };
+
+const SOCIAL_CONFIG: {
+  key: SocialKey;
+  label: string;
+  Icon: LucideIcon;
+  hoverClass: string;
+}[] = [
+  {
+    key: "linkedin",
+    label: "LinkedIn",
+    Icon: Linkedin,
+    hoverClass:
+      "hover:border-[#0a66c2]/60 hover:bg-[#0a66c2]/[0.06] hover:text-[#0a66c2]",
+  },
+  {
+    key: "github",
+    label: "GitHub",
+    Icon: Github,
+    hoverClass:
+      "hover:border-slate-800/70 hover:bg-slate-900/[0.06] hover:text-slate-900",
+  },
+  {
+    key: "leetcode",
+    label: "LeetCode",
+    Icon: Trophy,
+    hoverClass:
+      "hover:border-[#ffa116]/60 hover:bg-[#ffa116]/[0.08] hover:text-[#ffa116]",
+  },
+  {
+    key: "facebook",
+    label: "Facebook",
+    Icon: Facebook,
+    hoverClass:
+      "hover:border-[#1877f2]/60 hover:bg-[#1877f2]/[0.06] hover:text-[#1877f2]",
+  },
+  {
+    key: "instagram",
+    label: "Instagram",
+    Icon: Instagram,
+    hoverClass:
+      "hover:border-[#e1306c]/60 hover:bg-[#e1306c]/[0.06] hover:text-[#e1306c]",
+  },
+];
 
 const members: AboutMember[] = [
   {
@@ -27,7 +84,6 @@ const members: AboutMember[] = [
     quote: "Marketing is no longer about the stuff that you make, but about the stories you tell.",
     description:
       "Dhiraj founded BrandMarketing to end the war between branding and sales. He sets the north star strategy for every client, making sure long term positioning aligns with day to day execution.",
-    superpower: "Seeing the big picture before the puzzle pieces are even out of the box.",
   },
   {
     title: "The Data Architect",
@@ -36,7 +92,13 @@ const members: AboutMember[] = [
     quote: "If you can't measure it, you can't improve it.",
     description:
       "Sohail builds the measurement and performance infrastructure that turns creative ideas into predictable outcomes. From technical SEO to paid acquisition, he treats every budget like it is his own.",
-    superpower: "Turning a confusing 100 page data report into a 1 page action plan.",
+    socials: {
+      linkedin:
+        "https://www.linkedin.com/in/sohail-islam-jijo-b40776181?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      facebook: "https://www.facebook.com/share/1BNmRvG5gu/",
+      instagram:
+        "https://www.instagram.com/_sohail.exe?igsh=anRjcHVvOWg3Ynhw",
+    },
   },
   {
     title: "The Visual Storyteller",
@@ -45,7 +107,13 @@ const members: AboutMember[] = [
     quote: "Design is the silent ambassador of your brand.",
     description:
       "Trisha makes sure your brand does not just show up, it stands out. From logo concepts to the aesthetics of your social presence, she protects your identity with sharp detail and consistency.",
-    superpower: "Translating complex business concepts into stunning, simple visuals.",
+    socials: {
+      linkedin:
+        "https://www.linkedin.com/in/trisha-nandy-a14688203?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      facebook: "https://www.facebook.com/share/1BV7iWZBmm/",
+      instagram:
+        "https://www.instagram.com/trisha.nandy?igsh=MWN2ZHdoMDY5bWI5Zg==",
+    },
   },
   {
     title: "The Performance Engine",
@@ -54,7 +122,11 @@ const members: AboutMember[] = [
     quote: "If you can't measure it, you can't improve it.",
     description:
       "Saitika brings 7 years of digital marketing and 5 years of performance marketing expertise. She designs and optimizes Google Ads strategies, manages paid social campaigns (Meta, Instagram, LinkedIn, Pinterest), and implements marketing automation for clients across USA, Australia, Canada, and domestic markets. DV360 certified with hands-on programmatic advertising experience.",
-    superpower: "Turning ad spend into predictable ROI through data-driven optimization.",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/saitika-bhowmik-aa12b015a/",
+      facebook: "https://www.facebook.com/saitika.bhowmik/",
+      instagram: "https://www.instagram.com/saitikabhowmik/",
+    },
   },
   {
     title: "The Technical Guru",
@@ -63,7 +135,11 @@ const members: AboutMember[] = [
     quote: "Great marketing needs great systems behind it.",
     description:
       "Pawan turns growth requirements into fast, secure, scalable web and mobile experiences. From tracking and analytics to full product builds, he makes sure the tech foundation can handle real users and real scale.",
-    superpower: "Shipping reliable products that feel simple, even when the system is complex.",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/pawanstarydv7/?locale=en",
+      github: "https://github.com/starydv7",
+      leetcode: "https://leetcode.com/u/Starydv7/",
+    },
   },
 ];
 
@@ -76,7 +152,7 @@ export default function AboutPage() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.08),transparent_35%)]"
       />
-      <div className="mx-auto max-w-6xl space-y-12">
+      <div className="mx-auto w-full space-y-12">
         <Reveal>
           <header className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 shadow-xl shadow-sky-100/40 backdrop-blur sm:p-10">
           <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700">
@@ -86,7 +162,7 @@ export default function AboutPage() {
           <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
             The Minds Behind the Metrics
           </h1>
-          <p className="mt-4 max-w-3xl text-sm text-slate-600 sm:text-base">
+          <p className="mt-4 w-full text-sm text-slate-600 sm:text-base">
             We are a collective of strategists, creators, and data analysts. While we each have our
             own specialty, from color theory to keyword density, we&apos;re united by a single
             obsession: <span className="font-semibold text-slate-900">Growth.</span>
@@ -128,16 +204,43 @@ export default function AboutPage() {
                     “{m.quote}”
                   </blockquote>
 
-                  <p className="mt-4 text-sm leading-relaxed text-slate-700">{m.description}</p>
+                  <div className="mt-4 flex-1">
+                    <p className="text-sm leading-relaxed text-slate-700">{m.description}</p>
+                  </div>
 
-                  <dl className="mt-5 space-y-2 text-xs text-slate-600">
-                    <div>
-                      <dt className="font-semibold text-slate-900">Superpower</dt>
-                      <dd className="mt-0.5">{m.superpower}</dd>
-                    </div>
-                  </dl>
+                  {(() => {
+                    const socials = m.socials;
+                    const links = socials
+                      ? SOCIAL_CONFIG.filter((s) => socials[s.key])
+                      : [];
+                    return (
+                      <div className="mt-5 flex h-9 items-center gap-3">
+                        {links.length > 0 ? (
+                          <>
+                            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                              Connect
+                            </span>
+                            <div className="flex items-center gap-2">
+                              {links.map(({ key, label, Icon, hoverClass }) => (
+                                <a
+                                  key={key}
+                                  href={socials![key]}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label={`${m.name} on ${label}`}
+                                  className={`flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition ${hoverClass}`}
+                                >
+                                  <Icon className="h-3.5 w-3.5" />
+                                </a>
+                              ))}
+                            </div>
+                          </>
+                        ) : null}
+                      </div>
+                    );
+                  })()}
 
-                  <div className="mt-auto pt-5">
+                  <div className="pt-5">
                     <Link
                       href={HUBSPOT_MEETING_URL}
                       target="_blank"
@@ -155,7 +258,7 @@ export default function AboutPage() {
 
         <Reveal delay={0.1}>
           <section className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-sky-50/40 to-indigo-50/40 p-8 shadow-lg shadow-sky-100/40 sm:p-10">
-            <div className="max-w-3xl space-y-3">
+            <div className="w-full space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
                 Join Our Squad
               </p>

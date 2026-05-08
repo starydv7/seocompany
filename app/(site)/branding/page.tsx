@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function BrandingPage() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
-      <div className="mx-auto max-w-6xl space-y-14 sm:space-y-20">
+      <div className="mx-auto w-full space-y-14 sm:space-y-20">
         {/* Hero */}
         <Reveal>
           <header className="text-center space-y-6">
@@ -22,7 +22,7 @@ export default function BrandingPage() {
           <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Don&apos;t Just Fit In. Lead the Conversation.
           </h1>
-          <p className="mx-auto max-w-3xl text-base font-semibold text-slate-700 sm:text-xl">
+          <p className="mx-auto w-full text-base font-semibold text-slate-700 sm:text-xl">
             We craft unforgettable brand identities and high-authority content that turns
             &quot;browsers&quot; into &quot;brand advocates.&quot;
           </p>
@@ -43,7 +43,7 @@ export default function BrandingPage() {
           <h2 className="mb-8 text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             BRAND IDENTITY PRISM
           </h2>
-          <div className="relative mx-auto max-w-5xl">
+          <div className="relative mx-auto w-full">
             <svg viewBox="0 0 1000 600" className="w-full h-auto">
               {/* Central beige hexagon */}
               <polygon

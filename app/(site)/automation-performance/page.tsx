@@ -29,7 +29,7 @@ export default function AutomationPerformancePage() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(6,182,212,0.08),transparent_36%)]"
       />
-      <div className="mx-auto max-w-6xl space-y-16">
+      <div className="mx-auto w-full space-y-16">
         {/* Hero */}
         <Reveal>
           <header className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 text-center shadow-xl shadow-emerald-100/40 backdrop-blur sm:p-10">
@@ -43,10 +43,10 @@ export default function AutomationPerformancePage() {
           <p className="mt-3 text-base font-semibold text-slate-700 sm:text-xl">
             Scale Without the Stress
           </p>
-          <p className="mx-auto mt-1 max-w-3xl text-base font-semibold text-slate-800 sm:text-xl">
+          <p className="mx-auto mt-1 w-full text-base font-semibold text-slate-800 sm:text-xl">
             Stop Guessing. Start Scaling.
           </p>
-          <p className="mx-auto mt-4 max-w-3xl text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto mt-4 w-full text-sm text-slate-600 sm:text-base">
             We combine high-velocity Performance Marketing with intelligent Automation to turn your
             ad spend into a predictable revenue engine.
           </p>

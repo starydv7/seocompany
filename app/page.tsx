@@ -11,10 +11,10 @@ export default function Home() {
     <>
       {/* Hero */}
       <Reveal>
-        <section className="relative isolate overflow-hidden bg-gradient-to-br from-slate-50 via-[#edf5ff] to-[#e6f2ff] px-4 pb-14 pt-4 sm:px-6 sm:pb-20 sm:pt-8 lg:px-8">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-slate-200/80 bg-white/75 p-4 shadow-lg shadow-sky-100 backdrop-blur sm:p-6 lg:p-8">
+        <section className="relative isolate overflow-hidden bg-gradient-to-br from-slate-50 via-[#edf5ff] to-[#e6f2ff] px-0 pb-14 pt-4 sm:pb-20 sm:pt-8">
+        <div className="mx-auto w-full rounded-3xl border border-slate-200/80 bg-white/75 p-4 shadow-lg shadow-sky-100 backdrop-blur sm:p-6 lg:p-8">
           <div className="grid gap-7 lg:grid-cols-[1.2fr,0.9fr] lg:items-start lg:gap-10">
-            <div className="max-w-2xl space-y-6">
+            <div className="w-full space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-bold uppercase tracking-wide shadow-sm ring-1 ring-slate-200 sm:px-6 sm:py-2.5 sm:text-base">
                 <span className="bg-gradient-to-r from-[#ddbf5d] to-[#50b444] bg-clip-text text-transparent">
                 BrandMarketing
@@ -27,7 +27,7 @@ export default function Home() {
                   Meets Conversion
                 </span>
               </h1>
-              <p className="max-w-xl text-base text-slate-600 sm:text-xl">
+              <p className="w-full text-base text-slate-600 sm:text-xl">
                 We don't just build brands, we build businesses. From defining your identity to
                 dominating search results, BrandMarketing is your partner in digital growth.
               </p>
@@ -100,7 +100,7 @@ export default function Home() {
       {/* Introduction: Data-Driven Strategies */}
       <Reveal>
         <section className="px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[32px] bg-white px-4 py-8 shadow-[0_20px_60px_rgba(108,71,255,0.18)] sm:px-7 sm:py-10 lg:px-12 lg:py-14 xl:px-16">
+        <div className="relative mx-auto w-full overflow-hidden rounded-[32px] bg-white px-4 py-8 shadow-[0_20px_60px_rgba(108,71,255,0.18)] sm:px-7 sm:py-10 lg:px-12 lg:py-14 xl:px-16">
           <div
             aria-hidden
             className="pointer-events-none absolute -right-16 -top-16 h-[340px] w-[340px] rounded-full"
@@ -128,7 +128,7 @@ export default function Home() {
             In a crowded digital landscape, noise is easy to make. Impact is hard to achieve.
           </p>
 
-          <p className="relative z-[1] max-w-[740px] text-sm leading-[1.75] text-[#8c84a4] sm:text-base">
+          <p className="relative z-[1] w-full text-sm leading-[1.75] text-[#8c84a4] sm:text-base">
             At BrandMarketing, we bridge the gap between art and science. We believe that stunning
             branding is useless without visibility, and high traffic is meaningless without
             conversion. We fuse aesthetic excellence with rigorous performance tracking to ensure
@@ -208,7 +208,7 @@ export default function Home() {
       {/* Why Choose + Process + Testimonials */}
       <Reveal>
         <section className="bg-[#f5f7fc] px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 lg:px-8">
-        <div className="mx-auto max-w-6xl space-y-16">
+        <div className="mx-auto w-full space-y-16">
           <div className="space-y-7 rounded-3xl border border-slate-200/80 bg-white p-6 shadow-md shadow-slate-200/60 sm:p-8">
             <div className="text-center lg:text-left">
               <span className="inline-flex rounded-full bg-[#eef3ff] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6677d3]">
@@ -312,7 +312,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="grid auto-rows-fr gap-5 md:grid-cols-2">
               {[
                 {
                   name: "Dr Biswaroop Chakarborty",
@@ -343,17 +343,19 @@ export default function Home() {
                   initials: "PS",
                 },
               ].map((item) => (
-                <figure key={item.name} className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <figure key={item.name} className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                   <div className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b ${item.accent}`} />
                   <div className="pointer-events-none absolute right-4 top-3 text-3xl font-serif text-slate-100">
                     &quot;
                   </div>
-                  <p className="text-sm leading-relaxed text-slate-700">{item.text}</p>
+                  <div className="flex-1">
+                    <p className="text-sm leading-relaxed text-slate-700">{item.text}</p>
+                  </div>
                   <figcaption className="mt-5 flex items-center gap-3 border-t border-slate-100 pt-4">
-                    <div className={`flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br ${item.accent} text-xs font-semibold text-white`}>
+                    <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${item.accent} text-xs font-semibold text-white`}>
                       {item.initials}
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm font-semibold text-slate-900">{item.name}</p>
                       <p className="text-xs text-slate-500">{item.role}</p>
                     </div>
@@ -369,8 +371,8 @@ export default function Home() {
       {/* Footer / Final CTA */}
       <Reveal>
         <section className="px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-slate-200/90 bg-gradient-to-br from-slate-50 via-white to-sky-50/30 p-8 shadow-lg shadow-sky-100 sm:p-12">
-          <div className="mx-auto max-w-2xl space-y-4 text-center">
+        <div className="mx-auto w-full rounded-3xl border border-slate-200/90 bg-gradient-to-br from-slate-50 via-white to-sky-50/30 p-8 shadow-lg shadow-sky-100 sm:p-12">
+          <div className="mx-auto w-full space-y-4 text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
               Ready to Dominate Your Market?
             </h2>
