@@ -24,9 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-slate-50">
-      <body className={`${inter.className} min-h-screen overflow-x-hidden text-slate-900`}>
+      <body className={`${inter.className} min-h-screen text-slate-900`}>
         <Navbar />
-        <main className="relative overflow-x-hidden">{children}</main>
+        <main className="relative">{children}</main>
         <Footer />
       </body>
     </html>

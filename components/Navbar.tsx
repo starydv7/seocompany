@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import { hrefForMegaItem } from "@/lib/seo/nav-item-hrefs";
 import type { LucideIcon } from "lucide-react";
 import {
   Menu,
@@ -193,6 +194,7 @@ function MobileServiceCategory({
   onToggle: () => void;
   onNavigate: () => void;
 }) {
+  const resolveItemHref = (label: string) => hrefForMegaItem(label, href);
   const panelId = `mobile-cat-${title.replace(/\s+/g, "-").toLowerCase()}`;
   return (
     <li className="overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02]">
@@ -227,18 +229,28 @@ function MobileServiceCategory({
       >
         <div className="overflow-hidden">
           <ul className="space-y-0.5 border-t border-white/[0.06] bg-black/20 px-3 py-2">
-            {items.map((item) => (
-              <li key={item}>
-                <Link
-                  href={href}
-                  onClick={onNavigate}
-                  className="flex items-start gap-2 rounded-md px-2 py-1.5 text-[13px] leading-snug text-white/70 transition hover:bg-white/[0.05] hover:text-white"
-                >
-                  <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/40" />
-                  <span>{item}</span>
-                </Link>
-              </li>
-            ))}
+            {items.map((item) => {
+              const itemHref = resolveItemHref(item);
+              return (
+                <li key={item}>
+                  {itemHref ? (
+                    <Link
+                      href={itemHref}
+                      onClick={onNavigate}
+                      className="flex items-start gap-2 rounded-md px-2 py-1.5 text-[13px] leading-snug text-white/70 transition hover:bg-white/[0.05] hover:text-white"
+                    >
+                      <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/40" />
+                      <span>{item}</span>
+                    </Link>
+                  ) : (
+                    <span className="flex items-start gap-2 rounded-md px-2 py-1.5 text-[13px] leading-snug text-white/50">
+                      <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/25" />
+                      <span>{item}</span>
+                    </span>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -442,11 +454,23 @@ function MegaMenu({
                     className="list-disc space-y-1 pl-4 marker:text-slate-700"
                     style={{ fontSize: "clamp(11px, 0.78vw, 12.5px)" }}
                   >
-                    {section.items.map((item) => (
-                      <li key={item} className="leading-[1.3] text-slate-600">
-                        <span>{item}</span>
-                      </li>
-                    ))}
+                    {section.items.map((item) => {
+                      const itemHref = hrefForMegaItem(item, section.href);
+                      return (
+                        <li key={item} className="leading-[1.3] text-slate-600">
+                          {itemHref ? (
+                            <Link
+                              href={itemHref}
+                              className="transition hover:text-[#50b444]"
+                            >
+                              {item}
+                            </Link>
+                          ) : (
+                            <span>{item}</span>
+                          )}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </article>
               ))}
@@ -500,13 +524,14 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    const root = document.documentElement;
     if (open) {
-      document.body.style.overflow = "hidden";
+      root.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
+      root.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = "";
+      root.style.overflow = "";
     };
   }, [open]);
 
@@ -568,7 +593,7 @@ export default function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
-          className={`absolute right-2 top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[calc(100vw-1rem)] min-w-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0B0D17] shadow-2xl transition-transform duration-300 ease-out ${
+          className={`absolute right-2 top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[min(100%,calc(100%-1rem))] min-w-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0B0D17] shadow-2xl transition-transform duration-300 ease-out ${
             open ? "translate-x-0" : "translate-x-[calc(100%+0.75rem)]"
           }`}
         >
