@@ -21,6 +21,8 @@ import {
   ScanSearch,
   Search,
   Shield,
+  Sparkles,
+  Lock,
   Server,
   ShoppingCart,
   Smartphone,
@@ -201,9 +203,23 @@ export const whyTechnicalSeo = {
 export const technicalServices = {
   title: "Our Technical SEO Services",
   intro: "Comprehensive technical optimization—from audits and crawl fixes to migrations and enterprise-scale monitoring.",
-  sidebarTitle: "Not sure where to start?",
-  sidebarText: "Get a detailed audit and a custom roadmap for your website.",
-  sidebarCta: "Get Free Audit",
+  sidebar: {
+    titleBefore: "Not sure where to ",
+    titleAccent: "start?",
+    text: "Get a detailed audit and a custom roadmap for your website.",
+    features: [
+      { label: "Find hidden technical issues", icon: Search },
+      { label: "Improve rankings and performance", icon: TrendingUp },
+      { label: "Build a strong SEO foundation", icon: Shield },
+    ],
+    cta: "Get Free Audit",
+    footer: "No obligation. 100% free.",
+    stats: {
+      issues: { label: "Technical Issues Found", value: "24" },
+      score: { label: "SEO Score", value: "92/100" },
+      pages: { label: "Pages Analyzed", value: "1,248" },
+    },
+  },
   items: [
     {
       title: "Technical SEO Audit",

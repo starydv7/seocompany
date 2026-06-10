@@ -15,12 +15,12 @@ const digitalMarketingLinks: FooterLink[] = [
 ];
 
 const designDevelopmentLinks: FooterLink[] = [
-  { label: "Software Development", href: "/branding" },
-  { label: "Web Development", href: "/branding" },
-  { label: "Mobile App Development", href: "/branding" },
-  { label: "UI/UX Design", href: "/branding" },
-  { label: "Product Engineering", href: "/branding" },
-  { label: "Business Solutions", href: "/branding" },
+  { label: "Software Development", href: "/design-and-development/software-development" },
+  { label: "Web Development", href: "/design-and-development/web-development" },
+  { label: "Mobile App Development", href: "/design-and-development/mobile-app-development" },
+  { label: "UI/UX Design", href: "/design-and-development/ui-ux-design" },
+  { label: "Product Engineering", href: "/design-and-development/product-engineering" },
+  { label: "Business Solutions", href: "/design-and-development/business-solutions" },
 ];
 
 const companyLinks: FooterLink[] = [

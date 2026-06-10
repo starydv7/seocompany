@@ -52,7 +52,7 @@ const categories: Category[] = [
     kicker: "Custom systems, built to scale.",
     description:
       "From SaaS products to enterprise platforms — we design, build and ship full-stack software that fits your business.",
-    href: "/branding",
+    href: "/design-and-development/software-development",
     Icon: Code2,
     accent: "from-cyan-500 via-blue-600 to-indigo-600",
     items: [

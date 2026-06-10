@@ -1,0 +1,82 @@
+import {
+  BarChart3,
+  Code2,
+  Layers,
+  Lightbulb,
+  LineChart,
+  PenTool,
+  Rocket,
+  Search,
+  Target,
+  Wrench,
+} from "lucide-react";
+
+export const productEngineeringHero = {
+  badge: "PRODUCT ENGINEERING SERVICES",
+  titleBefore: "Build Products, Not Just Features",
+  titlePurple: "Launch Faster.",
+  titleBlue: "Scale Smarter.",
+  subtitle:
+    "From product strategy and architecture to development, optimization, and support, we help businesses transform ideas into scalable digital products.",
+  ctaPrimary: "Start Your Product",
+  ctaSecondary: "View Our Work",
+  items: [
+    "End-To-End Product Development",
+    "Product Planning & Architecture",
+    "Feature Development",
+    "Performance Optimization",
+    "System Integration",
+    "Product Maintenance & Support",
+  ],
+  features: [
+    { label: "Product Strategy", sub: "Clear roadmap & planning", icon: Target },
+    { label: "Scalable Architecture", sub: "Built for growth & scale", icon: Layers },
+    { label: "Rapid Development", sub: "Agile, fast & efficient", icon: Code2 },
+    { label: "Long-Term Support", sub: "Ongoing maintenance", icon: Wrench },
+  ],
+  lifecycle: [
+    { num: "01", label: "IDEA", icon: Lightbulb },
+    { num: "02", label: "DISCOVERY", icon: Search },
+    { num: "03", label: "DESIGN", icon: PenTool },
+    { num: "04", label: "BUILD", icon: Code2 },
+    { num: "05", label: "LAUNCH", icon: Rocket },
+    { num: "06", label: "SCALE", icon: BarChart3 },
+  ],
+  spokes: [
+    {
+      title: "Product Strategy",
+      desc: "Market research, user insights & roadmap",
+      icon: Target,
+      position: "top-left" as const,
+    },
+    {
+      title: "Development",
+      desc: "Clean, efficient & scalable code",
+      icon: Code2,
+      position: "bottom-left" as const,
+    },
+    {
+      title: "Architecture",
+      desc: "Robust, secure & future-ready",
+      icon: Layers,
+      position: "top-right" as const,
+    },
+    {
+      title: "Growth",
+      desc: "Optimize, scale & drive more value",
+      icon: LineChart,
+      position: "bottom-right" as const,
+    },
+  ],
+  technologies: [
+    "React",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "Python",
+    "PostgreSQL",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+  ],
+} as const;

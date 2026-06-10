@@ -9,6 +9,11 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 export const metadata: Metadata = {
   title: "BrandMarketing | SEO & Digital Growth",
   description: "BrandMarketing, premium SEO and digital marketing delivering measurable results.",
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export const viewport: Viewport = {

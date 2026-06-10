@@ -1,3 +1,4 @@
+import { DESIGN_ITEM_HREFS } from "@/lib/design-and-development/nav-item-hrefs";
 import { DM_ITEM_HREFS } from "@/lib/digital-marketing/nav-item-hrefs";
 
 /** Mega-menu SEO item label → dedicated page route */
@@ -9,5 +10,5 @@ export const SEO_ITEM_HREFS: Record<string, string> = {
 };
 
 export function hrefForMegaItem(label: string, _sectionHref: string): string | null {
-  return SEO_ITEM_HREFS[label] ?? DM_ITEM_HREFS[label] ?? null;
+  return SEO_ITEM_HREFS[label] ?? DM_ITEM_HREFS[label] ?? DESIGN_ITEM_HREFS[label] ?? null;
 }

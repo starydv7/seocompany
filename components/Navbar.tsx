@@ -17,9 +17,77 @@ import {
   ChevronRight,
   ChevronDown,
   ArrowRight,
+  Megaphone,
+  MousePointerClick,
+  Link2,
+  ShoppingCart,
+  Search,
+  Share2,
+  ShoppingBag,
+  BarChart3,
+  PenLine,
+  Radio,
+  Code2,
+  Globe,
+  Smartphone,
+  Server,
+  Palette,
+  Layers,
+  GitBranch,
+  Settings,
 } from "lucide-react";
 
 type MegaSection = { title: string; href: string; items: string[] };
+
+type MegaIconStyle = { icon: LucideIcon; box: string };
+
+const MEGA_SECTION_ICONS: Record<string, MegaIconStyle> = {
+  "Digital Marketing": { icon: Megaphone, box: "bg-violet-100 text-violet-600" },
+  "Pay Per Click (PPC) Marketing": { icon: MousePointerClick, box: "bg-violet-100 text-violet-600" },
+  "Link Building": { icon: Link2, box: "bg-violet-100 text-violet-600" },
+  "eCommerce Marketing": { icon: ShoppingCart, box: "bg-emerald-100 text-emerald-600" },
+  "Search Engine Optimization (SEO)": { icon: Search, box: "bg-blue-100 text-blue-600" },
+  "Social Media Marketing": { icon: Share2, box: "bg-pink-100 text-pink-600" },
+  "Online Marketplace Marketing": { icon: ShoppingBag, box: "bg-orange-100 text-orange-600" },
+  "CRO Services": { icon: BarChart3, box: "bg-teal-100 text-teal-600" },
+  "Social Media Advertising": { icon: Radio, box: "bg-blue-100 text-blue-600" },
+  "Content Marketing": { icon: PenLine, box: "bg-orange-100 text-orange-600" },
+  "Software Development": { icon: Code2, box: "bg-indigo-100 text-indigo-600" },
+  "Web Development": { icon: Globe, box: "bg-sky-100 text-sky-600" },
+  "Mobile App Development": { icon: Smartphone, box: "bg-violet-100 text-violet-600" },
+  "Frontend Development": { icon: LayoutGrid, box: "bg-blue-100 text-blue-600" },
+  "Backend Development": { icon: Server, box: "bg-slate-200 text-slate-700" },
+  "UI/UX Design": { icon: Palette, box: "bg-pink-100 text-pink-600" },
+  "Product Engineering": { icon: Layers, box: "bg-teal-100 text-teal-600" },
+  "Business Solutions": { icon: Briefcase, box: "bg-amber-100 text-amber-700" },
+  "Development Process": { icon: GitBranch, box: "bg-emerald-100 text-emerald-600" },
+};
+
+const DEFAULT_MEGA_ICON: MegaIconStyle = {
+  icon: Settings,
+  box: "bg-slate-100 text-slate-600",
+};
+
+function MegaSectionIcon({
+  title,
+  size = "md",
+}: {
+  title: string;
+  size?: "sm" | "md";
+}) {
+  const { icon: Icon, box } = MEGA_SECTION_ICONS[title] ?? DEFAULT_MEGA_ICON;
+  const dim = size === "sm" ? "h-8 w-8" : "h-7 w-7 sm:h-8 sm:w-8";
+  const iconDim = size === "sm" ? "h-4 w-4" : "h-3.5 w-3.5 sm:h-4 sm:w-4";
+
+  return (
+    <span
+      aria-hidden
+      className={`flex shrink-0 items-center justify-center rounded-lg ${dim} ${box}`}
+    >
+      <Icon className={iconDim} strokeWidth={2} />
+    </span>
+  );
+}
 
 const servicesMegaSections: MegaSection[] = [
   {
@@ -77,42 +145,42 @@ const servicesMegaSections: MegaSection[] = [
 const designMegaSections: MegaSection[] = [
   {
     title: "Software Development",
-    href: "/branding",
+    href: "/design-and-development/software-development",
     items: ["Custom Software Development", "Full Stack Web Development", "Enterprise Application Development", "SaaS Product Development", "Startup MVP Development", "API Development & Integration", "Cloud-Based Applications"],
   },
   {
     title: "Web Development",
-    href: "/branding",
+    href: "/design-and-development/web-development",
     items: ["Corporate Websites", "Business Websites", "Portfolio Websites", "Landing Pages", "Admin Dashboards", "CRM & ERP Systems", "Analytics Platforms", "E-commerce Platforms", "Booking & Management Systems"],
   },
   {
     title: "Mobile App Development",
-    href: "/branding",
+    href: "/design-and-development/mobile-app-development",
     items: ["Android App Development", "React Native Applications", "Cross-Platform Mobile Apps", "Business Mobile Applications", "Real-Time Applications"],
   },
   {
     title: "Frontend Development",
-    href: "/branding",
+    href: "/design-and-development/frontend-development",
     items: ["React.js Development", "TypeScript Applications", "Modern UI Development", "Responsive Web Interfaces", "Interactive User Experiences", "Tailwind CSS Development"],
   },
   {
     title: "Backend Development",
-    href: "/branding",
+    href: "/design-and-development/backend-development",
     items: ["Node.js & Express.js Development", "REST API Development", "Authentication Systems", "Database Architecture", "Firebase Integration", "Scalable Backend Systems"],
   },
   {
     title: "UI/UX Design",
-    href: "/branding",
+    href: "/design-and-development/ui-ux-design",
     items: ["Website UI Design", "Mobile App UI Design", "Dashboard Design", "SaaS Product Design", "Wireframing & Prototyping", "Responsive UI/UX", "Premium Modern Interfaces"],
   },
   {
     title: "Product Engineering",
-    href: "/branding",
+    href: "/design-and-development/product-engineering",
     items: ["End-to-End Product Development", "Product Planning & Architecture", "Feature Development", "Performance Optimization", "System Integration", "Product Maintenance & Support"],
   },
   {
     title: "Business Solutions",
-    href: "/branding",
+    href: "/design-and-development/business-solutions",
     items: ["Inventory Management Systems", "Employee Management Systems", "Customer Management Platforms", "Billing Systems", "Workflow Automation", "Reporting & Analytics Systems"],
   },
   {
@@ -205,12 +273,7 @@ function MobileServiceCategory({
         aria-controls={panelId}
         className="flex w-full items-center gap-3 px-3 py-3 text-left transition hover:bg-white/[0.04] active:scale-[0.99]"
       >
-        <span
-          aria-hidden
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#1e2140] text-[#9B94FF]"
-        >
-          <Briefcase className="h-4 w-4" strokeWidth={1.75} />
-        </span>
+        <MegaSectionIcon title={title} size="sm" />
         <span className="min-w-0 flex-1 truncate text-sm font-semibold text-white/90">
           {title}
         </span>
@@ -441,14 +504,11 @@ function MegaMenu({
                 >
                   <Link
                     href={section.href}
-                    className="mb-2 inline-flex items-center gap-2 font-semibold text-slate-800 transition hover:text-[#50b444]"
+                    className="mb-2 inline-flex items-center gap-2.5 font-semibold text-slate-800 transition hover:text-[#50b444]"
                     style={{ fontSize: "clamp(12px, 0.85vw, 14px)" }}
                   >
-                    <span
-                      aria-hidden
-                      className="inline-block h-4 w-4 shrink-0 rounded-sm bg-slate-200"
-                    />
-                    <span>{section.title}</span>
+                    <MegaSectionIcon title={section.title} />
+                    <span className="leading-snug">{section.title}</span>
                   </Link>
                   <ul
                     className="list-disc space-y-1 pl-4 marker:text-slate-700"
