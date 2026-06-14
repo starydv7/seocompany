@@ -7,13 +7,15 @@ import {
 export function ServiceSectionShell({
   variant,
   id,
+  shellClassName,
   children,
 }: {
   variant: ServiceSectionVariant;
   id?: string;
+  shellClassName?: string;
   children: ReactNode;
 }) {
-  const className = serviceSectionClass(variant);
+  const className = [serviceSectionClass(variant), shellClassName].filter(Boolean).join(" ");
 
   if (variant === "page") {
     return <section className={className}>{children}</section>;

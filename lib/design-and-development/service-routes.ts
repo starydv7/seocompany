@@ -14,5 +14,7 @@ export const PRODUCT_ENGINEERING_ROUTE = "/design-and-development/product-engine
 
 export const BUSINESS_SOLUTIONS_ROUTE = "/design-and-development/business-solutions";
 
+export const DEVELOPMENT_PROCESS_ROUTE = "/design-and-development/development-process";
+
 export const SOFTWARE_DEVELOPMENT_ROUTE = "/design-and-development/software-development";
 

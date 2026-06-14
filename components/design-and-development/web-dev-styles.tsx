@@ -1,12 +1,17 @@
 export const WDM_PAD = "px-[2%]";
 export const WDM_SECTION = `w-full max-w-none ${WDM_PAD}`;
+export const WDM_SECTION_PY = "py-12 sm:py-14 lg:py-16";
 
 export const WDM_FONT_DISPLAY =
   "text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-[1.12] tracking-tight text-slate-900";
+export const WDM_FONT_SECTION =
+  "text-center text-[clamp(1.25rem,2.5vw,1.85rem)] font-bold tracking-tight text-slate-900";
 export const WDM_FONT_GRADIENT =
   "bg-gradient-to-r from-[#7c3aed] via-[#6366f1] to-[#3b82f6] bg-clip-text text-transparent";
 export const WDM_FONT_LEAD = "text-[15px] leading-relaxed text-slate-600 sm:text-base";
 export const WDM_FONT_LIST = "text-sm leading-relaxed text-slate-700";
+export const WDM_FONT_CARD_TITLE = "text-base font-bold tracking-tight text-slate-900";
+export const WDM_FONT_BODY = "text-sm leading-relaxed text-slate-600";
 export const WDM_FONT_LABEL =
   "text-[9px] font-bold uppercase tracking-[0.18em] text-violet-700 sm:text-[10px]";
 
@@ -21,3 +26,8 @@ export const WDM_BTN_OUTLINE =
 
 export const WDM_CHECK =
   "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#7c3aed]";
+
+export const WDM_CARD =
+  "rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_4px_24px_rgba(15,23,42,0.05)] transition hover:border-violet-100 hover:shadow-[0_8px_32px_rgba(124,58,237,0.08)]";
+export const WDM_ICON_BOX =
+  "mb-4 flex h-11 w-11 items-center justify-center rounded-xl sm:h-12 sm:w-12";

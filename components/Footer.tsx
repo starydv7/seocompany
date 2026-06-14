@@ -11,7 +11,7 @@ const digitalMarketingLinks: FooterLink[] = [
   { label: "Social Media Marketing", href: "/social-media" },
   { label: "PPC & Performance", href: "/automation-performance" },
   { label: "Content Marketing", href: "/services" },
-  { label: "eCommerce Marketing", href: "/services" },
+  { label: "eCommerce Marketing", href: "/digital-marketing/ecommerce" },
 ];
 
 const designDevelopmentLinks: FooterLink[] = [

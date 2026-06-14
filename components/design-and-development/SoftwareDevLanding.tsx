@@ -8,6 +8,7 @@ import SoftwareDevBackendSection from "@/components/design-and-development/Softw
 import SoftwareDevFrontendSection from "@/components/design-and-development/SoftwareDevFrontendSection";
 import SoftwareDevMobileSection from "@/components/design-and-development/SoftwareDevMobileSection";
 import SoftwareDevBusinessSolutionsSection from "@/components/design-and-development/SoftwareDevBusinessSolutionsSection";
+import SoftwareDevDevelopmentProcessSection from "@/components/design-and-development/SoftwareDevDevelopmentProcessSection";
 import SoftwareDevProductEngineeringSection from "@/components/design-and-development/SoftwareDevProductEngineeringSection";
 import SoftwareDevUiuxSection from "@/components/design-and-development/SoftwareDevUiuxSection";
 import SoftwareDevWebSection from "@/components/design-and-development/SoftwareDevWebSection";
@@ -110,6 +111,7 @@ export default function SoftwareDevLanding() {
           <SoftwareDevUiuxSection />
           <SoftwareDevProductEngineeringSection />
           <SoftwareDevBusinessSolutionsSection />
+          <SoftwareDevDevelopmentProcessSection />
           {softwareDevServiceCards
             .filter(
               (service) =>
@@ -119,7 +121,8 @@ export default function SoftwareDevLanding() {
                 service.id !== "backend" &&
                 service.id !== "uiux" &&
                 service.id !== "product" &&
-                service.id !== "business"
+                service.id !== "business" &&
+                service.id !== "process"
             )
             .map((service) => {
               const Icon = service.icon as LucideIcon;

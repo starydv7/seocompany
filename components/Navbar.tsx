@@ -92,7 +92,7 @@ function MegaSectionIcon({
 const servicesMegaSections: MegaSection[] = [
   {
     title: "Digital Marketing",
-    href: "/services",
+    href: "/digital-marketing",
     items: ["Digital Marketing Strategy", "Digital Marketing Development", "Franchise Digital Marketing", "Enterprise Digital Marketing"],
   },
   {
@@ -107,7 +107,7 @@ const servicesMegaSections: MegaSection[] = [
   },
   {
     title: "eCommerce Marketing",
-    href: "/services",
+    href: "/digital-marketing/ecommerce",
     items: ["eCommerce SEO", "eCommerce PPC", "eCommerce Optimization", "Shopify SEO", "Shopify Web Design", "eCommerce Web Design"],
   },
   {
@@ -185,7 +185,7 @@ const designMegaSections: MegaSection[] = [
   },
   {
     title: "Development Process",
-    href: "/branding",
+    href: "/design-and-development/development-process",
     items: ["Requirement Analysis", "Product Planning", "UI/UX Design", "Development", "Testing", "Deployment", "Maintenance & Support"],
   },
 ];
@@ -553,10 +553,8 @@ function MegaMenu({
         aria-controls={panelId}
         onFocus={openMenu}
         onBlur={scheduleClose}
-        className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-1.5 py-3 text-[clamp(10px,1.15vw,14px)] leading-none transition hover:text-slate-900 hover:shadow-sm hover:shadow-cyan-100 lg:px-2 xl:px-3 ${
-          isActive || open
-            ? "bg-slate-100/90 text-slate-900 shadow-sm shadow-cyan-100"
-            : ""
+        className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-1.5 py-3 text-[clamp(10px,1.15vw,14px)] leading-none text-slate-50 transition hover:bg-white/10 hover:text-white lg:px-2 xl:px-3 ${
+          isActive || open ? "bg-white/15 text-white" : ""
         }`}
       >
         {label}
@@ -772,8 +770,8 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 transition-all ${
-          elevated ? "bg-white/92 shadow-lg backdrop-blur-md" : "bg-white/75 backdrop-blur"
+        className={`sticky top-0 z-50 bg-slate-600 transition-all ${
+          elevated ? "shadow-lg" : ""
         }`}
       >
         <nav
@@ -794,7 +792,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="ml-auto hidden items-center gap-0.5 pr-1 font-medium text-slate-700 md:flex lg:gap-1 xl:gap-2">
+          <div className="ml-auto hidden items-center gap-0.5 pr-1 font-medium text-slate-50 md:flex lg:gap-1 xl:gap-2">
             <MegaMenu
               label="Digital Marketing Services"
               href="/digital-marketing-services"
@@ -819,10 +817,8 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative whitespace-nowrap rounded-lg px-1.5 py-2 text-[clamp(10px,1.15vw,14px)] leading-none transition hover:text-slate-900 hover:shadow-sm hover:shadow-cyan-100 lg:px-2 xl:px-3 ${
-                  isActivePath(pathname, item.href)
-                    ? "bg-slate-100/90 text-slate-900 shadow-sm shadow-cyan-100"
-                    : ""
+                className={`relative whitespace-nowrap rounded-lg px-1.5 py-2 text-[clamp(10px,1.15vw,14px)] leading-none text-slate-50 transition hover:bg-white/10 hover:text-white lg:px-2 xl:px-3 ${
+                  isActivePath(pathname, item.href) ? "bg-white/15 text-white" : ""
                 }`}
               >
                 {isActivePath(pathname, item.href) ? (
@@ -848,7 +844,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 transition hover:bg-slate-100 md:hidden"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-slate-50 transition hover:bg-white/10 hover:text-white md:hidden"
             aria-label="Open menu"
             aria-controls="mobile-nav-drawer"
             aria-expanded={open}
