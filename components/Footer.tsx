@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
-import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import { HUBSPOT_MEETING_URL, BRAND_LOGO } from "@/lib/site";
 
 type FooterLink = { label: string; href: string; external?: boolean };
 
@@ -94,11 +94,11 @@ export default function Footer() {
           <div className="space-y-5">
             <Link href="/" className="inline-flex items-center" aria-label="Home">
               <Image
-                src="/assets/logo.png"
-                alt="BrandMarketing logo"
-                width={192}
-                height={56}
-                className="h-12 w-auto object-contain object-left"
+                src={BRAND_LOGO.src}
+                alt={BRAND_LOGO.alt}
+                width={BRAND_LOGO.width}
+                height={BRAND_LOGO.height}
+                className={BRAND_LOGO.className}
               />
             </Link>
 

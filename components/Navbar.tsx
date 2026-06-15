@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import { HUBSPOT_MEETING_URL, BRAND_LOGO } from "@/lib/site";
 import { hrefForMegaItem } from "@/lib/seo/nav-item-hrefs";
 import type { LucideIcon } from "lucide-react";
 import {
@@ -657,13 +657,13 @@ export default function Navbar() {
         >
           {/* Sticky header: logo + close */}
           <div className="flex shrink-0 items-center justify-between border-b border-white/[0.08] px-3 py-3 sm:px-4">
-            <Link href="/" onClick={close} className="flex min-w-0 items-center">
+            <Link href="/" onClick={close} className="flex shrink-0 items-center">
               <Image
-                src="/assets/logo.png"
-                alt="BrandMarketing logo"
-                width={152}
-                height={44}
-                className="h-11 w-44 shrink-0 object-contain object-left"
+                src={BRAND_LOGO.src}
+                alt={BRAND_LOGO.alt}
+                width={BRAND_LOGO.width}
+                height={BRAND_LOGO.height}
+                className={BRAND_LOGO.className}
                 priority
               />
             </Link>
@@ -770,24 +770,24 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-slate-600 transition-all ${
+        className={`sticky top-0 z-50 bg-slate-900 transition-all ${
           elevated ? "shadow-lg" : ""
         }`}
       >
         <nav
           id="site-navbar"
-          className="relative mx-auto flex w-full items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-8"
+          className="relative mx-auto flex w-full items-center justify-between gap-2 px-4 py-2 sm:px-6 lg:px-8"
         >
           <Link
             href="/"
-            className="flex min-w-0 items-center"
+            className="flex shrink-0 items-center"
           >
             <Image
-              src="/assets/logo.png"
-              alt="BrandMarketing logo"
-              width={184}
-              height={52}
-              className="h-10 w-40 shrink-0 object-contain object-left sm:h-11 sm:w-44 xl:h-12 xl:w-48"
+              src={BRAND_LOGO.src}
+              alt={BRAND_LOGO.alt}
+              width={BRAND_LOGO.width}
+              height={BRAND_LOGO.height}
+              className={BRAND_LOGO.className}
               priority
             />
           </Link>

@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   title: "BrandMarketing | SEO & Digital Growth",
   description: "BrandMarketing, premium SEO and digital marketing delivering measurable results.",
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [{ url: "/assets/logo.png", type: "image/png" }],
+    shortcut: "/assets/logo.png",
+    apple: "/assets/logo.png",
   },
 };
 
