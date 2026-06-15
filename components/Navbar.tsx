@@ -97,12 +97,12 @@ const servicesMegaSections: MegaSection[] = [
   },
   {
     title: "Pay Per Click (PPC) Marketing",
-    href: "/automation-performance",
+    href: "/digital-marketing-services/ppc",
     items: ["Search Engine Marketing (SEM)", "Google Ads Management", "YouTube Ads Management", "Programmatic Advertising", "Lead Generation Services", "Franchise PPC", "Enterprise PPC"],
   },
   {
     title: "Link Building",
-    href: "/seo",
+    href: "/digital-marketing-services/link-building",
     items: ["Digital PR Outreach"],
   },
   {
@@ -198,7 +198,8 @@ const navIconByHref: Record<string, LucideIcon> = {
   "/services": Briefcase,
   "/seo": Briefcase,
   "/social-media": Briefcase,
-  "/automation-performance": Briefcase,
+  "/digital-marketing-services/ppc": Briefcase,
+  "/digital-marketing-services/link-building": Briefcase,
   "/branding": LayoutGrid,
   "/about": Users,
 };

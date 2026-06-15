@@ -1,5 +1,6 @@
 import { DESIGN_ITEM_HREFS } from "@/lib/design-and-development/nav-item-hrefs";
 import { DM_ITEM_HREFS } from "@/lib/digital-marketing/nav-item-hrefs";
+import { LB_ITEM_HREFS } from "@/lib/link-building/nav-item-hrefs";
 import { PPC_ITEM_HREFS } from "@/lib/ppc/nav-item-hrefs";
 import { SM_ITEM_HREFS } from "@/lib/social-media/nav-item-hrefs";
 
@@ -18,6 +19,7 @@ export function hrefForMegaItem(label: string, _sectionHref: string): string | n
     DESIGN_ITEM_HREFS[label] ??
     SM_ITEM_HREFS[label] ??
     PPC_ITEM_HREFS[label] ??
+    LB_ITEM_HREFS[label] ??
     null
   );
 }

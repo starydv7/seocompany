@@ -58,7 +58,7 @@ const categories: Category[] = [
     kicker: "Spend less, close faster.",
     description:
       "High-intent, ROI-obsessed paid media across Google, Meta, YouTube and programmatic.",
-    href: "/automation-performance",
+    href: "/digital-marketing-services/ppc",
     Icon: Target,
     accent: "from-amber-500 via-orange-500 to-rose-500",
     items: [
@@ -97,7 +97,7 @@ const categories: Category[] = [
     kicker: "Authority, on demand.",
     description:
       "White-hat digital PR outreach that earns the kind of links Google rewards.",
-    href: "/seo",
+    href: "/digital-marketing-services/link-building",
     Icon: Link2,
     accent: "from-fuchsia-500 via-purple-500 to-indigo-500",
     items: ["Digital PR Outreach"],
