@@ -122,7 +122,7 @@ const servicesMegaSections: MegaSection[] = [
   },
   {
     title: "Online Marketplace Marketing",
-    href: "/services",
+    href: "/digital-marketing-services/online-marketplace-marketing",
     items: ["Amazon Marketing Services", "Amazon SEO", "Amazon Advertising/PPC", "Amazon Storefront & Branding", "Amazon Seller Consulting", "Amazon Posts Management", "Amazon DSP Advertising Management", "Target Plus Marketplace"],
   },
   {
@@ -200,6 +200,7 @@ const navIconByHref: Record<string, LucideIcon> = {
   "/social-media": Briefcase,
   "/digital-marketing-services/ppc": Briefcase,
   "/digital-marketing-services/link-building": Briefcase,
+  "/digital-marketing-services/online-marketplace-marketing": Briefcase,
   "/branding": LayoutGrid,
   "/about": Users,
 };
@@ -658,13 +659,13 @@ export default function Navbar() {
         >
           {/* Sticky header: logo + close */}
           <div className="flex shrink-0 items-center justify-between border-b border-white/[0.08] px-3 py-3 sm:px-4">
-            <Link href="/" onClick={close} className="flex shrink-0 items-center">
+            <Link href="/" onClick={close} className="flex shrink-0 items-center leading-none">
               <Image
                 src={BRAND_LOGO.src}
                 alt={BRAND_LOGO.alt}
                 width={BRAND_LOGO.width}
                 height={BRAND_LOGO.height}
-                className={BRAND_LOGO.className}
+                className={`${BRAND_LOGO.className} scale-[1.35] sm:scale-[1.4]`}
                 priority
               />
             </Link>
@@ -777,18 +778,15 @@ export default function Navbar() {
       >
         <nav
           id="site-navbar"
-          className="relative mx-auto flex w-full items-center justify-between gap-2 px-4 py-2 sm:px-6 lg:px-8"
+          className="relative mx-auto flex w-full items-center justify-between gap-2 py-2 pl-2 pr-4 sm:pr-6 lg:pr-8"
         >
-          <Link
-            href="/"
-            className="flex shrink-0 items-center"
-          >
+          <Link href="/" className="flex shrink-0 items-center leading-none">
             <Image
               src={BRAND_LOGO.src}
               alt={BRAND_LOGO.alt}
               width={BRAND_LOGO.width}
               height={BRAND_LOGO.height}
-              className={BRAND_LOGO.className}
+              className={`${BRAND_LOGO.className} scale-[1.35] sm:scale-[1.4]`}
               priority
             />
           </Link>

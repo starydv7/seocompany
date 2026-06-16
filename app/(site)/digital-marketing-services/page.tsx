@@ -153,7 +153,7 @@ const categories: Category[] = [
     kicker: "Win on Amazon and beyond.",
     description:
       "Listings, ads and storefronts engineered for marketplace algorithms and buyers.",
-    href: "/services",
+    href: "/digital-marketing-services/online-marketplace-marketing",
     Icon: Store,
     accent: "from-yellow-500 via-amber-500 to-orange-600",
     items: [

@@ -6,3 +6,4 @@ export const DM_FRANCHISE_ROUTE = "/digital-marketing/franchise";
 export const DM_ENTERPRISE_ROUTE = "/digital-marketing/enterprise";
 export const DM_PPC_ROUTE = "/digital-marketing-services/ppc";
 export const DM_LINK_BUILDING_ROUTE = "/digital-marketing-services/link-building";
+export const DM_MARKETPLACE_ROUTE = "/digital-marketing-services/online-marketplace-marketing";
