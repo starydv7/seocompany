@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { GoogleTagManagerBody, GoogleTagManagerHead } from "@/components/GoogleTagManager";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -29,7 +30,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-slate-50">
+      <head>
+        <GoogleTagManagerHead />
+      </head>
       <body className={`${inter.className} min-h-screen text-slate-900`}>
+        <GoogleTagManagerBody />
         <Navbar />
         <main className="relative">{children}</main>
         <Footer />
