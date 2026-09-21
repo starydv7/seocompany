@@ -12,7 +12,8 @@ import {
 import { blogMediaUrl } from "@/lib/blog/config";
 import { SITE_URL } from "@/lib/site-routes";
 
-export const dynamic = "force-dynamic";
+/** Cache post pages for 2 minutes (ISR). */
+export const revalidate = 120;
 
 type Props = { params: { slug: string } };
 
@@ -54,20 +55,23 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await getBlogPostBySlug(params.slug);
   if (!post) notFound();
 
-  const [recentList, commentsFromApi] = await Promise.all([
+  // Always load comments from dedicated endpoint (never trust stale page cache)
+  const [recentList, comments] = await Promise.all([
     getBlogPosts({ page: 1, limit: 10 }),
     getCommentsBySlug(params.slug),
   ]);
+
   const recent = recentList.data.filter((p) => p.slug !== post.slug);
-  const comments =
-    commentsFromApi.length > 0 ? commentsFromApi : getApprovedComments(post);
+  const related = getPublishedRelatedPosts(post);
+  const displayComments =
+    comments.length > 0 ? comments : getApprovedComments(post);
 
   return (
     <BlogPostView
       post={post}
-      related={getPublishedRelatedPosts(post)}
+      related={related}
       recent={recent}
-      comments={comments}
+      comments={displayComments}
     />
   );
 }

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import BlogLanding from "@/components/blog/BlogLanding";
-import { getBlogCategories, getBlogPosts, getBlogTags } from "@/lib/blog/api";
+import { extractTaxonomy, getBlogPosts } from "@/lib/blog/api";
 
-export const dynamic = "force-dynamic";
+/** Cache the page for 2 minutes; still refreshes in the background. */
+export const revalidate = 120;
 
 export const metadata: Metadata = {
   title: "Blog | BrandMarketing",
@@ -27,11 +28,14 @@ export default async function BlogPage({
   const tagId = searchParams.tagId;
   const search = searchParams.search;
 
-  const [posts, categories, tags] = await Promise.all([
-    getBlogPosts({ page, categoryId, tagId, search }),
-    getBlogCategories(),
-    getBlogTags(),
-  ]);
+  // Unfiltered page 1: one API call. Filtered: filtered list + taxonomy list.
+  const needsTaxonomyFetch = Boolean(categoryId || tagId || search || page > 1);
+
+  const posts = await getBlogPosts({ page, categoryId, tagId, search });
+  const taxonomySource = needsTaxonomyFetch
+    ? await getBlogPosts({ page: 1, limit: 100 })
+    : posts;
+  const { categories, tags } = extractTaxonomy(taxonomySource.data);
 
   return (
     <BlogLanding

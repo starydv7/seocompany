@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { BLOG_API_URL, BLOG_DEFAULT_PAGE_SIZE } from "@/lib/blog/config";
 import type {
   BlogCategory,
@@ -8,20 +9,36 @@ import type {
   BlogTag,
 } from "@/lib/blog/types";
 
-async function fetchJson<T>(path: string, init?: RequestInit): Promise<T | null> {
+const FETCH_TIMEOUT_MS = 12_000;
+/** Cache blog API responses for 2 minutes (ISR). */
+const REVALIDATE_SECONDS = 120;
+
+async function fetchJson<T>(
+  path: string,
+  init?: RequestInit & { noStore?: boolean }
+): Promise<T | null> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+  const { noStore, ...rest } = init ?? {};
+
   try {
     const res = await fetch(`${BLOG_API_URL}${path}`, {
-      ...init,
+      ...rest,
+      signal: controller.signal,
       headers: {
         Accept: "application/json",
-        ...(init?.headers ?? {}),
+        ...(rest.headers ?? {}),
       },
-      next: { revalidate: 30 },
+      ...(noStore
+        ? { cache: "no-store" as const }
+        : { next: { revalidate: REVALIDATE_SECONDS } }),
     });
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {
     return null;
+  } finally {
+    clearTimeout(timer);
   }
 }
 
@@ -57,32 +74,40 @@ export async function getBlogPosts(query: BlogPostsQuery = {}): Promise<BlogPost
   };
 }
 
-export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
-  const remote = await fetchJson<BlogPost>(`/public/posts/slug/${encodeURIComponent(slug)}`);
+/** Deduped within a single request (metadata + page share one fetch). */
+export const getBlogPostBySlug = cache(async (slug: string): Promise<BlogPost | null> => {
+  const remote = await fetchJson<BlogPost>(
+    `/public/posts/slug/${encodeURIComponent(slug)}`
+  );
   if (!remote || remote.status !== "published") return null;
   return remote;
+});
+
+/** One list fetch → categories + tags (avoids 2 extra API round-trips). */
+export function extractTaxonomy(posts: BlogPost[]): {
+  categories: BlogCategory[];
+  tags: BlogTag[];
+} {
+  const categories = new Map<string, BlogCategory>();
+  const tags = new Map<string, BlogTag>();
+  for (const post of posts) {
+    for (const cat of post.categories ?? []) categories.set(cat.id, cat);
+    for (const tag of post.tags ?? []) tags.set(tag.id, tag);
+  }
+  return {
+    categories: Array.from(categories.values()),
+    tags: Array.from(tags.values()),
+  };
 }
 
 export async function getBlogCategories(): Promise<BlogCategory[]> {
   const list = await getBlogPosts({ page: 1, limit: 100 });
-  const map = new Map<string, BlogCategory>();
-  for (const post of list.data) {
-    for (const cat of post.categories ?? []) {
-      map.set(cat.id, cat);
-    }
-  }
-  return Array.from(map.values());
+  return extractTaxonomy(list.data).categories;
 }
 
 export async function getBlogTags(): Promise<BlogTag[]> {
   const list = await getBlogPosts({ page: 1, limit: 100 });
-  const map = new Map<string, BlogTag>();
-  for (const post of list.data) {
-    for (const tag of post.tags ?? []) {
-      map.set(tag.id, tag);
-    }
-  }
-  return Array.from(map.values());
+  return extractTaxonomy(list.data).tags;
 }
 
 export function getPublishedRelatedPosts(post: BlogPost): BlogPost[] {
@@ -92,23 +117,34 @@ export function getPublishedRelatedPosts(post: BlogPost): BlogPost[] {
 }
 
 function isCommentApproved(comment: BlogComment): boolean {
+  // Public API only returns approved comments; some payloads omit the flag.
   if (comment.isApproved === false || comment.approved === false) return false;
   return true;
 }
 
-export function getApprovedComments(post: BlogPost): BlogComment[] {
-  return (post.comments ?? []).filter(isCommentApproved);
+export function normalizeComments(list: BlogComment[] | null | undefined): BlogComment[] {
+  if (!list?.length) return [];
+  return list
+    .filter((c) => c && c.id && c.content && isCommentApproved(c))
+    .sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
 }
 
-/** GET /public/posts/{slug}/comments — approved comments only from API. */
+export function getApprovedComments(post: BlogPost): BlogComment[] {
+  return normalizeComments(post.comments);
+}
+
+/** Always fresh — never cache empty/stale comment lists. */
 export async function getCommentsBySlug(slug: string): Promise<BlogComment[]> {
   const remote = await fetchJson<{
     comments?: BlogComment[];
     data?: BlogComment[];
-  }>(`/public/posts/${encodeURIComponent(slug)}/comments`);
+    commentCount?: number;
+  }>(`/public/posts/${encodeURIComponent(slug)}/comments`, { noStore: true });
 
-  const list = remote?.comments ?? remote?.data ?? [];
-  return list.filter(isCommentApproved);
+  return normalizeComments(remote?.comments ?? remote?.data ?? []);
 }
 
 export async function getAllPublishedSlugs(): Promise<string[]> {

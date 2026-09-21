@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { MessageSquare } from "lucide-react";
-import { submitBlogComment } from "@/lib/blog/comments-client";
+import { fetchBlogComments, submitBlogComment } from "@/lib/blog/comments-client";
 import type { BlogComment } from "@/lib/blog/types";
 
 type Props = {
@@ -11,13 +11,29 @@ type Props = {
 };
 
 export default function BlogComments({ slug, initialComments }: Props) {
-  const [comments] = useState(initialComments);
+  const [comments, setComments] = useState<BlogComment[]>(initialComments);
   const [authorName, setAuthorName] = useState("");
   const [authorEmail, setAuthorEmail] = useState("");
   const [content, setContent] = useState("");
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const [loading, setLoading] = useState(initialComments.length === 0);
+
+  // Always refresh from API on mount (fixes stale/empty SSR cache)
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      const fresh = await fetchBlogComments(slug);
+      if (cancelled) return;
+      if (fresh.length > 0) setComments(fresh);
+      setLoading(false);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,13 +46,26 @@ export default function BlogComments({ slug, initialComments }: Props) {
         authorEmail: authorEmail.trim(),
         content: content.trim(),
       });
-      if (result.ok) {
-        setMessage(result.message);
-        setAuthorName("");
-        setAuthorEmail("");
-        setContent("");
-      } else {
+
+      if (!result.ok) {
         setError(result.message);
+        return;
+      }
+
+      setMessage(result.message);
+      setAuthorName("");
+      setAuthorEmail("");
+      setContent("");
+
+      // Show immediately if API returned approved comment; else reload list
+      if (result.comment && result.comment.isApproved !== false) {
+        setComments((prev) => {
+          if (prev.some((c) => c.id === result.comment!.id)) return prev;
+          return [result.comment as BlogComment, ...prev];
+        });
+      } else {
+        const fresh = await fetchBlogComments(slug);
+        if (fresh.length > 0) setComments(fresh);
       }
     });
   };
@@ -56,7 +85,9 @@ export default function BlogComments({ slug, initialComments }: Props) {
       </div>
 
       <div className="mt-5 space-y-3">
-        {comments.length === 0 ? (
+        {loading && comments.length === 0 ? (
+          <p className="text-sm text-slate-500">Loading comments…</p>
+        ) : comments.length === 0 ? (
           <p className="text-sm text-slate-500">
             No comments yet. Be the first to share your thoughts.
           </p>
@@ -92,7 +123,7 @@ export default function BlogComments({ slug, initialComments }: Props) {
       >
         <p className="text-sm font-semibold text-slate-900">Leave a comment</p>
         <p className="mt-1 text-xs text-slate-500">
-          Comments are reviewed before they appear publicly.
+          Your comment may appear after moderation, depending on site settings.
         </p>
         <div className="mt-3 space-y-3">
           <div className="grid gap-3 sm:grid-cols-2">
