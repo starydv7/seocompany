@@ -6,6 +6,7 @@ import {
   getApprovedComments,
   getBlogPostBySlug,
   getBlogPosts,
+  getCommentsBySlug,
   getPublishedRelatedPosts,
 } from "@/lib/blog/api";
 import { blogMediaUrl } from "@/lib/blog/config";
@@ -53,15 +54,20 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await getBlogPostBySlug(params.slug);
   if (!post) notFound();
 
-  const recentList = await getBlogPosts({ page: 1, limit: 10 });
+  const [recentList, commentsFromApi] = await Promise.all([
+    getBlogPosts({ page: 1, limit: 10 }),
+    getCommentsBySlug(params.slug),
+  ]);
   const recent = recentList.data.filter((p) => p.slug !== post.slug);
+  const comments =
+    commentsFromApi.length > 0 ? commentsFromApi : getApprovedComments(post);
 
   return (
     <BlogPostView
       post={post}
       related={getPublishedRelatedPosts(post)}
       recent={recent}
-      comments={getApprovedComments(post)}
+      comments={comments}
     />
   );
 }

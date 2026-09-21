@@ -24,9 +24,12 @@ export type BlogTag = {
 export type BlogComment = {
   id: string;
   authorName: string;
+  authorEmail?: string | null;
   content: string;
   createdAt: string;
   approved?: boolean;
+  isApproved?: boolean;
+  parentId?: string | null;
 };
 
 export type BlogPost = {
@@ -72,5 +75,6 @@ export type BlogPostsResponse = {
 
 export type CreateCommentInput = {
   authorName: string;
+  authorEmail: string;
   content: string;
 };

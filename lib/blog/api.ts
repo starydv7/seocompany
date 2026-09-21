@@ -91,8 +91,24 @@ export function getPublishedRelatedPosts(post: BlogPost): BlogPost[] {
   );
 }
 
+function isCommentApproved(comment: BlogComment): boolean {
+  if (comment.isApproved === false || comment.approved === false) return false;
+  return true;
+}
+
 export function getApprovedComments(post: BlogPost): BlogComment[] {
-  return (post.comments ?? []).filter((c) => c.approved !== false);
+  return (post.comments ?? []).filter(isCommentApproved);
+}
+
+/** GET /public/posts/{slug}/comments — approved comments only from API. */
+export async function getCommentsBySlug(slug: string): Promise<BlogComment[]> {
+  const remote = await fetchJson<{
+    comments?: BlogComment[];
+    data?: BlogComment[];
+  }>(`/public/posts/${encodeURIComponent(slug)}/comments`);
+
+  const list = remote?.comments ?? remote?.data ?? [];
+  return list.filter(isCommentApproved);
 }
 
 export async function getAllPublishedSlugs(): Promise<string[]> {

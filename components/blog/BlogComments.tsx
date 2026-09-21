@@ -13,6 +13,7 @@ type Props = {
 export default function BlogComments({ slug, initialComments }: Props) {
   const [comments] = useState(initialComments);
   const [authorName, setAuthorName] = useState("");
+  const [authorEmail, setAuthorEmail] = useState("");
   const [content, setContent] = useState("");
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -26,11 +27,13 @@ export default function BlogComments({ slug, initialComments }: Props) {
     startTransition(async () => {
       const result = await submitBlogComment(slug, {
         authorName: authorName.trim(),
+        authorEmail: authorEmail.trim(),
         content: content.trim(),
       });
       if (result.ok) {
         setMessage(result.message);
         setAuthorName("");
+        setAuthorEmail("");
         setContent("");
       } else {
         setError(result.message);
@@ -45,14 +48,18 @@ export default function BlogComments({ slug, initialComments }: Props) {
         <h2 className="text-lg font-bold text-slate-900">
           Comments
           {comments.length > 0 ? (
-            <span className="ml-2 text-sm font-normal text-slate-500">({comments.length})</span>
+            <span className="ml-2 text-sm font-normal text-slate-500">
+              ({comments.length})
+            </span>
           ) : null}
         </h2>
       </div>
 
       <div className="mt-5 space-y-3">
         {comments.length === 0 ? (
-          <p className="text-sm text-slate-500">No comments yet. Be the first to share your thoughts.</p>
+          <p className="text-sm text-slate-500">
+            No comments yet. Be the first to share your thoughts.
+          </p>
         ) : (
           comments.map((comment) => (
             <div
@@ -60,7 +67,9 @@ export default function BlogComments({ slug, initialComments }: Props) {
               className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
             >
               <div className="flex items-center justify-between gap-2">
-                <p className="text-sm font-semibold text-slate-900">{comment.authorName}</p>
+                <p className="text-sm font-semibold text-slate-900">
+                  {comment.authorName}
+                </p>
                 <time className="text-[11px] text-slate-500">
                   {new Date(comment.createdAt).toLocaleDateString("en-IN", {
                     year: "numeric",
@@ -69,38 +78,60 @@ export default function BlogComments({ slug, initialComments }: Props) {
                   })}
                 </time>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">{comment.content}</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                {comment.content}
+              </p>
             </div>
           ))
         )}
       </div>
 
-      <form onSubmit={onSubmit} className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <form
+        onSubmit={onSubmit}
+        className="mt-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+      >
         <p className="text-sm font-semibold text-slate-900">Leave a comment</p>
+        <p className="mt-1 text-xs text-slate-500">
+          Comments are reviewed before they appear publicly.
+        </p>
         <div className="mt-3 space-y-3">
-          <input
-            type="text"
-            required
-            value={authorName}
-            onChange={(e) => setAuthorName(e.target.value)}
-            placeholder="Your name"
-            className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
-          />
+          <div className="grid gap-3 sm:grid-cols-2">
+            <input
+              type="text"
+              required
+              value={authorName}
+              onChange={(e) => setAuthorName(e.target.value)}
+              placeholder="Your name"
+              className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+            />
+            <input
+              type="email"
+              required
+              value={authorEmail}
+              onChange={(e) => setAuthorEmail(e.target.value)}
+              placeholder="Your email"
+              className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
+            />
+          </div>
           <textarea
             required
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="Write a comment…"
             rows={3}
-            className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+            className="w-full rounded-lg border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-100"
           />
-          {message ? <p className="text-sm font-medium text-emerald-700">{message}</p> : null}
-          {error ? <p className="text-sm font-medium text-rose-600">{error}</p> : null}
-        <button
-          type="submit"
-          disabled={pending}
-          className="rounded-lg bg-[#1570EF] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#175CD3] disabled:opacity-60"
-        >
+          {message ? (
+            <p className="text-sm font-medium text-emerald-700">{message}</p>
+          ) : null}
+          {error ? (
+            <p className="text-sm font-medium text-rose-600">{error}</p>
+          ) : null}
+          <button
+            type="submit"
+            disabled={pending}
+            className="rounded-lg bg-[#1570EF] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#175CD3] disabled:opacity-60"
+          >
             {pending ? "Sending…" : "Post comment"}
           </button>
         </div>
