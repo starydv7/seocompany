@@ -36,4 +36,5 @@ export const PUBLIC_ROUTES: string[] = [
   "/design-and-development/product-engineering",
   "/design-and-development/business-solutions",
   "/design-and-development/development-process",
+  "/blog",
 ];

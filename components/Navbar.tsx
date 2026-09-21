@@ -192,6 +192,7 @@ const designMegaSections: MegaSection[] = [
 
 const primaryNavItems: { label: string; href: string }[] = [
   { label: "About Us", href: "/about" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const navIconByHref: Record<string, LucideIcon> = {
@@ -203,6 +204,7 @@ const navIconByHref: Record<string, LucideIcon> = {
   "/digital-marketing-services/online-marketplace-marketing": Briefcase,
   "/branding": LayoutGrid,
   "/about": Users,
+  "/blog": PenLine,
 };
 
 function isActivePath(pathname: string, href: string) {
