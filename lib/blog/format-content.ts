@@ -10,7 +10,8 @@ export function formatArticleContent(content: string): string {
     /^#{1,3}\s/m.test(trimmed) ||
     /^\s*[-*]\s/m.test(trimmed) ||
     /^\s*\d+\.\s/m.test(trimmed) ||
-    /\*\*[^*]+\*\*/.test(trimmed);
+    /\*\*[^*]+\*\*/.test(trimmed) ||
+    /!\[[^\]]*\]\(https?:\/\/[^)\s]+\)/.test(trimmed);
 
   if (looksLikeMarkdown) return markdownToHtml(trimmed);
 
@@ -89,6 +90,14 @@ function markdownToHtml(md: string): string {
       continue;
     }
 
+    const imageOnly = trimmed.match(/^!\[([^\]]*)\]\((https?:\/\/[^)\s]+)\)$/);
+    if (imageOnly) {
+      flushPara();
+      closeList();
+      out.push(imageTag(imageOnly[1], imageOnly[2]));
+      continue;
+    }
+
     closeList();
     para.push(trimmed);
   }
@@ -98,8 +107,22 @@ function markdownToHtml(md: string): string {
   return out.join("");
 }
 
+function imageTag(alt: string, url: string): string {
+  return `<img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" />`;
+}
+
 function inlineFormat(text: string): string {
-  let html = escapeHtml(text);
+  const images: string[] = [];
+  const withTokens = text.replace(
+    /!\[([^\]]*)\]\((https?:\/\/[^)\s]+)\)/g,
+    (_match, alt: string, url: string) => {
+      const token = `%%IMG${images.length}%%`;
+      images.push(imageTag(alt, url));
+      return token;
+    },
+  );
+  let html = escapeHtml(withTokens);
+  html = html.replace(/%%IMG(\d+)%%/g, (_match, index: string) => images[Number(index)] ?? "");
   html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, "<em>$1</em>");
   html = html.replace(
