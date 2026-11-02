@@ -6,9 +6,9 @@ export default function EnterpriseDmProcessSection() {
   const { title, steps } = enterpriseDmProcess;
 
   return (
-    <section className={`${EDM_SECTION} bg-white ${EDM_SECTION_PY}`}>
+    <section className={`${EDM_SECTION} bg-transparent ${EDM_SECTION_PY}`}>
       <Reveal>
-        <article className="w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#4c1d95] via-[#5b21b6] to-[#6d28d9] px-6 py-10 shadow-[0_12px_48px_rgba(91,33,182,0.4)] sm:px-10 sm:py-12 lg:px-14 lg:py-14">
+        <article className="w-full overflow-hidden rounded-2xl lux-banner px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-14">
           <h2 className="text-center text-xl font-bold text-white sm:text-2xl">{title}</h2>
 
           <div className="relative mt-12 w-full sm:mt-14">
@@ -16,9 +16,9 @@ export default function EnterpriseDmProcessSection() {
               aria-hidden
               className="pointer-events-none absolute left-[4%] right-[4%] top-[22px] hidden items-center sm:flex"
             >
-              <span className="h-2 w-2 shrink-0 rounded-full bg-white/60" />
+              <span className="h-2 w-2 shrink-0 rounded-full bg-white/[0.035]" />
               <div className="mx-1 h-0 flex-1 border-t border-dashed border-white/35" />
-              <span className="h-2 w-2 shrink-0 rounded-full bg-white/60" />
+              <span className="h-2 w-2 shrink-0 rounded-full bg-white/[0.035]" />
             </div>
 
             <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-4 sm:gap-6">

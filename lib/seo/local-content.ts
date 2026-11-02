@@ -25,10 +25,10 @@ export const whyLocalSeo = {
   ],
   orbit: [
     { label: "Reviews", icon: Star, iconClass: "text-amber-500", angle: -90 },
-    { label: "Local Citations", icon: FileText, iconClass: "text-emerald-600", angle: -18 },
-    { label: "Customer Trust", icon: Users, iconClass: "text-violet-600", angle: 54 },
-    { label: "Local Authority", icon: Shield, iconClass: "text-blue-600", angle: 126 },
-    { label: "Google Business Profile", icon: Store, iconClass: "text-indigo-600", angle: 198 },
+    { label: "Local Citations", icon: FileText, iconClass: "text-emerald-300", angle: -18 },
+    { label: "Customer Trust", icon: Users, iconClass: "text-violet-300", angle: 54 },
+    { label: "Local Authority", icon: Shield, iconClass: "text-blue-300", angle: 126 },
+    { label: "Google Business Profile", icon: Store, iconClass: "text-indigo-300", angle: 198 },
   ] as const,
   gbp: {
     name: "Your Business",
@@ -69,15 +69,15 @@ export const localHero = {
   mapSearchQuery: "Plumber near me",
   businessRating: "4.9",
   flowSteps: [
-    { title: "Customer Search", desc: "Searches for services nearby", icon: Search, color: "text-violet-600 bg-violet-50" },
-    { title: "Google Maps", desc: "Finds local businesses", icon: MapPin, color: "text-violet-600 bg-violet-50" },
-    { title: "Your Business", desc: "Gets discovered", icon: Radio, color: "text-fuchsia-600 bg-fuchsia-50" },
-    { title: "Phone Call", desc: "You get the customer", icon: Phone, color: "text-teal-600 bg-teal-50" },
+    { title: "Customer Search", desc: "Searches for services nearby", icon: Search, color: "text-violet-300 bg-violet-400/10" },
+    { title: "Google Maps", desc: "Finds local businesses", icon: MapPin, color: "text-violet-300 bg-violet-400/10" },
+    { title: "Your Business", desc: "Gets discovered", icon: Radio, color: "text-fuchsia-300 bg-fuchsia-400/10" },
+    { title: "Phone Call", desc: "You get the customer", icon: Phone, color: "text-teal-300 bg-teal-400/10" },
   ],
   statCards: [
-    { value: "+312%", label: "Increase in Calls", icon: Phone, iconClass: "text-indigo-600 bg-indigo-50" },
-    { value: "+185%", label: "Maps Visibility", icon: MapPin, iconClass: "text-emerald-600 bg-emerald-50" },
-    { value: "+247%", label: "Local Leads", icon: Megaphone, iconClass: "text-amber-600 bg-amber-50" },
+    { value: "+312%", label: "Increase in Calls", icon: Phone, iconClass: "text-indigo-300 bg-indigo-400/10" },
+    { value: "+185%", label: "Maps Visibility", icon: MapPin, iconClass: "text-emerald-300 bg-emerald-400/10" },
+    { value: "+247%", label: "Local Leads", icon: Megaphone, iconClass: "text-amber-300 bg-amber-400/10" },
   ],
   performanceMetrics: [
     { label: "Views", value: "12.5K", delta: "+28%", spark: "#6366f1" },

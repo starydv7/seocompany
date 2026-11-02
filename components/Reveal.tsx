@@ -23,7 +23,10 @@ export default function Reveal({
     const node = ref.current;
     if (!node) return;
 
-    if (typeof IntersectionObserver === "undefined") {
+    if (
+      typeof IntersectionObserver === "undefined" ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       setVisible(true);
       return;
     }
@@ -51,11 +54,13 @@ export default function Reveal({
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "none" : `translate3d(0, ${y}px, 0)`,
+        transform: visible ? "none" : `translate3d(0, ${y}px, 0) scale(0.985)`,
+        // "none" (not blur(0)) once visible, so the wrapper doesn't trap position:fixed descendants
+        filter: visible ? "none" : "blur(10px)",
         transition:
-          "opacity 550ms cubic-bezier(0.22, 1, 0.36, 1), transform 550ms cubic-bezier(0.22, 1, 0.36, 1)",
+          "opacity 900ms cubic-bezier(0.22, 1, 0.36, 1), transform 900ms cubic-bezier(0.22, 1, 0.36, 1), filter 900ms cubic-bezier(0.22, 1, 0.36, 1)",
         transitionDelay: `${delay * 1000}ms`,
-        willChange: visible ? "auto" : "opacity, transform",
+        willChange: visible ? "auto" : "opacity, transform, filter",
       }}
     >
       {children}

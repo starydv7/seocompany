@@ -11,7 +11,7 @@ export default function TechnicalEnterpriseProcess() {
   return (
     <section className={TECH_SECTION}>
       <Reveal>
-        <article className="overflow-hidden rounded-2xl border border-slate-200/80 shadow-[0_8px_40px_rgba(15,23,42,0.08)]">
+        <article className="overflow-hidden rounded-2xl border border-white/[0.09] shadow-[0_8px_40px_rgba(15,23,42,0.08)]">
           {/* ── Top: Enterprise (dark) ── */}
           <div className="relative overflow-hidden bg-gradient-to-br from-[#05071a] via-[#0b1120] to-[#0f172a] px-6 py-8 sm:px-10 sm:py-10">
             <div
@@ -50,8 +50,8 @@ export default function TechnicalEnterpriseProcess() {
           </div>
 
           {/* ── Bottom: Process (white) ── */}
-          <div className="bg-white px-6 py-12 sm:px-12 sm:py-16">
-            <h2 className="text-center text-xl font-bold tracking-tight text-[#0a0b1e] sm:text-[1.65rem]">
+          <div className="bg-white/[0.035] px-6 py-12 sm:px-12 sm:py-16">
+            <h2 className="text-center text-xl font-bold tracking-tight text-white sm:text-[1.65rem]">
               {procTitle}
             </h2>
 
@@ -75,10 +75,10 @@ export default function TechnicalEnterpriseProcess() {
                     <span className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-[#6c5ce7] text-[11px] font-bold tracking-wide text-white shadow-[0_0_0_7px_rgba(108,92,231,0.22),0_4px_16px_rgba(108,92,231,0.35)]">
                       {step.num}
                     </span>
-                    <p className="mt-6 text-sm font-bold leading-snug text-[#0a0b1e]">
+                    <p className="mt-6 text-sm font-bold leading-snug text-white">
                       {step.title}
                     </p>
-                    <p className="mt-2 max-w-[12rem] text-[13px] leading-relaxed text-slate-500">
+                    <p className="mt-2 max-w-[12rem] text-[13px] leading-relaxed text-white/50">
                       {step.desc}
                     </p>
                   </div>

@@ -7,7 +7,7 @@ import WebDevTechIndustriesSection from "@/components/design-and-development/Web
 
 export default function WebDevLanding() {
   return (
-    <div className="w-full max-w-none overflow-x-hidden bg-white">
+    <div className="w-full max-w-none overflow-x-hidden bg-white/[0.035]">
       <SoftwareDevWebSection variant="page" />
       <WebDevSolutionsSection />
       <WebDevApproachSection />

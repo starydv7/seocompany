@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
 import { HUBSPOT_MEETING_URL, BRAND_LOGO } from "@/lib/site";
 
 type FooterLink = { label: string; href: string; external?: boolean };
@@ -24,6 +24,7 @@ const designDevelopmentLinks: FooterLink[] = [
 ];
 
 const companyLinks: FooterLink[] = [
+  { label: "Pricing", href: "/pricing" },
   { label: "About Us", href: "/about" },
   { label: "Blog", href: "/blog" },
   { label: "Careers", href: "/careers" },
@@ -44,6 +45,8 @@ const socialLinks: { label: string; href: string; Icon: typeof Facebook }[] = [
   },
 ];
 
+const linkClass = "group inline-flex items-center gap-1 text-white/55 transition hover:text-white";
+
 function FooterColumn({
   title,
   links,
@@ -53,27 +56,21 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-white">
-        {title}
-      </h3>
-      <ul className="mt-4 space-y-2.5 text-sm">
+      <h3 className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-gold">{title}</h3>
+      <ul className="mt-5 space-y-3 text-sm">
         {links.map((link) => (
           <li key={`${title}-${link.label}`}>
             {link.external ? (
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 transition hover:text-white"
-              >
+              <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
                 {link.label}
+                <ArrowUpRight className="h-3 w-3 opacity-0 transition group-hover:opacity-100" />
               </a>
             ) : (
-              <Link
-                href={link.href}
-                className="text-slate-400 transition hover:text-white"
-              >
-                {link.label}
+              <Link href={link.href} className={linkClass}>
+                <span className="relative">
+                  {link.label}
+                  <span className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-lux-gold/70 transition-transform duration-500 group-hover:scale-x-100" />
+                </span>
               </Link>
             )}
           </li>
@@ -87,12 +84,45 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-20 bg-[#0B0D17] text-slate-300">
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#ddbf5d]/40 to-transparent" />
+    <footer className="relative isolate mt-20 overflow-hidden bg-lux-ink text-white/70">
+      <div aria-hidden className="lux-hairline" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[30rem] w-[70rem] -translate-x-1/2 rounded-full opacity-50 blur-[120px]"
+        style={{ background: "radial-gradient(circle, rgba(221,191,93,0.22), transparent 60%)" }}
+      />
+      <div aria-hidden className="lux-grain" />
 
-      <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 py-14 lg:grid-cols-[1.2fr,2fr] lg:gap-16 lg:py-16">
-          <div className="space-y-5">
+      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Statement CTA */}
+        <div className="flex flex-col gap-10 border-b border-white/[0.08] py-16 lg:flex-row lg:items-end lg:justify-between lg:py-24">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-gold">Where creativity meets conversion</p>
+            <h2 className="mt-5 max-w-3xl font-serif text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] text-white">
+              Let&apos;s build what <span className="lux-gold-text italic">comes next.</span>
+            </h2>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href={HUBSPOT_MEETING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="lux-cta inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold"
+            >
+              Book a strategy call
+              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+            </a>
+            <Link
+              href="/pricing"
+              className="lux-ghost inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-white"
+            >
+              See pricing
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid gap-12 py-14 lg:grid-cols-[1.2fr,2fr] lg:gap-16 lg:py-16">
+          <div className="space-y-6">
             <Link href="/" className="inline-flex items-center" aria-label="Home">
               <Image
                 src={BRAND_LOGO.src}
@@ -103,37 +133,36 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="max-w-sm text-sm leading-relaxed text-slate-400">
-              Where creativity meets conversion. We don&apos;t just build brands,
-              we build businesses.
+            <p className="max-w-sm text-sm leading-relaxed text-white/55">
+              We don&apos;t just build brands, we build businesses.
             </p>
 
-            <ul className="space-y-2 pt-1 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <a
                   href="mailto:connect@brandmarketing.digital"
-                  className="inline-flex items-center gap-2 text-slate-300 transition hover:text-white"
+                  className="inline-flex items-center gap-2.5 text-white/75 transition hover:text-white"
                 >
-                  <Mail className="h-4 w-4 text-[#ddbf5d]" />
+                  <Mail className="h-4 w-4 text-lux-gold" />
                   connect@brandmarketing.digital
                 </a>
               </li>
               <li>
                 <a
                   href="tel:+917003427553"
-                  className="inline-flex items-center gap-2 text-slate-300 transition hover:text-white"
+                  className="inline-flex items-center gap-2.5 text-white/75 transition hover:text-white"
                 >
-                  <Phone className="h-4 w-4 text-[#ddbf5d]" />
+                  <Phone className="h-4 w-4 text-lux-gold" />
                   +91 70034 27553
                 </a>
               </li>
-              <li className="inline-flex items-center gap-2 text-slate-400">
-                <MapPin className="h-4 w-4 text-[#ddbf5d]" />
+              <li className="inline-flex items-center gap-2.5 text-white/55">
+                <MapPin className="h-4 w-4 text-lux-gold" />
                 Kolkata, India
               </li>
             </ul>
 
-            <div className="flex items-center gap-2 pt-2">
+            <div className="flex items-center gap-2 pt-1">
               {socialLinks.map(({ label, href, Icon }) => (
                 <a
                   key={label}
@@ -141,7 +170,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-slate-300 transition hover:border-[#50b444]/60 hover:bg-white/[0.06] hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.04] text-white/70 ring-1 ring-inset ring-white/10 transition hover:bg-lux-gold hover:text-lux-ink hover:ring-lux-gold"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -155,14 +184,24 @@ export default function Footer() {
             <FooterColumn title="Company" links={companyLinks} />
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-white/10">
-          <div className="flex w-full flex-col items-start justify-between gap-3 py-6 text-xs text-slate-500 sm:flex-row sm:items-center">
-            <p>© {year} BrandMarketing. All rights reserved.</p>
-            <p className="text-slate-500">
-              Built for brands that care about strategy, execution and measurable growth.
-            </p>
-          </div>
+      <div aria-hidden className="pointer-events-none relative select-none overflow-hidden">
+        <p
+          className="lux-outline-numeral whitespace-nowrap text-center font-serif text-[clamp(4rem,17vw,16rem)] leading-[0.8] tracking-[-0.03em]"
+          style={{
+            WebkitMaskImage: "linear-gradient(to bottom, #000 30%, transparent 95%)",
+            maskImage: "linear-gradient(to bottom, #000 30%, transparent 95%)",
+          }}
+        >
+          BrandMarketing
+        </p>
+      </div>
+
+      <div className="relative border-t border-white/[0.08]">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-white/40 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+          <p>© {year} BrandMarketing. All rights reserved.</p>
+          <p>Built for brands that care about strategy, execution and measurable growth.</p>
         </div>
       </div>
     </footer>

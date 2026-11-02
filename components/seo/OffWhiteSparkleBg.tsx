@@ -3,28 +3,22 @@ export default function OffWhiteSparkleBg() {
     <>
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 min-h-full bg-[#f9f7f4]"
+        className="pointer-events-none absolute inset-0 min-h-full bg-[radial-gradient(ellipse_70%_45%_at_8%_0%,rgba(221,191,93,0.12),transparent_60%),radial-gradient(ellipse_60%_45%_at_95%_10%,rgba(124,92,255,0.12),transparent_58%),radial-gradient(ellipse_80%_55%_at_50%_100%,rgba(80,180,68,0.08),transparent_62%)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 min-h-full bg-[radial-gradient(ellipse_85%_55%_at_10%_5%,rgba(255,255,255,0.95),transparent_58%),radial-gradient(ellipse_75%_50%_at_92%_8%,rgba(255,255,255,0.82),transparent_52%),radial-gradient(ellipse_90%_65%_at_50%_95%,rgba(255,252,247,0.9),transparent_62%),radial-gradient(ellipse_40%_30%_at_65%_45%,rgba(255,255,255,0.45),transparent_50%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 min-h-full opacity-[0.55]"
+        className="pointer-events-none absolute inset-0 min-h-full opacity-40"
         style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.92) 0.55px, transparent 0.55px)",
-          backgroundSize: "20px 24px",
+          backgroundImage: "radial-gradient(circle, rgba(243,227,166,0.55) 0.6px, transparent 0.6px)",
+          backgroundSize: "22px 26px",
         }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 min-h-full opacity-30"
+        className="pointer-events-none absolute inset-0 min-h-full opacity-20"
         style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.75) 0.35px, transparent 0.35px)",
-          backgroundSize: "12px 14px",
+          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.7) 0.4px, transparent 0.4px)",
+          backgroundSize: "13px 15px",
           backgroundPosition: "5px 3px",
         }}
       />

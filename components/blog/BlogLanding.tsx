@@ -46,15 +46,15 @@ export default function BlogLanding({
   const hasFilters = Boolean(activeCategory || activeTag || search);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-transparent">
       {/* Blue hero */}
-      <section className="relative overflow-hidden bg-[#1570EF]">
+      <section className="relative overflow-hidden lux-banner">
         {/* Decorative shapes */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-white/10" />
           <div className="absolute -bottom-20 right-1/4 h-56 w-56 rounded-full bg-white/5" />
           <div className="absolute -left-12 top-1/3 h-40 w-40 rounded-full bg-white/8" />
-          <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#175CD3]/40" />
+          <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-lux-gold/10" />
         </div>
 
         <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
@@ -79,11 +79,11 @@ export default function BlogLanding({
                     type="email"
                     name="email"
                     placeholder="Enter your email"
-                    className="min-w-0 flex-1 rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-blue-200 outline-none transition focus:border-white/40 focus:bg-white/15"
+                    className="min-w-0 flex-1 rounded-lg border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/40 outline-none transition focus:border-white/40 focus:bg-white/15"
                   />
                   <button
                     type="submit"
-                    className="shrink-0 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#1570EF] shadow-sm transition hover:bg-blue-50"
+                    className="shrink-0 rounded-lg lux-cta px-5 py-2.5 text-sm font-semibold text-lux-ink"
                   >
                     Subscribe
                   </button>
@@ -104,7 +104,7 @@ export default function BlogLanding({
               className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${
                 !activeCategoryId && !activeTagId
                   ? "bg-slate-900 text-white"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  : "bg-white/[0.05] text-white/65 hover:bg-white/10"
               }`}
             >
               All
@@ -115,8 +115,8 @@ export default function BlogLanding({
                 href={buildHref({ categoryId: cat.id, tagId: null, page: 1 })}
                 className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${
                   activeCategoryId === cat.id
-                    ? "bg-[#1570EF] text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    ? "bg-lux-gold text-lux-ink"
+                    : "bg-white/[0.05] text-white/65 hover:bg-white/10"
                 }`}
               >
                 {cat.name}
@@ -128,8 +128,8 @@ export default function BlogLanding({
                 href={buildHref({ tagId: tag.id, page: 1 })}
                 className={`rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${
                   activeTagId === tag.id
-                    ? "bg-[#1570EF] text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                    ? "bg-lux-gold text-lux-ink"
+                    : "bg-white/[0.05] text-white/65 hover:bg-white/10"
                 }`}
               >
                 #{tag.name}
@@ -139,36 +139,36 @@ export default function BlogLanding({
         ) : null}
 
         {hasFilters ? (
-          <div className="mb-6 flex flex-wrap items-center gap-2 text-sm text-slate-500">
+          <div className="mb-6 flex flex-wrap items-center gap-2 text-sm text-white/50">
             <span>Filtered by:</span>
             {activeCategory ? (
-              <span className="rounded-full bg-blue-50 px-3 py-0.5 font-medium text-blue-700">
+              <span className="rounded-full bg-blue-400/10 px-3 py-0.5 font-medium text-blue-300">
                 {activeCategory.name}
               </span>
             ) : null}
             {activeTag ? (
-              <span className="rounded-full bg-slate-100 px-3 py-0.5 font-medium text-slate-700">
+              <span className="rounded-full bg-white/[0.05] px-3 py-0.5 font-medium text-white/80">
                 #{activeTag.name}
               </span>
             ) : null}
             {search ? (
-              <span className="rounded-full bg-slate-100 px-3 py-0.5 font-medium text-slate-700">
+              <span className="rounded-full bg-white/[0.05] px-3 py-0.5 font-medium text-white/80">
                 &ldquo;{search}&rdquo;
               </span>
             ) : null}
-            <Link href="/blog" className="font-semibold text-blue-600 hover:underline">
+            <Link href="/blog" className="font-semibold text-blue-300 hover:underline">
               Clear
             </Link>
           </div>
         ) : null}
 
         {data.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-slate-300 px-6 py-20 text-center">
-            <p className="text-lg font-semibold text-slate-800">No published posts yet</p>
-            <p className="mt-2 text-sm text-slate-500">
+          <div className="rounded-2xl border border-dashed border-white/15 px-6 py-20 text-center">
+            <p className="text-lg font-semibold text-white">No published posts yet</p>
+            <p className="mt-2 text-sm text-white/50">
               Publish a post in your CMS, then refresh this page.
             </p>
-            <Link href="/blog" className="mt-4 inline-flex text-sm font-semibold text-blue-600 hover:underline">
+            <Link href="/blog" className="mt-4 inline-flex text-sm font-semibold text-blue-300 hover:underline">
               Clear filters
             </Link>
           </div>
@@ -182,33 +182,33 @@ export default function BlogLanding({
 
         {/* Pagination */}
         {meta.totalPages > 0 ? (
-          <div className="mt-14 flex items-center justify-between border-t border-slate-200 pt-6">
+          <div className="mt-14 flex items-center justify-between border-t border-white/[0.09] pt-6">
             {meta.page > 1 ? (
               <Link
                 href={buildHref({ page: meta.page - 1 })}
-                className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                className="rounded-lg border border-white/[0.09] px-4 py-2 text-sm font-semibold text-white/80 transition hover:border-white/15 hover:bg-white/[0.025]"
               >
                 Previous
               </Link>
             ) : (
-              <span className="rounded-lg border border-slate-100 px-4 py-2 text-sm font-semibold text-slate-300">
+              <span className="rounded-lg border border-white/[0.06] px-4 py-2 text-sm font-semibold text-slate-300">
                 Previous
               </span>
             )}
 
-            <span className="text-sm font-medium text-slate-600">
+            <span className="text-sm font-medium text-white/65">
               Page {meta.page} of {meta.totalPages}
             </span>
 
             {meta.page < meta.totalPages ? (
               <Link
                 href={buildHref({ page: meta.page + 1 })}
-                className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
+                className="rounded-lg border border-white/[0.09] px-4 py-2 text-sm font-semibold text-white/80 transition hover:border-white/15 hover:bg-white/[0.025]"
               >
                 Next
               </Link>
             ) : (
-              <span className="rounded-lg border border-slate-100 px-4 py-2 text-sm font-semibold text-slate-300">
+              <span className="rounded-lg border border-white/[0.06] px-4 py-2 text-sm font-semibold text-slate-300">
                 Next
               </span>
             )}
@@ -217,7 +217,7 @@ export default function BlogLanding({
       </section>
 
       {/* CTA banner */}
-      <section className="bg-[#1570EF]">
+      <section className="lux-banner">
         <div className="mx-auto max-w-6xl px-4 py-14 text-center sm:px-6 sm:py-16 lg:px-8">
           <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-tight text-white">
             Ready to level up your business?
@@ -236,7 +236,7 @@ export default function BlogLanding({
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#1570EF] shadow-sm transition hover:bg-blue-50"
+              className="inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold lux-cta text-lux-ink"
             >
               Get started
             </a>

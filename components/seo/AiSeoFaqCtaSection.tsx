@@ -63,7 +63,7 @@ export default function AiSeoFaqCtaSection() {
                     className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-4 text-xs leading-relaxed text-slate-400">{item.a}</p>
+                      <p className="pb-4 text-xs leading-relaxed text-white/40">{item.a}</p>
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ export default function AiSeoFaqCtaSection() {
       </Reveal>
 
       <Reveal delay={0.08} className="mt-[2%]">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#5b21b6] via-[#4f46e5] to-[#3b82f6] p-[2%] shadow-[0_24px_56px_rgba(79,70,229,0.35)]">
+        <div className="relative overflow-hidden rounded-2xl lux-banner p-[2%]">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-[0.1]"
@@ -97,7 +97,7 @@ export default function AiSeoFaqCtaSection() {
                   href={HUBSPOT_MEETING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-violet-800"
+                  className="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold lux-cta text-lux-ink"
                 >
                   {primaryLabel}
                   <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

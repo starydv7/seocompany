@@ -52,19 +52,19 @@ export default function TechnicalBottomSection() {
       <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-5">
         {/* Why Choose — 2×2 */}
         <Reveal>
-          <div className="h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm">
-            <h2 className="text-lg font-bold text-slate-900">{whyTitle}</h2>
+          <div className="h-full rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-sm">
+            <h2 className="text-lg font-bold text-white">{whyTitle}</h2>
             <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {whyItems.map((item) => {
                 const Icon = item.icon as LucideIcon;
                 return (
                   <div key={item.title} className="flex gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-100">
-                      <Icon className="h-5 w-5 text-violet-600" strokeWidth={2} />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-400/10">
+                      <Icon className="h-5 w-5 text-violet-300" strokeWidth={2} />
                     </span>
                     <div>
-                      <p className="text-xs font-bold text-slate-900">{item.title}</p>
-                      <p className="mt-1 text-[11px] leading-relaxed text-slate-500">
+                      <p className="text-xs font-bold text-white">{item.title}</p>
+                      <p className="mt-1 text-[11px] leading-relaxed text-white/50">
                         {item.description}
                       </p>
                     </div>
@@ -77,9 +77,9 @@ export default function TechnicalBottomSection() {
 
         {/* FAQ */}
         <Reveal delay={0.04}>
-          <div className="h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm">
-            <h2 className="text-lg font-bold text-slate-900">Frequently Asked Questions</h2>
-            <div className="mt-4 divide-y divide-slate-100">
+          <div className="h-full rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-sm">
+            <h2 className="text-lg font-bold text-white">Frequently Asked Questions</h2>
+            <div className="mt-4 divide-y divide-white/[0.06]">
               {technicalFaqs.map((item, index) => {
                 const isOpen = openIndex === index;
                 return (
@@ -90,7 +90,7 @@ export default function TechnicalBottomSection() {
                       className="flex w-full items-center justify-between gap-3 py-3.5 text-left"
                       aria-expanded={isOpen}
                     >
-                      <span className="text-[13px] font-semibold text-slate-800">{item.q}</span>
+                      <span className="text-[13px] font-semibold text-white">{item.q}</span>
                       <ChevronDown
                         className={`h-4 w-4 shrink-0 text-violet-500 transition-transform ${isOpen ? "rotate-180" : ""}`}
                       />
@@ -99,7 +99,7 @@ export default function TechnicalBottomSection() {
                       className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                     >
                       <div className="overflow-hidden">
-                        <p className="pb-3 text-[11px] leading-relaxed text-slate-600">{item.a}</p>
+                        <p className="pb-3 text-[11px] leading-relaxed text-white/65">{item.a}</p>
                       </div>
                     </div>
                   </div>
@@ -111,7 +111,7 @@ export default function TechnicalBottomSection() {
 
         {/* Final CTA */}
         <Reveal delay={0.08}>
-          <div className="relative flex h-full min-h-[18rem] flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-[#7c3aed] via-[#6d28d9] to-[#4f46e5] p-8 shadow-xl shadow-violet-400/30 sm:p-9">
+          <div className="relative flex h-full min-h-[18rem] flex-col overflow-hidden rounded-2xl lux-banner p-8 shadow-xl shadow-violet-400/30 sm:p-9">
             <div className="relative z-10 flex flex-1 flex-col">
               <h2 className="text-[1.55rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[1.85rem]">
                 {title}

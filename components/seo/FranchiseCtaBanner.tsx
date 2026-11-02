@@ -152,7 +152,7 @@ export default function FranchiseCtaBanner({ className = "" }: FranchiseCtaBanne
 
   return (
     <div
-      className={`relative box-border flex w-full min-w-0 flex-col overflow-hidden rounded-2xl bg-gradient-to-r from-[#5b21b6] via-[#4f46e5] to-[#3b82f6] p-[2%] shadow-[0_24px_56px_rgba(79,70,229,0.35)] ${className}`}
+      className={`relative box-border flex w-full min-w-0 flex-col overflow-hidden rounded-2xl lux-banner p-[2%] ${className}`}
     >
       <div
         aria-hidden
@@ -177,7 +177,7 @@ export default function FranchiseCtaBanner({ className = "" }: FranchiseCtaBanne
           <div className="flex min-w-0 flex-1 flex-col justify-center">
             <h2 className="text-xl font-bold leading-snug tracking-tight text-white">
               {titleLead}
-              <span className="bg-gradient-to-r from-violet-200 via-fuchsia-200 to-purple-200 bg-clip-text text-transparent">
+              <span className="lux-gold-text">
                 {titleAccent}
               </span>
             </h2>
@@ -187,15 +187,15 @@ export default function FranchiseCtaBanner({ className = "" }: FranchiseCtaBanne
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-xs font-semibold text-violet-800 shadow-md transition hover:bg-violet-50"
+                className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold lux-cta text-lux-ink"
               >
-                <Calendar className="h-4 w-4 shrink-0 text-violet-700" strokeWidth={2} />
+                <Calendar className="h-4 w-4 shrink-0 text-violet-300" strokeWidth={2} />
                 {primaryLabel}
-                <ArrowRight className="h-4 w-4 shrink-0 text-violet-700" strokeWidth={2.5} />
+                <ArrowRight className="h-4 w-4 shrink-0 text-violet-300" strokeWidth={2.5} />
               </Link>
               <Link
                 href={secondaryHref}
-                className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/90 bg-transparent px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold lux-ghost text-white"
               >
                 <FileText className="h-4 w-4 shrink-0" strokeWidth={2} />
                 {secondaryLabel}

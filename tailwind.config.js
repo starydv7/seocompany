@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+        display: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "Times New Roman", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"]
       },
       colors: {
         brand: {
@@ -21,6 +23,13 @@ module.exports = {
           700: "#085db4",
           800: "#0a4c8d",
           900: "#0d3f72"
+        },
+        lux: {
+          ink: "#06070d",
+          night: "#0b0d17",
+          gold: "#ddbf5d",
+          champagne: "#f3e3a6",
+          emerald: "#50b444"
         }
       },
       boxShadow: {
@@ -30,8 +39,3 @@ module.exports = {
   },
   plugins: []
 };
-
-
-
-
-

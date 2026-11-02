@@ -7,7 +7,7 @@ const ROOT = "relative h-[16rem] w-full sm:h-[18rem] lg:h-[20rem]";
 
 function ScoreRing({ score, label, color }: { score: number; label: string; color: string }) {
   return (
-    <div className="rounded-xl border border-slate-100 bg-white p-2 shadow-[0_8px_24px_rgba(15,23,42,0.1)]">
+    <div className="rounded-xl border border-white/[0.06] bg-white/[0.035] p-2 shadow-[0_8px_24px_rgba(15,23,42,0.1)]">
       <svg viewBox="0 0 56 56" className="mx-auto h-12 w-12 sm:h-14 sm:w-14">
         <circle cx="28" cy="28" r="22" fill="none" stroke="#ecfdf5" strokeWidth="5" />
         <circle
@@ -24,7 +24,7 @@ function ScoreRing({ score, label, color }: { score: number; label: string; colo
           {score}
         </text>
       </svg>
-      <p className="mt-0.5 text-center text-[9px] font-semibold text-slate-500 sm:text-[10px]">{label}</p>
+      <p className="mt-0.5 text-center text-[9px] font-semibold text-white/50 sm:text-[10px]">{label}</p>
     </div>
   );
 }
@@ -33,15 +33,15 @@ function WebGraphic() {
   return (
     <div className={ROOT} aria-hidden>
       {/* Main browser window — back layer, right */}
-      <div className="absolute right-0 top-1 z-[5] w-[78%] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.12)]">
-        <div className="flex items-center gap-1.5 border-b border-slate-100 bg-slate-50 px-3 py-2">
+      <div className="absolute right-0 top-1 z-[5] w-[78%] overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.035] shadow-[0_16px_40px_rgba(15,23,42,0.12)]">
+        <div className="flex items-center gap-1.5 border-b border-white/[0.06] bg-white/[0.025] px-3 py-2">
           <span className="h-2 w-2 rounded-full bg-rose-400" />
           <span className="h-2 w-2 rounded-full bg-amber-400" />
           <span className="h-2 w-2 rounded-full bg-emerald-400" />
-          <span className="ml-2 h-2 w-16 rounded bg-slate-200" />
+          <span className="ml-2 h-2 w-16 rounded bg-white/10" />
         </div>
-        <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4 py-6 sm:px-5 sm:py-7">
-          <p className="text-xs font-bold leading-snug text-slate-900 sm:text-sm">
+        <div className="bg-gradient-to-br from-white/[0.02] via-blue-400/10 to-indigo-400/10 px-4 py-6 sm:px-5 sm:py-7">
+          <p className="text-xs font-bold leading-snug text-white sm:text-sm">
             Build Your Business Online
           </p>
           <button
@@ -51,10 +51,10 @@ function WebGraphic() {
             Get Started
           </button>
         </div>
-        <div className="grid grid-cols-3 gap-2 border-t border-slate-100 bg-white p-2.5">
-          <div className="h-9 rounded-lg bg-slate-100" />
-          <div className="h-9 rounded-lg bg-blue-50" />
-          <div className="h-9 rounded-lg bg-violet-50" />
+        <div className="grid grid-cols-3 gap-2 border-t border-white/[0.06] bg-white/[0.035] p-2.5">
+          <div className="h-9 rounded-lg bg-white/[0.05]" />
+          <div className="h-9 rounded-lg bg-blue-400/10" />
+          <div className="h-9 rounded-lg bg-violet-400/10" />
         </div>
       </div>
 
@@ -77,9 +77,9 @@ function WebGraphic() {
       </div>
 
       {/* Analytics overview — front layer, bottom right */}
-      <div className="absolute bottom-0 right-0 z-20 min-w-[7rem] rounded-xl border border-slate-100 bg-white p-3 shadow-[0_12px_32px_rgba(15,23,42,0.14)] sm:min-w-[7.5rem]">
-        <p className="text-[10px] font-medium text-slate-500">Analytics Overview</p>
-        <p className="text-lg font-bold leading-tight text-slate-900">24.8K</p>
+      <div className="absolute bottom-0 right-0 z-20 min-w-[7rem] rounded-xl border border-white/[0.06] bg-white/[0.035] p-3 shadow-[0_12px_32px_rgba(15,23,42,0.14)] sm:min-w-[7.5rem]">
+        <p className="text-[10px] font-medium text-white/50">Analytics Overview</p>
+        <p className="text-lg font-bold leading-tight text-white">24.8K</p>
         <svg viewBox="0 0 72 24" className="mt-1 h-5 w-full">
           <polyline
             points="0,18 12,14 24,16 36,10 48,12 60,8 72,10"
@@ -98,7 +98,7 @@ function PhoneShell({ children, className }: { children: ReactNode; className?: 
   return (
     <div className={`overflow-hidden rounded-[16px] border-[2.5px] border-slate-800 bg-slate-900 shadow-[0_12px_32px_rgba(15,23,42,0.2)] ${className ?? ""}`}>
       <div className="mx-auto mt-1 h-0.5 w-8 rounded-full bg-slate-600" />
-      <div className="bg-white">{children}</div>
+      <div className="bg-white/[0.035]">{children}</div>
     </div>
   );
 }
@@ -109,7 +109,7 @@ function MobileGraphic() {
       {/* Main phone — dark dashboard, tilted right */}
       <PhoneShell className="absolute right-0 top-0 z-10 w-[50%] rotate-[5deg] sm:w-[48%]">
         <div className="bg-gradient-to-b from-[#0f172a] to-[#1e293b] p-3 sm:p-3.5">
-          <p className="text-[9px] text-slate-400 sm:text-[10px]">Total Revenue</p>
+          <p className="text-[9px] text-white/40 sm:text-[10px]">Total Revenue</p>
           <p className="text-base font-bold leading-tight text-white sm:text-lg">$24,568.00</p>
           <svg viewBox="0 0 100 36" className="my-2 h-10 w-full sm:h-11">
             <polyline
@@ -124,7 +124,7 @@ function MobileGraphic() {
             {["Home", "Orders", "Stats", "Profile"].map((tab) => (
               <div key={tab} className="text-center">
                 <div className="mx-auto mb-0.5 h-4 w-4 rounded-md bg-blue-500/30" />
-                <span className="text-[6px] text-slate-500 sm:text-[7px]">{tab}</span>
+                <span className="text-[6px] text-white/50 sm:text-[7px]">{tab}</span>
               </div>
             ))}
           </div>
@@ -132,7 +132,7 @@ function MobileGraphic() {
       </PhoneShell>
 
       {/* Bar chart card — floats left, tilted */}
-      <div className="absolute left-0 top-8 z-20 w-[44%] -rotate-[5deg] rounded-xl border border-slate-100 bg-white p-3 shadow-[0_12px_32px_rgba(15,23,42,0.14)] sm:top-10">
+      <div className="absolute left-0 top-8 z-20 w-[44%] -rotate-[5deg] rounded-xl border border-white/[0.06] bg-white/[0.035] p-3 shadow-[0_12px_32px_rgba(15,23,42,0.14)] sm:top-10">
         <div className="flex h-14 items-end gap-1 sm:h-16">
           {[45, 70, 55, 85, 60].map((h, i) => (
             <div key={i} className="flex-1 rounded-t bg-blue-500" style={{ height: `${h}%` }} />
@@ -141,13 +141,13 @@ function MobileGraphic() {
         <svg viewBox="0 0 80 20" className="mt-1.5 h-4 w-full">
           <polyline points="0,14 20,10 40,12 60,6 80,8" fill="none" stroke="#3b82f6" strokeWidth="1.5" />
         </svg>
-        <p className="mt-1 text-[11px] font-bold text-emerald-600 sm:text-xs">+18.3%</p>
+        <p className="mt-1 text-[11px] font-bold text-emerald-300 sm:text-xs">+18.3%</p>
       </div>
 
       {/* Stat card — bottom center */}
-      <div className="absolute bottom-2 left-[18%] z-30 rounded-xl border border-slate-100 bg-white px-3 py-2 shadow-[0_10px_28px_rgba(15,23,42,0.12)] sm:bottom-4">
-        <p className="text-sm font-bold text-slate-900">8,450</p>
-        <p className="text-[11px] font-semibold text-emerald-600 sm:text-xs">+12.4%</p>
+      <div className="absolute bottom-2 left-[18%] z-30 rounded-xl border border-white/[0.06] bg-white/[0.035] px-3 py-2 shadow-[0_10px_28px_rgba(15,23,42,0.12)] sm:bottom-4">
+        <p className="text-sm font-bold text-white">8,450</p>
+        <p className="text-[11px] font-semibold text-emerald-300 sm:text-xs">+12.4%</p>
       </div>
     </div>
   );
@@ -188,23 +188,23 @@ function FrontendGraphic() {
       </div>
 
       {/* Dashboard — right, gap separated */}
-      <div className="flex min-w-0 flex-1 flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
-        <div className="flex items-center gap-1 border-b border-slate-100 bg-slate-50 px-2.5 py-1.5">
+      <div className="flex min-w-0 flex-1 flex-col overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.035] shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+        <div className="flex items-center gap-1 border-b border-white/[0.06] bg-white/[0.025] px-2.5 py-1.5">
           <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
           <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
         </div>
         <div className="flex flex-1 gap-2 p-2.5">
-          <div className="w-6 shrink-0 space-y-1 rounded bg-slate-100 p-1">
+          <div className="w-6 shrink-0 space-y-1 rounded bg-white/[0.05] p-1">
             {[1, 2, 3, 4, 5, 6].map((n) => (
-              <div key={n} className="h-1.5 rounded bg-slate-200" />
+              <div key={n} className="h-1.5 rounded bg-white/10" />
             ))}
           </div>
           <div className="flex min-w-0 flex-1 flex-col gap-2">
             <div className="grid grid-cols-3 gap-1.5">
-              <div className="h-8 rounded-lg bg-blue-50" />
-              <div className="h-8 rounded-lg bg-violet-50" />
-              <div className="h-8 rounded-lg bg-emerald-50" />
+              <div className="h-8 rounded-lg bg-blue-400/10" />
+              <div className="h-8 rounded-lg bg-violet-400/10" />
+              <div className="h-8 rounded-lg bg-emerald-400/10" />
             </div>
             <div className="flex flex-1 items-end gap-1">
               {[45, 70, 55, 85, 60, 75, 50].map((h, i) => (
@@ -238,17 +238,17 @@ function BackendGraphic() {
       </div>
       <div className="flex min-w-0 flex-1 flex-col gap-2">
         <div className="flex flex-1 flex-col justify-center rounded-xl bg-[#1e293b] p-3 font-mono text-[8px] leading-relaxed shadow-[0_8px_24px_rgba(15,23,42,0.18)] sm:text-[9px]">
-          <p className="text-[9px] font-semibold text-slate-400 sm:text-[10px]">Response</p>
+          <p className="text-[9px] font-semibold text-white/40 sm:text-[10px]">Response</p>
           <p className="text-emerald-400">GET /api/users</p>
           <p className="text-sky-400">200 OK</p>
-          <p className="mt-1 text-slate-500">{"{"}</p>
+          <p className="mt-1 text-white/50">{"{"}</p>
           <p className="pl-2 text-violet-300">&quot;users&quot;: 1240,</p>
           <p className="pl-2 text-violet-300">&quot;status&quot;: &quot;success&quot;</p>
-          <p className="text-slate-500">{"}"}</p>
+          <p className="text-white/50">{"}"}</p>
         </div>
-        <div className="flex items-center justify-center gap-1.5 self-center rounded-full border border-emerald-200 bg-white px-3 py-1 shadow-sm">
+        <div className="flex items-center justify-center gap-1.5 self-center rounded-full border border-emerald-400/25 bg-white/[0.035] px-3 py-1 shadow-sm">
           <span className="h-2 w-2 rounded-full bg-emerald-500" />
-          <span className="text-[9px] font-semibold text-slate-700 sm:text-[10px]">Server Healthy</span>
+          <span className="text-[9px] font-semibold text-white/80 sm:text-[10px]">Server Healthy</span>
         </div>
       </div>
     </div>
@@ -258,30 +258,30 @@ function BackendGraphic() {
 function UiuxGraphic() {
   return (
     <div className={ROOT} aria-hidden>
-      <div className="flex h-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
-        <div className="flex w-8 shrink-0 flex-col gap-1 border-r border-slate-200 bg-white p-1.5">
+      <div className="flex h-full overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.025] shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+        <div className="flex w-8 shrink-0 flex-col gap-1 border-r border-white/[0.09] bg-white/[0.035] p-1.5">
           {["↖", "✎", "T", "□", "○"].map((t) => (
-            <div key={t} className="flex h-5 w-5 items-center justify-center rounded bg-slate-50 text-[8px] text-slate-500">{t}</div>
+            <div key={t} className="flex h-5 w-5 items-center justify-center rounded bg-white/[0.025] text-[8px] text-white/50">{t}</div>
           ))}
         </div>
         <div className="flex flex-1 items-center justify-center gap-2 p-2">
           {[0, 1, 2].map((i) => (
-            <div key={i} className="w-[28%] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-              <div className={`h-10 ${i === 1 ? "bg-pink-100" : "bg-violet-50"}`} />
+            <div key={i} className="w-[28%] overflow-hidden rounded-lg border border-white/[0.09] bg-white/[0.035] shadow-sm">
+              <div className={`h-10 ${i === 1 ? "bg-pink-400/10" : "bg-violet-400/10"}`} />
               <div className="space-y-1 p-1.5">
-                <div className="h-1 rounded bg-slate-200" />
-                <div className="h-1 w-3/4 rounded bg-slate-100" />
-                <div className="h-1 w-1/2 rounded bg-slate-100" />
+                <div className="h-1 rounded bg-white/10" />
+                <div className="h-1 w-3/4 rounded bg-white/[0.05]" />
+                <div className="h-1 w-1/2 rounded bg-white/[0.05]" />
               </div>
             </div>
           ))}
         </div>
-        <div className="w-[22%] shrink-0 border-l border-slate-200 bg-white p-2">
-          <p className="text-[7px] font-semibold text-slate-600">Properties</p>
+        <div className="w-[22%] shrink-0 border-l border-white/[0.09] bg-white/[0.035] p-2">
+          <p className="text-[7px] font-semibold text-white/65">Properties</p>
           <div className="mt-2 space-y-1.5">
-            <div className="h-1.5 rounded bg-slate-200" />
-            <div className="h-1.5 w-3/4 rounded bg-slate-100" />
-            <div className="h-1.5 rounded bg-slate-200" />
+            <div className="h-1.5 rounded bg-white/10" />
+            <div className="h-1.5 w-3/4 rounded bg-white/[0.05]" />
+            <div className="h-1.5 rounded bg-white/10" />
           </div>
           <div className="mt-3 flex gap-0.5">
             {["A", "B", "C"].map((l) => (
@@ -304,15 +304,15 @@ function ProductGraphic() {
   ];
   return (
     <div className={`${ROOT} flex flex-col justify-center`} aria-hidden>
-      <p className="mb-3 text-[10px] font-bold text-slate-700 sm:text-xs">Product Roadmap</p>
+      <p className="mb-3 text-[10px] font-bold text-white/80 sm:text-xs">Product Roadmap</p>
       <div className="space-y-2.5">
         {phases.map((p, i) => (
           <div key={p.name} className="flex items-center gap-2">
-            <span className="w-14 shrink-0 text-[9px] font-semibold text-slate-600 sm:text-[10px]">{p.name}</span>
-            <div className="h-2 flex-1 rounded-full bg-slate-100">
+            <span className="w-14 shrink-0 text-[9px] font-semibold text-white/65 sm:text-[10px]">{p.name}</span>
+            <div className="h-2 flex-1 rounded-full bg-white/[0.05]">
               <div className={`h-full rounded-full ${p.color}`} style={{ width: p.w }} />
             </div>
-            <span className="text-[8px] font-bold text-slate-400">{i + 1}</span>
+            <span className="text-[8px] font-bold text-white/40">{i + 1}</span>
           </div>
         ))}
       </div>
@@ -331,13 +331,13 @@ function BusinessGraphic() {
   ];
   return (
     <div className={ROOT} aria-hidden>
-      <div className="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 bg-white p-3 shadow-[0_8px_24px_rgba(15,23,42,0.08)] sm:p-4">
-        <p className="text-[10px] font-bold text-slate-700 sm:text-xs">Business Overview</p>
+      <div className="flex h-full flex-col overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.035] p-3 shadow-[0_8px_24px_rgba(15,23,42,0.08)] sm:p-4">
+        <p className="text-[10px] font-bold text-white/80 sm:text-xs">Business Overview</p>
         <div className="mt-2 grid grid-cols-3 gap-2">
           {metrics.map((m) => (
-            <div key={m.label} className="rounded-lg border border-slate-100 bg-slate-50 p-2">
-              <p className="text-[8px] text-slate-500 sm:text-[9px]">{m.label}</p>
-              <p className="text-[11px] font-bold text-slate-900 sm:text-xs">{m.value}</p>
+            <div key={m.label} className="rounded-lg border border-white/[0.06] bg-white/[0.025] p-2">
+              <p className="text-[8px] text-white/50 sm:text-[9px]">{m.label}</p>
+              <p className="text-[11px] font-bold text-white sm:text-xs">{m.value}</p>
             </div>
           ))}
         </div>
@@ -370,10 +370,10 @@ function ProcessGraphic() {
           return (
             <div key={step.title} className="flex flex-1 items-start">
               <div className="flex flex-1 flex-col items-center px-0.5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white shadow-[0_2px_12px_rgba(15,23,42,0.08)] sm:h-14 sm:w-14">
-                  <Icon className="h-5 w-5 text-blue-600 sm:h-6 sm:w-6" strokeWidth={2} />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/[0.09] bg-white/[0.035] shadow-[0_2px_12px_rgba(15,23,42,0.08)] sm:h-14 sm:w-14">
+                  <Icon className="h-5 w-5 text-blue-300 sm:h-6 sm:w-6" strokeWidth={2} />
                 </div>
-                <p className="mt-3 max-w-[6.5rem] text-center text-sm font-semibold leading-snug text-slate-700 sm:max-w-[8rem] sm:text-[15px]">
+                <p className="mt-3 max-w-[6.5rem] text-center text-sm font-semibold leading-snug text-white/80 sm:max-w-[8rem] sm:text-[15px]">
                   {step.title}
                 </p>
               </div>

@@ -99,7 +99,7 @@ function CityCard({
       style={{ transform: `translateY(-${lift}px)` }}
     >
       <MapPin className="h-4 w-4 text-violet-500" strokeWidth={2} />
-      <p className="mt-1 text-[9px] font-bold text-slate-800 sm:text-[10px]">{name}</p>
+      <p className="mt-1 text-[9px] font-bold text-white sm:text-[10px]">{name}</p>
       <div className="mt-2 flex h-7 items-end gap-0.5">
         {bars.map((h, i) => (
           <span
@@ -133,10 +133,10 @@ export default function FranchiseDmHeroDashboard() {
           <div
             className={`${FDM_FLOAT_CARD} flex items-center gap-2.5 px-5 py-3.5 shadow-[0_8px_32px_rgba(124,58,237,0.15)]`}
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-50">
-              <Building2 className="h-5 w-5 text-violet-600" strokeWidth={2} />
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-400/10">
+              <Building2 className="h-5 w-5 text-violet-300" strokeWidth={2} />
             </span>
-            <span className="text-sm font-bold text-slate-800">Corporate HQ</span>
+            <span className="text-sm font-bold text-white">Corporate HQ</span>
           </div>
 
           <div

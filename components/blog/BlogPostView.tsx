@@ -18,7 +18,7 @@ type Props = {
 };
 
 const ARTICLE_BODY =
-  "article-body text-[16px] leading-[1.8] text-slate-700 [&_a]:font-semibold [&_a]:text-[#1570EF] [&_a]:underline-offset-2 hover:[&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-[#1570EF] [&_blockquote]:pl-4 [&_blockquote]:italic [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:uppercase [&_h2]:tracking-tight [&_h2]:text-slate-900 [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-slate-900 [&_img]:my-6 [&_img]:max-h-96 [&_img]:w-auto [&_img]:max-w-full [&_img]:rounded-lg [&_li]:mb-2 [&_li]:pl-1 [&_ol]:my-5 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mb-5 [&_p:last-child]:mb-0 [&_pre]:my-5 [&_pre]:overflow-x-auto [&_pre]:rounded-lg [&_pre]:bg-slate-900 [&_pre]:p-4 [&_pre]:text-sm [&_pre]:text-slate-100 [&_strong]:font-bold [&_strong]:text-slate-900 [&_ul]:my-5 [&_ul]:list-disc [&_ul]:pl-6";
+  "article-body text-[16px] leading-[1.8] text-white/80 [&_a]:font-semibold [&_a]:text-lux-champagne [&_a]:underline-offset-2 hover:[&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-lux-gold [&_blockquote]:pl-4 [&_blockquote]:italic [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:uppercase [&_h2]:tracking-tight [&_h2]:text-white [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-white [&_img]:my-6 [&_img]:max-h-96 [&_img]:w-auto [&_img]:max-w-full [&_img]:rounded-lg [&_li]:mb-2 [&_li]:pl-1 [&_ol]:my-5 [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mb-5 [&_p:last-child]:mb-0 [&_pre]:my-5 [&_pre]:overflow-x-auto [&_pre]:rounded-lg [&_pre]:bg-slate-900 [&_pre]:p-4 [&_pre]:text-sm [&_pre]:text-slate-100 [&_strong]:font-bold [&_strong]:text-white [&_ul]:my-5 [&_ul]:list-disc [&_ul]:pl-6";
 
 function timeAgo(iso: string | null) {
   if (!iso) return "";
@@ -39,17 +39,17 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
   const commentCount = comments.length;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-transparent">
       <div className={`${BLOG_SECTION} py-6 sm:py-8`}>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] lg:gap-8 xl:gap-10">
           {/* Main column */}
           <main className="min-w-0">
             {/* Top meta */}
-            <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wide text-white/50">
               {post.categories?.[0] ? (
                 <Link
                   href={`/blog?categoryId=${post.categories[0].id}`}
-                  className="text-[#1570EF] hover:underline"
+                  className="text-lux-champagne hover:underline"
                 >
                   {post.categories[0].name}
                 </Link>
@@ -73,12 +73,12 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
             </div>
 
             {/* Title */}
-            <h1 className="mt-4 text-[clamp(1.5rem,3.5vw,2.35rem)] font-bold uppercase leading-[1.12] tracking-tight text-slate-900">
+            <h1 className="mt-4 text-[clamp(1.5rem,3.5vw,2.35rem)] font-bold uppercase leading-[1.12] tracking-tight text-white">
               {post.title}
             </h1>
 
             {/* Author + share row */}
-            <div className="mt-5 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-5">
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.09] pb-5">
               <div className="flex items-center gap-3">
                 {authorAvatar ? (
                   <Image
@@ -90,15 +90,15 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
                     unoptimized
                   />
                 ) : (
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.05] text-white/65">
                     <User className="h-5 w-5" />
                   </span>
                 )}
                 <div>
-                  <p className="text-sm font-bold text-slate-900">
+                  <p className="text-sm font-bold text-white">
                     {post.author?.name ?? "BrandMarketing"}
                   </p>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-white/50">
                     {post.publishDate ? timeAgo(post.publishDate) : "Recently published"}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
 
             {/* Hero image — full width of main column */}
             {hero ? (
-              <figure className="mt-6 overflow-hidden rounded-lg bg-slate-100">
+              <figure className="mt-6 overflow-hidden rounded-lg bg-white/[0.05]">
                 <div className="relative aspect-[16/9] w-full sm:aspect-[2/1]">
                   <Image
                     src={hero}
@@ -125,19 +125,19 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
 
             {/* Excerpt lead */}
             {post.excerpt ? (
-              <p className="mt-6 text-[17px] leading-relaxed text-slate-700">{post.excerpt}</p>
+              <p className="mt-6 text-[17px] leading-relaxed text-white/80">{post.excerpt}</p>
             ) : null}
 
             {/* Related quick links */}
             {related.length > 0 ? (
-              <div className="mt-6 border-l-4 border-[#1570EF] bg-slate-50 py-3 pl-4 pr-3">
-                <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Related</p>
+              <div className="mt-6 border-l-4 border-lux-gold bg-white/[0.025] py-3 pl-4 pr-3">
+                <p className="text-xs font-bold uppercase tracking-wide text-white/50">Related</p>
                 <ul className="mt-2 space-y-1">
                   {related.slice(0, 3).map((item) => (
                     <li key={item.id}>
                       <Link
                         href={`/blog/${item.slug}`}
-                        className="text-sm font-semibold text-[#1570EF] hover:underline"
+                        className="text-sm font-semibold text-lux-champagne hover:underline"
                       >
                         {item.title}
                       </Link>
@@ -155,20 +155,20 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
                   dangerouslySetInnerHTML={{ __html: formattedContent }}
                 />
               ) : (
-                <p className="text-slate-500">No content available.</p>
+                <p className="text-white/50">No content available.</p>
               )}
             </div>
 
             {/* Tags */}
             {(post.categories?.length || post.tags?.length) ? (
-              <div className="mt-10 border-t border-slate-200 pt-6">
-                <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Topics</p>
+              <div className="mt-10 border-t border-white/[0.09] pt-6">
+                <p className="text-xs font-bold uppercase tracking-wide text-white/50">Topics</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {post.categories?.map((cat) => (
                     <Link
                       key={cat.id}
                       href={`/blog?categoryId=${cat.id}`}
-                      className="rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:border-blue-300 hover:text-[#1570EF]"
+                      className="rounded-full border border-white/[0.09] px-3 py-1 text-xs font-semibold text-white/80 transition hover:border-lux-gold/50 hover:text-lux-champagne"
                     >
                       {cat.name}
                     </Link>
@@ -177,7 +177,7 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
                     <Link
                       key={tag.id}
                       href={`/blog?tagId=${tag.id}`}
-                      className="rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold text-slate-600 transition hover:border-blue-300 hover:text-[#1570EF]"
+                      className="rounded-full border border-white/[0.09] px-3 py-1 text-xs font-semibold text-white/65 transition hover:border-lux-gold/50 hover:text-lux-champagne"
                     >
                       #{tag.name}
                     </Link>
@@ -187,8 +187,8 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
             ) : null}
 
             {/* Author bio */}
-            <div className="mt-8 border-t border-slate-200 pt-6">
-              <p className="text-xs font-bold uppercase tracking-wide text-slate-500">About the author</p>
+            <div className="mt-8 border-t border-white/[0.09] pt-6">
+              <p className="text-xs font-bold uppercase tracking-wide text-white/50">About the author</p>
               <div className="mt-3 flex items-start gap-4">
                 {authorAvatar ? (
                   <Image
@@ -200,13 +200,13 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
                     unoptimized
                   />
                 ) : (
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-600">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/[0.05] text-white/65">
                     <User className="h-5 w-5" />
                   </span>
                 )}
                 <div>
-                  <p className="font-bold text-slate-900">{post.author?.name ?? "BrandMarketing"}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                  <p className="font-bold text-white">{post.author?.name ?? "BrandMarketing"}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-white/65">
                     {post.author?.bio ??
                       "Digital marketing insights and growth strategies from the BrandMarketing team."}
                   </p>
@@ -215,7 +215,7 @@ export default function BlogPostView({ post, related, recent, comments }: Props)
             </div>
 
             {BLOG_COMMENTS_ENABLED ? (
-              <div className="mt-10 border-t border-slate-200 pt-8">
+              <div className="mt-10 border-t border-white/[0.09] pt-8">
                 <BlogComments slug={post.slug} initialComments={comments} />
               </div>
             ) : null}

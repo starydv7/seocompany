@@ -116,7 +116,7 @@ export const enterpriseDmServices = {
         "Scale organic growth with technical SEO, content strategy, and authority building.",
       icon: Search,
       color: "#8b5cf6",
-      bg: "#f5f3ff",
+      bg: "rgba(139, 92, 246, 0.14)",
     },
     {
       title: "Enterprise Local SEO",
@@ -125,7 +125,7 @@ export const enterpriseDmServices = {
         "Dominate local search across multiple locations, regions, and markets.",
       icon: MapPin,
       color: "#22c55e",
-      bg: "#f0fdf4",
+      bg: "rgba(34, 197, 94, 0.14)",
     },
     {
       title: "Enterprise PPC Management",
@@ -134,7 +134,7 @@ export const enterpriseDmServices = {
         "High-performing ad campaigns that drive quality leads and revenue.",
       icon: MousePointerClick,
       color: "#3b82f6",
-      bg: "#eff6ff",
+      bg: "rgba(59, 130, 246, 0.14)",
     },
     {
       title: "Enterprise Content Marketing",
@@ -143,7 +143,7 @@ export const enterpriseDmServices = {
         "Strategic content that builds authority, engages audiences, and drives results.",
       icon: FileText,
       color: "#f59e0b",
-      bg: "#fffbeb",
+      bg: "rgba(245, 158, 11, 0.14)",
     },
     {
       title: "Enterprise Web Design & Development",
@@ -152,7 +152,7 @@ export const enterpriseDmServices = {
         "High-performance websites built for scale, speed, and conversions.",
       icon: Monitor,
       color: "#6366f1",
-      bg: "#eef2ff",
+      bg: "rgba(99, 102, 241, 0.14)",
     },
     {
       title: "Enterprise Marketing Automation",
@@ -161,7 +161,7 @@ export const enterpriseDmServices = {
         "Automate workflows, nurture leads, and personalize at enterprise scale.",
       icon: Settings,
       color: "#10b981",
-      bg: "#ecfdf5",
+      bg: "rgba(16, 185, 129, 0.14)",
     },
     {
       title: "Enterprise Analytics & Reporting",
@@ -170,7 +170,7 @@ export const enterpriseDmServices = {
         "Advanced analytics, attribution, and reporting for data-driven decisions.",
       icon: PieChart,
       color: "#14b8a6",
-      bg: "#f0fdfa",
+      bg: "rgba(20, 184, 166, 0.14)",
     },
     {
       title: "Omnichannel Marketing",
@@ -179,7 +179,7 @@ export const enterpriseDmServices = {
         "Integrated campaigns across all channels for a seamless customer experience.",
       icon: Share2,
       color: "#ec4899",
-      bg: "#fdf2f8",
+      bg: "rgba(236, 72, 153, 0.14)",
     },
   ],
 } as const;
@@ -193,7 +193,7 @@ export const enterpriseDmChallenges = {
         "Fragmented touchpoints across channels create inconsistent journeys that erode trust and reduce conversions.",
       icon: Users,
       color: "#8b5cf6",
-      bg: "#f5f3ff",
+      bg: "rgba(139, 92, 246, 0.14)",
     },
     {
       title: "Slow Campaign Execution",
@@ -201,7 +201,7 @@ export const enterpriseDmChallenges = {
         "Complex approval workflows and siloed teams delay launches, missing critical market windows.",
       icon: Zap,
       color: "#f59e0b",
-      bg: "#fffbeb",
+      bg: "rgba(245, 158, 11, 0.14)",
     },
     {
       title: "Poor Attribution",
@@ -209,7 +209,7 @@ export const enterpriseDmChallenges = {
         "Inability to connect marketing spend to revenue makes budget decisions guesswork at scale.",
       icon: Target,
       color: "#3b82f6",
-      bg: "#eff6ff",
+      bg: "rgba(59, 130, 246, 0.14)",
     },
     {
       title: "SEO Scalability",
@@ -217,7 +217,7 @@ export const enterpriseDmChallenges = {
         "Enterprise sites with thousands of pages need systematic SEO governance, not one-off fixes.",
       icon: Search,
       color: "#22c55e",
-      bg: "#f0fdf4",
+      bg: "rgba(34, 197, 94, 0.14)",
     },
     {
       title: "Data Silos",
@@ -225,7 +225,7 @@ export const enterpriseDmChallenges = {
         "Disconnected analytics, CRM, and ad platforms prevent a unified view of performance.",
       icon: Database,
       color: "#14b8a6",
-      bg: "#f0fdfa",
+      bg: "rgba(20, 184, 166, 0.14)",
     },
     {
       title: "Wasted Ad Spend",
@@ -233,7 +233,7 @@ export const enterpriseDmChallenges = {
         "Poor targeting, overlap, and lack of optimization drain budgets without measurable ROI.",
       icon: DollarSign,
       color: "#ec4899",
-      bg: "#fdf2f8",
+      bg: "rgba(236, 72, 153, 0.14)",
     },
   ],
 } as const;

@@ -22,7 +22,7 @@ export default function EnterpriseDmWhySection() {
   } = enterpriseDmWhy;
 
   return (
-    <section className={`${EDM_SECTION} bg-white ${EDM_SECTION_PY}`}>
+    <section className={`${EDM_SECTION} bg-transparent ${EDM_SECTION_PY}`}>
       <div className="grid w-full max-w-none grid-cols-1 items-start gap-12 lg:grid-cols-3 lg:gap-x-[3%]">
         {/* Left */}
         <Reveal className="min-w-0">
@@ -33,7 +33,7 @@ export default function EnterpriseDmWhySection() {
           <p className={`mt-4 w-full ${EDM_BODY}`}>{lead}</p>
           <ul className="mt-7 space-y-3.5">
             {checklist.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm text-slate-600">
+              <li key={item} className="flex items-center gap-3 text-sm text-white/65">
                 <span
                   className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
                   style={{ backgroundColor: EDM_BLUE }}
@@ -56,13 +56,13 @@ export default function EnterpriseDmWhySection() {
 
         {/* Right challenges */}
         <Reveal delay={0.08} className="min-w-0">
-          <div className="rounded-2xl border border-slate-100 bg-white px-6 py-6 shadow-[0_6px_28px_rgba(15,23,42,0.07)] sm:px-7 sm:py-7">
-            <h3 className="text-base font-bold text-[#0f172a] sm:text-lg">
+          <div className="rounded-2xl border border-white/[0.06] bg-white/[0.035] px-6 py-6 shadow-[0_6px_28px_rgba(15,23,42,0.07)] sm:px-7 sm:py-7">
+            <h3 className="text-base font-bold text-white sm:text-lg">
               {challengesTitle}
             </h3>
             <ul className="mt-6 space-y-3.5">
               {challenges.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-[13px] text-slate-600">
+                <li key={item} className="flex items-center gap-3 text-[13px] text-white/65">
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 shadow-sm">
                     <X className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
                   </span>

@@ -13,7 +13,7 @@ export default function FranchiseDmProcessSection() {
   const { tag, title, steps } = franchiseDmProcess;
 
   return (
-    <section className={`${FDM_SECTION} bg-slate-50/70 ${FDM_SECTION_PY}`}>
+    <section className={`${FDM_SECTION} bg-transparent ${FDM_SECTION_PY}`}>
       <Reveal className="w-full text-center">
         <p className={FDM_TAG}>{tag}</p>
         <h2 className={`mt-5 ${FDM_SECTION_TITLE}`}>{title}</h2>
@@ -22,7 +22,7 @@ export default function FranchiseDmProcessSection() {
       <div className="relative mt-14 w-full">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-[8%] right-[8%] top-7 hidden border-t-2 border-dashed border-violet-200 lg:block"
+          className="pointer-events-none absolute left-[8%] right-[8%] top-7 hidden border-t-2 border-dashed border-violet-400/25 lg:block"
         />
 
         <div className="grid w-full grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -37,11 +37,11 @@ export default function FranchiseDmProcessSection() {
                   >
                     {step.num}
                   </span>
-                  <span className="mt-5 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50">
-                    <Icon className="h-5 w-5 text-violet-600" strokeWidth={2} />
+                  <span className="mt-5 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10">
+                    <Icon className="h-5 w-5 text-violet-300" strokeWidth={2} />
                   </span>
-                  <p className="mt-4 text-base font-bold text-slate-900">{step.title}</p>
-                  <p className="mt-2 w-full text-sm leading-relaxed text-slate-500">
+                  <p className="mt-4 text-base font-bold text-white">{step.title}</p>
+                  <p className="mt-2 w-full text-sm leading-relaxed text-white/50">
                     {step.desc}
                   </p>
                 </div>

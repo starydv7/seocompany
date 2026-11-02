@@ -13,7 +13,7 @@ import { webDevSolutions } from "@/lib/design-and-development/web-dev-content";
 
 export default function WebDevSolutionsSection() {
   return (
-    <section className={`${WDM_SECTION} ${WDM_SECTION_PY} bg-[#FAFAF8]`}>
+    <section className={`${WDM_SECTION} ${WDM_SECTION_PY} bg-transparent`}>
       <div className="mb-8 text-center sm:mb-10">
         <h2 className={WDM_FONT_SECTION}>{webDevSolutions.title}</h2>
         <p className={`mx-auto mt-3 max-w-2xl ${WDM_FONT_LEAD}`}>{webDevSolutions.subtitle}</p>

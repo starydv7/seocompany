@@ -15,10 +15,10 @@ export default function EnterpriseDmServicesSection() {
   const { title, intro, items } = enterpriseDmServices;
 
   return (
-    <section id="enterprise-services" className={`${EDM_SECTION} bg-[#f8fafc] ${EDM_SECTION_PY}`}>
+    <section id="enterprise-services" className={`${EDM_SECTION} bg-transparent ${EDM_SECTION_PY}`}>
       <Reveal className="w-full text-center">
         <h2 className={EDM_SECTION_TITLE}>{title}</h2>
-        <p className={`mt-3 ${EDM_BODY} text-slate-500`}>{intro}</p>
+        <p className={`mt-3 ${EDM_BODY} text-white/50`}>{intro}</p>
       </Reveal>
 
       <div className="mt-10 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-4">
@@ -26,7 +26,7 @@ export default function EnterpriseDmServicesSection() {
           const Icon = service.icon as LucideIcon;
           return (
             <Reveal key={service.title} delay={i * 0.03} className="h-full">
-              <article className="flex h-full items-start gap-4 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_2px_14px_rgba(15,23,42,0.04)] transition hover:shadow-[0_8px_28px_rgba(15,23,42,0.08)]">
+              <article className="flex h-full items-start gap-4 rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-[0_2px_14px_rgba(15,23,42,0.04)] transition hover:shadow-[0_8px_28px_rgba(15,23,42,0.08)]">
                 <span
                   className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl"
                   style={{ backgroundColor: service.bg }}
@@ -39,17 +39,17 @@ export default function EnterpriseDmServicesSection() {
                 </span>
 
                 <div className="flex min-w-0 flex-1 flex-col">
-                  <h3 className="text-sm font-bold leading-snug text-[#0f172a]">
+                  <h3 className="text-sm font-bold leading-snug text-white">
                     {service.title}
                   </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500">
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-white/50">
                     {service.description}
                   </p>
                   <Link
                     href={HUBSPOT_MEETING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 transition hover:text-blue-800"
+                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-300 transition hover:text-blue-300"
                   >
                     Explore {service.shortName}
                     <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />

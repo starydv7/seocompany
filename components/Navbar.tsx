@@ -35,6 +35,7 @@ import {
   Layers,
   GitBranch,
   Settings,
+  Tag,
 } from "lucide-react";
 
 type MegaSection = { title: string; href: string; items: string[] };
@@ -42,30 +43,30 @@ type MegaSection = { title: string; href: string; items: string[] };
 type MegaIconStyle = { icon: LucideIcon; box: string };
 
 const MEGA_SECTION_ICONS: Record<string, MegaIconStyle> = {
-  "Digital Marketing": { icon: Megaphone, box: "bg-violet-100 text-violet-600" },
-  "Pay Per Click (PPC) Marketing": { icon: MousePointerClick, box: "bg-violet-100 text-violet-600" },
-  "Link Building": { icon: Link2, box: "bg-violet-100 text-violet-600" },
-  "eCommerce Marketing": { icon: ShoppingCart, box: "bg-emerald-100 text-emerald-600" },
-  "Search Engine Optimization (SEO)": { icon: Search, box: "bg-blue-100 text-blue-600" },
-  "Social Media Marketing": { icon: Share2, box: "bg-pink-100 text-pink-600" },
-  "Online Marketplace Marketing": { icon: ShoppingBag, box: "bg-orange-100 text-orange-600" },
-  "CRO Services": { icon: BarChart3, box: "bg-teal-100 text-teal-600" },
-  "Social Media Advertising": { icon: Radio, box: "bg-blue-100 text-blue-600" },
-  "Content Marketing": { icon: PenLine, box: "bg-orange-100 text-orange-600" },
-  "Software Development": { icon: Code2, box: "bg-indigo-100 text-indigo-600" },
-  "Web Development": { icon: Globe, box: "bg-sky-100 text-sky-600" },
-  "Mobile App Development": { icon: Smartphone, box: "bg-violet-100 text-violet-600" },
-  "Frontend Development": { icon: LayoutGrid, box: "bg-blue-100 text-blue-600" },
-  "Backend Development": { icon: Server, box: "bg-slate-200 text-slate-700" },
-  "UI/UX Design": { icon: Palette, box: "bg-pink-100 text-pink-600" },
-  "Product Engineering": { icon: Layers, box: "bg-teal-100 text-teal-600" },
-  "Business Solutions": { icon: Briefcase, box: "bg-amber-100 text-amber-700" },
-  "Development Process": { icon: GitBranch, box: "bg-emerald-100 text-emerald-600" },
+  "Digital Marketing": { icon: Megaphone, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
+  "Pay Per Click (PPC) Marketing": { icon: MousePointerClick, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
+  "Link Building": { icon: Link2, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
+  "eCommerce Marketing": { icon: ShoppingCart, box: "bg-emerald-400/15 text-emerald-300 ring-1 ring-inset ring-emerald-300/20" },
+  "Search Engine Optimization (SEO)": { icon: Search, box: "bg-blue-400/15 text-blue-300 ring-1 ring-inset ring-blue-300/20" },
+  "Social Media Marketing": { icon: Share2, box: "bg-pink-400/15 text-pink-300 ring-1 ring-inset ring-pink-300/20" },
+  "Online Marketplace Marketing": { icon: ShoppingBag, box: "bg-orange-400/15 text-orange-300 ring-1 ring-inset ring-orange-300/20" },
+  "CRO Services": { icon: BarChart3, box: "bg-teal-400/15 text-teal-300 ring-1 ring-inset ring-teal-300/20" },
+  "Social Media Advertising": { icon: Radio, box: "bg-blue-400/15 text-blue-300 ring-1 ring-inset ring-blue-300/20" },
+  "Content Marketing": { icon: PenLine, box: "bg-orange-400/15 text-orange-300 ring-1 ring-inset ring-orange-300/20" },
+  "Software Development": { icon: Code2, box: "bg-indigo-400/15 text-indigo-300 ring-1 ring-inset ring-indigo-300/20" },
+  "Web Development": { icon: Globe, box: "bg-sky-400/15 text-sky-300 ring-1 ring-inset ring-sky-300/20" },
+  "Mobile App Development": { icon: Smartphone, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
+  "Frontend Development": { icon: LayoutGrid, box: "bg-blue-400/15 text-blue-300 ring-1 ring-inset ring-blue-300/20" },
+  "Backend Development": { icon: Server, box: "bg-white/10 text-white/80 ring-1 ring-inset ring-white/15" },
+  "UI/UX Design": { icon: Palette, box: "bg-pink-400/15 text-pink-300 ring-1 ring-inset ring-pink-300/20" },
+  "Product Engineering": { icon: Layers, box: "bg-teal-400/15 text-teal-300 ring-1 ring-inset ring-teal-300/20" },
+  "Business Solutions": { icon: Briefcase, box: "bg-amber-400/15 text-amber-300 ring-1 ring-inset ring-amber-300/20" },
+  "Development Process": { icon: GitBranch, box: "bg-emerald-400/15 text-emerald-300 ring-1 ring-inset ring-emerald-300/20" },
 };
 
 const DEFAULT_MEGA_ICON: MegaIconStyle = {
   icon: Settings,
-  box: "bg-slate-100 text-slate-600",
+  box: "bg-slate-400/15 text-slate-300 ring-1 ring-inset ring-slate-300/20",
 };
 
 function MegaSectionIcon({
@@ -191,6 +192,7 @@ const designMegaSections: MegaSection[] = [
 ];
 
 const primaryNavItems: { label: string; href: string }[] = [
+  { label: "Pricing", href: "/pricing" },
   { label: "About Us", href: "/about" },
   { label: "Blog", href: "/blog" },
 ];
@@ -203,6 +205,7 @@ const navIconByHref: Record<string, LucideIcon> = {
   "/digital-marketing-services/link-building": Briefcase,
   "/digital-marketing-services/online-marketplace-marketing": Briefcase,
   "/branding": LayoutGrid,
+  "/pricing": Tag,
   "/about": Users,
   "/blog": PenLine,
 };
@@ -234,7 +237,7 @@ function MobileMenuRow({
     >
       <span
         className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${
-          isActive ? "bg-[#2a2f5a] text-[#B8B3FF]" : "bg-[#1e2140] text-[#9B94FF]"
+          isActive ? "bg-lux-gold text-lux-ink" : "bg-white/[0.06] text-lux-gold"
         }`}
       >
         <Icon className="h-4 w-4" strokeWidth={1.75} />
@@ -337,35 +340,38 @@ type MegaAsideContent = {
 
 function MegaAside({ content }: { content: MegaAsideContent }) {
   return (
-    <aside className="hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-[#f4f8f1] via-white to-[#f3faee] p-4 xl:block">
-      <h3 className="text-3xl font-semibold leading-tight text-slate-900">
+    <aside className="relative hidden overflow-hidden rounded-[24px] p-6 xl:block" style={{ background: "radial-gradient(120% 80% at 0% 0%, rgba(221,191,93,0.18), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015))", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)" }}>
+      <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-gold">BrandMarketing</p>
+      <h3 className="mt-3 font-serif text-[2.1rem] leading-[1.02] text-white">
         {content.headingTop}
         <br />
         {content.headingMiddle}
         <br />
-        <span className="text-[#50b444]">{content.headingHighlight}</span>
+        <span className="lux-gold-text italic">{content.headingHighlight}</span>
       </h3>
-      <p className="mt-3 text-sm text-slate-600">{content.description}</p>
-      <div className="mt-4 space-y-2">
+      <p className="mt-3 text-sm leading-relaxed text-white/60">{content.description}</p>
+      <div className="mt-5 space-y-2.5">
         <input
           type="text"
           placeholder={content.inputPlaceholder}
-          className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-700 outline-none focus:border-[#50b444]"
+          className="lux-input px-4 py-2.5 text-sm"
           readOnly
         />
-        <button
-          type="button"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#ddbf5d]/30 transition hover:brightness-105"
+        <a
+          href={HUBSPOT_MEETING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="lux-cta inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold"
         >
           {content.ctaLabel}
-          <ArrowRight className="h-4 w-4" />
-        </button>
+          <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+        </a>
       </div>
-      <div className="mt-4 grid grid-cols-3 gap-3 text-center">
+      <div className="mt-5 grid grid-cols-3 gap-2 text-center">
         {content.stats.map((stat) => (
-          <div key={stat.label} className="rounded-lg border border-slate-200 bg-white p-2">
-            <p className="text-lg font-bold text-[#50b444]">{stat.value}</p>
-            <p className="text-[10px] text-slate-500">{stat.label}</p>
+          <div key={stat.label} className="rounded-xl bg-white/[0.03] p-2.5 ring-1 ring-inset ring-white/[0.07]">
+            <p className="font-serif text-2xl leading-none text-white">{stat.value}</p>
+            <p className="mt-1 text-[10px] leading-tight text-white/45">{stat.label}</p>
           </div>
         ))}
       </div>
@@ -482,23 +488,25 @@ function MegaMenu({
         top: `${metrics.top}px`,
         maxHeight: metrics.maxHeight ? `${metrics.maxHeight}px` : undefined,
       }}
-      className={`fixed left-0 right-0 z-40 hidden overflow-y-auto overscroll-contain border-b border-slate-200 bg-white p-4 shadow-2xl transition-opacity duration-150 md:block [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
-        open ? "visible opacity-100" : "invisible opacity-0"
+      className={`fixed left-0 right-0 z-40 hidden overflow-y-auto overscroll-contain border-b border-white/10 bg-[#06070d]/95 p-4 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] backdrop-blur-2xl transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] lg:block [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+        open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
       }`}
     >
-        <div className="mx-auto grid w-full grid-cols-1 gap-4 overflow-visible xl:grid-cols-[300px,1fr]">
+        <div aria-hidden className="lux-hairline absolute inset-x-0 top-0" />
+        <div className="mx-auto grid w-full grid-cols-1 gap-4 overflow-visible xl:grid-cols-[320px,1fr]">
           <MegaAside content={asideContent} />
-          <section className="rounded-2xl border border-slate-200 bg-slate-50/30 p-3">
-            <div className="mb-3 rounded-lg border border-slate-200 bg-white px-3 py-2">
+          <section className="rounded-[24px] bg-white/[0.02] p-4 ring-1 ring-inset ring-white/[0.07]">
+            <div className="mb-4 flex items-center gap-3 rounded-xl bg-white/[0.04] px-4 py-2.5 ring-1 ring-inset ring-white/10">
+              <Search className="h-4 w-4 text-white/40" aria-hidden />
               <input
                 type="text"
                 placeholder={searchPlaceholder}
-                className="w-full text-sm text-slate-700 outline-none placeholder:text-slate-400"
+                className="w-full bg-transparent text-sm text-white outline-none placeholder:text-white/40"
                 readOnly
               />
             </div>
             <div
-              className="columns-2 bg-white px-2 py-2 sm:columns-3 lg:columns-4"
+              className="columns-2 px-2 py-2 sm:columns-3 lg:columns-4"
               style={{ columnGap: "clamp(12px, 1.2vw, 32px)" }}
             >
               {sections.map((section) => (
@@ -508,24 +516,24 @@ function MegaMenu({
                 >
                   <Link
                     href={section.href}
-                    className="mb-2 inline-flex items-center gap-2.5 font-semibold text-slate-800 transition hover:text-[#50b444]"
+                    className="mb-2 inline-flex items-center gap-2.5 font-semibold text-white transition hover:text-lux-gold"
                     style={{ fontSize: "clamp(12px, 0.85vw, 14px)" }}
                   >
                     <MegaSectionIcon title={section.title} />
                     <span className="leading-snug">{section.title}</span>
                   </Link>
                   <ul
-                    className="list-disc space-y-1 pl-4 marker:text-slate-700"
+                    className="list-disc space-y-1 pl-4 marker:text-lux-gold/50"
                     style={{ fontSize: "clamp(11px, 0.78vw, 12.5px)" }}
                   >
                     {section.items.map((item) => {
                       const itemHref = hrefForMegaItem(item, section.href);
                       return (
-                        <li key={item} className="leading-[1.3] text-slate-600">
+                        <li key={item} className="leading-[1.3] text-white/55">
                           {itemHref ? (
                             <Link
                               href={itemHref}
-                              className="transition hover:text-[#50b444]"
+                              className="transition hover:text-lux-champagne"
                             >
                               {item}
                             </Link>
@@ -557,12 +565,16 @@ function MegaMenu({
         aria-controls={panelId}
         onFocus={openMenu}
         onBlur={scheduleClose}
-        className={`inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-1.5 py-3 text-[clamp(10px,1.15vw,14px)] leading-none text-slate-50 transition hover:bg-white/10 hover:text-white lg:px-2 xl:px-3 ${
-          isActive || open ? "bg-white/15 text-white" : ""
+        data-active={isActive || open}
+        className={`lux-underline inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-1.5 py-3 text-[clamp(10px,1.1vw,14px)] leading-none tracking-[0.01em] transition hover:text-white lg:px-2 xl:px-3 ${
+          isActive || open ? "text-white" : "text-white/70"
         }`}
       >
         {label}
-        <ChevronDown className="h-4 w-4" aria-hidden />
+        <ChevronDown
+          className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180 text-lux-gold" : ""}`}
+          aria-hidden
+        />
       </Link>
       {mounted && createPortal(panel, document.body)}
     </div>
@@ -637,7 +649,7 @@ export default function Navbar() {
     mounted &&
     createPortal(
       <div
-        className={`fixed inset-0 z-[200] md:hidden ${open ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`fixed inset-0 z-[200] lg:hidden ${open ? "pointer-events-auto" : "pointer-events-none"}`}
         aria-hidden={!open}
       >
         {/* Dimmed backdrop, tap to close */}
@@ -655,7 +667,7 @@ export default function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
-          className={`absolute right-2 top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[min(100%,calc(100%-1rem))] min-w-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0B0D17] shadow-2xl transition-transform duration-300 ease-out ${
+          className={`absolute right-2 top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[min(100%,calc(100%-1rem))] min-w-0 flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#06070d]/95 shadow-2xl backdrop-blur-2xl transition-transform duration-300 ease-out ${
             open ? "translate-x-0" : "translate-x-[calc(100%+0.75rem)]"
           }`}
         >
@@ -704,7 +716,7 @@ export default function Navbar() {
               >
                 <p
                   id={group.id}
-                  className="px-1 pb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-slate-500"
+                  className="px-1 pb-2 font-mono text-[10px] uppercase tracking-[0.3em] text-lux-gold/80"
                 >
                   {group.heading}
                 </p>
@@ -739,13 +751,13 @@ export default function Navbar() {
           </nav>
 
           {/* Sticky footer: CTA + contact */}
-          <div className="shrink-0 border-t border-white/[0.08] bg-[#0B0D17] px-3 pb-3 pt-3 sm:px-4">
+          <div className="shrink-0 border-t border-white/[0.08] bg-[#06070d] px-3 pb-3 pt-3 sm:px-4">
             <Link
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={close}
-              className="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#ddbf5d] to-[#50b444] py-3 text-[14px] font-bold text-white transition hover:brightness-105"
+              className="lux-cta flex w-full items-center justify-center rounded-full py-3.5 text-[14px] font-semibold"
             >
               Book a Call
             </Link>
@@ -753,7 +765,7 @@ export default function Navbar() {
               or email us at{" "}
               <a
                 href="mailto:connect@brandmarketing.digital"
-                className="font-medium text-[#5B8DEF] hover:underline"
+                className="font-medium text-lux-gold hover:underline"
               >
                 connect@brandmarketing.digital
               </a>
@@ -774,13 +786,18 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-slate-900 transition-all ${
-          elevated ? "shadow-lg" : ""
+        className={`sticky top-0 z-50 transition-[background-color,box-shadow] duration-500 ${
+          elevated
+            ? "bg-[#06070d]/80 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)] backdrop-blur-2xl backdrop-saturate-150"
+            : "bg-[#06070d]"
         }`}
       >
+        <div aria-hidden className="lux-hairline absolute inset-x-0 bottom-0 opacity-60" />
         <nav
           id="site-navbar"
-          className="relative mx-auto flex w-full items-center justify-between gap-2 py-2 pl-2 pr-4 sm:pr-6 lg:pr-8"
+          className={`relative mx-auto flex w-full items-center justify-between gap-2 pl-2 pr-4 transition-[padding] duration-500 sm:pr-6 lg:pr-8 ${
+            elevated ? "py-1" : "py-2"
+          }`}
         >
           <Link href="/" className="flex shrink-0 items-center leading-none">
             <Image
@@ -793,7 +810,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="ml-auto hidden items-center gap-0.5 pr-1 font-medium text-slate-50 md:flex lg:gap-1 xl:gap-2">
+          <div className="ml-auto hidden items-center gap-1 pr-2 font-medium lg:flex xl:gap-2 xl:pr-4">
             <MegaMenu
               label="Digital Marketing Services"
               href="/digital-marketing-services"
@@ -818,16 +835,11 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative whitespace-nowrap rounded-lg px-1.5 py-2 text-[clamp(10px,1.15vw,14px)] leading-none text-slate-50 transition hover:bg-white/10 hover:text-white lg:px-2 xl:px-3 ${
-                  isActivePath(pathname, item.href) ? "bg-white/15 text-white" : ""
+                data-active={isActivePath(pathname, item.href)}
+                className={`lux-underline whitespace-nowrap rounded-lg px-1.5 py-3 text-[clamp(10px,1.1vw,14px)] leading-none tracking-[0.01em] transition hover:text-white lg:px-2 xl:px-3 ${
+                  isActivePath(pathname, item.href) ? "text-white" : "text-white/70"
                 }`}
               >
-                {isActivePath(pathname, item.href) ? (
-                  <span
-                    aria-hidden
-                    className="absolute -bottom-1 left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600"
-                  />
-                ) : null}
                 {item.label}
               </Link>
             ))}
@@ -837,15 +849,16 @@ export default function Navbar() {
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden whitespace-nowrap rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-2.5 py-2 text-[11px] font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105 md:inline-flex lg:px-3 lg:text-xs xl:px-4 xl:text-sm"
+            className="lux-cta hidden items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-xs font-semibold lg:inline-flex xl:px-5 xl:py-2.5 xl:text-sm"
           >
             Book a Call
+            <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
           </Link>
 
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-slate-50 transition hover:bg-white/10 hover:text-white md:hidden"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-slate-50 transition hover:bg-white/10 hover:text-white lg:hidden"
             aria-label="Open menu"
             aria-controls="mobile-nav-drawer"
             aria-expanded={open}

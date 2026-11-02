@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import { localProblemsSection } from "@/lib/seo/local-content";
 
 const CARD =
-  "flex h-full w-full min-w-0 flex-col items-center rounded-xl border border-slate-200/80 bg-white px-3 py-5 text-center sm:px-4 sm:py-6";
+  "flex h-full w-full min-w-0 flex-col items-center rounded-xl border border-white/[0.09] bg-white/[0.035] px-3 py-5 text-center sm:px-4 sm:py-6";
 
 const VISUAL_BOX = "flex w-full min-h-[8.75rem] flex-1 flex-col justify-end pt-4 sm:min-h-[9.25rem]";
 
@@ -13,7 +13,7 @@ function BeforeAfterColumns({ children }: { children: ReactNode }) {
 
 function ColumnLabel({ children }: { children: ReactNode }) {
   return (
-    <p className="mb-2 text-center text-[10px] font-medium tracking-wide text-slate-400">{children}</p>
+    <p className="mb-2 text-center text-[10px] font-medium tracking-wide text-white/40">{children}</p>
   );
 }
 
@@ -22,8 +22,8 @@ function MapSnippet({ position, variant }: { position: string; variant: "before"
   const roadColor = variant === "before" ? "#cbd5e1" : "#86efac";
   return (
     <div className="flex min-w-0 flex-col items-center">
-      <div className="w-full overflow-hidden rounded-md border border-slate-200/90 bg-slate-50/90">
-        <div className="relative aspect-[4/3] w-full bg-gradient-to-b from-slate-100 to-slate-200/70">
+      <div className="w-full overflow-hidden rounded-md border border-white/[0.09] bg-white/[0.025]">
+        <div className="relative aspect-[4/3] w-full bg-gradient-to-b from-white/[0.02] to-white/10">
           <svg viewBox="0 0 88 64" className="h-full w-full" preserveAspectRatio="xMidYMid meet" aria-hidden>
             <path d="M0 48 Q22 34 44 42 T88 38 L88 64 L0 64 Z" fill="#e8ecf1" />
             <path d="M8 52 L28 44 L48 48 L72 44" stroke={roadColor} strokeWidth="1.2" fill="none" />
@@ -32,7 +32,7 @@ function MapSnippet({ position, variant }: { position: string; variant: "before"
           </svg>
         </div>
       </div>
-      <p className="mt-1.5 text-[10px] font-semibold text-slate-700">{position}</p>
+      <p className="mt-1.5 text-[10px] font-semibold text-white/80">{position}</p>
     </div>
   );
 }
@@ -46,14 +46,14 @@ function CompareList({
   after: string[];
   afterTone: "blue" | "green";
 }) {
-  const afterClass = afterTone === "green" ? "text-emerald-600" : "text-blue-600";
+  const afterClass = afterTone === "green" ? "text-emerald-300" : "text-blue-300";
   return (
     <BeforeAfterColumns>
       <div className="flex min-w-0 flex-col items-center px-0.5">
         <ColumnLabel>Before</ColumnLabel>
         <ul className="w-full space-y-1.5 text-center">
           {before.map((item) => (
-            <li key={item} className="text-[10px] font-semibold leading-snug text-violet-600 sm:text-[11px]">
+            <li key={item} className="text-[10px] font-semibold leading-snug text-violet-300 sm:text-[11px]">
               {item}
             </li>
           ))}
@@ -167,7 +167,7 @@ function MiniGauge({ variant }: { variant: "before" | "after" }) {
       </div>
       <p
         className={`mt-1 text-center text-[9px] font-semibold leading-tight sm:text-[10px] ${
-          variant === "before" ? "text-red-500" : "text-teal-600"
+          variant === "before" ? "text-red-500" : "text-teal-300"
         }`}
       >
         {variant === "before" ? "Low Authority" : "High Authority"}
@@ -216,14 +216,14 @@ function ProblemVisual({ type }: { type: (typeof localProblemsSection.problems)[
         <BeforeAfterColumns>
           <div className="flex flex-col items-center">
             <ColumnLabel>Before</ColumnLabel>
-            <p className="text-xl font-bold leading-none text-slate-800">3.2</p>
+            <p className="text-xl font-bold leading-none text-white">3.2</p>
             <div className="mt-1.5">
               <StarRow filled={3} size="sm" />
             </div>
           </div>
           <div className="flex flex-col items-center">
             <ColumnLabel>After</ColumnLabel>
-            <p className="text-xl font-bold leading-none text-emerald-600">4.8</p>
+            <p className="text-xl font-bold leading-none text-emerald-300">4.8</p>
             <div className="mt-1.5">
               <StarRow filled={5} size="sm" greenAfter />
             </div>
@@ -252,10 +252,10 @@ export default function LocalProblemsSection() {
   return (
     <section className="w-full px-[2%] py-14 sm:py-16 lg:py-20">
       <Reveal className="mx-auto max-w-3xl text-center">
-        <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-[1.75rem]">
+        <h2 className="text-xl font-bold tracking-tight text-white sm:text-2xl lg:text-[1.75rem]">
           {title}
         </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-[15px]">
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/50 sm:text-[15px]">
           {subtitle}
         </p>
       </Reveal>
@@ -264,10 +264,10 @@ export default function LocalProblemsSection() {
         {problems.map((problem, i) => (
           <Reveal key={problem.title} delay={i * 0.04} className="h-full min-w-0">
             <article className={CARD}>
-              <h3 className="w-full px-1 text-[13px] font-bold leading-snug text-slate-900 sm:text-sm lg:text-[14px]">
+              <h3 className="w-full px-1 text-[13px] font-bold leading-snug text-white sm:text-sm lg:text-[14px]">
                 {problem.title}
               </h3>
-              <p className="mx-auto mt-2 flex min-h-[2.75rem] w-full items-center justify-center px-1 text-[11px] leading-snug text-slate-500 sm:min-h-[3rem] sm:text-xs">
+              <p className="mx-auto mt-2 flex min-h-[2.75rem] w-full items-center justify-center px-1 text-[11px] leading-snug text-white/50 sm:min-h-[3rem] sm:text-xs">
                 {problem.subtitle}
               </p>
               <div className={VISUAL_BOX}>

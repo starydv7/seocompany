@@ -28,30 +28,30 @@ function ComparisonCard({
 
   return (
     <div
-      className={`overflow-hidden rounded-2xl border bg-white shadow-[0_4px_24px_rgba(15,23,42,0.05)] ${
-        isNeg ? "border-rose-200/90" : "border-emerald-200/90"
+      className={`overflow-hidden rounded-2xl border bg-white/[0.035] shadow-[0_4px_24px_rgba(15,23,42,0.05)] ${
+        isNeg ? "border-rose-400/25" : "border-emerald-400/25"
       }`}
     >
       <p
         className={`px-5 py-3.5 text-sm font-bold ${
-          isNeg ? "border-b border-rose-100 bg-rose-50/70 text-rose-600" : "border-b border-emerald-100 bg-emerald-50/70 text-emerald-600"
+          isNeg ? "border-b border-rose-400/25 bg-rose-400/10 text-rose-300" : "border-b border-emerald-400/25 bg-emerald-400/10 text-emerald-300"
         }`}
       >
         {title}
       </p>
-      <ul className="divide-y divide-slate-100">
+      <ul className="divide-y divide-white/[0.06]">
         {items.map((item) => {
           const Icon = item.icon;
           return (
             <li key={item.label} className="flex items-center gap-3 px-5 py-3.5">
               <span
                 className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
-                  isNeg ? "bg-rose-50 text-rose-500" : "bg-emerald-50 text-emerald-600"
+                  isNeg ? "bg-rose-400/10 text-rose-500" : "bg-emerald-400/10 text-emerald-300"
                 }`}
               >
                 <Icon className="h-[18px] w-[18px]" strokeWidth={2} />
               </span>
-              <span className="min-w-0 flex-1 text-sm font-medium text-slate-800">
+              <span className="min-w-0 flex-1 text-sm font-medium text-white">
                 {item.label}
               </span>
               <Arrow
@@ -82,12 +82,12 @@ export default function TechnicalIssuesSection() {
   }));
 
   return (
-    <section className={`${TECH_SECTION} bg-white py-12 sm:py-16`}>
+    <section className={`${TECH_SECTION} bg-transparent py-12 sm:py-16`}>
       <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,34%)_minmax(0,1fr)] lg:gap-x-[5%] xl:gap-x-[6%]">
         <div className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <Reveal>
             <h2 className={`text-[1.65rem] leading-[1.2] sm:text-[1.85rem] lg:text-[2rem] ${TECH_TITLE}`}>
-              <span className="block text-slate-900">{titleBefore}</span>
+              <span className="block text-white">{titleBefore}</span>
               <span className={`block ${TECH_GRADIENT}`}>{titleAccent}</span>
             </h2>
             <p className={`mt-5 max-w-md leading-relaxed ${TECH_BODY}`}>{subtitle}</p>

@@ -17,16 +17,16 @@ export default function SocialMediaFaqSection({ items }: { items: FaqItem[] }) {
         const index = offset + i;
         const isOpen = openIndex === index;
         return (
-          <div key={item.q} className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+          <div key={item.q} className="overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.035]">
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               className="flex w-full items-center justify-between gap-4 px-4 py-3.5 text-left sm:px-5 sm:py-4"
               aria-expanded={isOpen}
             >
-              <span className="text-sm font-semibold text-slate-900">{item.q}</span>
+              <span className="text-sm font-semibold text-white">{item.q}</span>
               <Plus
-                className={`h-4 w-4 shrink-0 text-violet-600 transition-transform ${isOpen ? "rotate-45" : ""}`}
+                className={`h-4 w-4 shrink-0 text-violet-300 transition-transform ${isOpen ? "rotate-45" : ""}`}
                 strokeWidth={2.5}
               />
             </button>
@@ -36,7 +36,7 @@ export default function SocialMediaFaqSection({ items }: { items: FaqItem[] }) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-4 pb-4 text-sm leading-relaxed text-slate-600 sm:px-5">{item.a}</p>
+                <p className="px-4 pb-4 text-sm leading-relaxed text-white/65 sm:px-5">{item.a}</p>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { softwareDevFinalCta } from "@/lib/design-and-development/software-dev-c
 
 export default function SoftwareDevFinalCta() {
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#7c3aed] via-[#6d28d9] to-[#4338ca] p-[2%] sm:rounded-3xl sm:p-8 lg:p-10">
+    <div className="relative overflow-hidden rounded-2xl lux-banner p-[2%] sm:rounded-3xl sm:p-8 lg:p-10">
       <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-1/4 h-32 w-32 rounded-full bg-indigo-400/15 blur-2xl" />
 
@@ -26,7 +26,7 @@ export default function SoftwareDevFinalCta() {
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold text-violet-700 shadow-[0_8px_24px_rgba(0,0,0,0.15)] transition hover:bg-violet-50"
+            className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold lux-cta text-lux-ink"
           >
             {softwareDevFinalCta.cta}
             <ArrowRight className="h-4 w-4" />

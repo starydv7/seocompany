@@ -41,11 +41,11 @@ export default function SocialMediaLanding() {
   return (
     <div className={`min-h-screen w-full max-w-none ${SMM_BG}`}>
       {/* Hero */}
-      <section className={`relative ${SMM_SECTION} bg-white pb-16 pt-10 sm:pb-20 sm:pt-12 lg:pt-14`}>
+      <section className={`relative ${SMM_SECTION} bg-transparent pb-16 pt-10 sm:pb-20 sm:pt-12 lg:pt-14`}>
         <div className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-12 xl:gap-16">
           <div className="min-w-0 space-y-5 lg:max-w-xl">
             <span className={SMM_TAG}>
-              <Clock className="h-3.5 w-3.5 text-violet-600" strokeWidth={2} />
+              <Clock className="h-3.5 w-3.5 text-violet-300" strokeWidth={2} />
               {socialMediaHero.badge}
             </span>
             <h1 className={SMM_HERO_TITLE}>
@@ -55,7 +55,7 @@ export default function SocialMediaLanding() {
             <p className={SMM_BODY}>{socialMediaHero.subtitle}</p>
             <ul className="space-y-2.5">
               {socialMediaHero.items.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-[#374151]">
+                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-white/80">
                   <span className={SMM_CHECK}>
                     <Check className="h-3 w-3 text-white" strokeWidth={3} />
                   </span>
@@ -70,8 +70,8 @@ export default function SocialMediaLanding() {
               </Link>
               <Link href="#services" className={`${SMM_BTN_OUTLINE} gap-2`}>
                 {socialMediaHero.ctaSecondary}
-                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-200 bg-violet-50">
-                  <Play className="h-3 w-3 fill-violet-600 text-violet-600" />
+                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-400/25 bg-violet-400/10">
+                  <Play className="h-3 w-3 fill-violet-600 text-violet-300" />
                 </span>
               </Link>
             </div>
@@ -93,15 +93,15 @@ export default function SocialMediaLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <article key={item.title} className={SMM_SERVICE_CARD}>
-                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#F5F3FF]">
-                  <Icon className="h-5 w-5 text-violet-600" strokeWidth={1.75} />
+                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white/[0.035]">
+                  <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
                 </span>
                 <h3 className={SMM_CARD_TITLE}>{item.title}</h3>
                 <p className={`mt-2 ${SMM_CARD_BODY}`}>{item.desc}</p>
                 <ul className="mt-4 space-y-2">
                   {item.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-[#6B7280]">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-violet-600" strokeWidth={2.5} />
+                    <li key={b} className="flex items-start gap-2 text-sm text-white/60">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-violet-300" strokeWidth={2.5} />
                       {b}
                     </li>
                   ))}
@@ -113,7 +113,7 @@ export default function SocialMediaLanding() {
       </section>
 
       {/* Process */}
-      <section className={`${SMM_SECTION} ${SMM_SECTION_PY} bg-white`}>
+      <section className={`${SMM_SECTION} ${SMM_SECTION_PY} bg-transparent`}>
         <div className="mb-10 text-center">
           <h2 className={SMM_SECTION_TITLE}>{socialMediaProcess.title}</h2>
           <p className={`mx-auto mt-3 max-w-xl ${SMM_BODY}`}>{socialMediaProcess.subtitle}</p>
@@ -121,7 +121,7 @@ export default function SocialMediaLanding() {
         <div className="relative overflow-x-auto pb-2">
           <div className="relative flex min-w-[52rem] items-start justify-between sm:min-w-0">
             <div
-              className="absolute left-[8%] right-[8%] top-[1.35rem] hidden border-t border-dashed border-violet-200 sm:block"
+              className="absolute left-[8%] right-[8%] top-[1.35rem] hidden border-t border-dashed border-violet-400/25 sm:block"
               aria-hidden
             />
             {socialMediaProcess.steps.map((step) => {
@@ -131,12 +131,12 @@ export default function SocialMediaLanding() {
                   key={step.title}
                   className="relative z-10 flex w-[16%] min-w-[5rem] flex-col items-center text-center"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F5F3FF] sm:h-12 sm:w-12">
-                    <Icon className="h-5 w-5 text-violet-600" strokeWidth={1.75} />
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.035] sm:h-12 sm:w-12">
+                    <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
                   </span>
-                  <p className="mt-2 text-xs font-bold text-violet-600 sm:text-sm">{step.num}</p>
-                  <p className="mt-1 text-xs font-bold text-[#111827] sm:text-sm">{step.title}</p>
-                  <p className="mt-1 text-[10px] leading-snug text-[#6B7280] sm:text-[11px]">{step.desc}</p>
+                  <p className="mt-2 text-xs font-bold text-violet-300 sm:text-sm">{step.num}</p>
+                  <p className="mt-1 text-xs font-bold text-white sm:text-sm">{step.title}</p>
+                  <p className="mt-1 text-[10px] leading-snug text-white/60 sm:text-[11px]">{step.desc}</p>
                 </div>
               );
             })}
@@ -155,7 +155,7 @@ export default function SocialMediaLanding() {
             return (
               <div key={name} className={SMM_PLATFORM_CARD}>
                 {Icon ? <Icon className="h-10 w-10" /> : null}
-                <span className="text-center text-xs font-semibold text-[#374151]">{name}</span>
+                <span className="text-center text-xs font-semibold text-white/80">{name}</span>
               </div>
             );
           })}
@@ -163,7 +163,7 @@ export default function SocialMediaLanding() {
       </section>
 
       {/* Why Choose + Industries */}
-      <section className={`${SMM_SECTION} ${SMM_SECTION_PY} bg-white`}>
+      <section className={`${SMM_SECTION} ${SMM_SECTION_PY} bg-transparent`}>
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
           <div className={SMM_PANEL_CARD}>
             <h2 className={`mb-6 ${SMM_SECTION_TITLE_LEFT}`}>{socialMediaWhyChoose.title}</h2>
@@ -172,12 +172,12 @@ export default function SocialMediaLanding() {
                 const Icon = item.icon as LucideIcon;
                 return (
                   <div key={item.label} className="flex items-start gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#F5F3FF]">
-                      <Icon className="h-5 w-5 text-violet-600" strokeWidth={1.75} />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/[0.035]">
+                      <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
                     </span>
                     <div>
-                      <p className="text-sm font-bold text-[#111827]">{item.label}</p>
-                      <p className="mt-0.5 text-xs leading-relaxed text-[#6B7280]">{item.desc}</p>
+                      <p className="text-sm font-bold text-white">{item.label}</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-white/60">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -192,8 +192,8 @@ export default function SocialMediaLanding() {
                 const Icon = ind.icon as LucideIcon;
                 return (
                   <div key={ind.label} className="flex flex-col items-center gap-2 text-center">
-                    <Icon className="h-6 w-6 text-violet-600" strokeWidth={1.75} />
-                    <span className="text-[11px] font-semibold text-[#374151] sm:text-xs">{ind.label}</span>
+                    <Icon className="h-6 w-6 text-violet-300" strokeWidth={1.75} />
+                    <span className="text-[11px] font-semibold text-white/80 sm:text-xs">{ind.label}</span>
                   </div>
                 );
               })}
@@ -212,7 +212,7 @@ export default function SocialMediaLanding() {
 
       {/* CTA */}
       <section className={`${SMM_SECTION} ${SMM_PAD} pb-14 sm:pb-16`}>
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#4338ca] via-[#6366F1] to-[#5850EC] p-6 sm:rounded-3xl sm:p-8 lg:p-10">
+        <div className="relative overflow-hidden rounded-2xl lux-banner p-6 sm:rounded-3xl sm:p-8 lg:p-10">
           <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" aria-hidden />
           <div className="relative grid items-center gap-6 lg:grid-cols-[1fr_auto] lg:gap-10">
             <div className="space-y-2 text-center lg:text-left">
@@ -226,7 +226,7 @@ export default function SocialMediaLanding() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-violet-700 shadow-lg transition hover:bg-violet-50"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-cta text-lux-ink"
               >
                 {socialMediaFinalCta.ctaPrimary}
                 <ArrowRight className="h-4 w-4" />
@@ -235,7 +235,7 @@ export default function SocialMediaLanding() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
               >
                 {socialMediaFinalCta.ctaSecondary}
                 <Calendar className="h-4 w-4" />

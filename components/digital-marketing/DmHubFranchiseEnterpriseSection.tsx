@@ -24,7 +24,7 @@ function FranchiseMapVisual() {
   return (
     <div className={`${HUB_CARD} overflow-hidden p-0`}>
       <div className="grid grid-cols-1 sm:grid-cols-[1fr_42%]">
-        <div className="relative min-h-[10rem] bg-slate-50 p-3 sm:min-h-[12rem]">
+        <div className="relative min-h-[10rem] bg-white/[0.025] p-3 sm:min-h-[12rem]">
           <svg viewBox="0 0 400 200" className="h-full w-full" aria-hidden>
             <defs>
               <pattern id="dm-hub-dots" width="8" height="8" patternUnits="userSpaceOnUse">
@@ -41,18 +41,18 @@ function FranchiseMapVisual() {
             ))}
           </svg>
         </div>
-        <div className="border-t border-slate-100 p-3 sm:border-l sm:border-t-0 sm:p-4">
-          <p className="text-[10px] font-bold uppercase tracking-wide text-slate-500 sm:text-[11px]">
+        <div className="border-t border-white/[0.06] p-3 sm:border-l sm:border-t-0 sm:p-4">
+          <p className="text-[10px] font-bold uppercase tracking-wide text-white/50 sm:text-[11px]">
             All Locations
           </p>
           <ul className="mt-2 space-y-2">
             {dmHubFranchise.locations.map((loc) => (
               <li key={loc.name} className="flex items-center justify-between gap-2">
-                <span className="flex min-w-0 items-center gap-1.5 text-[10px] text-slate-700 sm:text-[11px]">
+                <span className="flex min-w-0 items-center gap-1.5 text-[10px] text-white/80 sm:text-[11px]">
                   <MapPin className="h-3 w-3 shrink-0 text-violet-500" strokeWidth={2} />
                   <span className="truncate">{loc.name}</span>
                 </span>
-                <span className="shrink-0 rounded-full bg-emerald-50 px-2 py-0.5 text-[9px] font-semibold text-emerald-700">
+                <span className="shrink-0 rounded-full bg-emerald-400/10 px-2 py-0.5 text-[9px] font-semibold text-emerald-300">
                   {loc.status}
                 </span>
               </li>
@@ -69,19 +69,19 @@ function EnterpriseWorkflowVisual() {
 
   return (
     <div className={`${HUB_CARD} p-4 sm:p-5`}>
-      <p className="text-sm font-bold text-slate-900">{workflowTitle}</p>
+      <p className="text-sm font-bold text-white">{workflowTitle}</p>
       <div className="relative mt-4 space-y-0">
         {workflowSteps.map((step, i) => (
           <div key={step} className="relative flex gap-3 pb-4 last:pb-0">
             {i < workflowSteps.length - 1 ? (
-              <div className="absolute left-[11px] top-6 h-[calc(100%-8px)] w-px bg-violet-200" aria-hidden />
+              <div className="absolute left-[11px] top-6 h-[calc(100%-8px)] w-px bg-violet-400/20" aria-hidden />
             ) : null}
             <span className="relative z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-600 text-[9px] font-bold text-white">
               {i + 1}
             </span>
             <div className="min-w-0 pt-0.5">
-              <p className="text-xs font-bold text-slate-800 sm:text-sm">{step}</p>
-              <p className="mt-0.5 text-[10px] text-slate-500 sm:text-[11px]">
+              <p className="text-xs font-bold text-white sm:text-sm">{step}</p>
+              <p className="mt-0.5 text-[10px] text-white/50 sm:text-[11px]">
                 {i === 0 && "Align goals, budgets, and KPIs across teams."}
                 {i === 1 && "Coordinate campaigns across brands and regions."}
                 {i === 2 && "Centralize data for unified reporting."}
@@ -100,7 +100,7 @@ function CheckList({ items }: { items: readonly string[] }) {
   return (
     <ul className="mt-5 space-y-2.5">
       {items.map((item) => (
-        <li key={item} className="flex items-start gap-2.5 text-sm text-slate-700">
+        <li key={item} className="flex items-start gap-2.5 text-sm text-white/80">
           <span className={HUB_CHECK}>
             <Check className="h-3 w-3 text-white" strokeWidth={3} />
           </span>

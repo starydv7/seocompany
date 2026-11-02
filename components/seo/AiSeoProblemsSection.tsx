@@ -10,7 +10,7 @@ export default function AiSeoProblemsSection() {
   return (
     <section className={FRANCHISE_SECTION}>
       <Reveal>
-        <div className="w-full rounded-2xl border border-slate-200/90 bg-white p-[2%] shadow-[0_2px_20px_rgba(15,23,42,0.04)]">
+        <div className="w-full rounded-2xl border border-white/[0.09] bg-white/[0.035] p-[2%] shadow-[0_2px_20px_rgba(15,23,42,0.04)]">
           <h2 className={`text-sm ${AI_LABEL_PURPLE} tracking-wide`}>{title}</h2>
           <div className="mt-6 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {items.map((item, i) => {
@@ -18,7 +18,7 @@ export default function AiSeoProblemsSection() {
               return (
                 <article
                   key={item.title}
-                  className="flex h-full min-h-[10.5rem] flex-col rounded-xl border border-slate-100 bg-white p-[2%] shadow-sm"
+                  className="flex h-full min-h-[10.5rem] flex-col rounded-xl border border-white/[0.06] bg-white/[0.035] p-[2%] shadow-sm"
                 >
                   <span
                     className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.iconBg}`}

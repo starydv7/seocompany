@@ -51,8 +51,8 @@ export default function CircularScore({
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-2xl font-bold leading-none text-indigo-700">{score}</span>
-        <span className="mt-0.5 text-[11px] font-medium text-slate-400">/{max}</span>
+        <span className="text-2xl font-bold leading-none text-indigo-300">{score}</span>
+        <span className="mt-0.5 text-[11px] font-medium text-white/40">/{max}</span>
       </div>
     </div>
   );

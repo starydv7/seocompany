@@ -34,7 +34,7 @@ export default function TechnicalSeoLanding() {
   } = technicalHero;
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-transparent text-white">
       <section
         className={`relative overflow-hidden ${TECH_HERO_BG} ${TECH_PAD} pb-16 pt-10 sm:pb-20 sm:pt-14`}
       >

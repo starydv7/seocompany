@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import {
+  ArrowRight,
   BarChart3,
   Brush,
   Code2,
@@ -15,6 +16,10 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import LuxBackdrop from "@/components/lux/LuxBackdrop";
+import LuxCard from "@/components/lux/LuxCard";
+import LuxPage, { LuxEyebrow, LuxPill } from "@/components/lux/LuxPage";
+import { LUX_ACCENTS, type LuxAccent } from "@/components/lux/accents";
 
 export const metadata: Metadata = {
   title: "About Us | BrandMarketing",
@@ -33,47 +38,12 @@ type AboutMember = {
   socials?: Partial<Record<SocialKey, string>>;
 };
 
-const SOCIAL_CONFIG: {
-  key: SocialKey;
-  label: string;
-  Icon: LucideIcon;
-  hoverClass: string;
-}[] = [
-  {
-    key: "linkedin",
-    label: "LinkedIn",
-    Icon: Linkedin,
-    hoverClass:
-      "hover:border-[#0a66c2]/60 hover:bg-[#0a66c2]/[0.06] hover:text-[#0a66c2]",
-  },
-  {
-    key: "github",
-    label: "GitHub",
-    Icon: Github,
-    hoverClass:
-      "hover:border-slate-800/70 hover:bg-slate-900/[0.06] hover:text-slate-900",
-  },
-  {
-    key: "leetcode",
-    label: "LeetCode",
-    Icon: Trophy,
-    hoverClass:
-      "hover:border-[#ffa116]/60 hover:bg-[#ffa116]/[0.08] hover:text-[#ffa116]",
-  },
-  {
-    key: "facebook",
-    label: "Facebook",
-    Icon: Facebook,
-    hoverClass:
-      "hover:border-[#1877f2]/60 hover:bg-[#1877f2]/[0.06] hover:text-[#1877f2]",
-  },
-  {
-    key: "instagram",
-    label: "Instagram",
-    Icon: Instagram,
-    hoverClass:
-      "hover:border-[#e1306c]/60 hover:bg-[#e1306c]/[0.06] hover:text-[#e1306c]",
-  },
+const SOCIAL_CONFIG: { key: SocialKey; label: string; Icon: LucideIcon }[] = [
+  { key: "linkedin", label: "LinkedIn", Icon: Linkedin },
+  { key: "github", label: "GitHub", Icon: Github },
+  { key: "leetcode", label: "LeetCode", Icon: Trophy },
+  { key: "facebook", label: "Facebook", Icon: Facebook },
+  { key: "instagram", label: "Instagram", Icon: Instagram },
 ];
 
 const members: AboutMember[] = [
@@ -143,146 +113,188 @@ const members: AboutMember[] = [
   },
 ];
 
-export default function AboutPage() {
-  const memberIcons = [Compass, BarChart3, Brush, Sparkles, Code2];
+const MEMBER_STYLE: { icon: LucideIcon; accent: LuxAccent }[] = [
+  { icon: Compass, accent: LUX_ACCENTS.gold },
+  { icon: BarChart3, accent: LUX_ACCENTS.sky },
+  { icon: Brush, accent: LUX_ACCENTS.rose },
+  { icon: Sparkles, accent: LUX_ACCENTS.violet },
+  { icon: Code2, accent: LUX_ACCENTS.emerald },
+];
 
-  return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.08),transparent_35%)]"
-      />
-      <div className="mx-auto w-full space-y-12">
-        <Reveal>
-          <header className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 shadow-xl shadow-sky-100/40 backdrop-blur sm:p-10">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-700">
-            <Sparkles className="h-3.5 w-3.5" />
-            Meet The Team
-          </div>
-          <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            The Minds Behind the Metrics
-          </h1>
-          <p className="mt-4 w-full text-sm text-slate-600 sm:text-base">
-            We are a collective of strategists, creators, and data analysts. While we each have our
-            own specialty, from color theory to keyword density, we&apos;re united by a single
-            obsession: <span className="font-semibold text-slate-900">Growth.</span>
-          </p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Strategy</p>
-              <p className="mt-1 text-sm font-semibold text-slate-800">Data led decision making</p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Creative</p>
-              <p className="mt-1 text-sm font-semibold text-slate-800">Strong identity and content</p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Execution</p>
-              <p className="mt-1 text-sm font-semibold text-slate-800">Fast systems for growth</p>
-            </div>
-          </div>
-          </header>
-        </Reveal>
+const PILLARS = [
+  { label: "Strategy", value: "Data led decision making" },
+  { label: "Creative", value: "Strong identity and content" },
+  { label: "Execution", value: "Fast systems for growth" },
+];
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {members.map((m, index) => {
-            const Icon = memberIcons[index % memberIcons.length];
-            return (
-              <Reveal key={m.name} delay={index * 0.06}>
-                <article className="group flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white/90 p-6 text-sm shadow-sm shadow-sky-50 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-100/60">
-                  <div className="mb-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500" />
-                  <div className="space-y-2">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-slate-50/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600">
-                      <Icon className="h-3.5 w-3.5 text-indigo-600" />
-                      {m.title}
-                    </div>
-                    <h2 className="text-lg font-semibold tracking-tight text-slate-900">{m.name}</h2>
-                    <p className="text-xs font-medium text-slate-600">{m.role}</p>
-                  </div>
-
-                  <blockquote className="mt-4 rounded-xl border border-slate-200 bg-gradient-to-br from-white to-sky-50 p-4 text-xs text-slate-700">
-                    “{m.quote}”
-                  </blockquote>
-
-                  <div className="mt-4 flex-1">
-                    <p className="text-sm leading-relaxed text-slate-700">{m.description}</p>
-                  </div>
-
-                  {(() => {
-                    const socials = m.socials;
-                    const links = socials
-                      ? SOCIAL_CONFIG.filter((s) => socials[s.key])
-                      : [];
-                    return (
-                      <div className="mt-5 flex h-9 items-center gap-3">
-                        {links.length > 0 ? (
-                          <>
-                            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                              Connect
-                            </span>
-                            <div className="flex items-center gap-2">
-                              {links.map(({ key, label, Icon, hoverClass }) => (
-                                <a
-                                  key={key}
-                                  href={socials![key]}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  aria-label={`${m.name} on ${label}`}
-                                  className={`flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition ${hoverClass}`}
-                                >
-                                  <Icon className="h-3.5 w-3.5" />
-                                </a>
-                              ))}
-                            </div>
-                          </>
-                        ) : null}
-                      </div>
-                    );
-                  })()}
-
-                  <div className="pt-5">
-                    <Link
-                      href={HUBSPOT_MEETING_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-4 py-2 text-xs font-semibold text-white shadow-md shadow-[#ddbf5d]/30 transition hover:brightness-105"
-                    >
-                      Work with us
-                    </Link>
-                  </div>
-                </article>
-              </Reveal>
-            );
-          })}
-        </div>
-
-        <Reveal delay={0.1}>
-          <section className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-sky-50/40 to-indigo-50/40 p-8 shadow-lg shadow-sky-100/40 sm:p-10">
-            <div className="w-full space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
-                Join Our Squad
-              </p>
-              <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
-                Think you have what it takes?
-              </h2>
-              <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
-                We’re always looking for ambitious talent to join our ranks. If you’re obsessed with
-                digital culture and results-driven marketing, we want to hear from you.
-              </p>
-              <div className="pt-3">
-                <Link
-                  href="/careers"
-                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-5 py-3 text-sm font-semibold text-white shadow-md shadow-[#ddbf5d]/30 transition hover:brightness-105"
-                >
-                  View Open Positions
-                </Link>
-              </div>
-            </div>
-          </section>
-        </Reveal>
-      </div>
-    </section>
-  );
+function initials(name: string) {
+  return name
+    .split(" ")
+    .filter(Boolean)
+    .map((part) => part[0])
+    .slice(0, 2)
+    .join("");
 }
 
+export default function AboutPage() {
+  return (
+    <LuxPage>
+      {/* Hero */}
+      <section className="relative isolate overflow-hidden px-4 pb-24 pt-16 sm:px-6 sm:pb-32 sm:pt-24 lg:px-8">
+        <LuxBackdrop />
+        <div className="relative mx-auto w-full max-w-7xl">
+          <Reveal>
+            <LuxPill>Meet the team</LuxPill>
+            <h1 className="mt-8 max-w-5xl text-[clamp(3rem,7.4vw,7rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-white">
+              The Minds Behind
+              <br />
+              <span className="lux-gold-text font-serif font-normal italic tracking-[-0.02em]">the Metrics</span>
+            </h1>
+            <p className="mt-8 max-w-2xl text-[clamp(1rem,1.35vw,1.2rem)] leading-relaxed text-white/65">
+              We are a collective of strategists, creators, and data analysts. While we each have our own specialty,
+              from color theory to keyword density, we&apos;re united by a single obsession:{" "}
+              <span className="font-serif text-[1.25em] italic text-lux-champagne">Growth.</span>
+            </p>
+          </Reveal>
 
+          <div className="mt-16 grid gap-4 sm:grid-cols-3">
+            {PILLARS.map((pillar, i) => (
+              <Reveal key={pillar.label} delay={0.08 * i}>
+                <div className="lux-panel flex items-center gap-5 px-6 py-5">
+                  <span className="font-serif text-4xl leading-none text-white/20">0{i + 1}</span>
+                  <div>
+                    <LuxEyebrow>{pillar.label}</LuxEyebrow>
+                    <p className="mt-1.5 text-sm font-medium text-white/85">{pillar.value}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="relative px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl">
+          <Reveal>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <LuxEyebrow>The collective</LuxEyebrow>
+                <h2 className="mt-4 font-serif text-[clamp(2.4rem,5vw,4.25rem)] leading-[1.02] text-white">
+                  Five specialists. <span className="lux-gold-text italic">One obsession.</span>
+                </h2>
+              </div>
+            </div>
+          </Reveal>
+
+          <div className="mt-14 grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-6">
+            {members.map((m, index) => {
+              const { icon: Icon, accent } = MEMBER_STYLE[index % MEMBER_STYLE.length];
+              const links = m.socials ? SOCIAL_CONFIG.filter((s) => m.socials![s.key]) : [];
+              return (
+                <Reveal
+                  key={m.name}
+                  delay={index * 0.06}
+                  className={`h-full lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""}`}
+                >
+                  <LuxCard as="article" accent={accent} className="flex h-full flex-col overflow-hidden p-7 sm:p-8">
+                    <span
+                      aria-hidden
+                      className="lux-outline-numeral pointer-events-none absolute -right-1 -top-6 select-none font-serif text-[7rem] leading-none"
+                    >
+                      0{index + 1}
+                    </span>
+
+                    <div className="flex items-center gap-4">
+                      <span className="lux-check flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl font-serif text-xl text-lux-ink">
+                        {initials(m.name)}
+                      </span>
+                      <span
+                        className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] ring-1 ring-inset ring-white/10"
+                        style={{ color: accent.from }}
+                      >
+                        <Icon className="h-3 w-3" />
+                        {m.title}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-7 text-2xl font-semibold tracking-[-0.02em] text-white">{m.name}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-white/45">{m.role}</p>
+
+                    <blockquote className="mt-6 border-l pl-4 font-serif text-xl italic leading-snug text-white/85" style={{ borderColor: accent.to }}>
+                      &ldquo;{m.quote}&rdquo;
+                    </blockquote>
+
+                    <p className="mt-6 flex-1 text-sm leading-relaxed text-white/60">{m.description}</p>
+
+                    <div className="mt-8 flex items-center justify-between gap-4 border-t border-white/[0.08] pt-6">
+                      <div className="flex min-h-9 items-center gap-2">
+                        {links.map(({ key, label, Icon: SocialIcon }) => (
+                          <a
+                            key={key}
+                            href={m.socials![key]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${m.name} on ${label}`}
+                            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.04] text-white/65 ring-1 ring-inset ring-white/10 transition hover:bg-lux-gold hover:text-lux-ink hover:ring-lux-gold"
+                          >
+                            <SocialIcon className="h-3.5 w-3.5" />
+                          </a>
+                        ))}
+                      </div>
+                      <Link
+                        href={HUBSPOT_MEETING_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-white/75 transition hover:text-lux-gold"
+                      >
+                        Work with us
+                        <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
+                      </Link>
+                    </div>
+                  </LuxCard>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Join */}
+      <section className="relative px-4 pb-32 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="relative mx-auto grid w-full max-w-7xl gap-10 overflow-hidden rounded-[40px] px-6 py-16 sm:px-12 sm:py-20 lg:grid-cols-[1.3fr,1fr] lg:items-end">
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 0% 0%, rgba(221,191,93,0.26), transparent 55%), radial-gradient(ellipse at 100% 100%, rgba(108,71,255,0.22), transparent 55%), linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))",
+              }}
+            />
+            <div aria-hidden className="absolute inset-0 -z-10 rounded-[40px] ring-1 ring-inset ring-white/10" />
+            <div>
+              <LuxEyebrow>Join our squad</LuxEyebrow>
+              <h2 className="mt-5 font-serif text-[clamp(2.4rem,5vw,4.5rem)] leading-[1] text-white">
+                Think you have <span className="lux-gold-text italic">what it takes?</span>
+              </h2>
+            </div>
+            <div>
+              <p className="text-base leading-relaxed text-white/65">
+                We&apos;re always looking for ambitious talent to join our ranks. If you&apos;re obsessed with digital
+                culture and results-driven marketing, we want to hear from you.
+              </p>
+              <Link
+                href="/careers"
+                className="lux-cta mt-8 inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold"
+              >
+                View Open Positions
+                <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
+              </Link>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+    </LuxPage>
+  );
+}

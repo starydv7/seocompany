@@ -35,7 +35,7 @@ export default function EnterpriseDmLanding() {
   } = enterpriseDmHero;
 
   return (
-    <div className="min-h-screen w-full max-w-none bg-white">
+    <div className="min-h-screen w-full max-w-none bg-transparent">
       <section
         className={`relative w-full max-w-none overflow-hidden ${EDM_HERO_BG} ${EDM_PAD} pb-16 pt-10 sm:pb-20 sm:pt-14`}
       >

@@ -11,22 +11,22 @@ export const metadata: Metadata = {
 
 export default function SeoPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white/[0.02] via-white/[0.03] to-white/[0.02] px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div className="mx-auto w-full space-y-16">
         {/* Hero */}
         <Reveal>
           <header className="space-y-5 text-center">
-          <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+          <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Search Engine Optimization (SEO) Services
           </h1>
-          <p className="text-base font-semibold text-slate-700 sm:text-xl">
+          <p className="text-base font-semibold text-white/80 sm:text-xl">
             That Drive Rankings, Revenue &amp; Real Business Growth
           </p>
-          <p className="mx-auto w-full text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto w-full text-sm text-white/65 sm:text-base">
             If your website isn&apos;t ranking on Google, it isn&apos;t competing. At BrandMarketing, we don&apos;t chase vanity metrics, we build search ecosystems that turn
             rankings into traffic, traffic into leads, and leads into revenue.
           </p>
-          <p className="mx-auto w-full text-sm text-slate-600 sm:text-base">
+          <p className="mx-auto w-full text-sm text-white/65 sm:text-base">
             Our SEO strategies are engineered for long-term dominance, not short-lived spikes.
             Whether you&apos;re a startup, local business, ecommerce brand, or enterprise, we help
             you own your search space.
@@ -36,7 +36,7 @@ export default function SeoPage() {
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
+              className="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-semibold lux-cta text-lux-ink"
             >
               Get a Free SEO Strategy Call
             </Link>
@@ -46,12 +46,12 @@ export default function SeoPage() {
 
         {/* Why SEO ROI */}
         <Reveal>
-          <section className="grid gap-8 rounded-3xl border border-slate-200/80 bg-white/90 p-6 text-sm text-slate-700 shadow-xl shadow-sky-50 sm:p-10 md:grid-cols-[minmax(0,1.4fr),minmax(0,1fr)]">
+          <section className="grid gap-8 rounded-3xl border border-white/[0.09] bg-transparent p-6 text-sm text-white/80 shadow-xl shadow-black/40 sm:p-10 md:grid-cols-[minmax(0,1.4fr),minmax(0,1fr)]">
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
               Why SEO Still Delivers the Highest ROI in Digital Marketing
             </h2>
-            <p className="text-base font-semibold text-slate-800">
+            <p className="text-base font-semibold text-white">
               Paid ads stop the moment your budget ends. SEO keeps working.
             </p>
             <ul className="space-y-2">
@@ -59,26 +59,26 @@ export default function SeoPage() {
               <li>Users trust organic rankings more than ads.</li>
               <li>SEO compounds results month after month.</li>
             </ul>
-            <p className="pt-1 text-sm font-medium text-slate-800">
+            <p className="pt-1 text-sm font-medium text-white">
               But only strategic, technically sound SEO works in 2025. That&apos;s where BrandMarketing comes in.
             </p>
           </div>
-          <div className="space-y-4 rounded-2xl border border-slate-200/80 bg-slate-50/80 p-6">
-            <h3 className="text-base font-semibold text-slate-900">
+          <div className="space-y-4 rounded-2xl border border-white/[0.09] bg-white/[0.025] p-6">
+            <h3 className="text-base font-semibold text-white">
               Our SEO Approach: Built for Algorithms, Designed for Humans
             </h3>
             <p className="text-sm">
               We combine technical excellence, semantic relevance, and conversion psychology to
               create SEO campaigns that Google rewards and users engage with.
             </p>
-            <p className="text-sm font-medium text-slate-900">Our SEO methodology focuses on:</p>
+            <p className="text-sm font-medium text-white">Our SEO methodology focuses on:</p>
             <ul className="space-y-1.5 text-sm">
               <li>Search intent, not just keywords</li>
               <li>Topic authority, not isolated pages</li>
               <li>User experience, not keyword stuffing</li>
               <li>Sustainable growth, not risky shortcuts</li>
             </ul>
-            <p className="pt-1 text-xs font-medium text-slate-600">
+            <p className="pt-1 text-xs font-medium text-white/65">
               We follow 100% white-hat SEO practices, aligned with Google&apos;s latest algorithm
               updates.
             </p>
@@ -89,150 +89,150 @@ export default function SeoPage() {
         {/* Comprehensive SEO Services */}
         <Reveal>
           <section className="space-y-8">
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Comprehensive SEO Services by BrandMarketing
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             {/* Advanced Keyword Research */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-sky-50">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40">
+              <h3 className="text-lg font-semibold text-white">
                 🔍 Advanced Keyword &amp; Search Intent Research
               </h3>
-              <p className="mt-3 text-slate-700">
+              <p className="mt-3 text-white/80">
                 We go beyond keyword volume and identify the opportunities that actually move
                 revenue.
               </p>
-              <ul className="mt-3 space-y-1.5 text-slate-700">
+              <ul className="mt-3 space-y-1.5 text-white/80">
                 <li>Buyer-intent keywords</li>
                 <li>Semantic keyword clusters</li>
                 <li>Competitor ranking gaps</li>
                 <li>Long-tail conversion opportunities</li>
               </ul>
-              <p className="mt-3 text-xs font-medium text-slate-600">
+              <p className="mt-3 text-xs font-medium text-white/65">
                 This ensures you rank for searches that actually generate business.
               </p>
             </article>
 
             {/* Technical SEO */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-sky-50">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40">
+              <h3 className="text-lg font-semibold text-white">
                 🛠 Technical SEO &amp; Website Optimization
               </h3>
-              <p className="mt-3 font-medium text-slate-800">
+              <p className="mt-3 font-medium text-white">
                 A slow or broken website kills rankings. We fix technical debt before it hurts your
                 growth.
               </p>
-              <ul className="mt-3 space-y-1.5 text-slate-700">
+              <ul className="mt-3 space-y-1.5 text-white/80">
                 <li>Crawlability &amp; indexation issues</li>
                 <li>Site speed &amp; Core Web Vitals</li>
                 <li>Mobile usability &amp; UX flaws</li>
                 <li>URL structure, schema &amp; internal linking</li>
                 <li>Duplicate content &amp; technical errors</li>
               </ul>
-              <p className="mt-3 text-xs font-medium text-slate-600">
+              <p className="mt-3 text-xs font-medium text-white/65">
                 Your site becomes search-engine-friendly and user-first.
               </p>
             </article>
 
             {/* On-Page SEO */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-sky-50">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40">
+              <h3 className="text-lg font-semibold text-white">
                 ✍️ On-Page SEO &amp; Content Optimization
               </h3>
-              <p className="mt-3 text-slate-700">
+              <p className="mt-3 text-white/80">
                 We optimize every ranking signal so your pages are built to rank and to convert.
               </p>
-              <ul className="mt-3 space-y-1.5 text-slate-700">
+              <ul className="mt-3 space-y-1.5 text-white/80">
                 <li>Page titles &amp; meta descriptions</li>
                 <li>Heading structure (H1 to H6)</li>
                 <li>Content depth &amp; topical relevance</li>
                 <li>Internal links &amp; content flow</li>
                 <li>Image optimization &amp; accessibility</li>
               </ul>
-              <p className="mt-3 text-xs font-medium text-slate-600">
+              <p className="mt-3 text-xs font-medium text-white/65">
                 Our content is written to rank AND convert, not just fill space.
               </p>
             </article>
 
             {/* Link Building */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-sky-50">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40">
+              <h3 className="text-lg font-semibold text-white">
                 🔗 Authority Link Building &amp; Off-Page SEO
               </h3>
-              <p className="mt-3 font-medium text-slate-800">
+              <p className="mt-3 font-medium text-white">
                 Backlinks still matter, but only the right ones.
               </p>
-              <ul className="mt-3 space-y-1.5 text-slate-700">
+              <ul className="mt-3 space-y-1.5 text-white/80">
                 <li>High-authority editorial backlinks</li>
                 <li>Niche-relevant placements</li>
                 <li>Brand mentions &amp; digital PR links</li>
                 <li>Natural anchor text profiles</li>
               </ul>
-              <p className="mt-3 text-xs font-medium text-slate-600">
+              <p className="mt-3 text-xs font-medium text-white/65">
                 No spam. No PBNs. No penalties.
               </p>
             </article>
 
             {/* Local SEO */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-sky-50">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40">
+              <h3 className="text-lg font-semibold text-white">
                 📍 Local SEO for High-Intent Customers
               </h3>
-              <p className="mt-3 text-slate-700">
+              <p className="mt-3 text-white/80">
                 Perfect for service businesses and multi-location brands that rely on inbound
                 calls, bookings, and visits.
               </p>
-              <ul className="mt-3 space-y-1.5 text-slate-700">
+              <ul className="mt-3 space-y-1.5 text-white/80">
                 <li>Google Business Profile optimization</li>
                 <li>Local citations &amp; NAP consistency</li>
                 <li>Location-specific landing pages</li>
                 <li>Reviews &amp; local trust signals</li>
               </ul>
-              <p className="mt-3 text-xs font-medium text-slate-600">
+              <p className="mt-3 text-xs font-medium text-white/65">
                 Result: more calls, visits, and local conversions.
               </p>
             </article>
 
             {/* Ecommerce SEO */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-sky-50">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40">
+              <h3 className="text-lg font-semibold text-white">
                 🛒 Ecommerce &amp; Conversion-Focused SEO
               </h3>
-              <p className="mt-3 text-slate-700">
+              <p className="mt-3 text-white/80">
                 SEO that sells, not just ranks.
               </p>
-              <ul className="mt-3 space-y-1.5 text-slate-700">
+              <ul className="mt-3 space-y-1.5 text-white/80">
                 <li>Product &amp; category page optimization</li>
                 <li>Ecommerce schema &amp; filters</li>
                 <li>Site architecture for scale</li>
                 <li>CRO elements to improve sales</li>
               </ul>
-              <p className="mt-3 text-xs font-medium text-slate-600">
+              <p className="mt-3 text-xs font-medium text-white/65">
                 Ideal for Shopify, WooCommerce, and custom platforms.
               </p>
             </article>
 
             {/* Reporting */}
-            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 text-sm shadow-lg shadow-sky-50 md:col-span-2">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40 md:col-span-2">
+              <h3 className="text-lg font-semibold text-white">
                 📊 Data-Driven Reporting &amp; Transparent Tracking
               </h3>
-              <p className="mt-3 text-slate-700">You&apos;ll always know:</p>
-              <ul className="mt-2 grid gap-2 text-slate-700 sm:grid-cols-2 lg:grid-cols-4">
+              <p className="mt-3 text-white/80">You&apos;ll always know:</p>
+              <ul className="mt-2 grid gap-2 text-white/80 sm:grid-cols-2 lg:grid-cols-4">
                 <li>What we&apos;re doing</li>
                 <li>Why we&apos;re doing it</li>
                 <li>What&apos;s working</li>
                 <li>Where growth is coming from</li>
               </ul>
-              <p className="mt-4 text-slate-700">We track:</p>
-              <ul className="mt-2 grid gap-2 text-slate-700 sm:grid-cols-2 lg:grid-cols-4">
+              <p className="mt-4 text-white/80">We track:</p>
+              <ul className="mt-2 grid gap-2 text-white/80 sm:grid-cols-2 lg:grid-cols-4">
                 <li>Keyword rankings</li>
                 <li>Organic traffic growth</li>
                 <li>Leads &amp; conversions</li>
                 <li>ROI &amp; revenue impact</li>
               </ul>
-              <p className="mt-4 text-xs font-medium text-slate-600">No fluff. Just clarity.</p>
+              <p className="mt-4 text-xs font-medium text-white/65">No fluff. Just clarity.</p>
             </article>
           </div>
           </section>
@@ -240,18 +240,18 @@ export default function SeoPage() {
 
         {/* Why choose us */}
         <Reveal>
-          <section className="space-y-6 rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-xl shadow-sky-50 sm:p-10">
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          <section className="space-y-6 rounded-3xl border border-white/[0.09] bg-transparent p-6 shadow-xl shadow-black/40 sm:p-10">
+          <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Why Brands Choose BrandMarketing Over Other SEO Agencies
           </h2>
-          <ul className="list-disc space-y-2 pl-5 text-sm text-slate-700 marker:text-slate-400">
+          <ul className="list-disc space-y-2 pl-5 text-sm text-white/80 marker:text-white/40">
             <li>Strategy-first, not template-based</li>
             <li>SEO built for Google&apos;s future, not past tricks</li>
             <li>Transparent communication &amp; reporting</li>
             <li>Customized plans for every business</li>
             <li>Focus on growth, not just rankings</li>
           </ul>
-          <p className="pt-1 text-sm font-semibold text-slate-900">
+          <p className="pt-1 text-sm font-semibold text-white">
             We don&apos;t sell &quot;SEO packages.&quot; We build SEO assets that compound in value.
           </p>
           </section>
@@ -259,25 +259,25 @@ export default function SeoPage() {
 
         {/* Who we work with */}
         <Reveal>
-          <section className="space-y-6 rounded-2xl border border-slate-200/80 bg-white/90 p-6 text-sm text-slate-700 shadow-lg shadow-sky-50 sm:p-10">
-          <h2 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
+          <section className="space-y-6 rounded-2xl border border-white/[0.09] bg-transparent p-6 text-sm text-white/80 shadow-lg shadow-black/40 sm:p-10">
+          <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
             Who We Work With
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
-              <p className="font-medium text-slate-800">Startups &amp; growing brands</p>
+            <div className="rounded-xl border border-white/[0.09] bg-white/[0.025] px-4 py-3">
+              <p className="font-medium text-white">Startups &amp; growing brands</p>
             </div>
-            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
-              <p className="font-medium text-slate-800">Local &amp; national service businesses</p>
+            <div className="rounded-xl border border-white/[0.09] bg-white/[0.025] px-4 py-3">
+              <p className="font-medium text-white">Local &amp; national service businesses</p>
             </div>
-            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
-              <p className="font-medium text-slate-800">Ecommerce stores</p>
+            <div className="rounded-xl border border-white/[0.09] bg-white/[0.025] px-4 py-3">
+              <p className="font-medium text-white">Ecommerce stores</p>
             </div>
-            <div className="rounded-xl border border-slate-200/80 bg-slate-50/70 px-4 py-3">
-              <p className="font-medium text-slate-800">Agencies &amp; enterprises</p>
+            <div className="rounded-xl border border-white/[0.09] bg-white/[0.025] px-4 py-3">
+              <p className="font-medium text-white">Agencies &amp; enterprises</p>
             </div>
           </div>
-          <p className="rounded-xl border border-sky-100 bg-sky-50/50 px-4 py-3 text-sm text-slate-700">
+          <p className="rounded-xl border border-sky-400/25 bg-sky-400/10 px-4 py-3 text-sm text-white/80">
             If organic growth matters to your business, BrandMarketing is your SEO partner.
           </p>
           </section>
@@ -285,22 +285,22 @@ export default function SeoPage() {
 
         {/* Final CTA */}
         <Reveal>
-          <section className="rounded-3xl border-2 border-dashed border-sky-200 bg-gradient-to-br from-sky-50 via-indigo-50 to-cyan-50 p-6 text-center shadow-lg shadow-sky-100/50 sm:p-12">
-          <h3 className="mb-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          <section className="rounded-3xl border-2 border-dashed border-sky-400/25 bg-gradient-to-br from-sky-400/10 via-indigo-400/10 to-cyan-400/10 p-6 text-center shadow-lg shadow-black/40 sm:p-12">
+          <h3 className="mb-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
             Ready to Outrank Your Competitors?
           </h3>
-          <p className="mb-4 text-sm text-slate-700 sm:text-base">
+          <p className="mb-4 text-sm text-white/80 sm:text-base">
             Your competitors are investing in SEO right now. The question is: are you building
             authority or falling behind?
           </p>
-          <p className="mb-6 text-sm font-semibold text-slate-900">
+          <p className="mb-6 text-sm font-semibold text-white">
             Let BrandMarketing help you: Rank higher • Convert more • Scale faster
           </p>
           <Link
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#ddbf5d]/30 transition hover:brightness-105"
+            className="inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold lux-cta text-lux-ink"
           >
             Get a Free SEO Strategy Call Today
           </Link>

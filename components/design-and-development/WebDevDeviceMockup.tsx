@@ -56,7 +56,7 @@ function LaptopScreen() {
         </h3>
 
         <div className="mt-3 flex min-h-0 flex-1 flex-col rounded-xl border border-slate-700/60 bg-[#111827]/90 p-3 sm:mt-4 sm:p-4">
-          <p className="shrink-0 text-[9px] font-medium text-slate-400 sm:text-[10px]">Growth Overview</p>
+          <p className="shrink-0 text-[9px] font-medium text-white/40 sm:text-[10px]">Growth Overview</p>
           <div className="mt-2 min-h-[5rem] flex-1 sm:min-h-[6.5rem] lg:min-h-[7.5rem]">
             <GrowthChart />
           </div>
@@ -87,18 +87,18 @@ export default function WebDevDeviceMockup() {
       {/* Laptop */}
       <div className="relative z-10">
         {/* Lid / screen bezel */}
-        <div className="rounded-t-[1.1rem] border border-slate-300/90 bg-gradient-to-b from-slate-200 to-slate-300 p-2 shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:rounded-t-[1.25rem] sm:p-2.5">
+        <div className="rounded-t-[1.1rem] border border-white/15 bg-gradient-to-b from-white/10 to-white/10 p-2 shadow-[0_24px_60px_rgba(15,23,42,0.18)] sm:rounded-t-[1.25rem] sm:p-2.5">
           <div className="overflow-hidden rounded-t-lg border border-slate-900/80 shadow-inner">
             <LaptopScreen />
           </div>
         </div>
 
         {/* Hinge */}
-        <div className="h-1.5 bg-gradient-to-b from-slate-400 to-slate-500 sm:h-2" />
+        <div className="h-1.5 bg-gradient-to-b from-white/20 to-white/20 sm:h-2" />
 
         {/* Keyboard base */}
-        <div className="relative mx-auto w-[104%] -translate-x-[2%] rounded-b-xl border border-slate-300/80 bg-gradient-to-b from-slate-300 via-slate-200 to-slate-300 px-4 pb-3 pt-2 shadow-[0_12px_32px_rgba(15,23,42,0.12)] sm:rounded-b-2xl sm:pb-4">
-          <div className="mx-auto h-1 w-[55%] rounded-full bg-slate-400/50" />
+        <div className="relative mx-auto w-[104%] -translate-x-[2%] rounded-b-xl border border-white/15 bg-gradient-to-b from-white/10 via-white/10 to-white/10 px-4 pb-3 pt-2 shadow-[0_12px_32px_rgba(15,23,42,0.12)] sm:rounded-b-2xl sm:pb-4">
+          <div className="mx-auto h-1 w-[55%] rounded-full bg-white/20" />
           <div className="mt-2 grid grid-cols-12 gap-0.5 opacity-40">
             {Array.from({ length: 48 }).map((_, i) => (
               <div key={i} className="h-1 rounded-sm bg-slate-500/60 sm:h-1.5" />

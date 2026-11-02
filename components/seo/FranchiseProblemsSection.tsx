@@ -22,20 +22,20 @@ function ProblemCard({
   diagram: number;
 }) {
   return (
-    <article className="flex h-full w-full min-w-0 flex-col rounded-xl border border-slate-200/90 bg-white px-3 py-4 shadow-[0_2px_14px_rgba(15,23,42,0.05)] sm:px-4 sm:py-5">
+    <article className="flex h-full w-full min-w-0 flex-col rounded-xl border border-white/[0.09] bg-white/[0.035] px-3 py-4 shadow-[0_2px_14px_rgba(15,23,42,0.05)] sm:px-4 sm:py-5">
       <h3 className={`flex min-h-[3rem] items-center justify-center text-center ${FRANCHISE_ITEM_TITLE}`}>
         {title}
       </h3>
       <div className="mt-3 grid min-h-[9rem] flex-1 grid-cols-[1fr_auto_1fr] items-end gap-1">
         <div className="flex min-w-0 flex-col">
-          <p className={`mb-2 text-center text-xs text-slate-400`}>Before</p>
+          <p className={`mb-2 text-center text-xs text-white/40`}>Before</p>
           <div className={DIAGRAM_CELL}>
             <BeforeHalf type={diagram} />
           </div>
         </div>
         <ArrowRight className="mb-6 h-3.5 w-3.5 shrink-0 self-end text-indigo-300" />
         <div className="flex min-w-0 flex-col">
-          <p className="mb-2 text-center text-xs text-slate-400">After</p>
+          <p className="mb-2 text-center text-xs text-white/40">After</p>
           <div className={DIAGRAM_CELL}>
             <AfterHalf type={diagram} />
           </div>
@@ -65,7 +65,7 @@ function BeforeHalf({ type }: { type: number }) {
         {Array.from({ length: 12 }).map((_, i) => (
           <span
             key={i}
-            className={`h-3.5 w-3.5 rounded-full sm:h-4 sm:w-4 ${i % 3 === 0 ? "bg-violet-400" : "bg-slate-200"}`}
+            className={`h-3.5 w-3.5 rounded-full sm:h-4 sm:w-4 ${i % 3 === 0 ? "bg-violet-400" : "bg-white/10"}`}
           />
         ))}
       </div>
@@ -91,8 +91,8 @@ function BeforeHalf({ type }: { type: number }) {
     <div className="flex w-14 flex-col gap-0.5 opacity-75 sm:w-16">
       <span className="h-1.5 rounded-sm bg-orange-300" />
       <span className="h-1.5 rounded-sm bg-violet-300" />
-      <span className="h-1.5 rounded-sm bg-slate-200" />
-      <span className="h-1.5 rounded-sm bg-slate-300" />
+      <span className="h-1.5 rounded-sm bg-white/10" />
+      <span className="h-1.5 rounded-sm bg-white/15" />
     </div>
   );
 }

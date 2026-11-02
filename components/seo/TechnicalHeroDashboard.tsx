@@ -126,7 +126,7 @@ export default function TechnicalHeroDashboard() {
             <p className="mt-2 text-sm font-bold" style={{ color: MINT_BRIGHT }}>
               {scoreLabel}
             </p>
-            <p className="mt-1 text-xs text-slate-400">{scoreDelta}</p>
+            <p className="mt-1 text-xs text-white/40">{scoreDelta}</p>
           </div>
         </div>
 
@@ -162,7 +162,7 @@ export default function TechnicalHeroDashboard() {
               <ArrowDown className="h-3 w-3" strokeWidth={3} />
               -38%
             </span>
-            <span className="text-slate-500">vs last 30 days</span>
+            <span className="text-white/50">vs last 30 days</span>
           </p>
           <LineChart
             points={crawlPts}

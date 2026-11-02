@@ -35,7 +35,7 @@ export default function FranchiseDmLanding() {
   } = franchiseDmHero;
 
   return (
-    <div className="min-h-screen w-full max-w-none bg-white">
+    <div className="min-h-screen w-full max-w-none bg-transparent">
       <section
         className={`relative w-full max-w-none overflow-hidden ${FDM_HERO_BG} ${FDM_PAD} pb-4 pt-10 sm:pt-14`}
       >
@@ -57,7 +57,7 @@ export default function FranchiseDmLanding() {
               <span className={FDM_TITLE_GRADIENT}>{titleAccent}</span>
             </h1>
 
-            <p className="mt-5 text-sm leading-[1.75] text-slate-600 sm:mt-6 sm:text-[15px]">
+            <p className="mt-5 text-sm leading-[1.75] text-white/65 sm:mt-6 sm:text-[15px]">
               {subtitle}
             </p>
 
@@ -67,10 +67,10 @@ export default function FranchiseDmLanding() {
                 return (
                   <li
                     key={f.label}
-                    className="flex items-center gap-2.5 text-[11px] font-medium text-slate-700 sm:text-xs"
+                    className="flex items-center gap-2.5 text-[11px] font-medium text-white/80 sm:text-xs"
                   >
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-50">
-                      <Icon className="h-4 w-4 text-violet-600" strokeWidth={2} />
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-400/10">
+                      <Icon className="h-4 w-4 text-violet-300" strokeWidth={2} />
                     </span>
                     <span className="leading-snug">{f.label}</span>
                   </li>

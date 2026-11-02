@@ -20,12 +20,12 @@ export default function FranchiseDmServicesSection() {
         <Reveal className="lg:sticky lg:top-28 lg:self-start">
           <p className={FDM_TAG}>{tag}</p>
           <h2 className={`mt-5 ${FDM_SECTION_TITLE}`}>{title}</h2>
-          <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-[15px]">
+          <p className="mt-4 text-sm leading-relaxed text-white/65 sm:text-[15px]">
             {description}
           </p>
           <Link
             href="#franchise-services"
-            className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-violet-600 transition hover:text-violet-800"
+            className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-violet-300 transition hover:text-violet-300"
           >
             {viewAllLabel}
             <ArrowRight className="h-4 w-4" />
@@ -42,13 +42,13 @@ export default function FranchiseDmServicesSection() {
                   className={`group flex h-full flex-col ${FDM_CARD} p-6`}
                 >
                   <div className="flex items-start justify-between">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-50 transition group-hover:bg-violet-100">
-                      <Icon className="h-5 w-5 text-violet-600" strokeWidth={2} />
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-400/10 transition group-hover:bg-violet-400/10">
+                      <Icon className="h-5 w-5 text-violet-300" strokeWidth={2} />
                     </span>
                     <ArrowUpRight className="h-4 w-4 text-slate-300 transition group-hover:text-violet-500" />
                   </div>
-                  <h3 className="mt-4 text-base font-bold text-slate-900">{item.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500">
+                  <h3 className="mt-4 text-base font-bold text-white">{item.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-white/50">
                     {item.description}
                   </p>
                 </Link>

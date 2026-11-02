@@ -39,20 +39,20 @@ export default function TechStackModal({ open, onClose }: Props) {
         aria-label="Close modal"
         onClick={onClose}
       />
-      <div className="relative z-10 flex max-h-[min(90vh,52rem)] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_24px_64px_rgba(15,23,42,0.18)]">
-        <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6 sm:py-5">
+      <div className="relative z-10 flex max-h-[min(90vh,52rem)] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-white/[0.09] bg-white/[0.035] shadow-[0_24px_64px_rgba(15,23,42,0.18)]">
+        <div className="flex items-start justify-between gap-4 border-b border-white/[0.06] px-5 py-4 sm:px-6 sm:py-5">
           <div>
-            <h2 id="tech-stack-modal-title" className="text-lg font-bold text-slate-900 sm:text-xl">
+            <h2 id="tech-stack-modal-title" className="text-lg font-bold text-white sm:text-xl">
               Our Technology Stack
             </h2>
-            <p className="mt-1 text-sm text-slate-600">
+            <p className="mt-1 text-sm text-white/65">
               Tools and technologies we use to design, build, and scale digital products.
             </p>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition hover:bg-slate-50 hover:text-slate-800"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/[0.09] text-white/50 transition hover:bg-white/[0.025] hover:text-white"
             aria-label="Close"
           >
             <X className="h-4 w-4" />
@@ -63,17 +63,17 @@ export default function TechStackModal({ open, onClose }: Props) {
           <div className="space-y-6">
             {TECH_STACK_CATEGORIES.map((category) => (
               <section key={category.id}>
-                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-violet-700 sm:text-sm">
+                <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-violet-300 sm:text-sm">
                   {category.title}
                 </h3>
                 <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5">
                   {category.technologies.map((tech) => (
                     <div
                       key={tech}
-                      className="flex flex-col items-center gap-2 rounded-xl border border-slate-100 bg-slate-50/50 px-2 py-3 transition hover:border-violet-100 hover:bg-violet-50/40"
+                      className="flex flex-col items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.025] px-2 py-3 transition hover:border-violet-400/25 hover:bg-violet-400/10"
                     >
                       <TechStackIcon name={tech} className="h-7 w-7 sm:h-8 sm:w-8" />
-                      <span className="text-center text-[10px] font-semibold leading-tight text-slate-700 sm:text-xs">
+                      <span className="text-center text-[10px] font-semibold leading-tight text-white/80 sm:text-xs">
                         {tech}
                       </span>
                     </div>

@@ -16,7 +16,7 @@ export default function TechnicalServicesSection() {
   const { title, intro, items, sidebar } = technicalServices;
 
   return (
-    <section id="technical-services" className={`${TECH_SECTION} bg-white py-10 sm:py-14`}>
+    <section id="technical-services" className={`${TECH_SECTION} bg-transparent py-10 sm:py-14`}>
       <Reveal className="text-center">
         <h2 className={TECH_SECTION_TITLE}>
           <span className={TECH_GRADIENT}>{title}</span>
@@ -30,19 +30,19 @@ export default function TechnicalServicesSection() {
             const Icon = service.icon as LucideIcon;
             return (
               <Reveal key={service.title} delay={i * 0.02}>
-                <article className="flex h-full min-h-[10.5rem] flex-col rounded-xl border border-slate-200/90 bg-white p-5 shadow-[0_2px_14px_rgba(15,23,42,0.05)]">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-100">
-                    <Icon className="h-[18px] w-[18px] text-violet-600" strokeWidth={2} />
+                <article className="flex h-full min-h-[10.5rem] flex-col rounded-xl border border-white/[0.09] bg-white/[0.035] p-5 shadow-[0_2px_14px_rgba(15,23,42,0.05)]">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-400/10">
+                    <Icon className="h-[18px] w-[18px] text-violet-300" strokeWidth={2} />
                   </span>
-                  <h3 className="mt-3 text-sm font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-2 flex-1 text-xs leading-relaxed text-slate-600">
+                  <h3 className="mt-3 text-sm font-bold text-white">{service.title}</h3>
+                  <p className="mt-2 flex-1 text-xs leading-relaxed text-white/65">
                     {service.description}
                   </p>
                   <Link
                     href={HUBSPOT_MEETING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800"
+                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-blue-300 hover:text-blue-300"
                   >
                     Learn more <ChevronRight className="h-3.5 w-3.5" />
                   </Link>
@@ -53,7 +53,7 @@ export default function TechnicalServicesSection() {
         </div>
 
         <Reveal delay={0.08} className="h-full lg:col-span-1">
-          <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-[#7c3aed] via-[#5b21b6] to-[#1e1b4b] px-5 py-6 shadow-[0_16px_48px_rgba(91,33,182,0.45)] sm:px-6 sm:py-7">
+          <div className="relative flex h-full flex-col overflow-hidden rounded-2xl lux-banner px-5 py-6 shadow-[0_16px_48px_rgba(91,33,182,0.45)] sm:px-6 sm:py-7">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_15%,rgba(167,139,250,0.35),transparent_65%)]"
@@ -75,7 +75,7 @@ export default function TechnicalServicesSection() {
                 <div>
                   <h3 className="text-base font-bold leading-snug text-white sm:text-[17px]">
                     {sidebar.titleBefore}
-                    <span className="bg-gradient-to-r from-violet-200 to-blue-300 bg-clip-text text-transparent">
+                    <span className="lux-gold-text">
                       {sidebar.titleAccent}
                     </span>
                   </h3>
@@ -106,15 +106,15 @@ export default function TechnicalServicesSection() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 flex w-full items-center justify-between gap-2 rounded-full bg-white py-2.5 pl-2 pr-4 shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition hover:bg-violet-50"
+                className="mt-5 flex w-full items-center justify-between gap-2 rounded-full bg-white/[0.035] py-2.5 pl-2 pr-4 shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition hover:bg-violet-400/10"
               >
                 <span className="flex items-center gap-2">
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-indigo-600">
                     <Sparkles className="h-4 w-4 text-white" strokeWidth={2} />
                   </span>
-                  <span className="text-sm font-bold text-violet-700">{sidebar.cta}</span>
+                  <span className="text-sm font-bold text-violet-300">{sidebar.cta}</span>
                 </span>
-                <ArrowRight className="h-4 w-4 text-violet-600" strokeWidth={2.5} />
+                <ArrowRight className="h-4 w-4 text-violet-300" strokeWidth={2.5} />
               </Link>
 
               <p className="mt-4 flex items-center justify-center gap-1.5 text-[11px] text-white/50">

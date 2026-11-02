@@ -54,11 +54,11 @@ function ComparisonCard({
     <article
       className={`h-full rounded-2xl border p-[2%] sm:rounded-3xl ${
         isNegative
-          ? "border-red-100/90 bg-gradient-to-b from-red-50/70 to-rose-50/40"
-          : "border-emerald-100/90 bg-gradient-to-b from-emerald-50/70 to-teal-50/40"
+          ? "border-red-400/25 bg-gradient-to-b from-red-400/10 to-rose-400/10"
+          : "border-emerald-400/25 bg-gradient-to-b from-emerald-400/10 to-teal-400/10"
       }`}
     >
-      <header className="flex items-center gap-3 border-b border-slate-200/60 pb-5">
+      <header className="flex items-center gap-3 border-b border-white/[0.09] pb-5">
         <span
           className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
             isNegative ? "bg-red-500" : "bg-emerald-500"
@@ -66,29 +66,29 @@ function ComparisonCard({
         >
           <HeaderIcon className="h-5 w-5 text-white" strokeWidth={2.5} />
         </span>
-        <h3 className="text-base font-bold leading-snug text-slate-900 sm:text-lg">{title}</h3>
+        <h3 className="text-base font-bold leading-snug text-white sm:text-lg">{title}</h3>
       </header>
 
-      <ul className="mt-1 divide-y divide-slate-200/70">
+      <ul className="mt-1 divide-y divide-white/[0.09]">
         {items.map((item) => {
           const Icon = item.icon;
           return (
             <li key={item.title} className="flex gap-3.5 py-5 first:pt-4 last:pb-1 sm:gap-4 sm:py-5">
               <span
                 className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
-                  isNegative ? "bg-red-100/90" : "bg-emerald-100/90"
+                  isNegative ? "bg-red-400/10" : "bg-emerald-400/10"
                 }`}
               >
                 <Icon
-                  className={`h-[18px] w-[18px] ${isNegative ? "text-red-500" : "text-emerald-600"}`}
+                  className={`h-[18px] w-[18px] ${isNegative ? "text-red-500" : "text-emerald-300"}`}
                   strokeWidth={2}
                 />
               </span>
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-bold leading-snug text-slate-900 sm:text-[15px]">
+                <p className="text-sm font-bold leading-snug text-white sm:text-[15px]">
                   {item.title}
                 </p>
-                <p className="mt-1.5 text-xs leading-relaxed text-slate-500 sm:text-sm">
+                <p className="mt-1.5 text-xs leading-relaxed text-white/50 sm:text-sm">
                   {item.description}
                 </p>
               </div>
@@ -113,11 +113,11 @@ export default function FranchiseDmChallengesSection() {
   } = franchiseDmVs;
 
   return (
-    <section className={`${FDM_SECTION} bg-slate-50/40 ${FDM_SECTION_PY}`}>
+    <section className={`${FDM_SECTION} bg-transparent ${FDM_SECTION_PY}`}>
       <Reveal className="w-full text-center">
         <p className={FDM_TAG}>{tag}</p>
         <h2 className={`mt-5 ${FDM_SECTION_TITLE}`}>{title}</h2>
-        <p className="mt-4 text-sm leading-relaxed text-slate-500 sm:text-[15px]">{subtitle}</p>
+        <p className="mt-4 text-sm leading-relaxed text-white/50 sm:text-[15px]">{subtitle}</p>
       </Reveal>
 
       <div className="relative mt-12 w-full lg:mt-14">
@@ -141,17 +141,17 @@ export default function FranchiseDmChallengesSection() {
       </div>
 
       <Reveal delay={0.1} className="mt-8 w-full lg:mt-10">
-        <div className="flex w-full flex-col gap-4 rounded-2xl border border-slate-200/90 bg-white p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.04)] sm:flex-row sm:items-center sm:gap-5 sm:rounded-3xl">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-100">
-            <TrendingUp className="h-5 w-5 text-violet-600" strokeWidth={2} />
+        <div className="flex w-full flex-col gap-4 rounded-2xl border border-white/[0.09] bg-white/[0.035] p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.04)] sm:flex-row sm:items-center sm:gap-5 sm:rounded-3xl">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-400/10">
+            <TrendingUp className="h-5 w-5 text-violet-300" strokeWidth={2} />
           </span>
           <div className="min-w-0">
-            <p className="text-xs font-bold uppercase tracking-wide text-violet-600">
+            <p className="text-xs font-bold uppercase tracking-wide text-violet-300">
               {bottomLine.label}
             </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-slate-700 sm:text-[15px]">
+            <p className="mt-1.5 text-sm leading-relaxed text-white/80 sm:text-[15px]">
               {bottomLine.textBefore}{" "}
-              <strong className="font-bold text-slate-900">{bottomLine.highlight}</strong>{" "}
+              <strong className="font-bold text-white">{bottomLine.highlight}</strong>{" "}
               {bottomLine.textAfter}
             </p>
           </div>

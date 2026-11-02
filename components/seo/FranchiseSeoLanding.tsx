@@ -36,7 +36,7 @@ const HERO_METRICS = [
 ];
 
 const CARD =
-  "rounded-2xl border border-slate-200/90 bg-white shadow-[0_10px_40px_rgba(99,102,241,0.08)]";
+  "rounded-2xl border border-white/[0.09] bg-white/[0.035] shadow-[0_10px_40px_rgba(99,102,241,0.08)]";
 
 function PerformanceChart() {
   const w = 360;
@@ -63,7 +63,7 @@ function PerformanceChart() {
         <polyline fill="none" stroke="url(#franchiseLineB)" strokeWidth="2.5" points={ptsB} />
         <polyline fill="none" stroke="url(#franchiseLineA)" strokeWidth="2.5" points={ptsA} />
       </svg>
-      <div className="mt-1 flex justify-between px-0.5 text-[9px] font-medium text-slate-400">
+      <div className="mt-1 flex justify-between px-0.5 text-[9px] font-medium text-white/40">
         {["Jan", "Mar", "May", "Jul", "Sep", "Nov"].map((m) => (
           <span key={m}>{m}</span>
         ))}
@@ -88,7 +88,7 @@ function MiniSparkline({ color }: { color: string }) {
 
 function HeroCheckIcon() {
   return (
-    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-indigo-600 shadow-sm shadow-indigo-200">
+    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-indigo-600 shadow-sm shadow-black/40">
       <Check className="h-3 w-3 text-white" strokeWidth={3} />
     </span>
   );
@@ -96,7 +96,7 @@ function HeroCheckIcon() {
 
 function TechCheckItem({ label }: { label: string }) {
   return (
-    <li className="flex items-center gap-2 text-[11px] font-medium text-slate-700 sm:text-xs">
+    <li className="flex items-center gap-2 text-[11px] font-medium text-white/80 sm:text-xs">
       <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-emerald-500">
         <Check className="h-2.5 w-2.5 text-white" strokeWidth={3} />
       </span>
@@ -110,10 +110,10 @@ function HeroPerformanceCard() {
     <div className={`${CARD} p-4 sm:p-5`}>
       <div className="flex items-start justify-between gap-2">
         <div>
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">
             Local Performance
           </p>
-          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-slate-500">
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-white/50">
             <span className="flex items-center gap-1.5">
               <span className="h-2 w-2 rounded-full bg-indigo-500" />
               Local Traffic
@@ -140,9 +140,9 @@ function HeroMetricsRow() {
     <div className="grid grid-cols-3 gap-3">
       {HERO_METRICS.map((m) => (
         <div key={m.label} className={`${CARD} flex flex-col p-3 sm:p-4`}>
-          <p className="text-[10px] font-semibold text-slate-500">{m.label}</p>
-          <p className="mt-1 text-base font-bold text-slate-900 sm:text-lg">{m.value}</p>
-          <p className="mt-0.5 text-[11px] font-bold text-emerald-600">{m.delta}</p>
+          <p className="text-[10px] font-semibold text-white/50">{m.label}</p>
+          <p className="mt-1 text-base font-bold text-white sm:text-lg">{m.value}</p>
+          <p className="mt-0.5 text-[11px] font-bold text-emerald-300">{m.delta}</p>
           <MiniSparkline color={m.spark} />
         </div>
       ))}
@@ -153,7 +153,7 @@ function HeroMetricsRow() {
 function HeroTechnicalHealthCard() {
   return (
     <div className={`${CARD} w-full p-4 sm:p-5`}>
-      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">
+      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">
         Franchise Technical Health Score
       </p>
       <div className="mt-4 flex w-full items-center gap-4 sm:gap-6">
@@ -183,7 +183,7 @@ function HeroDashboardStack() {
 
 export default function FranchiseSeoLanding() {
   return (
-    <div className="relative min-h-screen text-slate-900">
+    <div className="relative min-h-screen text-white">
       <OffWhiteSparkleBg />
       <GradientDefs />
       <div className="relative">
@@ -192,21 +192,21 @@ export default function FranchiseSeoLanding() {
         <div className="relative grid w-full grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-[5%] xl:gap-[6%]">
           {/* Left: continuous stack — nothing orphaned below buttons */}
           <Reveal className="min-w-0 space-y-6 lg:space-y-7 lg:pr-[2%]">
-            <p className="inline-flex rounded-full border border-indigo-200/80 bg-indigo-50 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-indigo-700">
+            <p className="inline-flex rounded-full border border-indigo-400/25 bg-indigo-400/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-indigo-300">
               {franchiseHero.eyebrow}
             </p>
-            <h1 className="text-[1.65rem] font-bold leading-[1.12] tracking-tight text-slate-900 sm:text-4xl lg:text-[2.55rem] xl:text-[2.65rem]">
+            <h1 className="text-[1.65rem] font-bold leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-[2.55rem] xl:text-[2.65rem]">
               Franchise SEO Services for{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-blue-500 bg-clip-text text-transparent">
+              <span className="lux-gold-text">
                 Multi-Location Business Growth
               </span>
             </h1>
-            <p className="max-w-[52ch] text-sm leading-relaxed text-slate-600 sm:text-[15px]">
+            <p className="max-w-[52ch] text-sm leading-relaxed text-white/65 sm:text-[15px]">
               {franchiseHero.tagline}
             </p>
             <ul className="grid w-full gap-x-8 gap-y-3 sm:grid-cols-2">
               {franchiseHero.checklist.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-slate-700">
+                <li key={item} className="flex items-start gap-2.5 text-sm text-white/80">
                   <HeroCheckIcon />
                   <span className="leading-snug">{item}</span>
                 </li>
@@ -217,14 +217,14 @@ export default function FranchiseSeoLanding() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-300/40 transition hover:bg-indigo-700"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-cta text-lux-ink"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/seo"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-indigo-400 hover:text-indigo-700"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
               >
                 Explore Our SEO Services
                 <ArrowRight className="h-4 w-4" />

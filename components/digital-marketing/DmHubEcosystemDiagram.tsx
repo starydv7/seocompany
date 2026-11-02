@@ -69,8 +69,8 @@ function SpokeCard({
       <span className={`flex h-8 w-8 items-center justify-center rounded-lg ${iconBg}`}>
         <Icon className={`h-4 w-4 ${iconText}`} strokeWidth={2} />
       </span>
-      <p className="mt-2 text-xs font-bold text-slate-900 sm:text-[13px]">{label}</p>
-      <p className="mt-0.5 text-[10px] leading-snug text-slate-500 sm:text-[11px]">{desc}</p>
+      <p className="mt-2 text-xs font-bold text-white sm:text-[13px]">{label}</p>
+      <p className="mt-0.5 text-[10px] leading-snug text-white/50 sm:text-[11px]">{desc}</p>
     </div>
   );
 }

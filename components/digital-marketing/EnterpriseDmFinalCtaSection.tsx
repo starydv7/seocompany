@@ -11,7 +11,7 @@ function CtaChart({ badge }: { badge: string }) {
       className="pointer-events-none absolute bottom-8 right-8 hidden h-[130px] w-[180px] items-end justify-end gap-2 sm:flex"
       aria-hidden
     >
-      <div className="absolute -top-1 right-0 flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-[10px] font-bold text-violet-700 shadow-lg">
+      <div className="absolute -top-1 right-0 flex items-center gap-1 rounded-full px-3 py-1.5 text-[10px] font-bold lux-cta text-lux-ink">
         <TrendingUp className="h-3 w-3" />
         {badge}
       </div>
@@ -31,9 +31,9 @@ export default function EnterpriseDmFinalCtaSection() {
   const { title, subtitle, checklist, primaryLabel, revenueBadge } = enterpriseDmFinalCta;
 
   return (
-    <section className={`${EDM_SECTION} bg-white pb-20 pt-4 sm:pb-24`}>
+    <section className={`${EDM_SECTION} bg-transparent pb-20 pt-4 sm:pb-24`}>
       <Reveal>
-        <div className="relative w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#7c3aed] via-[#6d28d9] to-[#4338ca] px-8 py-10 shadow-[0_16px_48px_rgba(109,40,217,0.35)] sm:px-12 sm:py-14 lg:px-16">
+        <div className="relative w-full overflow-hidden rounded-2xl lux-banner px-8 py-10 shadow-[0_16px_48px_rgba(109,40,217,0.35)] sm:px-12 sm:py-14 lg:px-16">
           <div className="relative z-10 w-full">
             <h2 className="text-2xl font-bold leading-[1.15] tracking-tight text-white sm:text-[2rem] lg:text-[2.25rem]">
               {title}
@@ -58,7 +58,7 @@ export default function EnterpriseDmFinalCtaSection() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-violet-700 shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition hover:bg-violet-50"
+                className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold lux-cta text-lux-ink"
               >
                 {primaryLabel}
                 <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

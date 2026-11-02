@@ -43,7 +43,7 @@ export default function FranchiseFaqCtaSection() {
               </p>
             </div>
 
-            <div className="mt-5 grid min-h-0 flex-1 grid-rows-5 divide-y divide-slate-200 border-t border-slate-200">
+            <div className="mt-5 grid min-h-0 flex-1 grid-rows-5 divide-y divide-white/[0.09] border-t border-white/[0.09]">
               {franchiseFaqs.map((item, index) => {
                 const isOpen = openIndex === index;
                 return (
@@ -51,15 +51,15 @@ export default function FranchiseFaqCtaSection() {
                     <button
                       type="button"
                       onClick={() => setOpenIndex(isOpen ? null : index)}
-                      className={`${FAQ_ROW} h-full flex-1 transition-colors hover:bg-slate-50/80`}
+                      className={`${FAQ_ROW} h-full flex-1 transition-colors hover:bg-white/[0.025]`}
                       aria-expanded={isOpen}
                     >
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-100">
-                        <HelpCircle className="h-5 w-5 text-violet-600" strokeWidth={2} />
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-400/10">
+                        <HelpCircle className="h-5 w-5 text-violet-300" strokeWidth={2} />
                       </span>
                       <span className={FRANCHISE_FAQ_QUESTION}>{item.q}</span>
                       <ChevronDown
-                        className={`h-5 w-5 shrink-0 text-violet-600 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                        className={`h-5 w-5 shrink-0 text-violet-300 transition-transform ${isOpen ? "rotate-180" : ""}`}
                       />
                     </button>
                     <div
@@ -69,7 +69,7 @@ export default function FranchiseFaqCtaSection() {
                     >
                       <div className="overflow-hidden">
                         <p
-                          className={`border-t border-slate-100 px-[2%] pb-3 pt-2 ${FRANCHISE_SECTION_SUBTITLE} text-slate-600`}
+                          className={`border-t border-white/[0.06] px-[2%] pb-3 pt-2 ${FRANCHISE_SECTION_SUBTITLE} text-white/65`}
                         >
                           {item.a}
                         </p>
@@ -89,18 +89,18 @@ export default function FranchiseFaqCtaSection() {
 
       {/* Bottom features bar */}
       <Reveal delay={0.1} className="mt-[2%] w-full">
-        <div className="grid w-full grid-cols-1 items-stretch rounded-xl border border-slate-200/90 bg-slate-50/50 shadow-[0_2px_14px_rgba(15,23,42,0.05)] sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid w-full grid-cols-1 items-stretch rounded-xl border border-white/[0.09] bg-white/[0.025] shadow-[0_2px_14px_rgba(15,23,42,0.05)] sm:grid-cols-2 lg:grid-cols-5">
           {franchiseCtaFeatures.map((feature, i) => {
             const Icon = feature.icon as LucideIcon;
             return (
               <div
                 key={feature.title}
                 className={`flex min-h-[5.75rem] w-full items-center gap-2.5 p-[2%] ${
-                  i > 0 ? "border-t border-slate-200 lg:border-l lg:border-t-0" : ""
+                  i > 0 ? "border-t border-white/[0.09] lg:border-l lg:border-t-0" : ""
                 }`}
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-100">
-                  <Icon className="h-4 w-4 text-violet-600" strokeWidth={2} />
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-400/10">
+                  <Icon className="h-4 w-4 text-violet-300" strokeWidth={2} />
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className={FRANCHISE_ITEM_TITLE}>{feature.title}</p>

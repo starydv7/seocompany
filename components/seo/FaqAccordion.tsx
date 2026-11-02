@@ -9,7 +9,7 @@ export default function FaqAccordion({ items }: { items: Faq[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+    <div className="divide-y divide-white/[0.09] rounded-2xl border border-white/[0.09] bg-white/[0.035]">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (
@@ -17,12 +17,12 @@ export default function FaqAccordion({ items }: { items: Faq[] }) {
             <button
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-slate-50/80"
+              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-white/[0.025]"
               aria-expanded={isOpen}
             >
-              <span className="text-sm font-semibold text-slate-900 sm:text-base">{item.q}</span>
+              <span className="text-sm font-semibold text-white sm:text-base">{item.q}</span>
               <ChevronDown
-                className={`h-5 w-5 shrink-0 text-indigo-600 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                className={`h-5 w-5 shrink-0 text-indigo-300 transition-transform ${isOpen ? "rotate-180" : ""}`}
               />
             </button>
             <div
@@ -31,7 +31,7 @@ export default function FaqAccordion({ items }: { items: Faq[] }) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-5 pb-4 text-sm leading-relaxed text-slate-600">{item.a}</p>
+                <p className="px-5 pb-4 text-sm leading-relaxed text-white/65">{item.a}</p>
               </div>
             </div>
           </div>

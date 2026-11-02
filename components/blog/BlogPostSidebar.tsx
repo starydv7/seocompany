@@ -29,17 +29,17 @@ function SidebarPostList({
 
   return (
     <div>
-      <h3 className="text-sm font-bold uppercase tracking-wide text-[#1570EF]">{title}</h3>
+      <h3 className="text-sm font-bold uppercase tracking-wide text-lux-champagne">{title}</h3>
       <ul className="mt-4 space-y-4">
         {posts.map((post) => (
-          <li key={post.id} className="border-b border-slate-100 pb-4 last:border-0 last:pb-0">
+          <li key={post.id} className="border-b border-white/[0.06] pb-4 last:border-0 last:pb-0">
             <Link
               href={`/blog/${post.slug}`}
-              className="text-[15px] font-semibold leading-snug text-slate-900 transition hover:text-[#1570EF]"
+              className="text-[15px] font-semibold leading-snug text-white transition hover:text-lux-champagne"
             >
               {post.title}
             </Link>
-            <p className="mt-1 text-xs text-slate-500">
+            <p className="mt-1 text-xs text-white/50">
               {post.publishDate ? timeAgo(post.publishDate) : null}
               {showComments && post.comments?.length ? (
                 <span className="ml-2 inline-flex items-center gap-1">
@@ -76,12 +76,12 @@ export default function BlogPostSidebar({
         <SidebarPostList title="Most discussed" posts={discussed} showComments />
       ) : null}
 
-      <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-        <h3 className="text-sm font-bold uppercase tracking-wide text-[#1570EF]">
+      <div className="rounded-xl border border-white/[0.09] bg-white/[0.035] p-5 shadow-sm">
+        <h3 className="text-sm font-bold uppercase tracking-wide text-lux-champagne">
           Grow with BrandMarketing
         </h3>
         <div className="mt-4 space-y-4">
-          <div className="rounded-lg border border-slate-100 bg-[#F9FAFB] p-3">
+          <div className="rounded-lg border border-white/[0.06] bg-white/[0.035] p-3">
             <div className="flex items-center gap-3">
               <Image
                 src="/assets/logo.png"
@@ -91,20 +91,20 @@ export default function BlogPostSidebar({
                 className="h-10 w-10 rounded-lg object-contain"
               />
               <div>
-                <p className="text-sm font-bold text-slate-900">Free SEO Audit</p>
-                <p className="text-xs text-slate-500">Expert review of your site</p>
+                <p className="text-sm font-bold text-white">Free SEO Audit</p>
+                <p className="text-xs text-white/50">Expert review of your site</p>
               </div>
             </div>
             <a
               href={HUBSPOT_MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 flex w-full items-center justify-center rounded-lg bg-[#1570EF] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#175CD3]"
+              className="mt-3 flex w-full items-center justify-center rounded-lg lux-cta px-4 py-2 text-xs font-bold uppercase tracking-wide text-lux-ink"
             >
               Book a call
             </a>
           </div>
-          <div className="rounded-lg border border-slate-100 bg-[#F9FAFB] p-3">
+          <div className="rounded-lg border border-white/[0.06] bg-white/[0.035] p-3">
             <div className="flex items-center gap-3">
               <Image
                 src="/assets/logo.png"
@@ -114,13 +114,13 @@ export default function BlogPostSidebar({
                 className="h-10 w-10 rounded-lg object-contain"
               />
               <div>
-                <p className="text-sm font-bold text-slate-900">Marketing Strategy</p>
-                <p className="text-xs text-slate-500">PPC, SEO &amp; social growth</p>
+                <p className="text-sm font-bold text-white">Marketing Strategy</p>
+                <p className="text-xs text-white/50">PPC, SEO &amp; social growth</p>
               </div>
             </div>
             <Link
               href="/contact"
-              className="mt-3 flex w-full items-center justify-center rounded-lg bg-[#1570EF] px-4 py-2 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-[#175CD3]"
+              className="mt-3 flex w-full items-center justify-center rounded-lg lux-cta px-4 py-2 text-xs font-bold uppercase tracking-wide text-lux-ink"
             >
               Get started
             </Link>

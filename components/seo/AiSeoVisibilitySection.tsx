@@ -30,12 +30,12 @@ export default function AiSeoVisibilitySection() {
           <div className="relative flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
             <div className="min-w-0 shrink-0 lg:max-w-[22rem]">
               <h2 className="text-2xl font-bold text-white sm:text-[1.75rem]">{title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">{subtitle}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/40">{subtitle}</p>
               <Link
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-900/40 transition hover:opacity-95"
+                className="mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold hover:opacity-95 lux-cta text-lux-ink"
               >
                 {cta}
                 <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

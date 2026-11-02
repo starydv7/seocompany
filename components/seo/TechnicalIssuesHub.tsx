@@ -51,12 +51,12 @@ function SpokeCard({
   icon: LucideIcon;
 }) {
   return (
-    <article className="w-[10.75rem] rounded-2xl border border-slate-100/90 bg-white p-3.5 shadow-[0_8px_30px_rgba(15,23,42,0.07)] sm:w-[12rem] sm:p-4">
-      <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-50">
+    <article className="w-[10.75rem] rounded-2xl border border-white/[0.06] bg-white/[0.035] p-3.5 shadow-[0_8px_30px_rgba(15,23,42,0.07)] sm:w-[12rem] sm:p-4">
+      <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-400/10">
         <Icon className="h-[18px] w-[18px] text-rose-500" strokeWidth={2} />
       </span>
-      <h3 className="mt-2.5 text-[13px] font-bold leading-snug text-slate-900">{title}</h3>
-      <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">{description}</p>
+      <h3 className="mt-2.5 text-[13px] font-bold leading-snug text-white">{title}</h3>
+      <p className="mt-1.5 text-[11px] leading-relaxed text-white/50">{description}</p>
     </article>
   );
 }
@@ -93,18 +93,18 @@ export default function TechnicalIssuesHub() {
 
       <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
         <div className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400/20 blur-2xl" />
-        <div className="relative flex flex-col items-center rounded-full bg-white px-4 py-4 shadow-[0_0_48px_rgba(139,92,246,0.28)] ring-1 ring-violet-100 sm:px-5 sm:py-5">
-          <div className="overflow-hidden rounded-lg border border-slate-200/90 shadow-sm">
+        <div className="relative flex flex-col items-center rounded-full bg-white/[0.035] px-4 py-4 shadow-[0_0_48px_rgba(139,92,246,0.28)] ring-1 ring-violet-400/25 sm:px-5 sm:py-5">
+          <div className="overflow-hidden rounded-lg border border-white/[0.09] shadow-sm">
             <div className="flex h-3.5 items-center gap-1 bg-gradient-to-r from-violet-500 to-indigo-500 px-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-white/90" />
-              <span className="h-1.5 w-1.5 rounded-full bg-white/60" />
+              <span className="h-1.5 w-1.5 rounded-full bg-white/[0.035]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-white/[0.035]" />
               <span className="h-1.5 w-1.5 rounded-full bg-white/40" />
             </div>
-            <div className="flex h-10 w-14 items-center justify-center bg-slate-50 sm:w-16">
-              <Monitor className="h-5 w-5 text-slate-400" strokeWidth={1.75} />
+            <div className="flex h-10 w-14 items-center justify-center bg-white/[0.025] sm:w-16">
+              <Monitor className="h-5 w-5 text-white/40" strokeWidth={1.75} />
             </div>
           </div>
-          <span className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-slate-900 sm:text-[11px]">
+          <span className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white sm:text-[11px]">
             {hubLabel}
           </span>
         </div>

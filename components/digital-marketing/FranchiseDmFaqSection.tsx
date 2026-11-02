@@ -15,7 +15,7 @@ export default function FranchiseDmFaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className={`${FDM_SECTION} bg-slate-50/50 ${FDM_SECTION_PY}`}>
+    <section className={`${FDM_SECTION} bg-transparent ${FDM_SECTION_PY}`}>
       <Reveal className="w-full text-center">
         <h2 className={FDM_SECTION_TITLE}>Frequently Asked Questions</h2>
         <p className={`mt-3 ${FDM_BODY}`}>
@@ -24,7 +24,7 @@ export default function FranchiseDmFaqSection() {
       </Reveal>
 
       <div className="mt-10 w-full">
-        <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200/80 bg-white shadow-sm">
+        <div className="divide-y divide-white/[0.09] rounded-2xl border border-white/[0.09] bg-white/[0.035] shadow-sm">
           {franchiseDmFaqs.map((item, index) => {
             const isOpen = openIndex === index;
             return (
@@ -33,10 +33,10 @@ export default function FranchiseDmFaqSection() {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="flex w-full items-center justify-between gap-4 px-[2%] py-5 text-left transition hover:bg-slate-50/80"
+                    className="flex w-full items-center justify-between gap-4 px-[2%] py-5 text-left transition hover:bg-white/[0.025]"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm font-semibold text-slate-800 sm:text-[15px]">
+                    <span className="text-sm font-semibold text-white sm:text-[15px]">
                       {item.q}
                     </span>
                     <Plus

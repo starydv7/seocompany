@@ -29,8 +29,8 @@ export default function SoftwareDevWebSection({ variant = "card" }: Props) {
         className="pointer-events-none absolute inset-0 overflow-hidden"
         aria-hidden
       >
-        <div className="absolute -left-[10%] top-[5%] h-[50%] w-[45%] rounded-full bg-violet-100/40 blur-3xl" />
-        <div className="absolute -right-[8%] top-[10%] h-[45%] w-[40%] rounded-full bg-blue-100/35 blur-3xl" />
+        <div className="absolute -left-[10%] top-[5%] h-[50%] w-[45%] rounded-full bg-violet-400/10 blur-3xl" />
+        <div className="absolute -right-[8%] top-[10%] h-[45%] w-[40%] rounded-full bg-blue-400/10 blur-3xl" />
         <div
           className="absolute right-[2%] top-[8%] h-[55%] w-[28%] opacity-25"
           style={{
@@ -43,7 +43,7 @@ export default function SoftwareDevWebSection({ variant = "card" }: Props) {
       <div className="relative grid w-full items-start gap-[2%] lg:grid-cols-2 lg:items-center">
         <div className="min-w-0 space-y-4 sm:space-y-5">
           <span className={WDM_TAG}>
-            <Globe className="h-3.5 w-3.5 text-violet-600" strokeWidth={2.5} />
+            <Globe className="h-3.5 w-3.5 text-violet-300" strokeWidth={2.5} />
             {webDevHero.badge}
           </span>
 
@@ -109,15 +109,15 @@ export default function SoftwareDevWebSection({ variant = "card" }: Props) {
         </div>
       </div>
 
-      <div className="relative mt-[2%] grid grid-cols-2 gap-4 border-t border-slate-100 pt-[2%] sm:grid-cols-4 sm:gap-6">
+      <div className="relative mt-[2%] grid grid-cols-2 gap-4 border-t border-white/[0.06] pt-[2%] sm:grid-cols-4 sm:gap-6">
         {webDevHero.features.map((feat) => {
           const Icon = feat.icon as LucideIcon;
           return (
             <div key={feat.label} className="flex items-center gap-2.5 sm:gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-50 sm:h-10 sm:w-10">
-                <Icon className="h-4 w-4 text-violet-600 sm:h-[18px] sm:w-[18px]" strokeWidth={2} />
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-400/10 sm:h-10 sm:w-10">
+                <Icon className="h-4 w-4 text-violet-300 sm:h-[18px] sm:w-[18px]" strokeWidth={2} />
               </span>
-              <span className="text-sm font-semibold text-slate-800">{feat.label}</span>
+              <span className="text-sm font-semibold text-white">{feat.label}</span>
             </div>
           );
         })}

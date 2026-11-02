@@ -33,14 +33,14 @@ function DashboardPanel() {
   const { dashboard } = ecommerceDmHero;
 
   return (
-    <div className="flex aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-100 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
-      <aside className="hidden w-[24%] shrink-0 border-r border-slate-100 bg-slate-50/80 p-2 sm:block sm:p-2.5">
+    <div className="flex aspect-[16/10] w-full overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.035] shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
+      <aside className="hidden w-[24%] shrink-0 border-r border-white/[0.06] bg-white/[0.025] p-2 sm:block sm:p-2.5">
         <nav className="space-y-0.5">
           {dashboard.nav.map((item, i) => (
             <div
               key={item}
               className={`rounded-md px-2 py-1 text-[7px] font-medium sm:text-[8px] ${
-                i === 0 ? "bg-emerald-100 text-emerald-800" : "text-slate-600"
+                i === 0 ? "bg-emerald-400/10 text-emerald-300" : "text-white/65"
               }`}
             >
               {item}
@@ -52,30 +52,30 @@ function DashboardPanel() {
       <div className="flex min-w-0 flex-1 flex-col p-2 sm:p-3">
         <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-4 sm:gap-2">
           {dashboard.metrics.map((m) => (
-            <div key={m.label} className="rounded-lg border border-slate-100 bg-white p-1.5 shadow-sm sm:p-2">
-              <p className="text-[6px] font-medium text-slate-500 sm:text-[7px]">{m.label}</p>
-              <p className="text-[10px] font-bold text-slate-900 sm:text-xs">{m.value}</p>
+            <div key={m.label} className="rounded-lg border border-white/[0.06] bg-white/[0.035] p-1.5 shadow-sm sm:p-2">
+              <p className="text-[6px] font-medium text-white/50 sm:text-[7px]">{m.label}</p>
+              <p className="text-[10px] font-bold text-white sm:text-xs">{m.value}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-2 grid min-h-0 flex-1 grid-cols-1 gap-2 sm:grid-cols-[1fr_36%]">
-          <div className="flex min-h-[4rem] flex-col rounded-lg border border-slate-100 bg-white p-2 sm:min-h-[5rem]">
-            <p className="text-[7px] font-semibold text-slate-700 sm:text-[8px]">Revenue Over Time</p>
+          <div className="flex min-h-[4rem] flex-col rounded-lg border border-white/[0.06] bg-white/[0.035] p-2 sm:min-h-[5rem]">
+            <p className="text-[7px] font-semibold text-white/80 sm:text-[8px]">Revenue Over Time</p>
             <div className="mt-1 min-h-0 flex-1">
               <RevenueChart />
             </div>
           </div>
-          <div className="rounded-lg border border-slate-100 bg-white p-2">
-            <p className="mb-1.5 text-[7px] font-semibold text-slate-700 sm:text-[8px]">Top Channels</p>
+          <div className="rounded-lg border border-white/[0.06] bg-white/[0.035] p-2">
+            <p className="mb-1.5 text-[7px] font-semibold text-white/80 sm:text-[8px]">Top Channels</p>
             <div className="space-y-1.5">
               {dashboard.channels.map((ch) => (
                 <div key={ch.label}>
                   <div className="mb-0.5 flex justify-between text-[6px] sm:text-[7px]">
-                    <span className="text-slate-600">{ch.label}</span>
-                    <span className="font-semibold text-slate-800">{ch.pct}%</span>
+                    <span className="text-white/65">{ch.label}</span>
+                    <span className="font-semibold text-white">{ch.pct}%</span>
                   </div>
-                  <div className="h-1 overflow-hidden rounded-full bg-slate-100">
+                  <div className="h-1 overflow-hidden rounded-full bg-white/[0.05]">
                     <div className="h-full rounded-full bg-emerald-500" style={{ width: `${ch.pct}%` }} />
                   </div>
                 </div>
@@ -92,9 +92,9 @@ function PhonePanel() {
   const { phone } = ecommerceDmHero.dashboard;
 
   return (
-    <div className="flex h-full flex-col rounded-[1.1rem] border-[3px] border-slate-900 bg-white p-2 shadow-[0_16px_40px_rgba(15,23,42,0.25)] sm:p-2.5">
-      <div className="mx-auto mb-2 h-1 w-8 rounded-full bg-slate-300" />
-      <p className="text-[8px] font-bold text-slate-800 sm:text-[9px]">{phone.title}</p>
+    <div className="flex h-full flex-col rounded-[1.1rem] border-[3px] border-slate-900 bg-white/[0.035] p-2 shadow-[0_16px_40px_rgba(15,23,42,0.25)] sm:p-2.5">
+      <div className="mx-auto mb-2 h-1 w-8 rounded-full bg-white/15" />
+      <p className="text-[8px] font-bold text-white sm:text-[9px]">{phone.title}</p>
       <svg viewBox="0 0 80 28" className="mt-2 h-8 w-full">
         <polyline
           points="0,22 20,18 40,20 60,10 80,14"
@@ -104,12 +104,12 @@ function PhonePanel() {
           strokeLinecap="round"
         />
       </svg>
-      <p className="mt-2 text-[7px] font-semibold text-slate-600 sm:text-[8px]">Top Products</p>
+      <p className="mt-2 text-[7px] font-semibold text-white/65 sm:text-[8px]">Top Products</p>
       <ul className="mt-1.5 flex-1 space-y-1.5">
         {phone.products.map((name) => (
-          <li key={name} className="flex items-center gap-1.5 rounded-md border border-slate-100 bg-slate-50 p-1.5">
-            <span className="h-6 w-6 shrink-0 rounded bg-emerald-100" />
-            <span className="text-[6px] font-medium text-slate-700 sm:text-[7px]">{name}</span>
+          <li key={name} className="flex items-center gap-1.5 rounded-md border border-white/[0.06] bg-white/[0.025] p-1.5">
+            <span className="h-6 w-6 shrink-0 rounded bg-emerald-400/10" />
+            <span className="text-[6px] font-medium text-white/80 sm:text-[7px]">{name}</span>
           </li>
         ))}
       </ul>

@@ -72,11 +72,11 @@ export default function StrategyDmHeroDashboard() {
             className={`absolute z-20 w-[7.75rem] sm:w-[8.75rem] ${SPOKE_POS[spoke.position]}`}
           >
             <div className={`${DSM_CARD} p-2.5 sm:p-3`}>
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-violet-50 sm:h-8 sm:w-8">
-                <Icon className="h-3.5 w-3.5 text-violet-600 sm:h-4 sm:w-4" strokeWidth={2} />
+              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-violet-400/10 sm:h-8 sm:w-8">
+                <Icon className="h-3.5 w-3.5 text-violet-300 sm:h-4 sm:w-4" strokeWidth={2} />
               </span>
-              <p className="mt-1.5 text-[11px] font-bold text-slate-900 sm:text-xs">{spoke.label}</p>
-              <p className="mt-0.5 text-[9px] leading-snug text-slate-500 sm:text-[10px]">
+              <p className="mt-1.5 text-[11px] font-bold text-white sm:text-xs">{spoke.label}</p>
+              <p className="mt-0.5 text-[9px] leading-snug text-white/50 sm:text-[10px]">
                 {spoke.desc}
               </p>
             </div>

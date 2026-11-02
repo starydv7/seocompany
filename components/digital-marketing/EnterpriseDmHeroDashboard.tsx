@@ -64,7 +64,7 @@ function RevenueDonut({
       <ul className="min-w-0 flex-1 space-y-1">
         {segments.map((s) => (
           <li key={s.label} className="flex items-center justify-between gap-1 text-[9px]">
-            <span className="flex items-center gap-1 text-slate-400">
+            <span className="flex items-center gap-1 text-white/40">
               <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: s.color }} />
               {s.label}
             </span>
@@ -94,9 +94,9 @@ export default function EnterpriseDmHeroDashboard() {
             key={m.label}
             className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-3 py-3"
           >
-            <p className="text-[10px] font-medium text-slate-400">{m.label}</p>
+            <p className="text-[10px] font-medium text-white/40">{m.label}</p>
             <p className="mt-1 text-lg font-bold text-emerald-400">{m.delta}</p>
-            <p className="text-[9px] text-slate-500">{m.sub}</p>
+            <p className="text-[9px] text-white/50">{m.sub}</p>
             <MiniSparkline color={m.lineColor} points={sparkPoints[i]} />
           </div>
         ))}
@@ -105,7 +105,7 @@ export default function EnterpriseDmHeroDashboard() {
       {/* Middle row */}
       <div className="mt-4 grid grid-cols-1 gap-4 border-t border-white/[0.06] pt-4 lg:grid-cols-2">
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">
             Revenue Attribution
           </p>
           <RevenueDonut
@@ -116,14 +116,14 @@ export default function EnterpriseDmHeroDashboard() {
         </div>
 
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-          <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+          <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-white/40">
             Channel Performance
           </p>
           <div className="space-y-2.5">
             {channels.map((c) => (
               <div key={c.label}>
                 <div className="mb-1 flex justify-between text-[10px]">
-                  <span className="text-slate-400">{c.label}</span>
+                  <span className="text-white/40">{c.label}</span>
                   <span className="font-bold text-white">{c.pct}%</span>
                 </div>
                 <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
@@ -140,7 +140,7 @@ export default function EnterpriseDmHeroDashboard() {
 
       {/* Customer journey */}
       <div className="mt-4 rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-        <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-slate-400">
+        <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-white/40">
           Customer Journey
         </p>
         <div className="relative flex items-start justify-between gap-1">

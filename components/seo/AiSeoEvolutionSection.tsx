@@ -21,10 +21,10 @@ function StepCard({
 
   return (
     <article
-      className={`relative flex min-h-[11.5rem] w-full flex-col items-center rounded-xl border bg-white px-3 py-6 text-center shadow-[0_4px_20px_rgba(15,23,42,0.06)] ${
+      className={`relative flex min-h-[11.5rem] w-full flex-col items-center rounded-xl border bg-white/[0.035] px-3 py-6 text-center shadow-[0_4px_20px_rgba(15,23,42,0.06)] ${
         step.highlight
           ? "border-[#7c3aed] pt-8 shadow-[0_0_28px_rgba(124,58,237,0.32)] ring-2 ring-[#c4b5fd]/60"
-          : "border-slate-100"
+          : "border-white/[0.06]"
       }`}
     >
       {hereBadge && (
@@ -38,7 +38,7 @@ function StepCard({
       />
       <p className={`mt-3 text-sm font-bold ${AI_ACCENT_COLOR}`}>{step.year}</p>
       <p className={`mt-1 text-sm font-bold leading-snug ${AI_TITLE_COLOR}`}>{step.label}</p>
-      <p className="mt-2 text-[11px] leading-relaxed text-slate-500">{step.description}</p>
+      <p className="mt-2 text-[11px] leading-relaxed text-white/50">{step.description}</p>
     </article>
   );
 }
@@ -46,10 +46,10 @@ function StepCard({
 function TimelineConnector() {
   return (
     <span
-      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-50"
+      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/[0.09] bg-white/[0.025]"
       aria-hidden
     >
-      <ChevronRight className="h-4 w-4 text-slate-400" strokeWidth={2.5} />
+      <ChevronRight className="h-4 w-4 text-white/40" strokeWidth={2.5} />
     </span>
   );
 }
@@ -64,14 +64,14 @@ export default function AiSeoEvolutionSection() {
         <div className="grid w-full grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,30%)_minmax(0,1fr)] lg:gap-x-[4%]">
           <Reveal className="min-w-0 shrink-0">
             <p className={`inline-flex items-center gap-2 text-[10px] ${AI_LABEL_PURPLE}`}>
-              <Circle className="h-3 w-3 fill-[#7c3aed] text-[#7c3aed]" strokeWidth={3} />
+              <Circle className="h-3 w-3 fill-[#7c3aed] text-[#b089f4]" strokeWidth={3} />
               {badge}
             </p>
             <h2 className={`mt-4 text-2xl sm:text-[1.75rem] lg:text-[2rem] ${AI_SECTION_TITLE}`}>
               {titleBefore}{" "}
               <span className={AI_ACCENT_COLOR}>{titleAccent}</span>
             </h2>
-            <p className={`mt-4 max-w-sm ${FRANCHISE_SECTION_SUBTITLE} text-slate-600`}>
+            <p className={`mt-4 max-w-sm ${FRANCHISE_SECTION_SUBTITLE} text-white/65`}>
               {subtitle}
             </p>
           </Reveal>
@@ -98,9 +98,9 @@ export default function AiSeoEvolutionSection() {
         </div>
 
         <Reveal delay={0.1}>
-          <div className="mt-8 flex items-center gap-3 rounded-xl bg-violet-50/90 px-4 py-4 sm:px-5">
-            <Sparkles className="h-5 w-5 shrink-0 text-[#7c3aed]" strokeWidth={2} />
-            <p className="text-sm leading-relaxed text-slate-700">
+          <div className="mt-8 flex items-center gap-3 rounded-xl bg-violet-400/10 px-4 py-4 sm:px-5">
+            <Sparkles className="h-5 w-5 shrink-0 text-[#b089f4]" strokeWidth={2} />
+            <p className="text-sm leading-relaxed text-white/80">
               {footerBefore}
               <span className={`font-bold ${AI_ACCENT_COLOR}`}>{footerAccent}</span>
             </p>

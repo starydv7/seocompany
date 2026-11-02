@@ -206,7 +206,7 @@ const valueProps: { label: string; value: string }[] = [
 
 export default function DigitalMarketingServicesPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white/[0.02] via-white/[0.03] to-white/[0.02] px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(80,180,68,0.08),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(221,191,93,0.08),transparent_35%)]"
@@ -214,18 +214,18 @@ export default function DigitalMarketingServicesPage() {
 
       <div className="mx-auto w-full space-y-14">
         <Reveal>
-          <header className="rounded-3xl border border-slate-200/80 bg-white/85 p-6 shadow-xl shadow-emerald-100/30 backdrop-blur sm:p-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d]/15 via-[#dde55d]/15 to-[#50b444]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#50b444]">
+          <header className="rounded-3xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-xl shadow-black/40 backdrop-blur sm:p-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d]/15 via-white/[0.03] to-[#50b444]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#50b444]">
               <Sparkles className="h-3.5 w-3.5" />
               Digital Marketing Services
             </div>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
               Full-stack digital marketing built for{" "}
-              <span className="bg-gradient-to-r from-[#ddbf5d] to-[#50b444] bg-clip-text text-transparent">
+              <span className="lux-gold-text">
                 compounding growth.
               </span>
             </h1>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/65 sm:text-base">
               From SEO to paid media, social to content, eCommerce to marketplaces — we run the
               entire growth engine for ambitious brands. Pick what you need, or combine them into a
               full-funnel system. Every service is built around outcomes you can measure.
@@ -236,14 +236,14 @@ export default function DigitalMarketingServicesPage() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#ddbf5d]/30 transition hover:brightness-105"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-cta text-lux-ink"
               >
                 Book a Strategy Call
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="#categories"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
               >
                 Explore Services
               </Link>
@@ -253,10 +253,10 @@ export default function DigitalMarketingServicesPage() {
               {valueProps.map((vp) => (
                 <div
                   key={vp.label}
-                  className="rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3"
+                  className="rounded-xl border border-white/[0.09] bg-white/[0.025] px-4 py-3"
                 >
                   <p className="text-2xl font-bold text-[#50b444]">{vp.value}</p>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-slate-500">
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white/50">
                     {vp.label}
                   </p>
                 </div>
@@ -272,11 +272,11 @@ export default function DigitalMarketingServicesPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#50b444]">
                   What we do
                 </p>
-                <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+                <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                   10 disciplines, one growth engine
                 </h2>
               </div>
-              <p className="max-w-md text-sm leading-relaxed text-slate-600">
+              <p className="max-w-md text-sm leading-relaxed text-white/65">
                 Every category below is delivered by specialists, integrated by strategists, and
                 measured against the metrics that actually matter to your business.
               </p>
@@ -287,7 +287,7 @@ export default function DigitalMarketingServicesPage() {
                 <article
                   key={c.id}
                   id={c.id}
-                  className="group flex h-full scroll-mt-24 flex-col rounded-2xl border border-slate-200/80 bg-white/90 p-6 text-sm shadow-sm shadow-sky-50 transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md hover:shadow-emerald-100"
+                  className="group flex h-full scroll-mt-24 flex-col rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-sm shadow-black/40 transition hover:-translate-y-1 hover:border-emerald-400/25 hover:shadow-md hover:shadow-black/40"
                 >
                   <div className="flex items-start gap-3">
                     <div
@@ -296,16 +296,16 @@ export default function DigitalMarketingServicesPage() {
                       <c.Icon className="h-6 w-6" strokeWidth={1.75} />
                     </div>
                     <div className="min-w-0 space-y-1">
-                      <h3 className="text-base font-semibold tracking-tight text-slate-900">
+                      <h3 className="text-base font-semibold tracking-tight text-white">
                         {c.title}
                       </h3>
-                      <p className="text-xs font-semibold text-slate-700">{c.kicker}</p>
+                      <p className="text-xs font-semibold text-white/80">{c.kicker}</p>
                     </div>
                   </div>
 
-                  <p className="mt-4 text-sm leading-relaxed text-slate-700">{c.description}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-white/80">{c.description}</p>
 
-                  <ul className="mt-4 flex-1 space-y-2 text-xs text-slate-600">
+                  <ul className="mt-4 flex-1 space-y-2 text-xs text-white/65">
                     {c.items.map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#50b444]" />
@@ -317,7 +317,7 @@ export default function DigitalMarketingServicesPage() {
                   <div className="pt-5">
                     <Link
                       href={c.href}
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-800 shadow-sm transition hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-800"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2 text-xs font-semibold lux-ghost text-white"
                     >
                       Learn more
                       <ArrowRight className="h-4 w-4" />
@@ -330,16 +330,16 @@ export default function DigitalMarketingServicesPage() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <section className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white via-emerald-50/30 to-amber-50/30 p-8 shadow-lg shadow-emerald-100/30 sm:p-12">
+          <section className="rounded-3xl border border-white/[0.09] bg-gradient-to-br from-white/[0.03] via-emerald-400/10 to-amber-400/10 p-8 shadow-lg shadow-black/40 sm:p-12">
             <div className="grid gap-6 lg:grid-cols-[1.4fr,1fr] lg:items-center">
               <div className="space-y-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#50b444]">
                   Ready when you are
                 </p>
-                <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+                <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                   Let&apos;s map the fastest path to growth for your business.
                 </h2>
-                <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
+                <p className="text-sm leading-relaxed text-white/65 sm:text-base">
                   Tell us your goals. We&apos;ll come back with a focused, measurable plan — no
                   fluff, no fixed packages, just the right mix of services for where you are
                   today.
@@ -351,14 +351,14 @@ export default function DigitalMarketingServicesPage() {
                   href={HUBSPOT_MEETING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d] to-[#50b444] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-[#ddbf5d]/30 transition hover:brightness-105"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-cta text-lux-ink"
                 >
                   Schedule a Strategy Call
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
                 >
                   Send us a brief
                 </Link>

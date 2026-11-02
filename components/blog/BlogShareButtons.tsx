@@ -37,7 +37,7 @@ export default function BlogShareButtons({ url, title }: Props) {
         href={`https://www.facebook.com/sharer/sharer.php?u=${encoded}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.09] text-white/50 transition hover:border-lux-gold/50 hover:bg-lux-gold/10 hover:text-lux-champagne"
         aria-label="Share on Facebook"
       >
         <Facebook className="h-4 w-4" />
@@ -46,7 +46,7 @@ export default function BlogShareButtons({ url, title }: Props) {
         href={`https://twitter.com/intent/tweet?url=${encoded}&text=${encodedTitle}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.09] text-white/50 transition hover:border-lux-gold/50 hover:bg-lux-gold/10 hover:text-lux-champagne"
         aria-label="Share on Twitter"
       >
         <TwitterIcon className="h-3.5 w-3.5" />
@@ -55,7 +55,7 @@ export default function BlogShareButtons({ url, title }: Props) {
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.09] text-white/50 transition hover:border-lux-gold/50 hover:bg-lux-gold/10 hover:text-lux-champagne"
         aria-label="Share on LinkedIn"
       >
         <Linkedin className="h-4 w-4" />
@@ -63,10 +63,10 @@ export default function BlogShareButtons({ url, title }: Props) {
       <button
         type="button"
         onClick={copyLink}
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
+        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.09] text-white/50 transition hover:border-lux-gold/50 hover:bg-lux-gold/10 hover:text-lux-champagne"
         aria-label="Copy link"
       >
-        {copied ? <Check className="h-4 w-4 text-emerald-600" /> : <Link2 className="h-4 w-4" />}
+        {copied ? <Check className="h-4 w-4 text-emerald-300" /> : <Link2 className="h-4 w-4" />}
       </button>
     </div>
   );
