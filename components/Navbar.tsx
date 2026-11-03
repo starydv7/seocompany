@@ -7,6 +7,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { HUBSPOT_MEETING_URL, BRAND_LOGO } from "@/lib/site";
 import { hrefForMegaItem } from "@/lib/seo/nav-item-hrefs";
+import { HIRE_ROLES } from "@/lib/hire-developers/hire-developers-content";
 import type { LucideIcon } from "lucide-react";
 import {
   Menu,
@@ -62,6 +63,7 @@ const MEGA_SECTION_ICONS: Record<string, MegaIconStyle> = {
   "Product Engineering": { icon: Layers, box: "bg-teal-100 text-teal-700 ring-1 ring-inset ring-teal-300/20" },
   "Business Solutions": { icon: Briefcase, box: "bg-amber-100 text-amber-700 ring-1 ring-inset ring-amber-300/20" },
   "Development Process": { icon: GitBranch, box: "bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-300/20" },
+  "Hire Developers": { icon: Users, box: "bg-amber-100 text-amber-700 ring-1 ring-inset ring-amber-300/20" },
 };
 
 const DEFAULT_MEGA_ICON: MegaIconStyle = {
@@ -144,6 +146,11 @@ const servicesMegaSections: MegaSection[] = [
 ];
 
 const designMegaSections: MegaSection[] = [
+  {
+    title: "Hire Developers",
+    href: "/hire-developers",
+    items: HIRE_ROLES.map((role) => role.label),
+  },
   {
     title: "Software Development",
     href: "/design-and-development/software-development",

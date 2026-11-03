@@ -16,6 +16,7 @@ const digitalMarketingLinks: FooterLink[] = [
 ];
 
 const designDevelopmentLinks: FooterLink[] = [
+  { label: "Hire Developers", href: "/hire-developers" },
   { label: "Software Development", href: "/design-and-development/software-development" },
   { label: "Web Development", href: "/design-and-development/web-development" },
   { label: "Mobile App Development", href: "/design-and-development/mobile-app-development" },

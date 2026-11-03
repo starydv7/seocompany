@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import {
@@ -21,11 +23,7 @@ import LuxCard from "@/components/lux/LuxCard";
 import LuxPage, { LuxEyebrow, LuxPill } from "@/components/lux/LuxPage";
 import { LUX_ACCENTS, type LuxAccent } from "@/components/lux/accents";
 
-export const metadata: Metadata = {
-  title: "About Us | BrandMarketing",
-  description:
-    "Meet the minds behind the metrics, a collective of strategists, creators, and analysts obsessed with growth.",
-};
+export const metadata: Metadata = pageMetadata("/about");
 
 type SocialKey = "linkedin" | "github" | "leetcode" | "facebook" | "instagram";
 
@@ -139,6 +137,7 @@ function initials(name: string) {
 export default function AboutPage() {
   return (
     <LuxPage>
+      <PageJsonLd path="/about" />
       {/* Hero */}
       <section className="relative isolate overflow-hidden px-4 pb-24 pt-16 sm:px-6 sm:pb-32 sm:pt-24 lg:px-8">
         <LuxBackdrop />

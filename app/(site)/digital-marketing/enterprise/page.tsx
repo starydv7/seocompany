@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import EnterpriseDmLanding from "@/components/digital-marketing/EnterpriseDmLanding";
 
-export const metadata: Metadata = {
-  title: "Enterprise Digital Marketing Services | BrandMarketing",
-  description:
-    "Enterprise digital marketing services for scalable business growth—data-driven strategies, global performance, and measurable revenue across SEO, PPC, and full-funnel channels.",
-};
+export const metadata: Metadata = pageMetadata("/digital-marketing/enterprise");
 
 export default function EnterpriseDigitalMarketingPage() {
-  return <EnterpriseDmLanding />;
+  return (
+    <>
+      <PageJsonLd path="/digital-marketing/enterprise" />
+      <EnterpriseDmLanding />
+    </>
+  );
 }

@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import { ArrowRight, BarChart3, Bot, Megaphone, Search } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
-export const metadata: Metadata = {
-  title: "Our Services | BrandMarketing",
-  description:
-    "Precision-engineered services to elevate your brand and multiply your revenue.",
-};
+export const metadata: Metadata = pageMetadata("/services");
 
 type Service = {
   id: string;
@@ -116,6 +114,7 @@ export default function ServicesPage() {
 
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+      <PageJsonLd path="/services" />
       <div className="mx-auto w-full space-y-14">
         <Reveal>
           <header className="w-full space-y-4">

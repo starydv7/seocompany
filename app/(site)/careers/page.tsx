@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,11 +18,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
-export const metadata: Metadata = {
-  title: "Careers | BrandMarketing",
-  description:
-    "Join BrandMarketing and help ambitious brands grow. Explore current openings across marketing, engineering and design.",
-};
+export const metadata: Metadata = pageMetadata("/careers");
 
 type Department = "Marketing" | "Engineering" | "Design" | "Operations";
 
@@ -195,6 +193,7 @@ export default function CareersPage() {
 
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+      <PageJsonLd path="/careers" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(80,180,68,0.08),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(221,191,93,0.08),transparent_35%)]"

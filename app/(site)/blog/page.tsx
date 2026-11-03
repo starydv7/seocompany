@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import BlogLanding from "@/components/blog/BlogLanding";
+import PageJsonLd from "@/components/seo/JsonLd";
 import { extractTaxonomy, getBlogPosts } from "@/lib/blog/api";
+import { pageMetadata } from "@/lib/seo";
 
 /** Cache the page for 2 minutes; still refreshes in the background. */
 export const revalidate = 120;
-
-export const metadata: Metadata = {
-  title: "Blog | BrandMarketing",
-  description:
-    "SEO, PPC, social media, and growth insights from BrandMarketing — practical playbooks for modern brands.",
-};
 
 type SearchParams = {
   categoryId?: string;
@@ -17,6 +13,12 @@ type SearchParams = {
   search?: string;
   page?: string;
 };
+
+export function generateMetadata({ searchParams }: { searchParams: SearchParams }): Metadata {
+  const base = pageMetadata("/blog");
+  const isFiltered = Boolean(searchParams.categoryId || searchParams.tagId || searchParams.search);
+  return isFiltered ? { ...base, robots: { index: false, follow: true } } : base;
+}
 
 export default async function BlogPage({
   searchParams,
@@ -38,13 +40,16 @@ export default async function BlogPage({
   const { categories, tags } = extractTaxonomy(taxonomySource.data);
 
   return (
-    <BlogLanding
-      posts={posts}
-      categories={categories}
-      tags={tags}
-      activeCategoryId={categoryId}
-      activeTagId={tagId}
-      search={search}
-    />
+    <>
+      <PageJsonLd path="/blog" />
+      <BlogLanding
+        posts={posts}
+        categories={categories}
+        tags={tags}
+        activeCategoryId={categoryId}
+        activeTagId={tagId}
+        search={search}
+      />
+    </>
   );
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, Mail, Phone, Video } from "lucide-react";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
@@ -8,11 +10,7 @@ import LuxCard from "@/components/lux/LuxCard";
 import LuxPage, { LuxEyebrow, LuxPill } from "@/components/lux/LuxPage";
 import { LUX_ACCENTS } from "@/components/lux/accents";
 
-export const metadata: Metadata = {
-  title: "Book a Strategy Call | BrandMarketing",
-  description:
-    "Book a free strategy call with BrandMarketing. Discuss your growth goals, uncover opportunities and leave with a roadmap tailored to your business.",
-};
+export const metadata: Metadata = pageMetadata("/contact");
 
 const BENEFITS = [
   {
@@ -45,6 +43,7 @@ const AGENDA = [
 export default function ContactPage() {
   return (
     <LuxPage>
+      <PageJsonLd path="/contact" />
       {/* Hero */}
       <section className="relative isolate overflow-hidden px-4 pb-24 pt-16 sm:px-6 sm:pb-32 sm:pt-24 lg:px-8">
         <LuxBackdrop />

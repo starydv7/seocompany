@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import FrontendDevLanding from "@/components/design-and-development/FrontendDevLanding";
 
-export const metadata: Metadata = {
-  title: "Frontend Development Services | BrandMarketing",
-  description:
-    "We build fast, responsive, and interactive frontends that look stunning on every device and deliver exceptional user experiences.",
-};
+export const metadata: Metadata = pageMetadata("/design-and-development/frontend-development");
 
 export default function FrontendDevelopmentPage() {
-  return <FrontendDevLanding />;
+  return (
+    <>
+      <PageJsonLd path="/design-and-development/frontend-development" />
+      <FrontendDevLanding />
+    </>
+  );
 }

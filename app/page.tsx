@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import { ArrowRight, BarChart3, Layers, Rocket, Search, ShieldCheck, Target, TrendingUp, Trophy, Zap } from "lucide-react";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import AuditForm from "@/components/AuditForm";
@@ -134,9 +137,12 @@ function SectionHeading({
   );
 }
 
+export const metadata: Metadata = pageMetadata("/");
+
 export default function Home() {
   return (
     <LuxPage>
+      <PageJsonLd path="/" />
       {/* Hero */}
       <section className="relative isolate overflow-hidden px-4 pb-24 pt-14 sm:px-6 sm:pb-32 sm:pt-20 lg:px-8">
         <LuxBackdrop />

@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
-import UiuxDevLanding from "@/components/design-and-development/UiuxDevLanding";
-
-export const metadata: Metadata = {
-  title: "UI/UX Design Services | BrandMarketing",
-  description:
-    "User-centered UI/UX design from research to high-fidelity prototypes that delight users and drive engagement.",
-};
-
-export default function UiUxDesignPage() {
-  return <UiuxDevLanding />;
-}
+import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
+import UiuxDevLanding from "@/components/design-and-development/UiuxDevLanding";
+
+export const metadata: Metadata = pageMetadata("/design-and-development/ui-ux-design");
+
+export default function UiUxDesignPage() {
+  return (
+    <>
+      <PageJsonLd path="/design-and-development/ui-ux-design" />
+      <UiuxDevLanding />
+    </>
+  );
+}

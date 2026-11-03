@@ -1,7 +1,7 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://brandmarketing.digital";
 
-/** Public, indexable routes (exclude redirect-only pages). */
+/** Public, indexable routes (exclude redirect-only pages and duplicates that canonicalise elsewhere, e.g. /seo/aiseo). */
 export const PUBLIC_ROUTES: string[] = [
   "/",
   "/about",
@@ -16,7 +16,6 @@ export const PUBLIC_ROUTES: string[] = [
   "/seo/technical",
   "/seo/franchise",
   "/seo/ai",
-  "/seo/aiseo",
   "/digital-marketing-services",
   "/digital-marketing-services/ppc",
   "/digital-marketing-services/link-building",
@@ -27,6 +26,7 @@ export const PUBLIC_ROUTES: string[] = [
   "/digital-marketing/ecommerce",
   "/digital-marketing/franchise",
   "/digital-marketing/enterprise",
+  "/hire-developers",
   "/design-and-development",
   "/design-and-development/software-development",
   "/design-and-development/web-development",

@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import PpcLanding from "@/components/ppc/PpcLanding";
 
-export const metadata: Metadata = {
-  title: "PPC Marketing Services | BrandMarketing",
-  description:
-    "PPC marketing that drives qualified traffic and maximum ROI — Google Ads, YouTube, programmatic, and enterprise paid media.",
-};
+export const metadata: Metadata = pageMetadata("/digital-marketing-services/ppc");
 
 export default function PpcMarketingPage() {
-  return <PpcLanding />;
+  return (
+    <>
+      <PageJsonLd path="/digital-marketing-services/ppc" />
+      <PpcLanding />
+    </>
+  );
 }

@@ -9,9 +9,11 @@ import {
   UI_UX_DESIGN_ROUTE,
   WEB_DEVELOPMENT_ROUTE,
 } from "@/lib/design-and-development/service-routes";
+import { HIRE_DEVELOPERS_ROUTE, HIRE_ROLES } from "@/lib/hire-developers/hire-developers-content";
 
 /** Mega-menu Design & Development item label → route */
 export const DESIGN_ITEM_HREFS: Record<string, string> = {
+  ...Object.fromEntries(HIRE_ROLES.map((role) => [role.label, `${HIRE_DEVELOPERS_ROUTE}#${role.id}`])),
   "Software Development": SOFTWARE_DEVELOPMENT_ROUTE,
   "Custom Software Development": SOFTWARE_DEVELOPMENT_ROUTE,
   "Full Stack Web Development": SOFTWARE_DEVELOPMENT_ROUTE,

@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import SocialMediaLanding from "@/components/social-media/SocialMediaLanding";
 
-export const metadata: Metadata = {
-  title: "Social Media Marketing Services | BrandMarketing",
-  description:
-    "Social media marketing that builds brands, drives real engagement, and delivers measurable results across every major platform.",
-};
+export const metadata: Metadata = pageMetadata("/social-media");
 
 export default function SocialMediaPage() {
-  return <SocialMediaLanding />;
+  return (
+    <>
+      <PageJsonLd path="/social-media" />
+      <SocialMediaLanding />
+    </>
+  );
 }

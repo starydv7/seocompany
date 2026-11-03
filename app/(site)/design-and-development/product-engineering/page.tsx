@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
-import ProductEngineeringLanding from "@/components/design-and-development/ProductEngineeringLanding";
-
-export const metadata: Metadata = {
-  title: "Product Engineering Services | BrandMarketing",
-  description:
-    "End-to-end product engineering from strategy and architecture to development, optimization, and long-term support.",
-};
-
-export default function ProductEngineeringPage() {
-  return <ProductEngineeringLanding />;
-}
+import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
+import ProductEngineeringLanding from "@/components/design-and-development/ProductEngineeringLanding";
+
+export const metadata: Metadata = pageMetadata("/design-and-development/product-engineering");
+
+export default function ProductEngineeringPage() {
+  return (
+    <>
+      <PageJsonLd path="/design-and-development/product-engineering" />
+      <ProductEngineeringLanding />
+    </>
+  );
+}

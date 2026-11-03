@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import WebDevLanding from "@/components/design-and-development/WebDevLanding";
 
-export const metadata: Metadata = {
-  title: "Web Development Services | BrandMarketing",
-  description:
-    "High-performance websites and web applications that drive traffic, engage users, and generate business results.",
-};
+export const metadata: Metadata = pageMetadata("/design-and-development/web-development");
 
 export default function WebDevelopmentPage() {
-  return <WebDevLanding />;
+  return (
+    <>
+      <PageJsonLd path="/design-and-development/web-development" />
+      <WebDevLanding />
+    </>
+  );
 }

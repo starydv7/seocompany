@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import EcommerceDmLanding from "@/components/digital-marketing/EcommerceDmLanding";
 
-export const metadata: Metadata = {
-  title: "eCommerce Marketing Services | BrandMarketing",
-  description:
-    "eCommerce marketing that drives traffic, sales, and long-term growth — SEO, PPC, optimization, and store design.",
-};
+export const metadata: Metadata = pageMetadata("/digital-marketing/ecommerce");
 
 export default function EcommerceMarketingPage() {
-  return <EcommerceDmLanding />;
+  return (
+    <>
+      <PageJsonLd path="/digital-marketing/ecommerce" />
+      <EcommerceDmLanding />
+    </>
+  );
 }

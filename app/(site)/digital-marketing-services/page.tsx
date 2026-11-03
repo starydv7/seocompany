@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import {
@@ -18,11 +20,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
-export const metadata: Metadata = {
-  title: "Digital Marketing Services | BrandMarketing",
-  description:
-    "Full-stack digital marketing services that combine SEO, paid media, social, content and conversion expertise to drive predictable, compounding growth.",
-};
+export const metadata: Metadata = pageMetadata("/digital-marketing-services");
 
 type Category = {
   id: string;
@@ -207,6 +205,7 @@ const valueProps: { label: string; value: string }[] = [
 export default function DigitalMarketingServicesPage() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+      <PageJsonLd path="/digital-marketing-services" />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(80,180,68,0.08),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(221,191,93,0.08),transparent_35%)]"

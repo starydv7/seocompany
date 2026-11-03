@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import Reveal from "@/components/Reveal";
 
-export const metadata: Metadata = {
-  title: "Search Engine Optimization (SEO) Services | BrandMarketing",
-  description:
-    "SEO services that drive rankings, revenue, and real business growth. Strategy-first, white-hat SEO built for Google’s future.",
-};
+export const metadata: Metadata = pageMetadata("/seo");
 
 export default function SeoPage() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+      <PageJsonLd path="/seo" />
       <div className="mx-auto w-full space-y-16">
         {/* Hero */}
         <Reveal>

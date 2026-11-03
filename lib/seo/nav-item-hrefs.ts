@@ -10,7 +10,7 @@ export const SEO_ITEM_HREFS: Record<string, string> = {
   "Local SEO": "/seo/local",
   "Technical SEO": "/seo/technical",
   "Franchise SEO": "/seo/franchise",
-  "AI SEO Services": "/seo/aiseo",
+  "AI SEO Services": "/seo/ai",
 };
 
 export function hrefForMegaItem(label: string, _sectionHref: string): string | null {

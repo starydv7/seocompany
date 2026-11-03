@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import SoftwareDevLanding from "@/components/design-and-development/SoftwareDevLanding";
 
-export const metadata: Metadata = {
-  title: "Software Development Services | BrandMarketing",
-  description:
-    "Custom software development built for scale, performance, and long-term growth — from startup MVPs to enterprise platforms.",
-};
+export const metadata: Metadata = pageMetadata("/design-and-development/software-development");
 
 export default function SoftwareDevelopmentPage() {
-  return <SoftwareDevLanding />;
+  return (
+    <>
+      <PageJsonLd path="/design-and-development/software-development" />
+      <SoftwareDevLanding />
+    </>
+  );
 }

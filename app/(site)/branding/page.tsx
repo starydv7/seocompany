@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
 import Reveal from "@/components/Reveal";
 
-export const metadata: Metadata = {
-  title: "Branding & Content Strategy | Identity with Intent",
-  description:
-    "We craft unforgettable brand identities and high-authority content that turns browsers into brand advocates.",
-};
+export const metadata: Metadata = pageMetadata("/branding");
 
 export default function BrandingPage() {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+      <PageJsonLd path="/branding" />
       <div className="mx-auto w-full space-y-14 sm:space-y-20">
         {/* Hero */}
         <Reveal>

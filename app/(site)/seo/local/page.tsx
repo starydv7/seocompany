@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import PageJsonLd from "@/components/seo/JsonLd";
+import { pageMetadata } from "@/lib/seo";
 import LocalSeoLanding from "@/components/seo/LocalSeoLanding";
 
-export const metadata: Metadata = {
-  title: "Local SEO Services | BrandMarketing",
-  description:
-    "Local SEO services that drive calls, traffic, and real local customers—Google Maps visibility, GBP optimization, and qualified leads from nearby searchers.",
-};
+export const metadata: Metadata = pageMetadata("/seo/local");
 
 export default function LocalSeoPage() {
-  return <LocalSeoLanding />;
+  return (
+    <>
+      <PageJsonLd path="/seo/local" />
+      <LocalSeoLanding />
+    </>
+  );
 }
