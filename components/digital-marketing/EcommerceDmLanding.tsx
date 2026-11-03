@@ -52,7 +52,7 @@ export default function EcommerceDmLanding() {
             <p className={ECM_BODY}>{ecommerceDmHero.subtitle}</p>
             <ul className="grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">
               {ecommerceDmHero.items.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-white/80">
+                <li key={item} className="flex items-start gap-2.5 text-sm text-stone-700">
                   <span className={ECM_CHECK}>
                     <Check className="h-3 w-3 text-white" strokeWidth={3} />
                   </span>
@@ -72,8 +72,8 @@ export default function EcommerceDmLanding() {
                 className={`${ECM_BTN_OUTLINE} gap-2`}
               >
                 {ecommerceDmHero.ctaSecondary}
-                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-emerald-400/25 bg-emerald-400/10">
-                  <Play className="h-3 w-3 fill-emerald-600 text-emerald-300" />
+                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50">
+                  <Play className="h-3 w-3 fill-emerald-600 text-emerald-700" />
                 </span>
               </Link>
             </div>
@@ -96,14 +96,14 @@ export default function EcommerceDmLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <article key={item.title} className={ECM_CARD}>
-                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-400/10">
-                  <Icon className="h-5 w-5 text-emerald-300" strokeWidth={1.75} />
+                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50">
+                  <Icon className="h-5 w-5 text-emerald-700" strokeWidth={1.75} />
                 </span>
                 <h3 className={ECM_CARD_TITLE}>{item.title}</h3>
                 <p className={`mt-2 ${ECM_CARD_BODY}`}>{item.desc}</p>
                 <ul className="mt-4 space-y-1.5">
                   {item.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-white/65">
+                    <li key={b} className="flex items-start gap-2 text-sm text-stone-600">
                       <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-emerald-500" />
                       {b}
                     </li>
@@ -124,7 +124,7 @@ export default function EcommerceDmLanding() {
         </div>
         <div className="relative overflow-x-auto pb-2">
           <div className="relative flex min-w-[44rem] items-start justify-between gap-2 sm:min-w-0">
-            <div className="absolute left-[5%] right-[5%] top-5 hidden border-t border-dashed border-white/15 sm:block" aria-hidden />
+            <div className="absolute left-[5%] right-[5%] top-5 hidden border-t border-dashed border-stone-300 sm:block" aria-hidden />
             {ecommerceDmProcess.steps.map((step) => (
               <div key={step.title} className="relative z-10 flex w-[15%] min-w-[4.5rem] flex-col items-center text-center">
                 <span
@@ -133,8 +133,8 @@ export default function EcommerceDmLanding() {
                 >
                   {step.num}
                 </span>
-                <p className="mt-3 text-xs font-bold text-white sm:text-sm">{step.title}</p>
-                <p className="mt-1 text-[10px] leading-snug text-white/50 sm:text-[11px]">{step.desc}</p>
+                <p className="mt-3 text-xs font-bold text-stone-900 sm:text-sm">{step.title}</p>
+                <p className="mt-1 text-[10px] leading-snug text-stone-500 sm:text-[11px]">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -151,10 +151,10 @@ export default function EcommerceDmLanding() {
                 const Icon = item.icon as LucideIcon;
                 return (
                   <div key={item.label} className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-400/10">
-                      <Icon className="h-5 w-5 text-emerald-300" strokeWidth={1.75} />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50">
+                      <Icon className="h-5 w-5 text-emerald-700" strokeWidth={1.75} />
                     </span>
-                    <span className="text-sm font-semibold text-white">{item.label}</span>
+                    <span className="text-sm font-semibold text-stone-900">{item.label}</span>
                   </div>
                 );
               })}
@@ -168,7 +168,7 @@ export default function EcommerceDmLanding() {
                 return (
                   <div key={name} className="flex flex-col items-center gap-2">
                     {Icon ? <Icon className="h-9 w-9 sm:h-10 sm:w-10" /> : null}
-                    <span className="text-center text-[10px] font-semibold text-white/65 sm:text-xs">{name}</span>
+                    <span className="text-center text-[10px] font-semibold text-stone-600 sm:text-xs">{name}</span>
                   </div>
                 );
               })}
@@ -187,8 +187,8 @@ export default function EcommerceDmLanding() {
                 const Icon = ind.icon as LucideIcon;
                 return (
                   <div key={ind.label} className="flex min-w-[5rem] flex-col items-center gap-1.5">
-                    <Icon className="h-5 w-5 text-emerald-300 sm:h-[22px] sm:w-[22px]" strokeWidth={1.75} />
-                    <span className="text-[11px] font-semibold text-white/80 sm:text-xs">{ind.label}</span>
+                    <Icon className="h-5 w-5 text-emerald-700 sm:h-[22px] sm:w-[22px]" strokeWidth={1.75} />
+                    <span className="text-[11px] font-semibold text-stone-700 sm:text-xs">{ind.label}</span>
                   </div>
                 );
               })}
@@ -204,10 +204,10 @@ export default function EcommerceDmLanding() {
       {/* CTA */}
       <section className={`${ECM_SECTION} ${ECM_PAD} pb-14 sm:pb-16`}>
         <div className="relative overflow-hidden rounded-2xl lux-banner p-6 sm:rounded-3xl sm:p-8 lg:p-10">
-          <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" aria-hidden />
+          <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-stone-900/5 blur-3xl" aria-hidden />
           <div className="relative grid items-center gap-6 lg:grid-cols-[1fr_auto] lg:gap-10">
             <div className="space-y-2 text-center lg:text-left">
-              <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl lg:text-[1.75rem]">
+              <h2 className="text-xl font-bold leading-tight text-stone-900 sm:text-2xl lg:text-[1.75rem]">
                 {ecommerceDmFinalCta.title}
               </h2>
               <p className="text-sm leading-relaxed text-emerald-50 sm:text-base">{ecommerceDmFinalCta.subtitle}</p>
@@ -226,7 +226,7 @@ export default function EcommerceDmLanding() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-stone-900"
               >
                 {ecommerceDmFinalCta.ctaSecondary}
                 <Calendar className="h-4 w-4" />

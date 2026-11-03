@@ -62,7 +62,7 @@ export default function DigitalMarketingHubLanding() {
             <p className={HUB_BODY}>{dmHubHero.subtitle}</p>
             <ul className="space-y-2.5">
               {dmHubHero.items.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm text-white/80">
+                <li key={item} className="flex items-start gap-2.5 text-sm text-stone-700">
                   <span className={HUB_CHECK}>
                     <Check className="h-3 w-3 text-white" strokeWidth={3} />
                   </span>
@@ -106,7 +106,7 @@ export default function DigitalMarketingHubLanding() {
         </div>
         <div className="relative overflow-x-auto pb-2">
           <div className="relative flex min-w-[44rem] items-start justify-between gap-1 sm:min-w-0">
-            <div className="absolute left-[6%] right-[6%] top-6 hidden border-t border-dashed border-violet-400/25 sm:block" aria-hidden />
+            <div className="absolute left-[6%] right-[6%] top-6 hidden border-t border-dashed border-violet-200 sm:block" aria-hidden />
             {dmHubStrategy.steps.map((step, i) => {
               const Icon = step.icon as LucideIcon;
               return (
@@ -114,14 +114,14 @@ export default function DigitalMarketingHubLanding() {
                   key={step.title}
                   className="relative z-10 flex w-[15%] min-w-[4.75rem] flex-col items-center text-center"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10 shadow-sm sm:h-[3.25rem] sm:w-[3.25rem]">
-                    <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50 shadow-sm sm:h-[3.25rem] sm:w-[3.25rem]">
+                    <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                   </span>
                   {i < dmHubStrategy.steps.length - 1 ? (
-                    <ChevronRight className="absolute -right-2 top-3 hidden h-4 w-4 text-violet-300 sm:block" aria-hidden />
+                    <ChevronRight className="absolute -right-2 top-3 hidden h-4 w-4 text-violet-700 sm:block" aria-hidden />
                   ) : null}
-                  <p className="mt-3 text-xs font-bold text-white sm:text-sm">{step.title}</p>
-                  <p className="mt-1 text-[10px] leading-snug text-white/50 sm:text-[11px]">{step.desc}</p>
+                  <p className="mt-3 text-xs font-bold text-stone-900 sm:text-sm">{step.title}</p>
+                  <p className="mt-1 text-[10px] leading-snug text-stone-500 sm:text-[11px]">{step.desc}</p>
                 </div>
               );
             })}
@@ -141,8 +141,8 @@ export default function DigitalMarketingHubLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <article key={item.title} className={HUB_CARD}>
-                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-violet-400/10">
-                  <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-violet-50">
+                  <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                 </span>
                 <h3 className={HUB_CARD_TITLE}>{item.title}</h3>
                 <p className={`mt-2 ${HUB_CARD_BODY}`}>{item.desc}</p>
@@ -166,7 +166,7 @@ export default function DigitalMarketingHubLanding() {
         </div>
         <div className="relative overflow-x-auto pb-2">
           <div className="relative flex min-w-[44rem] items-start justify-between gap-2 sm:min-w-0">
-            <div className="absolute left-[5%] right-[5%] top-5 hidden border-t border-dashed border-white/15 sm:block" aria-hidden />
+            <div className="absolute left-[5%] right-[5%] top-5 hidden border-t border-dashed border-stone-300 sm:block" aria-hidden />
             {dmHubProcess.steps.map((step) => (
               <div key={step.title} className="relative z-10 flex w-[15%] min-w-[4.5rem] flex-col items-center text-center">
                 <span
@@ -175,8 +175,8 @@ export default function DigitalMarketingHubLanding() {
                 >
                   {step.num}
                 </span>
-                <p className="mt-3 text-xs font-bold text-white sm:text-sm">{step.title}</p>
-                <p className="mt-1 text-[10px] leading-snug text-white/50 sm:text-[11px]">{step.desc}</p>
+                <p className="mt-3 text-xs font-bold text-stone-900 sm:text-sm">{step.title}</p>
+                <p className="mt-1 text-[10px] leading-snug text-stone-500 sm:text-[11px]">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -194,8 +194,8 @@ export default function DigitalMarketingHubLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <article key={item.title} className={`${HUB_CARD} flex items-start gap-4`}>
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-400/10">
-                  <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-50">
+                  <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                 </span>
                 <div>
                   <h3 className={HUB_CARD_TITLE}>{item.title}</h3>
@@ -218,10 +218,10 @@ export default function DigitalMarketingHubLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <div key={item.title} className="text-center">
-                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10">
-                  <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50">
+                  <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                 </span>
-                <p className="mt-3 text-sm font-bold text-white sm:text-base">{item.title}</p>
+                <p className="mt-3 text-sm font-bold text-stone-900 sm:text-base">{item.title}</p>
                 <p className={`mt-1.5 ${HUB_CARD_BODY}`}>{item.desc}</p>
               </div>
             );
@@ -240,8 +240,8 @@ export default function DigitalMarketingHubLanding() {
             const Icon = ind.icon as LucideIcon;
             return (
               <div key={ind.label} className="flex min-w-[5.5rem] flex-col items-center gap-2">
-                <Icon className="h-6 w-6 text-violet-300 sm:h-7 sm:w-7" strokeWidth={1.75} />
-                <span className="text-center text-[11px] font-semibold text-white/80 sm:text-xs">{ind.label}</span>
+                <Icon className="h-6 w-6 text-violet-700 sm:h-7 sm:w-7" strokeWidth={1.75} />
+                <span className="text-center text-[11px] font-semibold text-stone-700 sm:text-xs">{ind.label}</span>
               </div>
             );
           })}
@@ -251,12 +251,12 @@ export default function DigitalMarketingHubLanding() {
       {/* CTA */}
       <section className={`${HUB_SECTION} ${HUB_PAD} pb-14 sm:pb-16`}>
         <div className="relative overflow-hidden rounded-2xl lux-banner p-6 text-center sm:rounded-3xl sm:p-8 lg:p-10">
-          <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" aria-hidden />
+          <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-stone-900/5 blur-3xl" aria-hidden />
           <div className="relative mx-auto max-w-2xl space-y-4">
-            <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl lg:text-[1.75rem]">
+            <h2 className="text-xl font-bold leading-tight text-stone-900 sm:text-2xl lg:text-[1.75rem]">
               {dmHubFinalCta.title}
             </h2>
-            <p className="text-sm leading-relaxed text-violet-100 sm:text-base">{dmHubFinalCta.subtitle}</p>
+            <p className="text-sm leading-relaxed text-violet-700 sm:text-base">{dmHubFinalCta.subtitle}</p>
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <Link
                 href={HUBSPOT_MEETING_URL}
@@ -271,7 +271,7 @@ export default function DigitalMarketingHubLanding() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-stone-900"
               >
                 {dmHubFinalCta.ctaSecondary}
                 <Calendar className="h-4 w-4" />

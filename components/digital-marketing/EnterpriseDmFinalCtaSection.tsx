@@ -19,7 +19,7 @@ function CtaChart({ badge }: { badge: string }) {
         <div
           // eslint-disable-next-line react/no-array-index-key
           key={i}
-          className="w-5 rounded-t-md bg-white/25"
+          className="w-5 rounded-t-md bg-stone-900/15"
           style={{ height: `${h}px` }}
         />
       ))}
@@ -35,18 +35,18 @@ export default function EnterpriseDmFinalCtaSection() {
       <Reveal>
         <div className="relative w-full overflow-hidden rounded-2xl lux-banner px-8 py-10 shadow-[0_16px_48px_rgba(109,40,217,0.35)] sm:px-12 sm:py-14 lg:px-16">
           <div className="relative z-10 w-full">
-            <h2 className="text-2xl font-bold leading-[1.15] tracking-tight text-white sm:text-[2rem] lg:text-[2.25rem]">
+            <h2 className="text-2xl font-bold leading-[1.15] tracking-tight text-stone-900 sm:text-[2rem] lg:text-[2.25rem]">
               {title}
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-white/90 sm:text-[15px]">
+            <p className="mt-4 text-sm leading-relaxed text-stone-800 sm:text-[15px]">
               {subtitle}
             </p>
 
             <ul className="mt-7 space-y-3">
               {checklist.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-white/95">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/20">
-                    <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} />
+                <li key={item} className="flex items-center gap-3 text-sm text-stone-800">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-900/10">
+                    <Check className="h-3.5 w-3.5 text-stone-900" strokeWidth={3} />
                   </span>
                   {item}
                 </li>

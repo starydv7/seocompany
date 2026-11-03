@@ -44,7 +44,7 @@ export default function LinkBuildingLanding() {
         <div className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-12 xl:gap-16">
           <div className="min-w-0 space-y-5 lg:max-w-xl">
             <span className={LB_TAG}>
-              <Link2 className="h-3.5 w-3.5 text-violet-300" strokeWidth={2} />
+              <Link2 className="h-3.5 w-3.5 text-violet-700" strokeWidth={2} />
               {linkBuildingHero.badge}
             </span>
             <h1 className={LB_HERO_TITLE}>
@@ -54,7 +54,7 @@ export default function LinkBuildingLanding() {
             <p className={LB_BODY}>{linkBuildingHero.subtitle}</p>
             <ul className="space-y-2.5">
               {linkBuildingHero.items.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-white/80">
+                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-stone-700">
                   <span className={LB_CHECK}>
                     <Check className="h-3 w-3 text-white" strokeWidth={3} />
                   </span>
@@ -69,8 +69,8 @@ export default function LinkBuildingLanding() {
               </Link>
               <Link href="#services" className={`${LB_BTN_OUTLINE} gap-2`}>
                 {linkBuildingHero.ctaSecondary}
-                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-400/25 bg-violet-400/10">
-                  <Play className="h-3 w-3 fill-violet-600 text-violet-300" />
+                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-200 bg-violet-50">
+                  <Play className="h-3 w-3 fill-violet-600 text-violet-700" />
                 </span>
               </Link>
             </div>
@@ -92,15 +92,15 @@ export default function LinkBuildingLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <article key={item.title} className={LB_SERVICE_CARD}>
-                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white/[0.035]">
-                  <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white">
+                  <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                 </span>
                 <h3 className={LB_CARD_TITLE}>{item.title}</h3>
                 <p className={`mt-2 ${LB_CARD_BODY}`}>{item.desc}</p>
                 <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {item.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-white/60">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-violet-300" strokeWidth={2.5} />
+                    <li key={b} className="flex items-start gap-2 text-sm text-stone-600">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-violet-700" strokeWidth={2.5} />
                       {b}
                     </li>
                   ))}
@@ -120,7 +120,7 @@ export default function LinkBuildingLanding() {
         <div className="relative overflow-x-auto pb-2">
           <div className="relative flex min-w-[52rem] items-start justify-between sm:min-w-0">
             <div
-              className="absolute left-[8%] right-[8%] top-[1.35rem] hidden border-t border-dashed border-violet-400/25 sm:block"
+              className="absolute left-[8%] right-[8%] top-[1.35rem] hidden border-t border-dashed border-violet-200 sm:block"
               aria-hidden
             />
             {linkBuildingProcess.steps.map((step) => {
@@ -130,12 +130,12 @@ export default function LinkBuildingLanding() {
                   key={step.title}
                   className="relative z-10 flex w-[16%] min-w-[5rem] flex-col items-center text-center"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.035] sm:h-12 sm:w-12">
-                    <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white sm:h-12 sm:w-12">
+                    <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                   </span>
-                  <p className="mt-2 text-xs font-bold text-violet-300 sm:text-sm">{step.num}</p>
-                  <p className="mt-1 text-xs font-bold text-white sm:text-sm">{step.title}</p>
-                  <p className="mt-1 text-[10px] leading-snug text-white/60 sm:text-[11px]">{step.desc}</p>
+                  <p className="mt-2 text-xs font-bold text-violet-700 sm:text-sm">{step.num}</p>
+                  <p className="mt-1 text-xs font-bold text-stone-900 sm:text-sm">{step.title}</p>
+                  <p className="mt-1 text-[10px] leading-snug text-stone-600 sm:text-[11px]">{step.desc}</p>
                 </div>
               );
             })}
@@ -154,10 +154,10 @@ export default function LinkBuildingLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <div key={item.label} className={LB_APPROACH_CARD}>
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.035]">
-                  <Icon className="h-4 w-4 text-violet-300" strokeWidth={1.75} />
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white">
+                  <Icon className="h-4 w-4 text-violet-700" strokeWidth={1.75} />
                 </span>
-                <span className="text-sm font-semibold text-white">{item.label}</span>
+                <span className="text-sm font-semibold text-stone-900">{item.label}</span>
               </div>
             );
           })}
@@ -174,12 +174,12 @@ export default function LinkBuildingLanding() {
                 const Icon = item.icon as LucideIcon;
                 return (
                   <div key={item.label} className="flex items-start gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/[0.035]">
-                      <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white">
+                      <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                     </span>
                     <div>
-                      <p className="text-sm font-bold text-white">{item.label}</p>
-                      <p className="mt-0.5 text-xs leading-relaxed text-white/60">{item.desc}</p>
+                      <p className="text-sm font-bold text-stone-900">{item.label}</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-stone-600">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -194,8 +194,8 @@ export default function LinkBuildingLanding() {
                 const Icon = ind.icon as LucideIcon;
                 return (
                   <div key={ind.label} className="flex flex-col items-center gap-2 text-center">
-                    <Icon className="h-6 w-6 text-violet-300" strokeWidth={1.75} />
-                    <span className="text-[11px] font-semibold text-white/80 sm:text-xs">{ind.label}</span>
+                    <Icon className="h-6 w-6 text-violet-700" strokeWidth={1.75} />
+                    <span className="text-[11px] font-semibold text-stone-700 sm:text-xs">{ind.label}</span>
                   </div>
                 );
               })}
@@ -214,13 +214,13 @@ export default function LinkBuildingLanding() {
 
       {/* CTA — light purple */}
       <section className={`${LB_SECTION} ${LB_PAD} pb-14 sm:pb-16`}>
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-400/10 via-violet-400/10 to-indigo-400/10 p-6 sm:rounded-3xl sm:p-8 lg:p-10">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-violet-50 via-violet-50 to-indigo-50 p-6 sm:rounded-3xl sm:p-8 lg:p-10">
           <div className="relative grid items-center gap-6 lg:grid-cols-[1fr_auto] lg:gap-10">
             <div className="space-y-2 text-center lg:text-left">
-              <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl lg:text-[1.75rem]">
+              <h2 className="text-xl font-bold leading-tight text-stone-900 sm:text-2xl lg:text-[1.75rem]">
                 {linkBuildingFinalCta.title}
               </h2>
-              <p className="text-sm leading-relaxed text-white/60 sm:text-base">{linkBuildingFinalCta.subtitle}</p>
+              <p className="text-sm leading-relaxed text-stone-600 sm:text-base">{linkBuildingFinalCta.subtitle}</p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
               <Link href={HUBSPOT_MEETING_URL} target="_blank" rel="noopener noreferrer" className={LB_BTN_PRIMARY}>
@@ -234,7 +234,7 @@ export default function LinkBuildingLanding() {
                 className={`${LB_BTN_OUTLINE} gap-2`}
               >
                 {linkBuildingFinalCta.ctaSecondary}
-                <Calendar className="h-4 w-4 text-violet-300" />
+                <Calendar className="h-4 w-4 text-violet-700" />
               </Link>
             </div>
           </div>

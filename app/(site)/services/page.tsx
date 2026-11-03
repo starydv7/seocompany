@@ -115,17 +115,17 @@ export default function ServicesPage() {
   ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white/[0.02] via-white/[0.03] to-white/[0.02] px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div className="mx-auto w-full space-y-14">
         <Reveal>
           <header className="w-full space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-300">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
             BrandMarketing Services
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl">
             Precision-engineered services to elevate your brand and multiply your revenue.
           </h1>
-          <p className="text-sm leading-relaxed text-white/65 sm:text-base">
+          <p className="text-sm leading-relaxed text-stone-600 sm:text-base">
             Pick what you need, or combine them into a full-funnel system. Every service is built
             around one goal: outcomes you can measure.
           </p>
@@ -137,26 +137,26 @@ export default function ServicesPage() {
           {services.map((s) => (
             <article
               key={s.id}
-              className="flex h-full flex-col rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-sm shadow-black/40 transition hover:-translate-y-1 hover:border-sky-400/25 hover:shadow-md hover:shadow-black/40"
+              className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 text-sm shadow-sm shadow-stone-900/10 transition hover:-translate-y-1 hover:border-sky-200 hover:shadow-md hover:shadow-stone-900/10"
             >
               <div className="flex items-start gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-white shadow-md shadow-black/40">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-white shadow-md shadow-stone-900/10">
                   {s.icon}
                 </div>
                 <div className="space-y-1">
-                  <h2 className="text-base font-semibold tracking-tight text-white">
+                  <h2 className="text-base font-semibold tracking-tight text-stone-900">
                     {s.title}
                   </h2>
-                  <p className="text-xs font-semibold text-white/80">{s.kicker}</p>
+                  <p className="text-xs font-semibold text-stone-700">{s.kicker}</p>
                 </div>
               </div>
 
-              <p className="mt-4 text-sm leading-relaxed text-white/80">{s.description}</p>
+              <p className="mt-4 text-sm leading-relaxed text-stone-700">{s.description}</p>
 
               <div className="mt-auto pt-6">
                 <Link
                   href={`#${s.id}`}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2 text-xs font-semibold lux-ghost text-white"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2 text-xs font-semibold lux-ghost text-stone-900"
                 >
                   {s.ctaLabel} <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -169,10 +169,10 @@ export default function ServicesPage() {
         <Reveal delay={0.08}>
           <div className="space-y-6 pt-2">
           <div className="w-full space-y-2">
-            <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
               Service details
             </h2>
-            <p className="text-sm text-white/65 sm:text-base">
+            <p className="text-sm text-stone-600 sm:text-base">
               Click any service above to jump here. Want a custom plan? We’ll map the fastest path
               to growth for your goals.
             </p>
@@ -183,23 +183,23 @@ export default function ServicesPage() {
               <section
                 key={s.id}
                 id={s.id}
-                className="scroll-mt-28 rounded-2xl border border-white/[0.09] bg-transparent p-6 shadow-sm shadow-black/40"
+                className="scroll-mt-28 rounded-2xl border border-stone-200 bg-transparent p-6 shadow-sm shadow-stone-900/10"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="space-y-1">
-                    <h3 className="text-lg font-semibold tracking-tight text-white">
+                    <h3 className="text-lg font-semibold tracking-tight text-stone-900">
                       {s.title}
                     </h3>
-                    <p className="text-sm font-semibold text-white/80">{s.kicker}</p>
+                    <p className="text-sm font-semibold text-stone-700">{s.kicker}</p>
                   </div>
-                  <div className="hidden sm:flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-white shadow-md shadow-black/40">
+                  <div className="hidden sm:flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-600 text-white shadow-md shadow-stone-900/10">
                     {s.icon}
                   </div>
                 </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-white/80">{s.description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-stone-700">{s.description}</p>
 
-                <ul className="mt-4 space-y-2 text-sm text-white/65">
+                <ul className="mt-4 space-y-2 text-sm text-stone-600">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2.5">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600" />
@@ -219,7 +219,7 @@ export default function ServicesPage() {
                   </Link>
                   <Link
                     href="#top"
-                    className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold lux-ghost text-white"
+                    className="inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold lux-ghost text-stone-900"
                   >
                     Back to top
                   </Link>

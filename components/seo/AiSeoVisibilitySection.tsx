@@ -12,7 +12,7 @@ export default function AiSeoVisibilitySection() {
   return (
     <section className={FRANCHISE_SECTION}>
       <Reveal>
-        <div className="relative overflow-hidden rounded-2xl bg-[#05071a] p-[2%] shadow-[0_24px_60px_rgba(5,7,26,0.45)]">
+        <div className="relative overflow-hidden rounded-2xl bg-white p-[2%] shadow-[0_24px_60px_rgba(5,7,26,0.45)]">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-40"
@@ -29,8 +29,8 @@ export default function AiSeoVisibilitySection() {
 
           <div className="relative flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
             <div className="min-w-0 shrink-0 lg:max-w-[22rem]">
-              <h2 className="text-2xl font-bold text-white sm:text-[1.75rem]">{title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-white/40">{subtitle}</p>
+              <h2 className="text-2xl font-bold text-stone-900 sm:text-[1.75rem]">{title}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-stone-400">{subtitle}</p>
               <Link
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"

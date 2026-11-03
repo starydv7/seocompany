@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Linkedin, Facebook, Mail, Phone, MapPin } from "lucide-react";
@@ -45,7 +46,24 @@ const socialLinks: { label: string; href: string; Icon: typeof Facebook }[] = [
   },
 ];
 
-const linkClass = "group inline-flex items-center gap-1 text-white/55 transition hover:text-white";
+const WORDMARK: [char: string, bottom: string, top: string][] = [
+  ["B", "#b08a2e", "#e6c870"],
+  ["r", "#8fa035", "#c9d36a"],
+  ["a", "#3f9e36", "#86d46f"],
+  ["n", "#1a9466", "#4fd1a0"],
+  ["d", "#0f9e8f", "#5eead4"],
+  ["M", "#0b8fd0", "#67c7f5"],
+  ["a", "#2f6fe0", "#7fb0ff"],
+  ["r", "#5155e0", "#a5a8ff"],
+  ["k", "#6d4cf0", "#b39bff"],
+  ["e", "#9a45ea", "#d0a2ff"],
+  ["t", "#c93bdc", "#f0a0f7"],
+  ["i", "#e23a8a", "#f8a1c8"],
+  ["n", "#e5354f", "#fda4af"],
+  ["g", "#e08a07", "#fcd34d"],
+];
+
+const linkClass = "group inline-flex items-center gap-1 text-stone-500 transition hover:text-stone-900";
 
 function FooterColumn({
   title,
@@ -56,7 +74,7 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h3 className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-gold">{title}</h3>
+      <h3 className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-bronze">{title}</h3>
       <ul className="mt-5 space-y-3 text-sm">
         {links.map((link) => (
           <li key={`${title}-${link.label}`}>
@@ -84,7 +102,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative isolate mt-20 overflow-hidden bg-lux-ink text-white/70">
+    <footer className="relative isolate mt-20 overflow-hidden bg-[#f1ead9] text-stone-600">
       <div aria-hidden className="lux-hairline" />
       <div
         aria-hidden
@@ -95,10 +113,10 @@ export default function Footer() {
 
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Statement CTA */}
-        <div className="flex flex-col gap-10 border-b border-white/[0.08] py-16 lg:flex-row lg:items-end lg:justify-between lg:py-24">
+        <div className="flex flex-col gap-10 border-b border-stone-200 py-16 lg:flex-row lg:items-end lg:justify-between lg:py-24">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-gold">Where creativity meets conversion</p>
-            <h2 className="mt-5 max-w-3xl font-serif text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] text-white">
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-bronze">Where creativity meets conversion</p>
+            <h2 className="mt-5 max-w-3xl font-serif text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] text-stone-900">
               Let&apos;s build what <span className="lux-gold-text italic">comes next.</span>
             </h2>
           </div>
@@ -114,7 +132,7 @@ export default function Footer() {
             </a>
             <Link
               href="/pricing"
-              className="lux-ghost inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-white"
+              className="lux-ghost inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-stone-900"
             >
               See pricing
             </Link>
@@ -133,7 +151,7 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="max-w-sm text-sm leading-relaxed text-white/55">
+            <p className="max-w-sm text-sm leading-relaxed text-stone-500">
               We don&apos;t just build brands, we build businesses.
             </p>
 
@@ -141,23 +159,23 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:connect@brandmarketing.digital"
-                  className="inline-flex items-center gap-2.5 text-white/75 transition hover:text-white"
+                  className="inline-flex items-center gap-2.5 text-stone-700 transition hover:text-stone-900"
                 >
-                  <Mail className="h-4 w-4 text-lux-gold" />
+                  <Mail className="h-4 w-4 text-lux-bronze" />
                   connect@brandmarketing.digital
                 </a>
               </li>
               <li>
                 <a
                   href="tel:+917003427553"
-                  className="inline-flex items-center gap-2.5 text-white/75 transition hover:text-white"
+                  className="inline-flex items-center gap-2.5 text-stone-700 transition hover:text-stone-900"
                 >
-                  <Phone className="h-4 w-4 text-lux-gold" />
+                  <Phone className="h-4 w-4 text-lux-bronze" />
                   +91 70034 27553
                 </a>
               </li>
-              <li className="inline-flex items-center gap-2.5 text-white/55">
-                <MapPin className="h-4 w-4 text-lux-gold" />
+              <li className="inline-flex items-center gap-2.5 text-stone-500">
+                <MapPin className="h-4 w-4 text-lux-bronze" />
                 Kolkata, India
               </li>
             </ul>
@@ -170,7 +188,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.04] text-white/70 ring-1 ring-inset ring-white/10 transition hover:bg-lux-gold hover:text-lux-ink hover:ring-lux-gold"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/70 text-stone-600 ring-1 ring-inset ring-stone-300 transition hover:bg-lux-gold hover:text-lux-ink hover:ring-lux-gold"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -187,19 +205,22 @@ export default function Footer() {
       </div>
 
       <div aria-hidden className="pointer-events-none relative select-none overflow-hidden">
-        <p
-          className="lux-outline-numeral whitespace-nowrap text-center font-serif text-[clamp(4rem,17vw,16rem)] leading-[0.8] tracking-[-0.03em]"
-          style={{
-            WebkitMaskImage: "linear-gradient(to bottom, #000 30%, transparent 95%)",
-            maskImage: "linear-gradient(to bottom, #000 30%, transparent 95%)",
-          }}
-        >
-          BrandMarketing
+        <p className="lux-footer-wordmark whitespace-nowrap pb-[0.08em] text-center font-serif text-[clamp(4rem,17vw,16rem)] leading-[0.9] tracking-[-0.03em]">
+          {WORDMARK.map(([char, c1, c2], i) => (
+            <span
+              key={i}
+              data-char={char}
+              className="lux-fill-letter"
+              style={{ "--i": i, "--c1": c1, "--c2": c2 } as CSSProperties}
+            >
+              {char}
+            </span>
+          ))}
         </p>
       </div>
 
-      <div className="relative border-t border-white/[0.08]">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-white/40 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+      <div className="relative border-t border-stone-200">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-stone-500 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <p>© {year} BrandMarketing. All rights reserved.</p>
           <p>Built for brands that care about strategy, execution and measurable growth.</p>
         </div>

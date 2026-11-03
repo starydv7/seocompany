@@ -27,12 +27,12 @@ function StageCard({
 }) {
   return (
     <div className={`process-stage ${DPM_GLASS_CARD} flex w-full items-center gap-2.5 px-3 py-2 sm:gap-3 sm:px-3.5 sm:py-2.5`}>
-      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-400/10 sm:h-9 sm:w-9">
-        <Icon className="h-4 w-4 text-violet-300" strokeWidth={2} />
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-50 sm:h-9 sm:w-9">
+        <Icon className="h-4 w-4 text-violet-700" strokeWidth={2} />
       </span>
       <div className="min-w-0 flex-1">
-        <span className="text-[9px] font-bold text-violet-300 sm:text-[10px]">{step}</span>
-        <p className="text-[11px] font-bold leading-tight text-white sm:text-xs">{title}</p>
+        <span className="text-[9px] font-bold text-violet-700 sm:text-[10px]">{step}</span>
+        <p className="text-[11px] font-bold leading-tight text-stone-900 sm:text-xs">{title}</p>
       </div>
     </div>
   );
@@ -98,7 +98,7 @@ export default function DevelopmentProcessHeroVisual() {
   return (
     <div ref={boardRef} className="relative mx-auto w-full max-w-md perspective-[1400px] sm:max-w-lg">
       <div
-        className="process-board-inner relative rotate-[-2deg] rounded-[1.25rem] border border-violet-400/25 bg-gradient-to-br from-white/[0.03] via-white/[0.03] to-violet-400/10 p-4 shadow-[0_20px_60px_rgba(124,58,237,0.12)] backdrop-blur-sm sm:rotate-[-3deg] sm:rounded-[1.5rem] sm:p-5"
+        className="process-board-inner relative rotate-[-2deg] rounded-[1.25rem] border border-violet-200 bg-gradient-to-br from-white via-white to-violet-50 p-4 shadow-[0_20px_60px_rgba(124,58,237,0.12)] backdrop-blur-sm sm:rotate-[-3deg] sm:rounded-[1.5rem] sm:p-5"
         style={{ transformStyle: "preserve-3d" }}
       >
         <div
@@ -113,7 +113,7 @@ export default function DevelopmentProcessHeroVisual() {
         {developmentProcessHero.floatLabels.map((label) => (
           <span
             key={label.text}
-            className={`process-float-label absolute z-20 rounded-full border border-violet-400/25 bg-white/[0.035] px-2.5 py-1 text-[9px] font-semibold text-violet-300 shadow-sm backdrop-blur-md sm:px-3 sm:text-[10px] ${label.position}`}
+            className={`process-float-label absolute z-20 rounded-full border border-violet-200 bg-white px-2.5 py-1 text-[9px] font-semibold text-violet-700 shadow-sm backdrop-blur-md sm:px-3 sm:text-[10px] ${label.position}`}
           >
             {label.text}
           </span>

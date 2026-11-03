@@ -30,9 +30,9 @@ export default function TechnicalFaqCtaSection() {
     <section className={`${TECH_SECTION} pb-16`}>
       <div className="grid w-full grid-cols-1 gap-[2%] lg:grid-cols-2">
         <Reveal>
-          <div className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-[2%] shadow-sm">
-            <h2 className="text-xl font-bold text-white">Frequently Asked Questions</h2>
-            <div className="mt-4 divide-y divide-white/[0.06]">
+          <div className="rounded-2xl border border-stone-200 bg-white p-[2%] shadow-sm">
+            <h2 className="text-xl font-bold text-stone-900">Frequently Asked Questions</h2>
+            <div className="mt-4 divide-y divide-stone-200/70">
               {technicalFaqs.map((item, index) => {
                 const isOpen = openIndex === index;
                 return (
@@ -43,7 +43,7 @@ export default function TechnicalFaqCtaSection() {
                       className="flex w-full items-center justify-between gap-4 py-4 text-left"
                       aria-expanded={isOpen}
                     >
-                      <span className="text-sm font-semibold text-white">{item.q}</span>
+                      <span className="text-sm font-semibold text-stone-900">{item.q}</span>
                       <ChevronDown
                         className={`h-5 w-5 shrink-0 text-violet-500 transition-transform ${isOpen ? "rotate-180" : ""}`}
                       />
@@ -52,7 +52,7 @@ export default function TechnicalFaqCtaSection() {
                       className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                     >
                       <div className="overflow-hidden">
-                        <p className="pb-4 text-xs leading-relaxed text-white/65">{item.a}</p>
+                        <p className="pb-4 text-xs leading-relaxed text-stone-600">{item.a}</p>
                       </div>
                     </div>
                   </div>
@@ -65,13 +65,13 @@ export default function TechnicalFaqCtaSection() {
         <Reveal delay={0.06}>
           <div className="relative flex h-full min-h-[16rem] flex-col justify-between overflow-hidden rounded-2xl lux-banner p-[2%] lg:flex-row lg:items-center">
             <div className="relative z-10 max-w-md">
-              <h2 className="text-xl font-bold text-white sm:text-2xl">{title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-violet-100">{subtitle}</p>
+              <h2 className="text-xl font-bold text-stone-900 sm:text-2xl">{title}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-violet-700">{subtitle}</p>
               <Link
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${TECH_BTN_PRIMARY} mt-6 bg-white/[0.035] text-violet-300 hover:bg-violet-400/10`}
+                className={`${TECH_BTN_PRIMARY} mt-6 bg-white text-violet-700 hover:bg-violet-50`}
               >
                 {primaryLabel}
                 <ArrowRight className="h-4 w-4" />

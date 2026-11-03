@@ -43,30 +43,30 @@ type MegaSection = { title: string; href: string; items: string[] };
 type MegaIconStyle = { icon: LucideIcon; box: string };
 
 const MEGA_SECTION_ICONS: Record<string, MegaIconStyle> = {
-  "Digital Marketing": { icon: Megaphone, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
-  "Pay Per Click (PPC) Marketing": { icon: MousePointerClick, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
-  "Link Building": { icon: Link2, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
-  "eCommerce Marketing": { icon: ShoppingCart, box: "bg-emerald-400/15 text-emerald-300 ring-1 ring-inset ring-emerald-300/20" },
-  "Search Engine Optimization (SEO)": { icon: Search, box: "bg-blue-400/15 text-blue-300 ring-1 ring-inset ring-blue-300/20" },
-  "Social Media Marketing": { icon: Share2, box: "bg-pink-400/15 text-pink-300 ring-1 ring-inset ring-pink-300/20" },
-  "Online Marketplace Marketing": { icon: ShoppingBag, box: "bg-orange-400/15 text-orange-300 ring-1 ring-inset ring-orange-300/20" },
-  "CRO Services": { icon: BarChart3, box: "bg-teal-400/15 text-teal-300 ring-1 ring-inset ring-teal-300/20" },
-  "Social Media Advertising": { icon: Radio, box: "bg-blue-400/15 text-blue-300 ring-1 ring-inset ring-blue-300/20" },
-  "Content Marketing": { icon: PenLine, box: "bg-orange-400/15 text-orange-300 ring-1 ring-inset ring-orange-300/20" },
-  "Software Development": { icon: Code2, box: "bg-indigo-400/15 text-indigo-300 ring-1 ring-inset ring-indigo-300/20" },
-  "Web Development": { icon: Globe, box: "bg-sky-400/15 text-sky-300 ring-1 ring-inset ring-sky-300/20" },
-  "Mobile App Development": { icon: Smartphone, box: "bg-violet-400/15 text-violet-300 ring-1 ring-inset ring-violet-300/20" },
-  "Frontend Development": { icon: LayoutGrid, box: "bg-blue-400/15 text-blue-300 ring-1 ring-inset ring-blue-300/20" },
-  "Backend Development": { icon: Server, box: "bg-white/10 text-white/80 ring-1 ring-inset ring-white/15" },
-  "UI/UX Design": { icon: Palette, box: "bg-pink-400/15 text-pink-300 ring-1 ring-inset ring-pink-300/20" },
-  "Product Engineering": { icon: Layers, box: "bg-teal-400/15 text-teal-300 ring-1 ring-inset ring-teal-300/20" },
-  "Business Solutions": { icon: Briefcase, box: "bg-amber-400/15 text-amber-300 ring-1 ring-inset ring-amber-300/20" },
-  "Development Process": { icon: GitBranch, box: "bg-emerald-400/15 text-emerald-300 ring-1 ring-inset ring-emerald-300/20" },
+  "Digital Marketing": { icon: Megaphone, box: "bg-violet-100 text-violet-700 ring-1 ring-inset ring-violet-300/20" },
+  "Pay Per Click (PPC) Marketing": { icon: MousePointerClick, box: "bg-violet-100 text-violet-700 ring-1 ring-inset ring-violet-300/20" },
+  "Link Building": { icon: Link2, box: "bg-violet-100 text-violet-700 ring-1 ring-inset ring-violet-300/20" },
+  "eCommerce Marketing": { icon: ShoppingCart, box: "bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-300/20" },
+  "Search Engine Optimization (SEO)": { icon: Search, box: "bg-blue-100 text-blue-700 ring-1 ring-inset ring-blue-300/20" },
+  "Social Media Marketing": { icon: Share2, box: "bg-pink-100 text-pink-700 ring-1 ring-inset ring-pink-300/20" },
+  "Online Marketplace Marketing": { icon: ShoppingBag, box: "bg-orange-100 text-orange-700 ring-1 ring-inset ring-orange-300/20" },
+  "CRO Services": { icon: BarChart3, box: "bg-teal-100 text-teal-700 ring-1 ring-inset ring-teal-300/20" },
+  "Social Media Advertising": { icon: Radio, box: "bg-blue-100 text-blue-700 ring-1 ring-inset ring-blue-300/20" },
+  "Content Marketing": { icon: PenLine, box: "bg-orange-100 text-orange-700 ring-1 ring-inset ring-orange-300/20" },
+  "Software Development": { icon: Code2, box: "bg-indigo-100 text-indigo-700 ring-1 ring-inset ring-indigo-300/20" },
+  "Web Development": { icon: Globe, box: "bg-sky-100 text-sky-700 ring-1 ring-inset ring-sky-300/20" },
+  "Mobile App Development": { icon: Smartphone, box: "bg-violet-100 text-violet-700 ring-1 ring-inset ring-violet-300/20" },
+  "Frontend Development": { icon: LayoutGrid, box: "bg-blue-100 text-blue-700 ring-1 ring-inset ring-blue-300/20" },
+  "Backend Development": { icon: Server, box: "bg-white text-stone-700 ring-1 ring-inset ring-stone-300" },
+  "UI/UX Design": { icon: Palette, box: "bg-pink-100 text-pink-700 ring-1 ring-inset ring-pink-300/20" },
+  "Product Engineering": { icon: Layers, box: "bg-teal-100 text-teal-700 ring-1 ring-inset ring-teal-300/20" },
+  "Business Solutions": { icon: Briefcase, box: "bg-amber-100 text-amber-700 ring-1 ring-inset ring-amber-300/20" },
+  "Development Process": { icon: GitBranch, box: "bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-300/20" },
 };
 
 const DEFAULT_MEGA_ICON: MegaIconStyle = {
   icon: Settings,
-  box: "bg-slate-400/15 text-slate-300 ring-1 ring-inset ring-slate-300/20",
+  box: "bg-slate-400/15 text-stone-500 ring-1 ring-inset ring-slate-300/20",
 };
 
 function MegaSectionIcon({
@@ -232,19 +232,19 @@ function MobileMenuRow({
       href={href}
       onClick={onNavigate}
       className={`flex items-center gap-3 rounded-xl px-3 py-3 transition active:scale-[0.99] ${
-        isActive ? "bg-white/[0.09]" : "hover:bg-white/[0.05]"
+        isActive ? "bg-white" : "hover:bg-white"
       }`}
     >
       <span
         className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${
-          isActive ? "bg-lux-gold text-lux-ink" : "bg-white/[0.06] text-lux-gold"
+          isActive ? "bg-lux-gold text-lux-ink" : "bg-white text-lux-bronze"
         }`}
       >
         <Icon className="h-4 w-4" strokeWidth={1.75} />
       </span>
       <p
         className={`min-w-0 flex-1 truncate text-sm font-semibold ${
-          isActive ? "text-white" : "text-white/90"
+          isActive ? "text-stone-900" : "text-stone-800"
         }`}
       >
         {label}
@@ -272,21 +272,21 @@ function MobileServiceCategory({
   const resolveItemHref = (label: string) => hrefForMegaItem(label, href);
   const panelId = `mobile-cat-${title.replace(/\s+/g, "-").toLowerCase()}`;
   return (
-    <li className="overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02]">
+    <li className="overflow-hidden rounded-xl border border-stone-200 bg-white/60">
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className="flex w-full items-center gap-3 px-3 py-3 text-left transition hover:bg-white/[0.04] active:scale-[0.99]"
+        className="flex w-full items-center gap-3 px-3 py-3 text-left transition hover:bg-white active:scale-[0.99]"
       >
         <MegaSectionIcon title={title} size="sm" />
-        <span className="min-w-0 flex-1 truncate text-sm font-semibold text-white/90">
+        <span className="min-w-0 flex-1 truncate text-sm font-semibold text-stone-800">
           {title}
         </span>
         <ChevronDown
           className={`h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 ${
-            isOpen ? "rotate-180 text-white" : ""
+            isOpen ? "rotate-180 text-stone-900" : ""
           }`}
           strokeWidth={2}
         />
@@ -298,7 +298,7 @@ function MobileServiceCategory({
         }`}
       >
         <div className="overflow-hidden">
-          <ul className="space-y-0.5 border-t border-white/[0.06] bg-black/20 px-3 py-2">
+          <ul className="space-y-0.5 border-t border-stone-200/70 bg-black/20 px-3 py-2">
             {items.map((item) => {
               const itemHref = resolveItemHref(item);
               return (
@@ -307,14 +307,14 @@ function MobileServiceCategory({
                     <Link
                       href={itemHref}
                       onClick={onNavigate}
-                      className="flex items-start gap-2 rounded-md px-2 py-1.5 text-[13px] leading-snug text-white/70 transition hover:bg-white/[0.05] hover:text-white"
+                      className="flex items-start gap-2 rounded-md px-2 py-1.5 text-[13px] leading-snug text-stone-600 transition hover:bg-white hover:text-stone-900"
                     >
-                      <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/40" />
+                      <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white" />
                       <span>{item}</span>
                     </Link>
                   ) : (
-                    <span className="flex items-start gap-2 rounded-md px-2 py-1.5 text-[13px] leading-snug text-white/50">
-                      <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/25" />
+                    <span className="flex items-start gap-2 rounded-md px-2 py-1.5 text-[13px] leading-snug text-stone-500">
+                      <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white" />
                       <span>{item}</span>
                     </span>
                   )}
@@ -340,16 +340,16 @@ type MegaAsideContent = {
 
 function MegaAside({ content }: { content: MegaAsideContent }) {
   return (
-    <aside className="relative hidden overflow-hidden rounded-[24px] p-6 xl:block" style={{ background: "radial-gradient(120% 80% at 0% 0%, rgba(221,191,93,0.18), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015))", boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)" }}>
-      <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-gold">BrandMarketing</p>
-      <h3 className="mt-3 font-serif text-[2.1rem] leading-[1.02] text-white">
+    <aside className="relative hidden overflow-hidden rounded-[24px] p-6 xl:block" style={{ background: "radial-gradient(120% 80% at 0% 0%, rgba(221,191,93,0.18), transparent 60%), linear-gradient(180deg, #ffffff, rgba(255,255,255,0.75))", boxShadow: "inset 0 0 0 1px rgba(120,96,50,0.14)" }}>
+      <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-bronze">BrandMarketing</p>
+      <h3 className="mt-3 font-serif text-[2.1rem] leading-[1.02] text-stone-900">
         {content.headingTop}
         <br />
         {content.headingMiddle}
         <br />
         <span className="lux-gold-text italic">{content.headingHighlight}</span>
       </h3>
-      <p className="mt-3 text-sm leading-relaxed text-white/60">{content.description}</p>
+      <p className="mt-3 text-sm leading-relaxed text-stone-600">{content.description}</p>
       <div className="mt-5 space-y-2.5">
         <input
           type="text"
@@ -369,9 +369,9 @@ function MegaAside({ content }: { content: MegaAsideContent }) {
       </div>
       <div className="mt-5 grid grid-cols-3 gap-2 text-center">
         {content.stats.map((stat) => (
-          <div key={stat.label} className="rounded-xl bg-white/[0.03] p-2.5 ring-1 ring-inset ring-white/[0.07]">
-            <p className="font-serif text-2xl leading-none text-white">{stat.value}</p>
-            <p className="mt-1 text-[10px] leading-tight text-white/45">{stat.label}</p>
+          <div key={stat.label} className="rounded-xl bg-white p-2.5 ring-1 ring-inset ring-stone-200">
+            <p className="font-serif text-2xl leading-none text-stone-900">{stat.value}</p>
+            <p className="mt-1 text-[10px] leading-tight text-stone-500">{stat.label}</p>
           </div>
         ))}
       </div>
@@ -488,20 +488,20 @@ function MegaMenu({
         top: `${metrics.top}px`,
         maxHeight: metrics.maxHeight ? `${metrics.maxHeight}px` : undefined,
       }}
-      className={`fixed left-0 right-0 z-40 hidden overflow-y-auto overscroll-contain border-b border-white/10 bg-[#06070d]/95 p-4 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.9)] backdrop-blur-2xl transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] lg:block [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+      className={`fixed left-0 right-0 z-40 hidden overflow-y-auto overscroll-contain border-b border-stone-200 bg-[#f7f2e7]/95 p-4 shadow-[0_40px_120px_-40px_rgba(80,60,20,0.35)] backdrop-blur-2xl transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] lg:block [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
         open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
       }`}
     >
         <div aria-hidden className="lux-hairline absolute inset-x-0 top-0" />
         <div className="mx-auto grid w-full grid-cols-1 gap-4 overflow-visible xl:grid-cols-[320px,1fr]">
           <MegaAside content={asideContent} />
-          <section className="rounded-[24px] bg-white/[0.02] p-4 ring-1 ring-inset ring-white/[0.07]">
-            <div className="mb-4 flex items-center gap-3 rounded-xl bg-white/[0.04] px-4 py-2.5 ring-1 ring-inset ring-white/10">
-              <Search className="h-4 w-4 text-white/40" aria-hidden />
+          <section className="rounded-[24px] bg-white/60 p-4 ring-1 ring-inset ring-stone-200">
+            <div className="mb-4 flex items-center gap-3 rounded-xl bg-white px-4 py-2.5 ring-1 ring-inset ring-stone-200">
+              <Search className="h-4 w-4 text-stone-400" aria-hidden />
               <input
                 type="text"
                 placeholder={searchPlaceholder}
-                className="w-full bg-transparent text-sm text-white outline-none placeholder:text-white/40"
+                className="w-full bg-transparent text-sm text-stone-900 outline-none placeholder:text-stone-400"
                 readOnly
               />
             </div>
@@ -516,7 +516,7 @@ function MegaMenu({
                 >
                   <Link
                     href={section.href}
-                    className="mb-2 inline-flex items-center gap-2.5 font-semibold text-white transition hover:text-lux-gold"
+                    className="mb-2 inline-flex items-center gap-2.5 font-semibold text-stone-900 transition hover:text-lux-bronze"
                     style={{ fontSize: "clamp(12px, 0.85vw, 14px)" }}
                   >
                     <MegaSectionIcon title={section.title} />
@@ -529,11 +529,11 @@ function MegaMenu({
                     {section.items.map((item) => {
                       const itemHref = hrefForMegaItem(item, section.href);
                       return (
-                        <li key={item} className="leading-[1.3] text-white/55">
+                        <li key={item} className="leading-[1.3] text-stone-500">
                           {itemHref ? (
                             <Link
                               href={itemHref}
-                              className="transition hover:text-lux-champagne"
+                              className="transition hover:text-lux-bronze"
                             >
                               {item}
                             </Link>
@@ -566,13 +566,20 @@ function MegaMenu({
         onFocus={openMenu}
         onBlur={scheduleClose}
         data-active={isActive || open}
-        className={`lux-underline inline-flex items-center gap-1 whitespace-nowrap rounded-lg px-1.5 py-3 text-[clamp(10px,1.1vw,14px)] leading-none tracking-[0.01em] transition hover:text-white lg:px-2 xl:px-3 ${
-          isActive || open ? "text-white" : "text-white/70"
+        className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-2.5 text-[12px] font-semibold leading-none tracking-[-0.005em] transition-all duration-300 xl:px-4 xl:text-[14px] ${
+          isActive
+            ? "lux-nav-pill-active"
+            : open
+              ? "bg-white/[0.1] text-white"
+              : "text-slate-300 hover:bg-white/[0.07] hover:text-white"
         }`}
       >
         {label}
         <ChevronDown
-          className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180 text-lux-gold" : ""}`}
+          className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180" : ""} ${
+            isActive ? "text-lux-bronze" : open ? "text-lux-gold" : "opacity-70"
+          }`}
+          strokeWidth={2.5}
           aria-hidden
         />
       </Link>
@@ -667,12 +674,12 @@ export default function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
-          className={`absolute right-2 top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[min(100%,calc(100%-1rem))] min-w-0 flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#06070d]/95 shadow-2xl backdrop-blur-2xl transition-transform duration-300 ease-out ${
+          className={`absolute right-2 top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[min(100%,calc(100%-1rem))] min-w-0 flex-col overflow-hidden rounded-[24px] border border-stone-200 bg-[#f7f2e7]/95 shadow-2xl backdrop-blur-2xl transition-transform duration-300 ease-out ${
             open ? "translate-x-0" : "translate-x-[calc(100%+0.75rem)]"
           }`}
         >
           {/* Sticky header: logo + close */}
-          <div className="flex shrink-0 items-center justify-between border-b border-white/[0.08] px-3 py-3 sm:px-4">
+          <div className="flex shrink-0 items-center justify-between border-b border-stone-200 px-3 py-3 sm:px-4">
             <Link href="/" onClick={close} className="flex shrink-0 items-center leading-none">
               <Image
                 src={BRAND_LOGO.src}
@@ -686,7 +693,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={close}
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-[#15182b] text-white transition active:bg-white/10"
+              className="flex h-10 w-10 items-center justify-center rounded-xl border border-stone-200 bg-white text-stone-900 transition active:bg-white"
               aria-label="Close menu"
             >
               <X className="h-5 w-5" strokeWidth={2} />
@@ -751,7 +758,7 @@ export default function Navbar() {
           </nav>
 
           {/* Sticky footer: CTA + contact */}
-          <div className="shrink-0 border-t border-white/[0.08] bg-[#06070d] px-3 pb-3 pt-3 sm:px-4">
+          <div className="shrink-0 border-t border-stone-200 bg-[#f7f2e7] px-3 pb-3 pt-3 sm:px-4">
             <Link
               href={HUBSPOT_MEETING_URL}
               target="_blank"
@@ -765,7 +772,7 @@ export default function Navbar() {
               or email us at{" "}
               <a
                 href="mailto:connect@brandmarketing.digital"
-                className="font-medium text-lux-gold hover:underline"
+                className="font-medium text-lux-bronze hover:underline"
               >
                 connect@brandmarketing.digital
               </a>
@@ -786,17 +793,16 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 transition-[background-color,box-shadow] duration-500 ${
-          elevated
-            ? "bg-[#06070d]/80 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)] backdrop-blur-2xl backdrop-saturate-150"
-            : "bg-[#06070d]"
+        className={`lux-nav sticky top-0 z-50 transition-shadow duration-500 ${
+          elevated ? "shadow-[0_24px_60px_-20px_rgba(15,23,42,0.85)]" : ""
         }`}
       >
-        <div aria-hidden className="lux-hairline absolute inset-x-0 bottom-0 opacity-60" />
+        <div aria-hidden className="lux-nav-accent absolute inset-x-0 top-0" />
+        <div aria-hidden className="lux-hairline absolute inset-x-0 bottom-0" />
         <nav
           id="site-navbar"
-          className={`relative mx-auto flex w-full items-center justify-between gap-2 pl-2 pr-4 transition-[padding] duration-500 sm:pr-6 lg:pr-8 ${
-            elevated ? "py-1" : "py-2"
+          className={`relative mx-auto flex w-full items-center justify-between gap-3 pl-2 pr-4 transition-[padding] duration-500 sm:pr-6 lg:pr-8 ${
+            elevated ? "py-1.5" : "py-3"
           }`}
         >
           <Link href="/" className="flex shrink-0 items-center leading-none">
@@ -810,7 +816,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="ml-auto hidden items-center gap-1 pr-2 font-medium lg:flex xl:gap-2 xl:pr-4">
+          <div className="lux-nav-dock ml-auto hidden items-center gap-0.5 rounded-full p-1.5 lg:flex xl:gap-1">
             <MegaMenu
               label="Digital Marketing Services"
               href="/digital-marketing-services"
@@ -836,8 +842,10 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 data-active={isActivePath(pathname, item.href)}
-                className={`lux-underline whitespace-nowrap rounded-lg px-1.5 py-3 text-[clamp(10px,1.1vw,14px)] leading-none tracking-[0.01em] transition hover:text-white lg:px-2 xl:px-3 ${
-                  isActivePath(pathname, item.href) ? "text-white" : "text-white/70"
+                className={`whitespace-nowrap rounded-full px-2.5 py-2.5 text-[12px] font-semibold leading-none tracking-[-0.005em] transition-all duration-300 xl:px-4 xl:text-[14px] ${
+                  isActivePath(pathname, item.href)
+                    ? "lux-nav-pill-active"
+                    : "text-slate-300 hover:bg-white/[0.07] hover:text-white"
                 }`}
               >
                 {item.label}
@@ -845,20 +853,24 @@ export default function Navbar() {
             ))}
           </div>
 
+          <span aria-hidden className="mx-1 hidden h-8 w-px bg-gradient-to-b from-transparent via-white/15 to-transparent lg:block" />
+
           <Link
             href={HUBSPOT_MEETING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="lux-cta hidden items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2 text-xs font-semibold lg:inline-flex xl:px-5 xl:py-2.5 xl:text-sm"
+            className="lux-cta group hidden items-center gap-2.5 whitespace-nowrap rounded-full py-1.5 pl-4 pr-1.5 text-[12px] font-bold lg:inline-flex xl:pl-5 xl:text-sm"
           >
             Book a Call
-            <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#172033] text-lux-gold transition-transform duration-300 group-hover:translate-x-0.5 xl:h-8 xl:w-8">
+              <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.75} />
+            </span>
           </Link>
 
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-slate-50 transition hover:bg-white/10 hover:text-white lg:hidden"
+            className="lux-nav-dock inline-flex h-11 w-11 items-center justify-center rounded-xl text-white transition hover:bg-white/10 lg:hidden"
             aria-label="Open menu"
             aria-controls="mobile-nav-drawer"
             aria-expanded={open}

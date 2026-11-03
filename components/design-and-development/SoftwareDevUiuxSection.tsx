@@ -28,8 +28,8 @@ export default function SoftwareDevUiuxSection({ variant = "card" }: Props) {
   return (
     <ServiceSectionShell variant={variant} id="ui-ux-design">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        <div className="absolute -left-[8%] top-[6%] h-[45%] w-[42%] rounded-full bg-pink-400/10 blur-3xl" />
-        <div className="absolute -right-[6%] top-[12%] h-[40%] w-[38%] rounded-full bg-violet-400/10 blur-3xl" />
+        <div className="absolute -left-[8%] top-[6%] h-[45%] w-[42%] rounded-full bg-pink-50 blur-3xl" />
+        <div className="absolute -right-[6%] top-[12%] h-[40%] w-[38%] rounded-full bg-violet-50 blur-3xl" />
         <div
           className="absolute right-[3%] top-[8%] h-[50%] w-[26%] opacity-20"
           style={{
@@ -42,7 +42,7 @@ export default function SoftwareDevUiuxSection({ variant = "card" }: Props) {
       <div className="relative grid w-full items-start gap-[2%] lg:grid-cols-[minmax(0,38%)_minmax(0,62%)]">
         <div className="min-w-0 space-y-4 sm:space-y-5">
           <span className={UDM_TAG}>
-            <Palette className="h-3.5 w-3.5 text-violet-300" strokeWidth={2.5} />
+            <Palette className="h-3.5 w-3.5 text-violet-700" strokeWidth={2.5} />
             {uiuxDevHero.badge}
           </span>
 
@@ -103,8 +103,8 @@ export default function SoftwareDevUiuxSection({ variant = "card" }: Props) {
               className={`${UDM_BTN_OUTLINE} gap-2`}
             >
               {uiuxDevHero.ctaSecondary}
-              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-400/25 bg-violet-400/10">
-                <Play className="h-3 w-3 fill-violet-600 text-violet-300" />
+              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-200 bg-violet-50">
+                <Play className="h-3 w-3 fill-violet-600 text-violet-700" />
               </span>
             </Link>
           </div>
@@ -114,12 +114,12 @@ export default function SoftwareDevUiuxSection({ variant = "card" }: Props) {
               const Icon = feat.icon as LucideIcon;
               return (
                 <div key={feat.label} className={UDM_FEATURE_CARD}>
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-400/10 sm:h-9 sm:w-9">
-                    <Icon className="h-4 w-4 text-violet-300" strokeWidth={2} />
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-50 sm:h-9 sm:w-9">
+                    <Icon className="h-4 w-4 text-violet-700" strokeWidth={2} />
                   </span>
                   <div className="min-w-0">
-                    <p className="text-[10px] font-bold text-white sm:text-[11px]">{feat.label}</p>
-                    <p className="text-[8px] text-white/50 sm:text-[9px]">{feat.sub}</p>
+                    <p className="text-[10px] font-bold text-stone-900 sm:text-[11px]">{feat.label}</p>
+                    <p className="text-[8px] text-stone-500 sm:text-[9px]">{feat.sub}</p>
                   </div>
                 </div>
               );
@@ -132,8 +132,8 @@ export default function SoftwareDevUiuxSection({ variant = "card" }: Props) {
         </div>
       </div>
 
-      <div className="relative mt-[2%] rounded-xl border border-white/[0.06] bg-white/[0.035] px-4 py-3.5 shadow-[0_4px_20px_rgba(15,23,42,0.06)] sm:px-5 sm:py-4">
-        <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-wider text-white/80 sm:text-xs">
+      <div className="relative mt-[2%] rounded-xl border border-stone-200/70 bg-white px-4 py-3.5 shadow-[0_4px_20px_rgba(15,23,42,0.06)] sm:px-5 sm:py-4">
+        <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-wider text-stone-700 sm:text-xs">
           Tools We Use
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 sm:gap-x-5">
@@ -142,7 +142,7 @@ export default function SoftwareDevUiuxSection({ variant = "card" }: Props) {
             return (
               <div key={tool} className="flex items-center gap-1.5">
                 {Icon ? <Icon className="h-5 w-5 sm:h-[22px] sm:w-[22px]" /> : null}
-                <span className="text-[10px] font-semibold text-white/65 sm:text-xs">{tool}</span>
+                <span className="text-[10px] font-semibold text-stone-600 sm:text-xs">{tool}</span>
               </div>
             );
           })}

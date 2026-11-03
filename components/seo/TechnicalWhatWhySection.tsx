@@ -40,22 +40,22 @@ function ComparisonBox({
     <div
       className={`overflow-hidden rounded-xl border ${
         isNeg
-          ? "border-rose-400/25 bg-rose-400/10"
-          : "border-emerald-400/25 bg-emerald-400/10"
+          ? "border-rose-200 bg-rose-50"
+          : "border-emerald-200 bg-emerald-50"
       }`}
     >
       <p
         className={`px-4 py-3 text-sm font-bold ${
-          isNeg ? "text-rose-300" : "text-emerald-300"
+          isNeg ? "text-rose-700" : "text-emerald-700"
         }`}
       >
         {title}
       </p>
-      <ul className={`divide-y ${isNeg ? "divide-rose-400/25" : "divide-emerald-400/25"}`}>
+      <ul className={`divide-y ${isNeg ? "divide-rose-200" : "divide-emerald-200"}`}>
         {items.map((item) => (
           <li
             key={item}
-            className="flex items-start gap-2.5 px-4 py-3 text-[13px] leading-snug text-white/65"
+            className="flex items-start gap-2.5 px-4 py-3 text-[13px] leading-snug text-stone-600"
           >
             {isNeg ? (
               <X className="mt-0.5 h-4 w-4 shrink-0 text-rose-500" strokeWidth={2.5} />
@@ -94,10 +94,10 @@ export default function TechnicalWhatWhySection() {
         {/* Left — What Is */}
         <Reveal className="min-w-0 lg:pt-2">
           <SplitHeading before={titleBefore} accent={titleAccent} />
-          <p className={`mt-4 leading-relaxed text-white/65 ${TECH_BODY}`}>{body}</p>
+          <p className={`mt-4 leading-relaxed text-stone-600 ${TECH_BODY}`}>{body}</p>
           <ul className="mt-6 space-y-3.5">
             {checklist.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm text-white/80">
+              <li key={item} className="flex items-center gap-3 text-sm text-stone-700">
                 <span
                   className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
                   style={{ backgroundColor: TECH_PURPLE }}
@@ -118,7 +118,7 @@ export default function TechnicalWhatWhySection() {
         {/* Right — Why + compare + impact */}
         <Reveal delay={0.08} className="min-w-0">
           <SplitHeading before={whyBefore} accent={whyAccent} />
-          <p className={`mt-4 max-w-lg leading-relaxed text-white/50 ${TECH_BODY}`}>{lead}</p>
+          <p className={`mt-4 max-w-lg leading-relaxed text-stone-500 ${TECH_BODY}`}>{lead}</p>
 
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-3">
             <div className="min-w-0 flex-1 space-y-3">
@@ -126,21 +126,21 @@ export default function TechnicalWhatWhySection() {
               <ComparisonBox title={withTitle} items={withList} variant="positive" />
             </div>
 
-            <div className="w-full shrink-0 self-start rounded-xl border border-violet-400/25 bg-white/[0.035] px-3 py-3.5 sm:w-[8.75rem]">
-              <p className="text-[10px] font-bold leading-snug text-white">{impactTitle}</p>
+            <div className="w-full shrink-0 self-start rounded-xl border border-violet-200 bg-white px-3 py-3.5 sm:w-[8.75rem]">
+              <p className="text-[10px] font-bold leading-snug text-stone-900">{impactTitle}</p>
               <ul className="mt-3 space-y-2.5">
                 {impacts.map((item) => {
                   const Icon = item.icon as LucideIcon;
                   return (
                     <li key={item.label} className="flex items-center gap-2">
-                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-violet-400/10">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-violet-50">
                         <Icon
                           className="h-3.5 w-3.5"
                           style={{ color: TECH_PURPLE }}
                           strokeWidth={2}
                         />
                       </span>
-                      <span className="text-[10px] font-semibold leading-tight text-white/80">
+                      <span className="text-[10px] font-semibold leading-tight text-stone-700">
                         {item.label}
                       </span>
                     </li>
@@ -153,14 +153,14 @@ export default function TechnicalWhatWhySection() {
       </div>
 
       <Reveal delay={0.1} className="mt-12 sm:mt-14">
-        <div className="flex items-start gap-4 rounded-2xl border border-white/[0.06] bg-white/[0.025] px-5 py-5 sm:gap-5 sm:px-7 sm:py-6">
+        <div className="flex items-start gap-4 rounded-2xl border border-stone-200/70 bg-white/60 px-5 py-5 sm:gap-5 sm:px-7 sm:py-6">
           <span
             className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-md"
             style={{ backgroundColor: TECH_PURPLE }}
           >
             <Star className="h-5 w-5 fill-white text-white" strokeWidth={1.5} />
           </span>
-          <p className="text-sm leading-[1.75] text-white/65 sm:text-[15px]">
+          <p className="text-sm leading-[1.75] text-stone-600 sm:text-[15px]">
             {bannerBefore}
             <span className={`font-bold ${TECH_ACCENT}`}>{bannerAccent}</span>
           </p>

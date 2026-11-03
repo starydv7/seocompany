@@ -22,7 +22,7 @@ export default function FranchiseDmProcessSection() {
       <div className="relative mt-14 w-full">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-[8%] right-[8%] top-7 hidden border-t-2 border-dashed border-violet-400/25 lg:block"
+          className="pointer-events-none absolute left-[8%] right-[8%] top-7 hidden border-t-2 border-dashed border-violet-200 lg:block"
         />
 
         <div className="grid w-full grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -37,11 +37,11 @@ export default function FranchiseDmProcessSection() {
                   >
                     {step.num}
                   </span>
-                  <span className="mt-5 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-400/10">
-                    <Icon className="h-5 w-5 text-violet-300" strokeWidth={2} />
+                  <span className="mt-5 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50">
+                    <Icon className="h-5 w-5 text-violet-700" strokeWidth={2} />
                   </span>
-                  <p className="mt-4 text-base font-bold text-white">{step.title}</p>
-                  <p className="mt-2 w-full text-sm leading-relaxed text-white/50">
+                  <p className="mt-4 text-base font-bold text-stone-900">{step.title}</p>
+                  <p className="mt-2 w-full text-sm leading-relaxed text-stone-500">
                     {step.desc}
                   </p>
                 </div>

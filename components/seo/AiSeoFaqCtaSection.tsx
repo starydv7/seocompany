@@ -41,8 +41,8 @@ export default function AiSeoFaqCtaSection() {
   return (
     <section className={`${FRANCHISE_SECTION} pb-16`}>
       <Reveal>
-        <div className="w-full overflow-hidden rounded-2xl bg-[#0f172a] p-[2%]">
-          <h2 className="text-xl font-bold text-white">Frequently Asked Questions</h2>
+        <div className="w-full overflow-hidden rounded-2xl bg-white p-[2%]">
+          <h2 className="text-xl font-bold text-stone-900">Frequently Asked Questions</h2>
           <div className="mt-4 divide-y divide-slate-700/80">
             {aiSeoFaqs.map((item, index) => {
               const isOpen = openIndex === index;
@@ -54,7 +54,7 @@ export default function AiSeoFaqCtaSection() {
                     className="flex w-full items-center justify-between gap-4 py-4 text-left"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm font-medium text-white/95">{item.q}</span>
+                    <span className="text-sm font-medium text-stone-800">{item.q}</span>
                     <ChevronDown
                       className={`h-5 w-5 shrink-0 text-violet-400 transition-transform ${isOpen ? "rotate-180" : ""}`}
                     />
@@ -63,7 +63,7 @@ export default function AiSeoFaqCtaSection() {
                     className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-4 text-xs leading-relaxed text-white/40">{item.a}</p>
+                      <p className="pb-4 text-xs leading-relaxed text-stone-400">{item.a}</p>
                     </div>
                   </div>
                 </div>
@@ -86,12 +86,12 @@ export default function AiSeoFaqCtaSection() {
           />
           <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="min-w-0 flex-1 lg:max-w-[55%]">
-              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/90">
-                <Circle className="h-3 w-3 fill-white/80 text-white/80" strokeWidth={2} />
+              <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-stone-800">
+                <Circle className="h-3 w-3 fill-white/80 text-stone-700" strokeWidth={2} />
                 {badge}
               </p>
-              <h2 className="mt-4 text-xl font-bold leading-snug text-white sm:text-2xl">{title}</h2>
-              <p className="mt-3 text-sm text-white/90">{subtitle}</p>
+              <h2 className="mt-4 text-xl font-bold leading-snug text-stone-900 sm:text-2xl">{title}</h2>
+              <p className="mt-3 text-sm text-stone-800">{subtitle}</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
                   href={HUBSPOT_MEETING_URL}
@@ -104,7 +104,7 @@ export default function AiSeoFaqCtaSection() {
                 </Link>
                 <Link
                   href={secondaryHref}
-                  className="inline-flex items-center gap-2 rounded-xl border-2 border-white/85 px-5 py-3 text-sm font-semibold text-white"
+                  className="inline-flex items-center gap-2 rounded-xl border-2 border-stone-400 px-5 py-3 text-sm font-semibold text-stone-900"
                 >
                   {secondaryLabel}
                 </Link>

@@ -11,9 +11,9 @@ export default function TechnicalEnterpriseProcess() {
   return (
     <section className={TECH_SECTION}>
       <Reveal>
-        <article className="overflow-hidden rounded-2xl border border-white/[0.09] shadow-[0_8px_40px_rgba(15,23,42,0.08)]">
+        <article className="overflow-hidden rounded-2xl border border-stone-200 shadow-[0_8px_40px_rgba(15,23,42,0.08)]">
           {/* ── Top: Enterprise (dark) ── */}
-          <div className="relative overflow-hidden bg-gradient-to-br from-[#05071a] via-[#0b1120] to-[#0f172a] px-6 py-8 sm:px-10 sm:py-10">
+          <div className="relative overflow-hidden bg-gradient-to-br from-white via-[#fbf8f1] to-[#f3ecdd] px-6 py-8 sm:px-10 sm:py-10">
             <div
               aria-hidden
               className="pointer-events-none absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(ellipse_70%_80%_at_80%_50%,rgba(99,70,254,0.35),transparent_70%)]"
@@ -21,7 +21,7 @@ export default function TechnicalEnterpriseProcess() {
 
             <div className="relative grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_auto] lg:gap-10">
               <div className="min-w-0">
-                <h2 className="text-xl font-bold text-white sm:text-2xl">{entTitle}</h2>
+                <h2 className="text-xl font-bold text-stone-900 sm:text-2xl">{entTitle}</h2>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-300/90">
                   {description}
                 </p>
@@ -31,10 +31,10 @@ export default function TechnicalEnterpriseProcess() {
                     const Icon = f.icon as LucideIcon;
                     return (
                       <div key={f.label} className="flex flex-col items-center text-center">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-violet-400/20 bg-white/[0.05] backdrop-blur-sm">
-                          <Icon className="h-5 w-5 text-violet-200" strokeWidth={1.75} />
+                        <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-violet-400/20 bg-white backdrop-blur-sm">
+                          <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                         </span>
-                        <p className="mt-2 text-[9px] font-medium leading-tight text-slate-300 sm:text-[10px]">
+                        <p className="mt-2 text-[9px] font-medium leading-tight text-stone-500 sm:text-[10px]">
                           {f.label}
                         </p>
                       </div>
@@ -50,8 +50,8 @@ export default function TechnicalEnterpriseProcess() {
           </div>
 
           {/* ── Bottom: Process (white) ── */}
-          <div className="bg-white/[0.035] px-6 py-12 sm:px-12 sm:py-16">
-            <h2 className="text-center text-xl font-bold tracking-tight text-white sm:text-[1.65rem]">
+          <div className="bg-white px-6 py-12 sm:px-12 sm:py-16">
+            <h2 className="text-center text-xl font-bold tracking-tight text-stone-900 sm:text-[1.65rem]">
               {procTitle}
             </h2>
 
@@ -75,10 +75,10 @@ export default function TechnicalEnterpriseProcess() {
                     <span className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-[#6c5ce7] text-[11px] font-bold tracking-wide text-white shadow-[0_0_0_7px_rgba(108,92,231,0.22),0_4px_16px_rgba(108,92,231,0.35)]">
                       {step.num}
                     </span>
-                    <p className="mt-6 text-sm font-bold leading-snug text-white">
+                    <p className="mt-6 text-sm font-bold leading-snug text-stone-900">
                       {step.title}
                     </p>
-                    <p className="mt-2 max-w-[12rem] text-[13px] leading-relaxed text-white/50">
+                    <p className="mt-2 max-w-[12rem] text-[13px] leading-relaxed text-stone-500">
                       {step.desc}
                     </p>
                   </div>

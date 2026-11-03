@@ -73,12 +73,12 @@ function SpokeCard({
 }) {
   return (
     <div className={`absolute z-10 ${SPOKE_LAYOUT[position]}`}>
-      <div className="rounded-xl border border-white/[0.06] bg-white/[0.035] p-2.5 shadow-[0_6px_24px_rgba(15,23,42,0.07)] sm:p-3">
-        <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-violet-400/10 sm:h-9 sm:w-9">
-          <Icon className="h-4 w-4 text-violet-300 sm:h-[18px] sm:w-[18px]" strokeWidth={2} />
+      <div className="rounded-xl border border-stone-200/70 bg-white p-2.5 shadow-[0_6px_24px_rgba(15,23,42,0.07)] sm:p-3">
+        <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-violet-50 sm:h-9 sm:w-9">
+          <Icon className="h-4 w-4 text-violet-700 sm:h-[18px] sm:w-[18px]" strokeWidth={2} />
         </div>
-        <p className="text-[10px] font-bold leading-tight text-white sm:text-[11px]">{title}</p>
-        <p className="mt-1 text-[8px] leading-snug text-white/50 sm:text-[9px]">{desc}</p>
+        <p className="text-[10px] font-bold leading-tight text-stone-900 sm:text-[11px]">{title}</p>
+        <p className="mt-1 text-[8px] leading-snug text-stone-500 sm:text-[9px]">{desc}</p>
       </div>
     </div>
   );
@@ -94,12 +94,12 @@ function LifecyclePill({
   icon: LucideIcon;
 }) {
   return (
-    <div className="relative z-10 flex w-full items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.035] px-2.5 py-1.5 shadow-[0_4px_16px_rgba(15,23,42,0.06)] sm:gap-2.5 sm:px-3 sm:py-2">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-400/10 sm:h-8 sm:w-8">
-        <Icon className="h-3.5 w-3.5 text-violet-300 sm:h-4 sm:w-4" strokeWidth={2} />
+    <div className="relative z-10 flex w-full items-center gap-2 rounded-full border border-stone-200/70 bg-white px-2.5 py-1.5 shadow-[0_4px_16px_rgba(15,23,42,0.06)] sm:gap-2.5 sm:px-3 sm:py-2">
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-50 sm:h-8 sm:w-8">
+        <Icon className="h-3.5 w-3.5 text-violet-700 sm:h-4 sm:w-4" strokeWidth={2} />
       </span>
-      <span className="text-[9px] font-bold tracking-wide text-white sm:text-[10px]">
-        <span className="text-violet-300">{num}</span> {label}
+      <span className="text-[9px] font-bold tracking-wide text-stone-900 sm:text-[10px]">
+        <span className="text-violet-700">{num}</span> {label}
       </span>
     </div>
   );
@@ -109,7 +109,7 @@ function LifecycleStack() {
   return (
     <div className="relative flex w-[7.5rem] flex-col items-center sm:w-[8.75rem]">
       <div
-        className="absolute left-1/2 top-[6%] z-0 h-[88%] w-px -translate-x-1/2 border-l border-dashed border-blue-400/40"
+        className="absolute left-1/2 top-[6%] z-0 h-[88%] w-px -translate-x-1/2 border-l border-dashed border-blue-300"
         aria-hidden
       />
       <div className="relative z-10 flex w-full flex-col gap-1.5 sm:gap-2">
@@ -126,7 +126,7 @@ function LifecycleStack() {
 
 export default function ProductEngineeringHeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[1.25rem] border border-white/[0.06] bg-gradient-to-br from-white/[0.03] via-white/[0.03] to-white/[0.03] p-4 shadow-[0_12px_40px_rgba(15,23,42,0.09)] sm:rounded-[1.5rem] sm:p-5 lg:p-6">
+    <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[1.25rem] border border-stone-200/70 bg-gradient-to-br from-white via-white to-white p-4 shadow-[0_12px_40px_rgba(15,23,42,0.09)] sm:rounded-[1.5rem] sm:p-5 lg:p-6">
       <div
         className="pointer-events-none absolute right-[4%] top-[5%] h-[38%] w-[32%] opacity-[0.22]"
         style={{

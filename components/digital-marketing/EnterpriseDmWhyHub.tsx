@@ -26,14 +26,14 @@ function SpokeCard({
 }) {
   return (
     <div
-      className={`flex items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.035] shadow-[0_4px_22px_rgba(15,23,42,0.09)] ${
+      className={`flex items-center gap-2 rounded-xl border border-stone-200/70 bg-white shadow-[0_4px_22px_rgba(15,23,42,0.09)] ${
         compact ? "w-[7.25rem] px-2.5 py-2 sm:w-[7.75rem]" : "w-[9.5rem] px-3 py-2.5 sm:w-[10rem]"
       }`}
     >
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-violet-400/10">
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-violet-50">
         <Icon className="h-3.5 w-3.5" style={{ color: EDM_PURPLE }} strokeWidth={2} />
       </span>
-      <span className="text-[10px] font-semibold leading-snug text-white sm:text-[11px]">
+      <span className="text-[10px] font-semibold leading-snug text-stone-900 sm:text-[11px]">
         {label}
       </span>
     </div>

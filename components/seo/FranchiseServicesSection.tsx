@@ -29,12 +29,12 @@ export default function FranchiseServicesSection() {
       <div className={`${FRANCHISE_INNER} mt-[2%] grid w-full grid-cols-1 items-stretch gap-[2%] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5`}>
         {franchiseServices.map((service, i) => (
           <Reveal key={service.title} delay={i * 0.02} className="h-full">
-            <article className="flex h-full min-h-[14rem] w-full flex-col rounded-xl border border-white/[0.09] bg-white/[0.035] p-[2%] transition hover:shadow-md">
+            <article className="flex h-full min-h-[14rem] w-full flex-col rounded-xl border border-stone-200 bg-white p-[2%] transition hover:shadow-md">
               <GradientIconBox icon={service.icon} />
               <h3 className={`mt-4 ${FRANCHISE_ITEM_TITLE}`}>
                 {service.title}
               </h3>
-              <p className={`mt-2 flex-1 ${FRANCHISE_ITEM_BODY} text-white/65`}>
+              <p className={`mt-2 flex-1 ${FRANCHISE_ITEM_BODY} text-stone-600`}>
                 {service.description}{" "}
                 {service.bullets[0]}
               </p>
@@ -42,7 +42,7 @@ export default function FranchiseServicesSection() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-blue-300 hover:text-blue-300"
+                className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-blue-700 hover:text-blue-700"
               >
                 Learn more <ChevronRight className="h-4 w-4" />
               </Link>

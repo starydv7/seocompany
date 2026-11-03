@@ -117,19 +117,19 @@ const openings: JobPosting[] = [
 
 const departmentStyles: Record<Department, { badge: string; dot: string }> = {
   Marketing: {
-    badge: "bg-emerald-400/10 text-emerald-300 ring-emerald-400/25",
+    badge: "bg-emerald-50 text-emerald-700 ring-emerald-200",
     dot: "bg-emerald-500",
   },
   Engineering: {
-    badge: "bg-indigo-400/10 text-indigo-300 ring-indigo-400/25",
+    badge: "bg-indigo-50 text-indigo-700 ring-indigo-200",
     dot: "bg-indigo-500",
   },
   Design: {
-    badge: "bg-pink-400/10 text-pink-300 ring-pink-400/25",
+    badge: "bg-pink-50 text-pink-700 ring-pink-200",
     dot: "bg-pink-500",
   },
   Operations: {
-    badge: "bg-amber-400/10 text-amber-300 ring-amber-400/25",
+    badge: "bg-amber-50 text-amber-700 ring-amber-200",
     dot: "bg-amber-500",
   },
 };
@@ -194,7 +194,7 @@ export default function CareersPage() {
   );
 
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white/[0.02] via-white/[0.03] to-white/[0.02] px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(80,180,68,0.08),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(221,191,93,0.08),transparent_35%)]"
@@ -202,18 +202,18 @@ export default function CareersPage() {
 
       <div className="mx-auto w-full space-y-14">
         <Reveal>
-          <header className="rounded-3xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-xl shadow-black/40 backdrop-blur sm:p-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d]/15 via-white/[0.03] to-[#50b444]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#50b444]">
+          <header className="rounded-3xl border border-stone-200 bg-white p-6 shadow-xl shadow-stone-900/10 backdrop-blur sm:p-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d]/15 via-white to-[#50b444]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#50b444]">
               <Sparkles className="h-3.5 w-3.5" />
               Join Our Squad
             </div>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl">
               Build the future of growth marketing{" "}
               <span className="lux-gold-text">
                 with us.
               </span>
             </h1>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/65 sm:text-base">
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-stone-600 sm:text-base">
               We&apos;re a small, senior team helping ambitious brands grow with strategy,
               creativity and data. If you love shipping work that actually moves the metric, you&apos;ll
               feel right at home.
@@ -231,7 +231,7 @@ export default function CareersPage() {
                 href={`mailto:${APPLY_EMAIL}?subject=${encodeURIComponent(
                   "General application — BrandMarketing"
                 )}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-stone-900"
               >
                 <Mail className="h-4 w-4" />
                 Send us your resume
@@ -242,10 +242,10 @@ export default function CareersPage() {
               {valueProps.map((vp) => (
                 <div
                   key={vp.label}
-                  className="rounded-xl border border-white/[0.09] bg-white/[0.025] px-4 py-3"
+                  className="rounded-xl border border-stone-200 bg-white/60 px-4 py-3"
                 >
                   <p className="text-2xl font-bold text-[#50b444]">{vp.value}</p>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white/50">
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-stone-500">
                     {vp.label}
                   </p>
                 </div>
@@ -262,7 +262,7 @@ export default function CareersPage() {
               </p>
               <h2
                 id="why-us-heading"
-                className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+                className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl"
               >
                 A studio environment, with the ambition of an agency.
               </h2>
@@ -271,14 +271,14 @@ export default function CareersPage() {
               {perks.map(({ Icon, title, description }) => (
                 <article
                   key={title}
-                  className="flex gap-3 rounded-2xl border border-white/[0.09] bg-white/[0.035] p-5 shadow-sm shadow-black/40 transition hover:-translate-y-0.5 hover:border-emerald-400/25 hover:shadow-md hover:shadow-black/40"
+                  className="flex gap-3 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm shadow-stone-900/10 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md hover:shadow-stone-900/10"
                 >
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#ddbf5d] to-[#50b444] text-white shadow-md shadow-[#ddbf5d]/30">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </span>
                   <div className="min-w-0">
-                    <h3 className="text-sm font-semibold text-white">{title}</h3>
-                    <p className="mt-1 text-xs leading-relaxed text-white/65">{description}</p>
+                    <h3 className="text-sm font-semibold text-stone-900">{title}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-stone-600">{description}</p>
                   </div>
                 </article>
               ))}
@@ -299,7 +299,7 @@ export default function CareersPage() {
                 </p>
                 <h2
                   id="openings-heading"
-                  className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+                  className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl"
                 >
                   {openings.length === 0
                     ? "No active openings right now"
@@ -329,14 +329,14 @@ export default function CareersPage() {
             </div>
 
             {openings.length === 0 ? (
-              <div className="rounded-3xl border border-dashed border-white/15 bg-white/[0.035] p-10 text-center">
+              <div className="rounded-3xl border border-dashed border-stone-300 bg-white p-10 text-center">
                 <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#ddbf5d] to-[#50b444] text-white shadow-md shadow-[#ddbf5d]/30">
                   <Briefcase className="h-6 w-6" />
                 </div>
-                <h3 className="mt-4 text-xl font-semibold text-white">
+                <h3 className="mt-4 text-xl font-semibold text-stone-900">
                   We&apos;re between hiring sprints
                 </h3>
-                <p className="mx-auto mt-2 max-w-md text-sm text-white/65">
+                <p className="mx-auto mt-2 max-w-md text-sm text-stone-600">
                   We hire in bursts as client work scales. Send your resume and a short note —
                   when the right role opens, you&apos;ll hear from us first.
                 </p>
@@ -356,7 +356,7 @@ export default function CareersPage() {
                   const dept = departmentStyles[job.department];
                   return (
                     <li key={job.id}>
-                      <article className="flex h-full flex-col rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-sm shadow-black/40 transition hover:-translate-y-0.5 hover:border-emerald-400/25 hover:shadow-md hover:shadow-black/40">
+                      <article className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm shadow-stone-900/10 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md hover:shadow-stone-900/10">
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0 space-y-2">
                             <span
@@ -368,7 +368,7 @@ export default function CareersPage() {
                               />
                               {job.department}
                             </span>
-                            <h3 className="text-lg font-semibold tracking-tight text-white">
+                            <h3 className="text-lg font-semibold tracking-tight text-stone-900">
                               {job.title}
                             </h3>
                           </div>
@@ -377,7 +377,7 @@ export default function CareersPage() {
                           </span>
                         </div>
 
-                        <dl className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-white/65">
+                        <dl className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-stone-600">
                           <div className="inline-flex items-center gap-1.5">
                             <Clock className="h-3.5 w-3.5 text-[#50b444]" />
                             <dt className="sr-only">Type</dt>
@@ -395,7 +395,7 @@ export default function CareersPage() {
                           </div>
                         </dl>
 
-                        <p className="mt-4 flex-1 text-sm leading-relaxed text-white/80">
+                        <p className="mt-4 flex-1 text-sm leading-relaxed text-stone-700">
                           {job.description}
                         </p>
 
@@ -403,7 +403,7 @@ export default function CareersPage() {
                           {job.skills.map((s) => (
                             <li
                               key={s}
-                              className="inline-flex items-center rounded-full border border-white/[0.09] bg-white/[0.025] px-2.5 py-0.5 text-[11px] font-medium text-white/65"
+                              className="inline-flex items-center rounded-full border border-stone-200 bg-white/60 px-2.5 py-0.5 text-[11px] font-medium text-stone-600"
                             >
                               {s}
                             </li>
@@ -420,7 +420,7 @@ export default function CareersPage() {
                           </a>
                           <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold lux-ghost text-white"
+                            className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold lux-ghost text-stone-900"
                           >
                             Ask a question
                           </Link>
@@ -435,16 +435,16 @@ export default function CareersPage() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <section className="rounded-3xl border border-white/[0.09] bg-gradient-to-br from-white/[0.03] via-emerald-400/10 to-amber-400/10 p-8 shadow-lg shadow-black/40 sm:p-12">
+          <section className="rounded-3xl border border-stone-200 bg-gradient-to-br from-white via-emerald-50 to-amber-50 p-8 shadow-lg shadow-stone-900/10 sm:p-12">
             <div className="grid gap-6 lg:grid-cols-[1.4fr,1fr] lg:items-center">
               <div className="space-y-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#50b444]">
                   Don&apos;t see your role?
                 </p>
-                <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                <h2 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
                   Pitch yourself in one short email.
                 </h2>
-                <p className="text-sm leading-relaxed text-white/65 sm:text-base">
+                <p className="text-sm leading-relaxed text-stone-600 sm:text-base">
                   If you&apos;re great at what you do and obsessed with growth, we want to know
                   about you — even when nothing&apos;s posted. Tell us what you do best and where
                   you want to take it.
@@ -463,7 +463,7 @@ export default function CareersPage() {
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-stone-900"
                 >
                   Use the contact form
                 </Link>

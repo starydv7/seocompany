@@ -2,7 +2,7 @@ import { Rocket, Sparkles } from "lucide-react";
 import { aiSeoHero } from "@/lib/seo/ai-seo-content";
 
 const CARD =
-  "absolute z-10 flex items-center gap-2 rounded-xl border border-white/[0.06] bg-white/[0.035] px-3 py-2 shadow-[0_8px_28px_rgba(99,102,241,0.14)] sm:gap-2.5 sm:px-3.5 sm:py-2.5";
+  "absolute z-10 flex items-center gap-2 rounded-xl border border-stone-200/70 bg-white px-3 py-2 shadow-[0_8px_28px_rgba(99,102,241,0.14)] sm:gap-2.5 sm:px-3.5 sm:py-2.5";
 
 const POSITION: Record<string, string> = {
   top: "left-1/2 top-[4%] -translate-x-1/2",
@@ -15,7 +15,7 @@ const POSITION: Record<string, string> = {
 function ChatGptIcon() {
   return (
     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-[#10a37f]">
-      <svg viewBox="0 0 24 24" className="h-4 w-4 text-white" aria-hidden>
+      <svg viewBox="0 0 24 24" className="h-4 w-4 text-stone-900" aria-hidden>
         <path
           fill="currentColor"
           d="M12 2a6.5 6.5 0 0 0-5.2 10.4L4 18l5.6-2.8A6.5 6.5 0 1 0 12 2zm0 10.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
@@ -36,7 +36,7 @@ function ClaudeIcon() {
 function PerplexityIcon() {
   return (
     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-[#20b2aa]">
-      <svg viewBox="0 0 24 24" className="h-4 w-4 text-white" aria-hidden>
+      <svg viewBox="0 0 24 24" className="h-4 w-4 text-stone-900" aria-hidden>
         <path
           fill="currentColor"
           d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zm0 2.2L6.5 8.2v7.6L12 18.8l5.5-3.2V8.2L12 5.2z"
@@ -51,8 +51,8 @@ function PlatformIcon({ id }: { id: string }) {
   if (id === "claude") return <ClaudeIcon />;
   if (id === "perplexity") return <PerplexityIcon />;
   return (
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-violet-400/10">
-      <Sparkles className="h-4 w-4 text-violet-300" strokeWidth={2} />
+    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-violet-50">
+      <Sparkles className="h-4 w-4 text-violet-700" strokeWidth={2} />
     </span>
   );
 }
@@ -69,7 +69,7 @@ function PlatformCard({
   return (
     <div className={`${CARD} ${POSITION[position]}`}>
       <PlatformIcon id={id} />
-      <span className="whitespace-nowrap text-xs font-semibold text-white">{label}</span>
+      <span className="whitespace-nowrap text-xs font-semibold text-stone-900">{label}</span>
     </div>
   );
 }
@@ -83,7 +83,7 @@ export default function AiSeoHeroDiagram() {
       <div className="relative mx-auto aspect-square w-full max-w-[24rem] overflow-hidden sm:max-w-[26rem] lg:max-w-[28rem]">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[44%] h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400/20 blur-3xl"
+          className="pointer-events-none absolute left-1/2 top-[44%] h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-100 blur-3xl"
         />
 
         <svg
@@ -128,8 +128,8 @@ export default function AiSeoHeroDiagram() {
             aria-hidden
             className="absolute inset-[-10%] rounded-full bg-violet-500/20 blur-2xl"
           />
-          <div className="relative flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-[#4f46e5] via-[#6366f1] to-[#7c3aed] shadow-[0_0_48px_rgba(99,102,241,0.45)] ring-[3px] ring-violet-400/40">
-            <span className="px-2 text-center text-xs font-bold uppercase tracking-wide text-white sm:text-sm">
+          <div className="relative flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-[#4f46e5] via-[#6366f1] to-[#7c3aed] shadow-[0_0_48px_rgba(99,102,241,0.45)] ring-[3px] ring-violet-300">
+            <span className="px-2 text-center text-xs font-bold uppercase tracking-wide text-stone-900 sm:text-sm">
               {hubLabel}
             </span>
           </div>
@@ -144,13 +144,13 @@ export default function AiSeoHeroDiagram() {
 
       {/* Callout — in document flow, slight overlap up but reserves space below */}
       <div className="relative z-20 mx-auto -mt-10 w-full max-w-[26rem] sm:-mt-12 sm:max-w-[28rem]">
-        <div className="flex items-center gap-3 rounded-xl border border-violet-400/25 bg-violet-400/10 px-4 py-3 shadow-[0_8px_24px_rgba(99,102,241,0.12)] sm:px-5 sm:py-3.5">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/[0.035] shadow-sm">
-            <Rocket className="h-5 w-5 text-violet-300" strokeWidth={2} />
+        <div className="flex items-center gap-3 rounded-xl border border-violet-200 bg-violet-50 px-4 py-3 shadow-[0_8px_24px_rgba(99,102,241,0.12)] sm:px-5 sm:py-3.5">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm">
+            <Rocket className="h-5 w-5 text-violet-700" strokeWidth={2} />
           </span>
           <div className="min-w-0 text-left">
-            <p className="text-sm font-bold text-white">{calloutTitle}</p>
-            <p className="text-xs leading-relaxed text-white/65">{calloutBody}</p>
+            <p className="text-sm font-bold text-stone-900">{calloutTitle}</p>
+            <p className="text-xs leading-relaxed text-stone-600">{calloutBody}</p>
           </div>
         </div>
       </div>

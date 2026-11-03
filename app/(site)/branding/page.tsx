@@ -11,18 +11,18 @@ export const metadata: Metadata = {
 
 export default function BrandingPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white/[0.02] via-white/[0.03] to-white/[0.02] px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div className="mx-auto w-full space-y-14 sm:space-y-20">
         {/* Hero */}
         <Reveal>
           <header className="text-center space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ring-1 ring-white/[0.09] lux-cta text-lux-ink">
+          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide ring-1 ring-stone-200 lux-cta text-lux-ink">
             Branding & Content Strategy
           </div>
-          <h1 className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-3xl font-bold leading-tight tracking-tight text-stone-900 sm:text-5xl lg:text-6xl">
             Don&apos;t Just Fit In. Lead the Conversation.
           </h1>
-          <p className="mx-auto w-full text-base font-semibold text-white/80 sm:text-xl">
+          <p className="mx-auto w-full text-base font-semibold text-stone-700 sm:text-xl">
             We craft unforgettable brand identities and high-authority content that turns
             &quot;browsers&quot; into &quot;brand advocates.&quot;
           </p>
@@ -39,8 +39,8 @@ export default function BrandingPage() {
 
         {/* Brand Identity Prism Diagram */}
         <Reveal>
-          <div className="rounded-3xl border border-white/[0.09] bg-white/[0.035] p-5 shadow-xl shadow-black/40 sm:p-12">
-          <h2 className="mb-8 text-center text-2xl font-bold tracking-tight text-white sm:text-3xl">
+          <div className="rounded-3xl border border-stone-200 bg-white p-5 shadow-xl shadow-stone-900/10 sm:p-12">
+          <h2 className="mb-8 text-center text-2xl font-bold tracking-tight text-stone-900 sm:text-3xl">
             BRAND IDENTITY PRISM
           </h2>
           <div className="relative mx-auto w-full">
@@ -270,14 +270,14 @@ export default function BrandingPage() {
 
         {/* Why Branding */}
         <Reveal>
-          <section className="rounded-3xl border border-white/[0.09] bg-gradient-to-br from-white/[0.03] via-purple-400/10 to-indigo-400/10 p-6 shadow-xl shadow-black/40 sm:p-12">
-          <h2 className="mb-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <section className="rounded-3xl border border-stone-200 bg-gradient-to-br from-white via-purple-50 to-indigo-50 p-6 shadow-xl shadow-stone-900/10 sm:p-12">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
             Why Branding is Your Best Investment
           </h2>
-          <p className="text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="text-base leading-relaxed text-stone-700 sm:text-lg">
             In a world of infinite choices, people don&apos;t buy products; they buy{" "}
-            <span className="font-bold text-white">stories</span> and{" "}
-            <span className="font-bold text-white">trust</span>. A strong brand reduces your
+            <span className="font-bold text-stone-900">stories</span> and{" "}
+            <span className="font-bold text-stone-900">trust</span>. A strong brand reduces your
             cost-per-acquisition because your reputation does the heavy lifting before the ad even
             runs.
           </p>
@@ -288,22 +288,22 @@ export default function BrandingPage() {
         <Reveal>
           <section className="space-y-10">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
               Our Creative Services
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {/* 1. Brand Strategy & Positioning */}
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40 sm:p-8">
-              <h3 className="text-xl font-bold text-white">1. Brand Strategy &amp; Positioning</h3>
-              <p className="mt-4 text-white/80">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 text-sm shadow-lg shadow-stone-900/10 sm:p-8">
+              <h3 className="text-xl font-bold text-stone-900">1. Brand Strategy &amp; Positioning</h3>
+              <p className="mt-4 text-stone-700">
                 Before we design, we define. We find your &quot;Unique Selling Proposition&quot; (USP)
                 and carve out a space in the market that your competitors can&apos;t touch.
               </p>
-              <div className="mt-4 rounded-lg bg-purple-400/10 p-4">
-                <p className="text-sm font-semibold text-white">The Blueprint:</p>
-                <ul className="mt-2 space-y-1.5 text-xs text-white/80">
+              <div className="mt-4 rounded-lg bg-purple-50 p-4">
+                <p className="text-sm font-semibold text-stone-900">The Blueprint:</p>
+                <ul className="mt-2 space-y-1.5 text-xs text-stone-700">
                   <li>• Competitor analysis</li>
                   <li>• Target persona mapping</li>
                   <li>• Value proposition design</li>
@@ -312,15 +312,15 @@ export default function BrandingPage() {
             </article>
 
             {/* 2. Visual Identity Systems */}
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40 sm:p-8">
-              <h3 className="text-xl font-bold text-white">2. Visual Identity Systems</h3>
-              <p className="mt-4 text-white/80">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 text-sm shadow-lg shadow-stone-900/10 sm:p-8">
+              <h3 className="text-xl font-bold text-stone-900">2. Visual Identity Systems</h3>
+              <p className="mt-4 text-stone-700">
                 Your visual &quot;handshake.&quot; We create a cohesive look that works across every
                 touchpoint, from your website favicon to giant billboards.
               </p>
-              <div className="mt-4 rounded-lg bg-pink-400/10 p-4">
-                <p className="text-sm font-semibold text-white">Deliverables:</p>
-                <ul className="mt-2 space-y-1.5 text-xs text-white/80">
+              <div className="mt-4 rounded-lg bg-pink-50 p-4">
+                <p className="text-sm font-semibold text-stone-900">Deliverables:</p>
+                <ul className="mt-2 space-y-1.5 text-xs text-stone-700">
                   <li>• Logo suites</li>
                   <li>• Typography</li>
                   <li>• Color palettes</li>
@@ -330,15 +330,15 @@ export default function BrandingPage() {
             </article>
 
             {/* 3. High-Authority Content Marketing */}
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40 sm:p-8">
-              <h3 className="text-xl font-bold text-white">3. High-Authority Content Marketing</h3>
-              <p className="mt-4 text-white/80">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 text-sm shadow-lg shadow-stone-900/10 sm:p-8">
+              <h3 className="text-xl font-bold text-stone-900">3. High-Authority Content Marketing</h3>
+              <p className="mt-4 text-stone-700">
                 Content is the fuel for your SEO and Social Media engines. We produce content that
                 educates, entertains, and converts.
               </p>
-              <div className="mt-4 rounded-lg bg-indigo-400/10 p-4">
-                <p className="text-sm font-semibold text-white">The Output:</p>
-                <ul className="mt-2 space-y-1.5 text-xs text-white/80">
+              <div className="mt-4 rounded-lg bg-indigo-50 p-4">
+                <p className="text-sm font-semibold text-stone-900">The Output:</p>
+                <ul className="mt-2 space-y-1.5 text-xs text-stone-700">
                   <li>• SEO-optimized blogs</li>
                   <li>• Whitepapers</li>
                   <li>• Case studies</li>
@@ -348,9 +348,9 @@ export default function BrandingPage() {
             </article>
 
             {/* 4. Video & Motion Graphics */}
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-lg shadow-black/40 sm:p-8">
-              <h3 className="text-xl font-bold text-white">4. Video &amp; Motion Graphics</h3>
-              <p className="mt-4 text-white/80">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 text-sm shadow-lg shadow-stone-900/10 sm:p-8">
+              <h3 className="text-xl font-bold text-stone-900">4. Video &amp; Motion Graphics</h3>
+              <p className="mt-4 text-stone-700">
                 Short-form video is the king of engagement. We produce high-quality Reels, TikToks,
                 and explainer videos that capture attention in the first 1.5 seconds.
               </p>
@@ -361,11 +361,11 @@ export default function BrandingPage() {
 
         {/* BrandMarketing Content Framework */}
         <Reveal>
-          <section className="rounded-3xl border border-white/[0.09] bg-gradient-to-br from-white/[0.03] via-indigo-400/10 to-purple-400/10 p-6 shadow-xl shadow-black/40 sm:p-12">
-          <h2 className="mb-6 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <section className="rounded-3xl border border-stone-200 bg-gradient-to-br from-white via-indigo-50 to-purple-50 p-6 shadow-xl shadow-stone-900/10 sm:p-12">
+          <h2 className="mb-6 text-center text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
             The BrandMarketing Content Framework
           </h2>
-          <p className="mb-8 text-center text-base text-white/80 sm:text-lg">
+          <p className="mb-8 text-center text-base text-stone-700 sm:text-lg">
             We don&apos;t just write for the sake of writing. Every piece of content we create
             follows a strategic funnel to ensure it moves the needle.
           </p>
@@ -373,27 +373,27 @@ export default function BrandingPage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
-                <tr className="border-b-2 border-white/15 bg-white/[0.035]">
-                  <th className="px-6 py-3 text-left font-bold text-white">Stage</th>
-                  <th className="px-6 py-3 text-left font-bold text-white">Content Type</th>
-                  <th className="px-6 py-3 text-left font-bold text-white">Goal</th>
+                <tr className="border-b-2 border-stone-300 bg-white">
+                  <th className="px-6 py-3 text-left font-bold text-stone-900">Stage</th>
+                  <th className="px-6 py-3 text-left font-bold text-stone-900">Content Type</th>
+                  <th className="px-6 py-3 text-left font-bold text-stone-900">Goal</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-white/[0.09] bg-white/[0.035]">
-                  <td className="px-6 py-4 font-semibold text-white">Top (Awareness)</td>
-                  <td className="px-6 py-4 text-white/80">Viral Reels, Educational Blogs</td>
-                  <td className="px-6 py-4 text-white/80">Capture Attention &amp; Traffic</td>
+                <tr className="border-b border-stone-200 bg-white">
+                  <td className="px-6 py-4 font-semibold text-stone-900">Top (Awareness)</td>
+                  <td className="px-6 py-4 text-stone-700">Viral Reels, Educational Blogs</td>
+                  <td className="px-6 py-4 text-stone-700">Capture Attention &amp; Traffic</td>
                 </tr>
-                <tr className="border-b border-white/[0.09] bg-white/[0.035]">
-                  <td className="px-6 py-4 font-semibold text-white">Middle (Consideration)</td>
-                  <td className="px-6 py-4 text-white/80">Case Studies, Newsletters</td>
-                  <td className="px-6 py-4 text-white/80">Build Trust &amp; Authority</td>
+                <tr className="border-b border-stone-200 bg-white">
+                  <td className="px-6 py-4 font-semibold text-stone-900">Middle (Consideration)</td>
+                  <td className="px-6 py-4 text-stone-700">Case Studies, Newsletters</td>
+                  <td className="px-6 py-4 text-stone-700">Build Trust &amp; Authority</td>
                 </tr>
-                <tr className="bg-white/[0.035]">
-                  <td className="px-6 py-4 font-semibold text-white">Bottom (Conversion)</td>
-                  <td className="px-6 py-4 text-white/80">Sales Pages, Reviews, FAQs</td>
-                  <td className="px-6 py-4 text-white/80">Close the Sale</td>
+                <tr className="bg-white">
+                  <td className="px-6 py-4 font-semibold text-stone-900">Bottom (Conversion)</td>
+                  <td className="px-6 py-4 text-stone-700">Sales Pages, Reviews, FAQs</td>
+                  <td className="px-6 py-4 text-stone-700">Close the Sale</td>
                 </tr>
               </tbody>
             </table>
@@ -405,44 +405,44 @@ export default function BrandingPage() {
         <Reveal>
           <section className="space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
               Our Process: From Concept to Culture
             </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-lg shadow-black/40">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 text-sm font-bold text-white shadow-md shadow-black/40">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 shadow-lg shadow-stone-900/10">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 text-sm font-bold text-white shadow-md shadow-stone-900/10">
                 1
               </div>
-              <h3 className="mb-2 text-lg font-bold text-white">The Immersion</h3>
-              <p className="text-sm text-white/65">
+              <h3 className="mb-2 text-lg font-bold text-stone-900">The Immersion</h3>
+              <p className="text-sm text-stone-600">
                 We interview your team and customers to find the &quot;heart&quot; of your business.
               </p>
             </article>
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-lg shadow-black/40">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 text-sm font-bold text-white shadow-md shadow-black/40">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 shadow-lg shadow-stone-900/10">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 text-sm font-bold text-white shadow-md shadow-stone-900/10">
                 2
               </div>
-              <h3 className="mb-2 text-lg font-bold text-white">The Concept</h3>
-              <p className="text-sm text-white/65">
+              <h3 className="mb-2 text-lg font-bold text-stone-900">The Concept</h3>
+              <p className="text-sm text-stone-600">
                 We present visual and verbal directions that define your new path.
               </p>
             </article>
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-lg shadow-black/40">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 text-sm font-bold text-white shadow-md shadow-black/40">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 shadow-lg shadow-stone-900/10">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 text-sm font-bold text-white shadow-md shadow-stone-900/10">
                 3
               </div>
-              <h3 className="mb-2 text-lg font-bold text-white">The Creation</h3>
-              <p className="text-sm text-white/65">
+              <h3 className="mb-2 text-lg font-bold text-stone-900">The Creation</h3>
+              <p className="text-sm text-stone-600">
                 Our designers and writers build out your brand assets and content library.
               </p>
             </article>
-            <article className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-lg shadow-black/40">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 text-sm font-bold text-white shadow-md shadow-black/40">
+            <article className="rounded-2xl border border-stone-200 bg-white p-6 shadow-lg shadow-stone-900/10">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 text-sm font-bold text-white shadow-md shadow-stone-900/10">
                 4
               </div>
-              <h3 className="mb-2 text-lg font-bold text-white">The Launch</h3>
-              <p className="text-sm text-white/65">
+              <h3 className="mb-2 text-lg font-bold text-stone-900">The Launch</h3>
+              <p className="text-sm text-stone-600">
                 We deploy your brand across all channels and monitor audience sentiment.
               </p>
             </article>
@@ -452,11 +452,11 @@ export default function BrandingPage() {
 
         {/* Final CTA */}
         <Reveal>
-          <section className="rounded-3xl border-2 border-dashed border-purple-400/25 bg-gradient-to-br from-purple-400/10 via-indigo-400/10 to-pink-400/10 p-6 text-center shadow-lg shadow-black/40 sm:p-12">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <section className="rounded-3xl border-2 border-dashed border-purple-200 bg-gradient-to-br from-purple-50 via-indigo-50 to-pink-50 p-6 text-center shadow-lg shadow-stone-900/10 sm:p-12">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
             Stop Being a Commodity. Become a Category Leader.
           </h2>
-          <p className="mb-6 text-base text-white/80 sm:text-lg">
+          <p className="mb-6 text-base text-stone-700 sm:text-lg">
             If your brand looks and sounds like everyone else, you&apos;re forced to compete on
             price. When you have a powerful brand, you compete on value.
           </p>

@@ -27,7 +27,7 @@ export default function TechnicalServicesAuditGraphic() {
 
       <div className="relative flex min-h-[10.5rem] items-center justify-center px-2 pt-2">
         {/* Main glass dashboard */}
-        <div className="relative z-10 ml-4 h-[6.5rem] w-[10.5rem] rounded-xl border border-white/20 bg-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-md sm:h-[7rem] sm:w-[11.5rem]">
+        <div className="relative z-10 ml-4 h-[6.5rem] w-[10.5rem] rounded-xl border border-stone-300 bg-stone-900/5 shadow-[0_8px_32px_rgba(0,0,0,0.25)] backdrop-blur-md sm:h-[7rem] sm:w-[11.5rem]">
           <div className="flex items-center gap-1 px-2.5 pt-2">
             <span className="h-1.5 w-1.5 rounded-full bg-rose-400/90" />
             <span className="h-1.5 w-1.5 rounded-full bg-amber-300/90" />
@@ -35,12 +35,12 @@ export default function TechnicalServicesAuditGraphic() {
           </div>
 
           <div className="mt-2 space-y-1.5 px-2.5">
-            <div className="h-1 w-[68%] rounded-full bg-white/25" />
-            <div className="h-1 w-[48%] rounded-full bg-white/18" />
+            <div className="h-1 w-[68%] rounded-full bg-stone-900/15" />
+            <div className="h-1 w-[48%] rounded-full bg-stone-900/10" />
           </div>
 
           {/* Mini chart box */}
-          <div className="absolute bottom-2 right-2 rounded-md border border-white/15 bg-white/10 px-1.5 py-1 backdrop-blur-sm">
+          <div className="absolute bottom-2 right-2 rounded-md border border-stone-300 bg-stone-900/5 px-1.5 py-1 backdrop-blur-sm">
             <div className="flex items-end gap-0.5">
               {[5, 8, 6, 11].map((h, i) => (
                 <div
@@ -93,35 +93,35 @@ export default function TechnicalServicesAuditGraphic() {
         </div>
 
         {/* Issues found — left */}
-        <div className="absolute bottom-1 left-0 z-30 rounded-xl border border-white/15 bg-[#0f0a2e]/60 px-2.5 py-2 shadow-lg backdrop-blur-md">
+        <div className="absolute bottom-1 left-0 z-30 rounded-xl border border-stone-300 bg-white px-2.5 py-2 shadow-lg backdrop-blur-md">
           <div className="flex items-center gap-1.5">
-            <Shield className="h-3.5 w-3.5 text-violet-300" strokeWidth={2} />
-            <span className="text-[8px] font-medium leading-tight text-white/70">
+            <Shield className="h-3.5 w-3.5 text-violet-700" strokeWidth={2} />
+            <span className="text-[8px] font-medium leading-tight text-stone-600">
               {stats.issues.label}
             </span>
           </div>
-          <p className="mt-0.5 text-lg font-bold leading-none text-amber-400">{stats.issues.value}</p>
+          <p className="mt-0.5 text-lg font-bold leading-none text-amber-600">{stats.issues.value}</p>
         </div>
 
         {/* SEO score — top right */}
-        <div className="absolute right-0 top-0 z-30 flex items-center gap-1.5 rounded-full border border-white/15 bg-[#0f0a2e]/55 px-2.5 py-1.5 shadow-lg backdrop-blur-md">
+        <div className="absolute right-0 top-0 z-30 flex items-center gap-1.5 rounded-full border border-stone-300 bg-white px-2.5 py-1.5 shadow-lg backdrop-blur-md">
           <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
-          <span className="text-[9px] font-semibold text-emerald-300">
+          <span className="text-[9px] font-semibold text-emerald-700">
             {stats.score.label} {stats.score.value}
           </span>
         </div>
 
         {/* Pages analyzed — bottom right */}
-        <div className="absolute bottom-0 right-0 z-30 rounded-xl border border-white/15 bg-[#0f0a2e]/60 px-2.5 py-2 shadow-lg backdrop-blur-md">
+        <div className="absolute bottom-0 right-0 z-30 rounded-xl border border-stone-300 bg-white px-2.5 py-2 shadow-lg backdrop-blur-md">
           <div className="flex items-center gap-1.5">
             <span className="flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500/90">
               <Check className="h-2.5 w-2.5 text-white" strokeWidth={3} />
             </span>
-            <span className="text-[8px] font-medium leading-tight text-white/70">
+            <span className="text-[8px] font-medium leading-tight text-stone-600">
               {stats.pages.label}
             </span>
           </div>
-          <p className="mt-0.5 text-lg font-bold leading-none text-emerald-400">{stats.pages.value}</p>
+          <p className="mt-0.5 text-lg font-bold leading-none text-emerald-600">{stats.pages.value}</p>
         </div>
       </div>
     </div>

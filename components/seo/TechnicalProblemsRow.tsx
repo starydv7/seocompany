@@ -7,7 +7,7 @@ export default function TechnicalProblemsRow() {
   const { title, items } = technicalProblemsRow;
 
   return (
-    <section className={`${TECH_SECTION} border-y border-white/[0.06] bg-transparent py-10 sm:py-12`}>
+    <section className={`${TECH_SECTION} border-y border-stone-200/70 bg-transparent py-10 sm:py-12`}>
       <Reveal className="text-center">
         <h2 className={TECH_SECTION_TITLE}>{title}</h2>
       </Reveal>
@@ -18,15 +18,15 @@ export default function TechnicalProblemsRow() {
             <Reveal key={item.label} delay={i * 0.03}>
               <div className="flex flex-col items-center text-center">
                 <span
-                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/[0.06] bg-white/[0.035] shadow-[0_4px_16px_rgba(15,23,42,0.06)]"
+                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-stone-200/70 bg-white shadow-[0_4px_16px_rgba(15,23,42,0.06)]"
                   style={{ backgroundColor: item.bg }}
                 >
                   <Icon className="h-5 w-5" style={{ color: item.color }} strokeWidth={2} />
                 </span>
-                <p className="mt-3 text-[11px] font-bold leading-snug text-white sm:text-xs">
+                <p className="mt-3 text-[11px] font-bold leading-snug text-stone-900 sm:text-xs">
                   {item.label}
                 </p>
-                <p className="mt-1.5 max-w-[11rem] text-[10px] leading-relaxed text-white/50">
+                <p className="mt-1.5 max-w-[11rem] text-[10px] leading-relaxed text-stone-500">
                   {item.description}
                 </p>
               </div>

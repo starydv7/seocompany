@@ -29,6 +29,8 @@ module.exports = {
           night: "#0b0d17",
           gold: "#ddbf5d",
           champagne: "#f3e3a6",
+          bronze: "#8f6c1d",
+          cream: "#f7f2e7",
           emerald: "#50b444"
         }
       },

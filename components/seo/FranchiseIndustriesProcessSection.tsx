@@ -80,9 +80,9 @@ function CompactProcessStep({
 
     <article className={FRANCHISE_STEP_BOX}>
 
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-violet-400/25 bg-violet-400/10">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-violet-200 bg-violet-50">
 
-        <Icon className="h-4 w-4 text-violet-300" strokeWidth={2} />
+        <Icon className="h-4 w-4 text-violet-700" strokeWidth={2} />
 
       </span>
 
@@ -168,7 +168,7 @@ export default function FranchiseIndustriesProcessSection() {
 
           <Reveal delay={0.04} className="mt-4">
 
-            <div className="flex w-full border-b border-white/[0.09]">
+            <div className="flex w-full border-b border-stone-200">
 
               {tabs.map((tab) => {
 
@@ -190,9 +190,9 @@ export default function FranchiseIndustriesProcessSection() {
 
                       isActive
 
-                        ? "border-violet-600 text-violet-300"
+                        ? "border-violet-600 text-violet-700"
 
-                        : "border-transparent text-white/50 hover:text-white/80"
+                        : "border-transparent text-stone-500 hover:text-stone-700"
 
                     }`}
 
@@ -200,7 +200,7 @@ export default function FranchiseIndustriesProcessSection() {
 
                     <Icon
 
-                      className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-violet-300" : "text-white/40"}`}
+                      className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-violet-700" : "text-stone-400"}`}
 
                       strokeWidth={2}
 
@@ -250,7 +250,7 @@ export default function FranchiseIndustriesProcessSection() {
 
           <Reveal delay={0.12} className="mt-5 shrink-0">
 
-            <div className="flex w-full flex-col items-stretch justify-between gap-3 rounded-xl bg-white/[0.025] p-[2%] sm:flex-row sm:items-center">
+            <div className="flex w-full flex-col items-stretch justify-between gap-3 rounded-xl bg-white/60 p-[2%] sm:flex-row sm:items-center">
 
               <div className="flex min-w-0 flex-1 items-start gap-2.5 sm:items-center">
 
@@ -262,7 +262,7 @@ export default function FranchiseIndustriesProcessSection() {
 
                 <div className="min-w-0 text-left">
 
-                  <p className={`${FRANCHISE_ITEM_TITLE} text-violet-300`}>{cta.highlight}</p>
+                  <p className={`${FRANCHISE_ITEM_TITLE} text-violet-700`}>{cta.highlight}</p>
 
                   <p className={FRANCHISE_ITEM_BODY}>{cta.body}</p>
 
@@ -352,7 +352,7 @@ export default function FranchiseIndustriesProcessSection() {
 
           <Reveal delay={0.12} className="mt-5 w-full shrink-0">
 
-            <div className="flex w-full flex-col gap-3 rounded-xl border border-white/[0.09] bg-white/[0.025] p-[2%]">
+            <div className="flex w-full flex-col gap-3 rounded-xl border border-stone-200 bg-white/60 p-[2%]">
 
               {features.map((feature) => (
 

@@ -32,7 +32,7 @@ const WHY_ICONS: LucideIcon[] = [
 ];
 
 const PANEL =
-  "flex min-h-0 min-w-0 flex-col rounded-2xl border border-white/[0.09] bg-white/[0.035] p-[2%] shadow-[0_4px_28px_rgba(15,23,42,0.06)]";
+  "flex min-h-0 min-w-0 flex-col rounded-2xl border border-stone-200 bg-white p-[2%] shadow-[0_4px_28px_rgba(15,23,42,0.06)]";
 
 export default function WhatWhySection() {
   return (
@@ -46,7 +46,7 @@ export default function WhatWhySection() {
             </h2>
           </Reveal>
           <Reveal className="mt-5 lg:mt-6">
-            <div className={`space-y-4 ${FRANCHISE_SECTION_SUBTITLE} text-white/65`}>
+            <div className={`space-y-4 ${FRANCHISE_SECTION_SUBTITLE} text-stone-600`}>
               {whatIsFranchiseSeo.body.map((p) => (
                 <p key={p.slice(0, 36)}>{p}</p>
               ))}
@@ -72,7 +72,7 @@ export default function WhatWhySection() {
               {whyFranchiseSeo.titleLine1}{" "}
               <span className={TITLE_GRADIENT}>{whyFranchiseSeo.titleLine2}</span>
             </h2>
-            <p className={`mt-4 ${FRANCHISE_SECTION_SUBTITLE} text-white/65`}>
+            <p className={`mt-4 ${FRANCHISE_SECTION_SUBTITLE} text-stone-600`}>
               {whyFranchiseSeo.lead}
             </p>
           </Reveal>
@@ -82,10 +82,10 @@ export default function WhatWhySection() {
               const Icon = WHY_ICONS[i] ?? AlertTriangle;
               return (
                 <Reveal key={risk.title} delay={0.1 + i * 0.02} className="h-full min-w-0">
-                  <div className="flex h-full min-h-[8rem] flex-col rounded-xl border border-white/[0.09] bg-white/[0.025] p-[2%]">
+                  <div className="flex h-full min-h-[8rem] flex-col rounded-xl border border-stone-200 bg-white/60 p-[2%]">
                     <GradientIconBox icon={Icon} />
-                    <p className={`mt-3 flex-1 ${FRANCHISE_ITEM_BODY} text-white/65`}>
-                      <span className="font-semibold text-white">{risk.title}</span>
+                    <p className={`mt-3 flex-1 ${FRANCHISE_ITEM_BODY} text-stone-600`}>
+                      <span className="font-semibold text-stone-900">{risk.title}</span>
                       {" — "}
                       {risk.desc}
                     </p>

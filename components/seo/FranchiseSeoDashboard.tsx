@@ -6,16 +6,16 @@ export default function FranchiseSeoDashboard() {
       aria-hidden
     >
       {/* Main: SEO Performance */}
-      <div className="absolute left-0 top-0 z-0 w-[11.5rem] overflow-hidden rounded-xl border border-white/[0.09] bg-white/[0.035] shadow-lg sm:w-[12.5rem]">
+      <div className="absolute left-0 top-0 z-0 w-[11.5rem] overflow-hidden rounded-xl border border-stone-200 bg-white shadow-lg sm:w-[12.5rem]">
         <div className="bg-gradient-to-r from-violet-600 to-indigo-600 px-2.5 py-1.5">
-          <p className="text-[9px] font-bold text-white sm:text-[10px]">SEO Performance</p>
+          <p className="text-[9px] font-bold text-stone-900 sm:text-[10px]">SEO Performance</p>
         </div>
         <div className="space-y-2 p-2 sm:p-2.5">
           <div>
-            <p className="text-[8px] font-medium text-white/50">Organic Sessions</p>
+            <p className="text-[8px] font-medium text-stone-500">Organic Sessions</p>
             <div className="mt-0.5 flex items-baseline gap-1.5">
-              <span className="text-xs font-bold text-white">78,540</span>
-              <span className="text-[9px] font-semibold text-emerald-300">+34.6%</span>
+              <span className="text-xs font-bold text-stone-900">78,540</span>
+              <span className="text-[9px] font-semibold text-emerald-700">+34.6%</span>
             </div>
             <svg viewBox="0 0 120 32" className="mt-1 h-7 w-full">
               <path
@@ -38,7 +38,7 @@ export default function FranchiseSeoDashboard() {
             </svg>
           </div>
           <div>
-            <p className="text-[8px] font-medium text-white/50">Keyword Rankings</p>
+            <p className="text-[8px] font-medium text-stone-500">Keyword Rankings</p>
             <div className="mt-1 flex items-center gap-2">
               <svg viewBox="0 0 36 36" className="h-9 w-9 shrink-0">
                 <circle cx="18" cy="18" r="14" fill="#e0e7ff" />
@@ -46,7 +46,7 @@ export default function FranchiseSeoDashboard() {
                 <path d="M18 18 L32 18 A14 14 0 0 1 18 32 Z" fill="#8b5cf6" />
                 <path d="M18 18 L18 32 A14 14 0 0 1 4 18 Z" fill="#a5b4fc" />
               </svg>
-              <ul className="space-y-0.5 text-[7px] text-white/65">
+              <ul className="space-y-0.5 text-[7px] text-stone-600">
                 <li className="flex items-center gap-1">
                   <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
                   Top 3
@@ -66,10 +66,10 @@ export default function FranchiseSeoDashboard() {
       </div>
 
       {/* Traffic Growth */}
-      <div className="absolute bottom-2 left-1 z-[2] w-[6.75rem] rounded-lg border border-white/[0.09] bg-white/[0.035] p-2 shadow-xl sm:w-[7.25rem]">
-        <p className="text-[8px] font-bold text-white">Traffic Growth</p>
-        <p className="mt-0.5 text-[10px] font-bold text-violet-300">+275%</p>
-        <p className="text-[7px] text-white/40">vs last 6 months</p>
+      <div className="absolute bottom-2 left-1 z-[2] w-[6.75rem] rounded-lg border border-stone-200 bg-white p-2 shadow-xl sm:w-[7.25rem]">
+        <p className="text-[8px] font-bold text-stone-900">Traffic Growth</p>
+        <p className="mt-0.5 text-[10px] font-bold text-violet-700">+275%</p>
+        <p className="text-[7px] text-stone-400">vs last 6 months</p>
         <div className="mt-1.5 flex h-10 items-end justify-between gap-0.5">
           {["J", "F", "M", "A", "M", "J"].map((m, i) => (
             <div key={m + i} className="flex flex-col items-center gap-0.5">
@@ -77,17 +77,17 @@ export default function FranchiseSeoDashboard() {
                 className="w-1.5 rounded-sm bg-violet-500"
                 style={{ height: `${8 + i * 3}px` }}
               />
-              <span className="text-[6px] text-white/40">{m}</span>
+              <span className="text-[6px] text-stone-400">{m}</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* Conversions */}
-      <div className="absolute bottom-6 left-[5.5rem] z-[3] w-[6.25rem] rounded-lg border border-white/[0.09] bg-white/[0.035] p-2 shadow-xl sm:left-[6rem] sm:w-[6.75rem]">
-        <p className="text-[8px] font-bold text-white">Conversions</p>
-        <p className="text-xs font-bold text-white">2,340</p>
-        <p className="text-[8px] font-semibold text-emerald-300">+42.8%</p>
+      <div className="absolute bottom-6 left-[5.5rem] z-[3] w-[6.25rem] rounded-lg border border-stone-200 bg-white p-2 shadow-xl sm:left-[6rem] sm:w-[6.75rem]">
+        <p className="text-[8px] font-bold text-stone-900">Conversions</p>
+        <p className="text-xs font-bold text-stone-900">2,340</p>
+        <p className="text-[8px] font-semibold text-emerald-700">+42.8%</p>
         <svg viewBox="0 0 80 24" className="mt-1 h-5 w-full">
           <path
             d="M0 20 Q20 16 40 12 T80 4"
@@ -99,8 +99,8 @@ export default function FranchiseSeoDashboard() {
       </div>
 
       {/* Top Keywords */}
-      <div className="absolute right-0 top-8 z-[4] w-[7.5rem] rounded-lg border border-white/[0.09] bg-white/[0.035] p-2 shadow-2xl sm:w-32">
-        <p className="text-[8px] font-bold text-white">Top Keywords</p>
+      <div className="absolute right-0 top-8 z-[4] w-[7.5rem] rounded-lg border border-stone-200 bg-white p-2 shadow-2xl sm:w-32">
+        <p className="text-[8px] font-bold text-stone-900">Top Keywords</p>
         <ul className="mt-1.5 space-y-1">
           {[
             "SaaS Platform",
@@ -110,8 +110,8 @@ export default function FranchiseSeoDashboard() {
             "Team Hub",
           ].map((kw, i) => (
             <li key={kw} className="flex items-center gap-1">
-              <span className="w-2 text-[6px] font-medium text-white/40">{i + 1}</span>
-              <span className="min-w-0 flex-1 truncate text-[7px] font-medium text-white/80">{kw}</span>
+              <span className="w-2 text-[6px] font-medium text-stone-400">{i + 1}</span>
+              <span className="min-w-0 flex-1 truncate text-[7px] font-medium text-stone-700">{kw}</span>
               <svg viewBox="0 0 24 10" className="h-2 w-6 shrink-0">
                 <path
                   d={`M0 8 L6 ${6 - i} L12 ${4 + i % 2} L18 ${2 + i} L24 1`}

@@ -27,7 +27,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
   return (
     <article className="group flex h-full flex-col">
-      <Link href={`/blog/${post.slug}`} className="block overflow-hidden rounded-xl bg-white/[0.05]">
+      <Link href={`/blog/${post.slug}`} className="block overflow-hidden rounded-xl bg-white">
         <div className="relative aspect-[16/10] overflow-hidden">
           {image ? (
             <Image
@@ -39,7 +39,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
               unoptimized
             />
           ) : (
-            <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-400/10 to-indigo-400/10 text-sm font-medium text-blue-300">
+            <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 text-sm font-medium text-blue-700">
               BrandMarketing Blog
             </div>
           )}
@@ -47,23 +47,23 @@ export default function BlogCard({ post }: { post: BlogPost }) {
       </Link>
 
       <div className="mt-4 flex flex-1 flex-col">
-        <p className="text-sm text-white/50">
-          <span className="font-medium text-white/80">{authorName}</span>
+        <p className="text-sm text-stone-500">
+          <span className="font-medium text-stone-700">{authorName}</span>
           {post.publishDate ? (
             <>
-              <span className="mx-1.5 text-slate-300">•</span>
+              <span className="mx-1.5 text-stone-500">•</span>
               <time dateTime={post.publishDate}>{formatDate(post.publishDate)}</time>
             </>
           ) : null}
         </p>
 
-        <h2 className="mt-2 text-lg font-bold leading-snug tracking-tight text-white">
-          <Link href={`/blog/${post.slug}`} className="transition hover:text-blue-300">
+        <h2 className="mt-2 text-lg font-bold leading-snug tracking-tight text-stone-900">
+          <Link href={`/blog/${post.slug}`} className="transition hover:text-blue-700">
             {post.title}
           </Link>
         </h2>
 
-        <p className="mt-2 line-clamp-3 flex-1 text-[15px] leading-relaxed text-white/65">
+        <p className="mt-2 line-clamp-3 flex-1 text-[15px] leading-relaxed text-stone-600">
           {excerptText(post)}
         </p>
 
@@ -72,7 +72,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
             {labelChips.map((chip) => (
               <span
                 key={chip.id}
-                className="rounded-full border border-white/[0.09] px-2.5 py-0.5 text-xs font-semibold text-white/65"
+                className="rounded-full border border-stone-200 px-2.5 py-0.5 text-xs font-semibold text-stone-600"
               >
                 {chip.name}
               </span>

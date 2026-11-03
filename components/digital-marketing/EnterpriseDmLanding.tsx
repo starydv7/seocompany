@@ -50,7 +50,7 @@ export default function EnterpriseDmLanding() {
 
         <div className="relative grid w-full max-w-none grid-cols-1 items-center gap-10 xl:grid-cols-2 xl:gap-x-[4%]">
           <Reveal className="min-w-0 w-full">
-            <p className="inline-flex rounded-full border border-violet-400/40 bg-violet-500/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-violet-300">
+            <p className="inline-flex rounded-full border border-violet-400/40 bg-violet-500/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-violet-700">
               {badge}
             </p>
 
@@ -65,7 +65,7 @@ export default function EnterpriseDmLanding() {
               </span>
             </h1>
 
-            <p className="mt-6 w-full text-sm leading-[1.75] text-slate-300 sm:text-[15px]">
+            <p className="mt-6 w-full text-sm leading-[1.75] text-stone-500 sm:text-[15px]">
               {subtitle}
             </p>
 
@@ -75,10 +75,10 @@ export default function EnterpriseDmLanding() {
                 return (
                   <li
                     key={f.label}
-                    className="flex items-center gap-2.5 text-[11px] font-medium text-slate-200 sm:text-xs"
+                    className="flex items-center gap-2.5 text-[11px] font-medium text-stone-700 sm:text-xs"
                   >
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-violet-400/40 bg-violet-500/15">
-                      <Icon className="h-4 w-4 text-violet-300" strokeWidth={2} />
+                      <Icon className="h-4 w-4 text-violet-700" strokeWidth={2} />
                     </span>
                     {f.label}
                   </li>

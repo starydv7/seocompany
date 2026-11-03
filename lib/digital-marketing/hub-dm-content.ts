@@ -29,8 +29,8 @@ export const dmHubHero = {
   titleAccent: "Predictable Growth",
   tagline: [
     { word: "Strategy.", color: "#7c3aed" },
-    { word: "Execution.", color: "#14b8a6" },
-    { word: "Optimization.", color: "#22c55e" },
+    { word: "Execution.", color: "#0d9488" },
+    { word: "Optimization.", color: "#16a34a" },
   ],
   subtitle:
     "We build data-driven marketing systems that attract qualified traffic, convert leads, and scale revenue — with strategy, execution, and optimization working together.",
@@ -74,13 +74,13 @@ export const dmHubEcosystem = {
   subtitle: "Every channel connected to one growth engine — built to work together, not in silos.",
   hubLabel: "Digital Marketing",
   spokes: [
-    { label: "SEO", desc: "Organic visibility that compounds over time.", icon: Search, color: "text-emerald-300 bg-emerald-400/10", position: "leftTop" as const },
-    { label: "Paid Advertising", desc: "High-intent traffic on demand.", icon: Megaphone, color: "text-blue-300 bg-blue-400/10", position: "rightTop" as const },
-    { label: "Content Marketing", desc: "Authority content that converts.", icon: PenTool, color: "text-orange-300 bg-orange-400/10", position: "leftMid" as const },
-    { label: "Email Marketing", desc: "Nurture leads into customers.", icon: Mail, color: "text-teal-300 bg-teal-400/10", position: "rightMid" as const },
-    { label: "Social Media", desc: "Engage audiences where they are.", icon: Share2, color: "text-pink-300 bg-pink-400/10", position: "leftBot" as const },
-    { label: "Conversion Optimization", desc: "Turn more visitors into buyers.", icon: Target, color: "text-amber-300 bg-amber-400/10", position: "rightBot" as const },
-    { label: "Analytics", desc: "Measure what matters and optimize.", icon: BarChart3, color: "text-indigo-300 bg-indigo-400/10", position: "bottom" as const },
+    { label: "SEO", desc: "Organic visibility that compounds over time.", icon: Search, color: "text-emerald-700 bg-emerald-50", position: "leftTop" as const },
+    { label: "Paid Advertising", desc: "High-intent traffic on demand.", icon: Megaphone, color: "text-blue-700 bg-blue-50", position: "rightTop" as const },
+    { label: "Content Marketing", desc: "Authority content that converts.", icon: PenTool, color: "text-orange-700 bg-orange-50", position: "leftMid" as const },
+    { label: "Email Marketing", desc: "Nurture leads into customers.", icon: Mail, color: "text-teal-700 bg-teal-50", position: "rightMid" as const },
+    { label: "Social Media", desc: "Engage audiences where they are.", icon: Share2, color: "text-pink-700 bg-pink-50", position: "leftBot" as const },
+    { label: "Conversion Optimization", desc: "Turn more visitors into buyers.", icon: Target, color: "text-amber-700 bg-amber-50", position: "rightBot" as const },
+    { label: "Analytics", desc: "Measure what matters and optimize.", icon: BarChart3, color: "text-indigo-700 bg-indigo-50", position: "bottom" as const },
   ],
 } as const;
 

@@ -9,16 +9,16 @@ export default function EnterpriseDmProcessSection() {
     <section className={`${EDM_SECTION} bg-transparent ${EDM_SECTION_PY}`}>
       <Reveal>
         <article className="w-full overflow-hidden rounded-2xl lux-banner px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-14">
-          <h2 className="text-center text-xl font-bold text-white sm:text-2xl">{title}</h2>
+          <h2 className="text-center text-xl font-bold text-stone-900 sm:text-2xl">{title}</h2>
 
           <div className="relative mt-12 w-full sm:mt-14">
             <div
               aria-hidden
               className="pointer-events-none absolute left-[4%] right-[4%] top-[22px] hidden items-center sm:flex"
             >
-              <span className="h-2 w-2 shrink-0 rounded-full bg-white/[0.035]" />
-              <div className="mx-1 h-0 flex-1 border-t border-dashed border-white/35" />
-              <span className="h-2 w-2 shrink-0 rounded-full bg-white/[0.035]" />
+              <span className="h-2 w-2 shrink-0 rounded-full bg-white" />
+              <div className="mx-1 h-0 flex-1 border-t border-dashed border-stone-300" />
+              <span className="h-2 w-2 shrink-0 rounded-full bg-white" />
             </div>
 
             <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-4 sm:gap-6">
@@ -27,10 +27,10 @@ export default function EnterpriseDmProcessSection() {
                   <span className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-[#7c3aed] text-[11px] font-bold tracking-wide text-white shadow-[0_0_0_7px_rgba(124,58,237,0.35)]">
                     {step.num}
                   </span>
-                  <p className="mt-6 text-sm font-bold leading-snug text-white sm:text-[15px]">
+                  <p className="mt-6 text-sm font-bold leading-snug text-stone-900 sm:text-[15px]">
                     {step.title}
                   </p>
-                  <p className="mt-2 max-w-[13rem] text-xs leading-relaxed text-white/75 sm:text-[13px]">
+                  <p className="mt-2 max-w-[13rem] text-xs leading-relaxed text-stone-700 sm:text-[13px]">
                     {step.desc}
                   </p>
                 </div>

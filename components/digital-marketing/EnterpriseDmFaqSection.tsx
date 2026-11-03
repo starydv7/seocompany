@@ -26,7 +26,7 @@ export default function EnterpriseDmFaqSection() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <div className="w-full divide-y divide-white/[0.09] rounded-2xl border border-white/[0.09] bg-white/[0.035]">
+          <div className="w-full divide-y divide-stone-200 rounded-2xl border border-stone-200 bg-white">
             {enterpriseDmFaqs.map((item, index) => {
               const isOpen = openIndex === index;
               return (
@@ -34,10 +34,10 @@ export default function EnterpriseDmFaqSection() {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left transition hover:bg-white/[0.025] sm:px-6"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left transition hover:bg-white/60 sm:px-6"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm font-semibold leading-snug text-white">
+                    <span className="text-sm font-semibold leading-snug text-stone-900">
                       {item.q}
                     </span>
                     <Plus
@@ -49,7 +49,7 @@ export default function EnterpriseDmFaqSection() {
                     className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-5 pb-5 text-sm leading-relaxed text-white/65 sm:px-6">
+                      <p className="px-5 pb-5 text-sm leading-relaxed text-stone-600 sm:px-6">
                         {item.a}
                       </p>
                     </div>

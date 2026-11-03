@@ -175,7 +175,7 @@ export default function FranchiseCtaBanner({ className = "" }: FranchiseCtaBanne
       <div className="relative flex min-h-0 flex-1 flex-col justify-between gap-4">
         <div className="flex min-h-0 flex-1 flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
           <div className="flex min-w-0 flex-1 flex-col justify-center">
-            <h2 className="text-xl font-bold leading-snug tracking-tight text-white">
+            <h2 className="text-xl font-bold leading-snug tracking-tight text-stone-900">
               {titleLead}
               <span className="lux-gold-text">
                 {titleAccent}
@@ -189,13 +189,13 @@ export default function FranchiseCtaBanner({ className = "" }: FranchiseCtaBanne
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold lux-cta text-lux-ink"
               >
-                <Calendar className="h-4 w-4 shrink-0 text-violet-300" strokeWidth={2} />
+                <Calendar className="h-4 w-4 shrink-0 text-violet-700" strokeWidth={2} />
                 {primaryLabel}
-                <ArrowRight className="h-4 w-4 shrink-0 text-violet-300" strokeWidth={2.5} />
+                <ArrowRight className="h-4 w-4 shrink-0 text-violet-700" strokeWidth={2.5} />
               </Link>
               <Link
                 href={secondaryHref}
-                className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold lux-ghost text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold lux-ghost text-stone-900"
               >
                 <FileText className="h-4 w-4 shrink-0" strokeWidth={2} />
                 {secondaryLabel}
@@ -208,14 +208,14 @@ export default function FranchiseCtaBanner({ className = "" }: FranchiseCtaBanne
           </div>
         </div>
 
-        <div className="relative w-full shrink-0 border-t border-white/25 pt-[2%]">
+        <div className="relative w-full shrink-0 border-t border-stone-300 pt-[2%]">
           <ul className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-2">
             {trustItems.map((item) => {
               const Icon = item.icon as LucideIcon;
               return (
                 <li key={item.label} className="flex min-w-0 items-center gap-2.5">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600/80 ring-1 ring-white/20">
-                    <Icon className="h-3.5 w-3.5 text-white" strokeWidth={2.25} />
+                    <Icon className="h-3.5 w-3.5 text-stone-900" strokeWidth={2.25} />
                   </span>
                   <span className={`${FRANCHISE_ITEM_TITLE} text-white`}>{item.label}</span>
                 </li>

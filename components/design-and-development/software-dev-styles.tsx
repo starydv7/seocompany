@@ -9,24 +9,24 @@ export const SDM_SECTION_PY = "py-10 sm:py-14 lg:py-16";
 
 /* —— Typography (Inter via layout.tsx) —— */
 export const SDM_FONT_DISPLAY =
-  "text-[clamp(1.65rem,3.8vw,2.5rem)] font-bold leading-[1.15] tracking-tight text-white";
+  "text-[clamp(1.65rem,3.8vw,2.5rem)] font-bold leading-[1.15] tracking-tight text-stone-900";
 export const SDM_FONT_DISPLAY_ACCENT = "lux-gold-text";
-export const SDM_FONT_LEAD = "text-[15px] leading-relaxed text-white/65 sm:text-base";
+export const SDM_FONT_LEAD = "text-[15px] leading-relaxed text-stone-600 sm:text-base";
 export const SDM_FONT_SECTION =
-  "text-center text-[clamp(1.25rem,2.5vw,1.85rem)] font-bold tracking-tight text-white";
-export const SDM_FONT_CARD_TITLE = "text-lg font-bold tracking-tight text-white sm:text-xl";
-export const SDM_FONT_BODY = "text-sm leading-relaxed text-white/65";
-export const SDM_FONT_LIST = "text-sm leading-relaxed text-white/80";
-export const SDM_FONT_CAPTION = "text-[10px] font-semibold leading-snug text-white/65 sm:text-[11px]";
+  "text-center text-[clamp(1.25rem,2.5vw,1.85rem)] font-bold tracking-tight text-stone-900";
+export const SDM_FONT_CARD_TITLE = "text-lg font-bold tracking-tight text-stone-900 sm:text-xl";
+export const SDM_FONT_BODY = "text-sm leading-relaxed text-stone-600";
+export const SDM_FONT_LIST = "text-sm leading-relaxed text-stone-700";
+export const SDM_FONT_CAPTION = "text-[10px] font-semibold leading-snug text-stone-600 sm:text-[11px]";
 export const SDM_FONT_LABEL =
-  "text-[9px] font-bold uppercase tracking-[0.2em] text-violet-300 sm:text-[10px]";
+  "text-[9px] font-bold uppercase tracking-[0.2em] text-violet-700 sm:text-[10px]";
 
 /* —— Legacy aliases (used across section components) —— */
-export const SDM_TITLE = "font-bold tracking-tight text-white";
+export const SDM_TITLE = "font-bold tracking-tight text-stone-900";
 export const SDM_SECTION_TITLE = SDM_FONT_SECTION;
 export const SDM_BODY = SDM_FONT_LEAD;
 export const SDM_TAG =
-  "inline-flex items-center rounded-full border border-violet-400/25 bg-white/[0.035] px-3.5 py-1 " +
+  "inline-flex items-center rounded-full border border-violet-200 bg-white px-3.5 py-1 " +
   SDM_FONT_LABEL;
 export const SDM_TITLE_ACCENT = SDM_FONT_DISPLAY_ACCENT;
 
@@ -34,13 +34,13 @@ export const SDM_TITLE_ACCENT = SDM_FONT_DISPLAY_ACCENT;
 export const SDM_BTN_PRIMARY =
   "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold lux-cta text-lux-ink";
 export const SDM_BTN_OUTLINE =
-  "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold lux-ghost text-white";
+  "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold lux-ghost text-stone-900";
 
 /* —— Surfaces —— */
 export const SDM_CARD =
-  "rounded-2xl border border-white/[0.09] bg-white/[0.035] shadow-[0_4px_24px_rgba(15,23,42,0.07)]";
+  "rounded-2xl border border-stone-200 bg-white shadow-[0_4px_24px_rgba(15,23,42,0.07)]";
 export const SDM_SERVICE_STACK = "flex w-full flex-col gap-[3%]";
-export const SDM_PAGE_HERO = `w-full max-w-none ${SDM_PAD} py-10 sm:py-14 lg:py-16 bg-white/[0.035]`;
+export const SDM_PAGE_HERO = `w-full max-w-none ${SDM_PAD} py-10 sm:py-14 lg:py-16 bg-white`;
 
 export type ServiceSectionVariant = "card" | "page";
 
@@ -49,15 +49,15 @@ export function serviceSectionClass(variant: ServiceSectionVariant) {
     ? `${SDM_PAGE_HERO} relative overflow-hidden`
     : `${SDM_SERVICE_CARD} relative scroll-mt-24 overflow-hidden`;
 }
-export const SDM_SERVICE_SECTION = "w-full max-w-none bg-white/[0.035] px-[2%] py-[2%]";
+export const SDM_SERVICE_SECTION = "w-full max-w-none bg-white px-[2%] py-[2%]";
 export const SDM_SERVICE_CARD =
-  "w-full overflow-visible rounded-2xl border border-white/[0.09] bg-white/[0.035] p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.06)]";
+  "w-full overflow-visible rounded-2xl border border-stone-200 bg-white p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.06)]";
 export const SDM_CAP_CARD =
-  "flex min-h-[7.5rem] flex-col items-center justify-center rounded-xl border border-white/[0.09] bg-white/[0.035] px-2 py-4 text-center shadow-[0_2px_14px_rgba(15,23,42,0.05)] sm:min-h-[8.5rem] sm:px-3 sm:py-5";
+  "flex min-h-[7.5rem] flex-col items-center justify-center rounded-xl border border-stone-200 bg-white px-2 py-4 text-center shadow-[0_2px_14px_rgba(15,23,42,0.05)] sm:min-h-[8.5rem] sm:px-3 sm:py-5";
 export const SDM_ICON_BOX =
-  "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.035] sm:h-10 sm:w-10";
+  "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white sm:h-10 sm:w-10";
 export const SDM_CAP_ICON_BOX =
-  "mb-3 flex h-11 w-11 items-center justify-center rounded-lg bg-white/[0.035] sm:h-12 sm:w-12";
+  "mb-3 flex h-11 w-11 items-center justify-center rounded-lg bg-white sm:h-12 sm:w-12";
 
 /* —— Lists —— */
 export const SDM_BULLET_LIST = "space-y-1.5 sm:space-y-2";

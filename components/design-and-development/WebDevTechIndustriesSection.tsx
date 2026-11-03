@@ -14,15 +14,15 @@ export default function WebDevTechIndustriesSection() {
         <TechStackBar technologies={webDevTechnologies} />
       </div>
 
-      <div className="mt-10 rounded-xl border border-white/[0.06] bg-white/[0.035] px-4 py-4 shadow-sm sm:px-5 sm:py-5">
+      <div className="mt-10 rounded-xl border border-stone-200/70 bg-white px-4 py-4 shadow-sm sm:px-5 sm:py-5">
         <h2 className={`mb-6 text-left sm:mb-8 ${WDM_FONT_SECTION}`}>Industries We Support</h2>
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 sm:gap-x-8 lg:justify-between">
           {webDevIndustries.map((ind) => {
             const Icon = ind.icon as LucideIcon;
             return (
               <div key={ind.label} className="flex min-w-[4rem] flex-col items-center gap-1.5">
-                <Icon className="h-5 w-5 text-violet-300 sm:h-[22px] sm:w-[22px]" strokeWidth={1.75} />
-                <span className="text-[11px] font-semibold text-violet-300 sm:text-xs">{ind.label}</span>
+                <Icon className="h-5 w-5 text-violet-700 sm:h-[22px] sm:w-[22px]" strokeWidth={1.75} />
+                <span className="text-[11px] font-semibold text-violet-700 sm:text-xs">{ind.label}</span>
               </div>
             );
           })}

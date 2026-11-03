@@ -45,7 +45,7 @@ export default function MarketplaceLanding() {
         <div className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-12 xl:gap-16">
           <div className="min-w-0 space-y-5 lg:max-w-xl">
             <span className={MP_TAG}>
-              <ShoppingBag className="h-3.5 w-3.5 text-orange-300" strokeWidth={2} />
+              <ShoppingBag className="h-3.5 w-3.5 text-orange-700" strokeWidth={2} />
               {marketplaceHero.badge}
             </span>
             <h1 className={MP_HERO_TITLE}>
@@ -55,7 +55,7 @@ export default function MarketplaceLanding() {
             <p className={MP_BODY}>{marketplaceHero.subtitle}</p>
             <ul className="space-y-2">
               {marketplaceHero.items.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-white/80">
+                <li key={item} className="flex items-start gap-2.5 text-sm font-medium text-stone-700">
                   <span className={MP_CHECK}>
                     <Check className="h-3 w-3 text-white" strokeWidth={3} />
                   </span>
@@ -70,8 +70,8 @@ export default function MarketplaceLanding() {
               </Link>
               <Link href="#services" className={`${MP_BTN_OUTLINE} gap-2`}>
                 {marketplaceHero.ctaSecondary}
-                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-orange-400/25 bg-orange-400/10">
-                  <Play className="h-3 w-3 fill-orange-600 text-orange-300" />
+                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-orange-200 bg-orange-50">
+                  <Play className="h-3 w-3 fill-orange-600 text-orange-700" />
                 </span>
               </Link>
             </div>
@@ -93,14 +93,14 @@ export default function MarketplaceLanding() {
             const Icon = item.icon as LucideIcon;
             return (
               <article key={item.title} className={MP_SERVICE_CARD}>
-                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-400/10">
-                  <Icon className="h-5 w-5 text-orange-300" strokeWidth={1.75} />
+                <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-50">
+                  <Icon className="h-5 w-5 text-orange-700" strokeWidth={1.75} />
                 </span>
                 <h3 className={MP_CARD_TITLE}>{item.title}</h3>
                 <p className={`mt-2 ${MP_CARD_BODY}`}>{item.desc}</p>
                 <ul className="mt-4 space-y-1.5">
                   {item.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-white/60">
+                    <li key={b} className="flex items-start gap-2 text-sm text-stone-600">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" strokeWidth={2.5} />
                       {b}
                     </li>
@@ -121,7 +121,7 @@ export default function MarketplaceLanding() {
         <div className="relative overflow-x-auto pb-2">
           <div className="relative flex min-w-[52rem] items-start justify-between sm:min-w-0">
             <div
-              className="absolute left-[8%] right-[8%] top-[1.35rem] hidden border-t border-dashed border-orange-400/25 sm:block"
+              className="absolute left-[8%] right-[8%] top-[1.35rem] hidden border-t border-dashed border-orange-200 sm:block"
               aria-hidden
             />
             {marketplaceProcess.steps.map((step) => {
@@ -140,8 +140,8 @@ export default function MarketplaceLanding() {
                   <p className="mt-2 text-xs font-bold" style={{ color: step.color }}>
                     {step.num}
                   </p>
-                  <p className="mt-1 text-xs font-bold text-white sm:text-sm">{step.title}</p>
-                  <p className="mt-1 text-[10px] leading-snug text-white/60 sm:text-[11px]">{step.desc}</p>
+                  <p className="mt-1 text-xs font-bold text-stone-900 sm:text-sm">{step.title}</p>
+                  <p className="mt-1 text-[10px] leading-snug text-stone-600 sm:text-[11px]">{step.desc}</p>
                 </div>
               );
             })}
@@ -159,12 +159,12 @@ export default function MarketplaceLanding() {
                 const Icon = item.icon as LucideIcon;
                 return (
                   <div key={item.label} className="flex items-start gap-3">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-400/10">
-                      <Icon className="h-4 w-4 text-violet-300" strokeWidth={1.75} />
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-50">
+                      <Icon className="h-4 w-4 text-violet-700" strokeWidth={1.75} />
                     </span>
                     <div>
-                      <p className="text-sm font-bold text-white">{item.label}</p>
-                      <p className="mt-0.5 text-xs leading-relaxed text-white/60">{item.desc}</p>
+                      <p className="text-sm font-bold text-stone-900">{item.label}</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-stone-600">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -179,7 +179,7 @@ export default function MarketplaceLanding() {
                 return (
                   <div key={name} className={MP_PLATFORM_CARD}>
                     {Icon ? <Icon className="h-10 w-10" /> : null}
-                    <span className="text-center text-xs font-semibold text-white/80">{name}</span>
+                    <span className="text-center text-xs font-semibold text-stone-700">{name}</span>
                   </div>
                 );
               })}
@@ -192,8 +192,8 @@ export default function MarketplaceLanding() {
                 const Icon = ind.icon as LucideIcon;
                 return (
                   <div key={ind.label} className="flex flex-col items-center gap-2 text-center">
-                    <Icon className="h-6 w-6 text-violet-300" strokeWidth={1.75} />
-                    <span className="text-[11px] font-semibold text-white/80 sm:text-xs">{ind.label}</span>
+                    <Icon className="h-6 w-6 text-violet-700" strokeWidth={1.75} />
+                    <span className="text-[11px] font-semibold text-stone-700 sm:text-xs">{ind.label}</span>
                   </div>
                 );
               })}
@@ -213,13 +213,13 @@ export default function MarketplaceLanding() {
       {/* CTA */}
       <section className={`${MP_SECTION} ${MP_PAD} pb-14 sm:pb-16`}>
         <div className="relative overflow-hidden rounded-2xl lux-banner p-6 sm:rounded-3xl sm:p-8 lg:p-10">
-          <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl" aria-hidden />
+          <div className="pointer-events-none absolute -right-8 top-0 h-40 w-40 rounded-full bg-stone-900/5 blur-3xl" aria-hidden />
           <div className="relative grid items-center gap-6 lg:grid-cols-[1fr_auto] lg:gap-10">
             <div className="space-y-2 text-center lg:text-left">
-              <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl lg:text-[1.75rem]">
+              <h2 className="text-xl font-bold leading-tight text-stone-900 sm:text-2xl lg:text-[1.75rem]">
                 {marketplaceFinalCta.title}
               </h2>
-              <p className="text-sm leading-relaxed text-indigo-100 sm:text-base">{marketplaceFinalCta.subtitle}</p>
+              <p className="text-sm leading-relaxed text-indigo-700 sm:text-base">{marketplaceFinalCta.subtitle}</p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
               <Link
@@ -235,7 +235,7 @@ export default function MarketplaceLanding() {
                 href={HUBSPOT_MEETING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-stone-900"
               >
                 {marketplaceFinalCta.ctaSecondary}
                 <Calendar className="h-4 w-4" />

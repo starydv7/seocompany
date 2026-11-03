@@ -61,7 +61,7 @@ export default function FranchiseDmWorldMap() {
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.035] p-[2%] shadow-[0_8px_40px_rgba(99,102,241,0.08)]"
+      className="relative w-full overflow-hidden rounded-3xl border border-stone-200/70 bg-white p-[2%] shadow-[0_8px_40px_rgba(99,102,241,0.08)]"
       aria-hidden
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_55%_45%,rgba(167,139,250,0.1),transparent_70%)]" />
@@ -139,25 +139,25 @@ export default function FranchiseDmWorldMap() {
         {destinations.map((dest) => (
           <div
             key={`label-${dest.name}`}
-            className="absolute flex items-center gap-1.5 rounded-lg border border-white/[0.06] bg-white/[0.035] px-2 py-1 shadow-[0_4px_14px_rgba(15,23,42,0.08)]"
+            className="absolute flex items-center gap-1.5 rounded-lg border border-stone-200/70 bg-white px-2 py-1 shadow-[0_4px_14px_rgba(15,23,42,0.08)]"
             style={{
               left: `${dest.labelX}%`,
               top: `${dest.labelY}%`,
             }}
           >
             <span className="text-sm leading-none">{dest.flag}</span>
-            <span className="whitespace-nowrap text-[10px] font-semibold text-white/80 sm:text-[11px]">
+            <span className="whitespace-nowrap text-[10px] font-semibold text-stone-700 sm:text-[11px]">
               {dest.name}
             </span>
           </div>
         ))}
 
         <div
-          className="absolute flex items-center gap-1.5 rounded-lg border border-violet-400/25 bg-violet-400/10 px-2.5 py-1.5 shadow-[0_4px_14px_rgba(124,58,237,0.15)]"
+          className="absolute flex items-center gap-1.5 rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-1.5 shadow-[0_4px_14px_rgba(124,58,237,0.15)]"
           style={{ left: "52%", top: "38%" }}
         >
           <span className="text-sm leading-none">{hub.flag}</span>
-          <span className="whitespace-nowrap text-[10px] font-bold text-violet-300 sm:text-[11px]">
+          <span className="whitespace-nowrap text-[10px] font-bold text-violet-700 sm:text-[11px]">
             {hub.name}
           </span>
         </div>

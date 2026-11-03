@@ -40,13 +40,13 @@ export default function ChallengesSection() {
 
       <div className={`relative ${FRANCHISE_INNER}`}>
         <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="inline-flex items-center gap-2 rounded-full bg-rose-400/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-rose-300">
+          <p className="inline-flex items-center gap-2 rounded-full bg-rose-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-rose-700">
             <AlertTriangle className="h-3.5 w-3.5" strokeWidth={2.5} />
             {badge}
           </p>
           <h2 className={`mt-5 ${FRANCHISE_SECTION_TITLE}`}>
             {title}{" "}
-            <span className="text-rose-300">{titleHighlight}</span> {titleEnd}
+            <span className="text-rose-700">{titleHighlight}</span> {titleEnd}
           </h2>
           <p className={`mx-auto mt-4 max-w-2xl ${FRANCHISE_SECTION_SUBTITLE}`}>
             {subtitle}
@@ -58,7 +58,7 @@ export default function ChallengesSection() {
             const Icon = item.icon;
             return (
               <Reveal key={item.title} delay={i * 0.04} className="h-full">
-                <article className="flex h-full min-h-[10.5rem] flex-col items-center rounded-2xl border border-white/[0.06] bg-white/[0.035] p-[2%] text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)]">
+                <article className="flex h-full min-h-[10.5rem] flex-col items-center rounded-2xl border border-stone-200/70 bg-white p-[2%] text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)]">
                   <Icon className="h-9 w-9 text-rose-500" strokeWidth={1.75} />
                   <h3 className={`mt-4 ${FRANCHISE_ITEM_TITLE}`}>
                     {item.title}

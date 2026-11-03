@@ -27,8 +27,8 @@ export default function SoftwareDevFrontendSection({ variant = "card" }: Props) 
   return (
     <ServiceSectionShell variant={variant} id="frontend-development">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        <div className="absolute -left-[8%] top-[6%] h-[45%] w-[42%] rounded-full bg-teal-400/10 blur-3xl" />
-        <div className="absolute -right-[6%] top-[14%] h-[40%] w-[38%] rounded-full bg-emerald-400/10 blur-3xl" />
+        <div className="absolute -left-[8%] top-[6%] h-[45%] w-[42%] rounded-full bg-teal-50 blur-3xl" />
+        <div className="absolute -right-[6%] top-[14%] h-[40%] w-[38%] rounded-full bg-emerald-50 blur-3xl" />
         <div
           className="absolute right-[4%] top-[10%] h-[50%] w-[26%] opacity-20"
           style={{
@@ -41,7 +41,7 @@ export default function SoftwareDevFrontendSection({ variant = "card" }: Props) 
       <div className="relative grid w-full items-start gap-[2%] lg:grid-cols-2 lg:items-center">
         <div className="min-w-0 space-y-4 sm:space-y-5">
           <span className={FDM_TAG}>
-            <Code2 className="h-3.5 w-3.5 text-teal-300" strokeWidth={2.5} />
+            <Code2 className="h-3.5 w-3.5 text-teal-700" strokeWidth={2.5} />
             {frontendDevHero.badge}
           </span>
 
@@ -99,8 +99,8 @@ export default function SoftwareDevFrontendSection({ variant = "card" }: Props) 
               className={`${FDM_BTN_OUTLINE} gap-2`}
             >
               {frontendDevHero.ctaSecondary}
-              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-teal-400/25 bg-teal-400/10">
-                <Play className="h-3 w-3 fill-teal-600 text-teal-300" />
+              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-teal-200 bg-teal-50">
+                <Play className="h-3 w-3 fill-teal-600 text-teal-700" />
               </span>
             </Link>
           </div>
@@ -111,15 +111,15 @@ export default function SoftwareDevFrontendSection({ variant = "card" }: Props) 
         </div>
       </div>
 
-      <div className="relative mt-[2%] grid grid-cols-2 gap-4 border-t border-white/[0.06] pt-[2%] sm:grid-cols-4 sm:gap-6">
+      <div className="relative mt-[2%] grid grid-cols-2 gap-4 border-t border-stone-200/70 pt-[2%] sm:grid-cols-4 sm:gap-6">
         {frontendDevHero.features.map((feat) => {
           const Icon = feat.icon as LucideIcon;
           return (
             <div key={feat.label} className="flex items-center gap-2.5 sm:gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal-400/10 sm:h-10 sm:w-10">
-                <Icon className="h-4 w-4 text-teal-300 sm:h-[18px] sm:w-[18px]" strokeWidth={2} />
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal-50 sm:h-10 sm:w-10">
+                <Icon className="h-4 w-4 text-teal-700 sm:h-[18px] sm:w-[18px]" strokeWidth={2} />
               </span>
-              <span className="text-sm font-semibold text-white">{feat.label}</span>
+              <span className="text-sm font-semibold text-stone-900">{feat.label}</span>
             </div>
           );
         })}

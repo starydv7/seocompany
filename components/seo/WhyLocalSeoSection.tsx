@@ -5,7 +5,7 @@ import { whyLocalSeo } from "@/lib/seo/local-content";
 
 function PurpleCheck() {
   return (
-    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-600 shadow-sm shadow-black/40">
+    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-600 shadow-sm shadow-stone-900/10">
       <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} />
     </span>
   );
@@ -13,7 +13,7 @@ function PurpleCheck() {
 
 function StorefrontCenter() {
   return (
-    <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-violet-400/10 shadow-[0_0_40px_rgba(139,92,246,0.2)] sm:h-32 sm:w-32">
+    <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-violet-50 shadow-[0_0_40px_rgba(139,92,246,0.2)] sm:h-32 sm:w-32">
       <svg viewBox="0 0 80 80" className="h-16 w-16 sm:h-[4.5rem] sm:w-[4.5rem]" aria-hidden>
         <rect x="14" y="38" width="52" height="32" rx="4" fill="#3b82f6" />
         <rect x="22" y="46" width="14" height="16" rx="2" fill="#93c5fd" />
@@ -73,10 +73,10 @@ function OrbitDiagram() {
             className="absolute z-[5] flex w-[4.5rem] -translate-x-1/2 -translate-y-1/2 flex-col items-center sm:w-20"
             style={{ left: `${x}%`, top: `${y}%` }}
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.035] shadow-md sm:h-12 sm:w-12">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-stone-200/70 bg-white shadow-md sm:h-12 sm:w-12">
               <Icon className={`h-5 w-5 ${item.iconClass}`} strokeWidth={2} />
             </span>
-            <p className="mt-1.5 max-w-[5.5rem] text-center text-[9px] font-semibold leading-tight text-white/80 sm:text-[10px]">
+            <p className="mt-1.5 max-w-[5.5rem] text-center text-[9px] font-semibold leading-tight text-stone-700 sm:text-[10px]">
               {item.label}
             </p>
           </div>
@@ -90,9 +90,9 @@ function GbpProfileCard() {
   const { gbp } = whyLocalSeo;
 
   return (
-    <div className="rounded-2xl border border-white/[0.09] bg-white/[0.035] p-4 shadow-[0_8px_32px_rgba(15,23,42,0.08)] sm:p-5">
+    <div className="rounded-2xl border border-stone-200 bg-white p-4 shadow-[0_8px_32px_rgba(15,23,42,0.08)] sm:p-5">
       <div className="flex gap-3">
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/[0.05]">
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white">
           <svg viewBox="0 0 40 40" className="h-8 w-8" aria-hidden>
             <rect x="6" y="18" width="28" height="18" rx="3" fill="#6366f1" />
             <path d="M4 18 L20 8 L36 18 Z" fill="#818cf8" />
@@ -101,25 +101,25 @@ function GbpProfileCard() {
           </svg>
         </span>
         <div className="min-w-0">
-          <p className="text-base font-bold text-white">{gbp.name}</p>
+          <p className="text-base font-bold text-stone-900">{gbp.name}</p>
           <p className="mt-0.5 flex flex-wrap items-center gap-1 text-sm">
-            <span className="font-bold text-white">{gbp.rating}</span>
-            <span className="flex text-amber-400">
+            <span className="font-bold text-stone-900">{gbp.rating}</span>
+            <span className="flex text-amber-600">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="h-3.5 w-3.5 fill-current" />
               ))}
             </span>
-            <span className="text-white/50">({gbp.reviewCount})</span>
+            <span className="text-stone-500">({gbp.reviewCount})</span>
           </p>
-          <p className="mt-0.5 text-xs text-white/50">{gbp.category}</p>
+          <p className="mt-0.5 text-xs text-stone-500">{gbp.category}</p>
         </div>
       </div>
 
-      <div className="mt-4 flex gap-4 border-b border-white/[0.06] text-[10px] font-bold uppercase tracking-wide">
+      <div className="mt-4 flex gap-4 border-b border-stone-200/70 text-[10px] font-bold uppercase tracking-wide">
         {gbp.tabs.map((tab, i) => (
           <span
             key={tab}
-            className={`pb-2 ${i === 0 ? "border-b-2 border-indigo-600 text-indigo-300" : "text-white/40"}`}
+            className={`pb-2 ${i === 0 ? "border-b-2 border-indigo-600 text-indigo-700" : "text-stone-400"}`}
           >
             {tab}
           </span>
@@ -130,11 +130,11 @@ function GbpProfileCard() {
         {gbp.metrics.map((m) => (
           <div
             key={m.label}
-            className="rounded-lg border border-white/[0.06] bg-white/[0.025] px-2 py-2.5 text-center sm:px-2.5"
+            className="rounded-lg border border-stone-200/70 bg-white/60 px-2 py-2.5 text-center sm:px-2.5"
           >
-            <p className="text-[9px] font-medium text-white/50 sm:text-[10px]">{m.label}</p>
-            <p className="mt-1 text-sm font-bold text-white">{m.value}</p>
-            <p className="mt-0.5 inline-flex items-center gap-0.5 text-[10px] font-semibold text-emerald-300">
+            <p className="text-[9px] font-medium text-stone-500 sm:text-[10px]">{m.label}</p>
+            <p className="mt-1 text-sm font-bold text-stone-900">{m.value}</p>
+            <p className="mt-0.5 inline-flex items-center gap-0.5 text-[10px] font-semibold text-emerald-700">
               <TrendingUp className="h-3 w-3" />
               {m.delta}
             </p>
@@ -142,23 +142,23 @@ function GbpProfileCard() {
         ))}
       </div>
 
-      <div className="mt-4 rounded-xl border border-white/[0.06] bg-white/[0.035] p-3 sm:p-4">
-        <p className="text-sm font-bold text-white">Customer Reviews</p>
+      <div className="mt-4 rounded-xl border border-stone-200/70 bg-white p-3 sm:p-4">
+        <p className="text-sm font-bold text-stone-900">Customer Reviews</p>
         <div className="mt-3 flex gap-4">
           <div className="shrink-0 text-center">
-            <p className="text-3xl font-bold text-white">{gbp.rating}</p>
-            <span className="mt-1 flex justify-center text-amber-400">
+            <p className="text-3xl font-bold text-stone-900">{gbp.rating}</p>
+            <span className="mt-1 flex justify-center text-amber-600">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="h-3 w-3 fill-current" />
               ))}
             </span>
-            <p className="mt-1 text-[10px] text-white/50">({gbp.reviewCount} reviews)</p>
+            <p className="mt-1 text-[10px] text-stone-500">({gbp.reviewCount} reviews)</p>
           </div>
           <div className="flex min-w-0 flex-1 flex-col justify-center gap-1">
             {gbp.ratingBars.map((row) => (
               <div key={row.stars} className="flex items-center gap-2">
-                <span className="w-3 text-[10px] text-white/50">{row.stars}</span>
-                <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/[0.05]">
+                <span className="w-3 text-[10px] text-stone-500">{row.stars}</span>
+                <div className="h-2 flex-1 overflow-hidden rounded-full bg-white">
                   <div
                     className="h-full rounded-full bg-orange-400"
                     style={{ width: `${row.pct}%` }}
@@ -180,15 +180,15 @@ export default function WhyLocalSeoSection() {
     <section className="relative w-full px-[2%] py-14 sm:py-16 lg:py-20">
       <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_minmax(280px,340px)_minmax(300px,380px)] lg:gap-8 xl:gap-10">
         <Reveal className="min-w-0">
-          <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-[2rem]">
+          <h2 className="text-2xl font-bold leading-tight text-stone-900 sm:text-3xl lg:text-[2rem]">
             {title}
           </h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/65 sm:text-[15px]">
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-stone-600 sm:text-[15px]">
             {subtitle}
           </p>
           <ul className="mt-8 space-y-3.5">
             {factors.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm font-medium text-white">
+              <li key={item} className="flex items-center gap-3 text-sm font-medium text-stone-900">
                 <PurpleCheck />
                 {item}
               </li>

@@ -13,7 +13,7 @@ export default function AiSeoServicesSection() {
       <div className="grid w-full grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,16rem)_minmax(0,1fr)] lg:gap-[3%]">
         <Reveal className="lg:sticky lg:top-24">
           <p className={`inline-flex items-center gap-2 text-[10px] ${AI_LABEL_PURPLE}`}>
-            <Circle className="h-3 w-3 fill-[#7c3aed] text-[#b089f4]" strokeWidth={3} />
+            <Circle className="h-3 w-3 fill-[#7c3aed] text-[#7c3aed]" strokeWidth={3} />
             {badge}
           </p>
           <h2 className={`mt-4 text-xl sm:text-2xl lg:text-[1.65rem] ${AI_SECTION_TITLE}`}>
@@ -26,12 +26,12 @@ export default function AiSeoServicesSection() {
             const Icon = item.icon as LucideIcon;
             return (
               <Reveal key={item.title} delay={i * 0.03} className="h-full">
-                <article className="flex h-full min-h-[11rem] flex-col rounded-xl border border-white/[0.06] bg-white/[0.035] p-[2%] shadow-[0_2px_16px_rgba(15,23,42,0.05)]">
+                <article className="flex h-full min-h-[11rem] flex-col rounded-xl border border-stone-200/70 bg-white p-[2%] shadow-[0_2px_16px_rgba(15,23,42,0.05)]">
                   <div className="flex items-start gap-3">
                     <span
                       className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${item.gradient} shadow-sm`}
                     >
-                      <Icon className="h-5 w-5 text-white" strokeWidth={2} />
+                      <Icon className="h-5 w-5 text-stone-900" strokeWidth={2} />
                     </span>
                     <h3 className={`${AI_CARD_TITLE} leading-snug`}>{item.title}</h3>
                   </div>

@@ -17,7 +17,7 @@ function EngagementChart() {
 
   return (
     <div className="flex h-[9.5rem] gap-2 sm:h-[11rem]">
-      <div className="flex w-7 shrink-0 flex-col justify-between py-1 text-[10px] font-medium text-white/40">
+      <div className="flex w-7 shrink-0 flex-col justify-between py-1 text-[10px] font-medium text-stone-400">
         {yLabels.map((l) => (
           <span key={l}>{l}</span>
         ))}
@@ -46,15 +46,15 @@ function EngagementChart() {
             strokeLinejoin="round"
           />
           <circle cx="172" cy="48" r="5" fill="#6366F1" stroke="#fff" strokeWidth="2" />
-          <rect x="145" y="18" width="58" height="24" rx="5" fill="#1e293b" />
-          <text x="174" y="32" textAnchor="middle" fill="#fff" fontSize="7.5" fontWeight="600">
+          <rect x="145" y="18" width="58" height="24" rx="5" fill="#ffffff" stroke="#e7e5e4" />
+          <text x="174" y="32" textAnchor="middle" fill="#1c1917" fontSize="7.5" fontWeight="600">
             May 30
           </text>
-          <text x="174" y="40" textAnchor="middle" fill="#c7d2fe" fontSize="7">
+          <text x="174" y="40" textAnchor="middle" fill="#57534e" fontSize="7">
             12.5K
           </text>
         </svg>
-        <div className="mt-1 flex justify-between text-[10px] font-medium text-white/40">
+        <div className="mt-1 flex justify-between text-[10px] font-medium text-stone-400">
           {months.map((m) => (
             <span key={m}>{m}</span>
           ))}
@@ -76,21 +76,21 @@ function DashboardPanel() {
   const { dashboard } = socialMediaHero;
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/[0.09] bg-white/[0.035] shadow-[0_28px_80px_rgba(15,23,42,0.14)]">
-      <div className="border-b border-white/[0.06] px-4 py-3">
+    <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-[0_28px_80px_rgba(15,23,42,0.14)]">
+      <div className="border-b border-stone-200/70 px-4 py-3">
         <TrafficLights />
       </div>
 
       <div className="flex min-h-[22rem] sm:min-h-[26rem]">
-        <aside className="hidden w-[26%] shrink-0 border-r border-white/[0.06] bg-white/[0.025] py-4 sm:block">
+        <aside className="hidden w-[26%] shrink-0 border-r border-stone-200/70 bg-white/60 py-4 sm:block">
           <nav className="space-y-1">
             {dashboard.nav.map((item, i) => (
               <div
                 key={item}
                 className={`relative px-4 py-2 text-xs font-medium ${
                   i === 0
-                    ? "bg-violet-400/10 text-violet-300 before:absolute before:left-0 before:top-0 before:h-full before:w-[3px] before:bg-violet-600"
-                    : "text-white/50"
+                    ? "bg-violet-50 text-violet-700 before:absolute before:left-0 before:top-0 before:h-full before:w-[3px] before:bg-violet-600"
+                    : "text-stone-500"
                 }`}
               >
                 {item}
@@ -102,10 +102,10 @@ function DashboardPanel() {
         <div className="flex min-w-0 flex-1 flex-col p-4">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {dashboard.metrics.map((m) => (
-              <div key={m.label} className="rounded-xl border border-white/[0.06] bg-white/[0.035] p-3 shadow-sm">
-                <p className="text-[11px] font-medium text-white/50">{m.label}</p>
-                <p className="mt-1 text-lg font-bold text-white">{m.value}</p>
-                <p className="mt-0.5 flex items-center gap-1 text-[11px] font-semibold text-emerald-300">
+              <div key={m.label} className="rounded-xl border border-stone-200/70 bg-white p-3 shadow-sm">
+                <p className="text-[11px] font-medium text-stone-500">{m.label}</p>
+                <p className="mt-1 text-lg font-bold text-stone-900">{m.value}</p>
+                <p className="mt-0.5 flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
                   <svg viewBox="0 0 10 10" className="h-2.5 w-2.5" aria-hidden>
                     <path d="M5 1L9 7H1L5 1z" fill="currentColor" />
                   </svg>
@@ -116,20 +116,20 @@ function DashboardPanel() {
           </div>
 
           <div className="mt-4 grid flex-1 grid-cols-1 gap-3 lg:grid-cols-[1fr_38%]">
-            <div className="rounded-xl border border-white/[0.06] bg-white/[0.035] p-3 sm:p-4">
-              <p className="text-sm font-semibold text-white">Engagement Over Time</p>
+            <div className="rounded-xl border border-stone-200/70 bg-white p-3 sm:p-4">
+              <p className="text-sm font-semibold text-stone-900">Engagement Over Time</p>
               <EngagementChart />
             </div>
-            <div className="rounded-xl border border-white/[0.06] bg-white/[0.035] p-3 sm:p-4">
-              <p className="mb-3 text-sm font-semibold text-white">Top Platforms</p>
+            <div className="rounded-xl border border-stone-200/70 bg-white p-3 sm:p-4">
+              <p className="mb-3 text-sm font-semibold text-stone-900">Top Platforms</p>
               <div className="space-y-3">
                 {dashboard.platforms.map((p) => (
                   <div key={p.label}>
                     <div className="mb-1 flex items-center justify-between">
-                      <span className="text-xs font-medium text-white/65">{p.label}</span>
-                      <span className="text-xs font-bold text-white">{p.pct}%</span>
+                      <span className="text-xs font-medium text-stone-600">{p.label}</span>
+                      <span className="text-xs font-bold text-stone-900">{p.pct}%</span>
                     </div>
-                    <div className="h-2 overflow-hidden rounded-full bg-white/[0.05]">
+                    <div className="h-2 overflow-hidden rounded-full bg-white">
                       <div
                         className="h-full rounded-full"
                         style={{
@@ -170,18 +170,18 @@ function PhonePanel() {
   const { phone } = socialMediaHero.dashboard;
 
   return (
-    <div className="flex h-full flex-col rounded-[1.75rem] border-[4px] border-slate-900 bg-white/[0.035] p-3 shadow-[0_24px_56px_rgba(15,23,42,0.3)] sm:p-4">
-      <div className="mx-auto mb-2.5 h-1.5 w-12 rounded-full bg-white/15" />
-      <p className="text-xs font-bold text-white sm:text-sm">{phone.title}</p>
+    <div className="flex h-full flex-col rounded-[1.75rem] border-[4px] border-stone-200 bg-white p-3 shadow-[0_24px_56px_rgba(15,23,42,0.3)] sm:p-4">
+      <div className="mx-auto mb-2.5 h-1.5 w-12 rounded-full bg-white" />
+      <p className="text-xs font-bold text-stone-900 sm:text-sm">{phone.title}</p>
       <div className="mt-3">
         <PostPreview />
       </div>
       <div className="mt-3 grid grid-cols-2 gap-2">
         {phone.stats.map((s) => (
-          <div key={s.label} className="rounded-lg border border-white/[0.06] bg-white/[0.025] p-2">
-            <p className="text-[10px] font-medium text-white/50">{s.label}</p>
-            <p className="text-sm font-bold text-white">{s.value}</p>
-            <p className="text-[10px] font-semibold text-emerald-300">{s.change}</p>
+          <div key={s.label} className="rounded-lg border border-stone-200/70 bg-white/60 p-2">
+            <p className="text-[10px] font-medium text-stone-500">{s.label}</p>
+            <p className="text-sm font-bold text-stone-900">{s.value}</p>
+            <p className="text-[10px] font-semibold text-emerald-700">{s.change}</p>
           </div>
         ))}
       </div>

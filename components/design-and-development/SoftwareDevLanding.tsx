@@ -36,7 +36,7 @@ import {
 
 export default function SoftwareDevLanding() {
   return (
-    <div className="w-full max-w-none overflow-x-hidden bg-white/[0.035]">
+    <div className="w-full max-w-none overflow-x-hidden bg-white">
       {/* Hero */}
       <section className={`${SDM_SECTION} ${SDM_SECTION_PY} bg-transparent pt-8 sm:pt-12`}>
         <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
@@ -79,7 +79,7 @@ export default function SoftwareDevLanding() {
       </section>
 
       {/* Capabilities — 7 icon cards + service grid */}
-      <section className={`${SDM_SECTION} ${SDM_SECTION_PY} border-t border-white/[0.06] bg-transparent`}>
+      <section className={`${SDM_SECTION} ${SDM_SECTION_PY} border-t border-stone-200/70 bg-transparent`}>
         <div className="mb-8 text-center sm:mb-10">
           <h2 className={SDM_FONT_SECTION}>{softwareDevCapabilities.title}</h2>
           <div className="mx-auto mt-3 h-1 w-12 rounded-full bg-[#7c3aed]" />
@@ -90,9 +90,9 @@ export default function SoftwareDevLanding() {
             return (
               <div key={cap.title} className={SDM_CAP_CARD}>
                 <span className={SDM_CAP_ICON_BOX}>
-                  <Icon className="h-5 w-5 text-[#b089f4] sm:h-[22px] sm:w-[22px]" strokeWidth={1.75} />
+                  <Icon className="h-5 w-5 text-[#7c3aed] sm:h-[22px] sm:w-[22px]" strokeWidth={1.75} />
                 </span>
-                <p className="text-[10px] font-semibold leading-snug text-white sm:text-[11px]">
+                <p className="text-[10px] font-semibold leading-snug text-stone-900 sm:text-[11px]">
                   {cap.title}
                 </p>
               </div>

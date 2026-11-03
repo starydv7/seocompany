@@ -231,13 +231,13 @@ const industries: { name: string; Icon: LucideIcon; accent: string }[] = [
   { name: "Logistics", Icon: Truck, accent: "from-sky-500 to-blue-500" },
   { name: "Real Estate", Icon: Building2, accent: "from-indigo-500 to-violet-500" },
   { name: "Community Platforms", Icon: Users, accent: "from-cyan-500 to-emerald-500" },
-  { name: "Enterprise Businesses", Icon: Building, accent: "from-slate-700 to-white/20" },
+  { name: "Enterprise Businesses", Icon: Building, accent: "from-slate-700 to-white" },
   { name: "Local Businesses", Icon: Store, accent: "from-yellow-500 to-amber-600" },
 ];
 
 export default function DesignAndDevelopmentPage() {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white/[0.02] via-white/[0.03] to-white/[0.02] px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+    <section className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white to-white px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(80,180,68,0.08),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(221,191,93,0.08),transparent_35%)]"
@@ -245,18 +245,18 @@ export default function DesignAndDevelopmentPage() {
 
       <div className="mx-auto w-full space-y-14">
         <Reveal>
-          <header className="rounded-3xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-xl shadow-black/40 backdrop-blur sm:p-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d]/15 via-white/[0.03] to-[#50b444]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#50b444]">
+          <header className="rounded-3xl border border-stone-200 bg-white p-6 shadow-xl shadow-stone-900/10 backdrop-blur sm:p-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#ddbf5d]/15 via-white to-[#50b444]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#50b444]">
               <Sparkles className="h-3.5 w-3.5" />
               Design and Development
             </div>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl">
               End-to-end software, web and mobile{" "}
               <span className="lux-gold-text">
                 engineered to scale.
               </span>
             </h1>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/65 sm:text-base">
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-stone-600 sm:text-base">
               From custom SaaS platforms to mobile apps, internal tools to e-commerce — we design,
               build and maintain digital products that fit your business and grow with it. Modern
               stacks, senior team, predictable delivery.
@@ -274,7 +274,7 @@ export default function DesignAndDevelopmentPage() {
               </Link>
               <Link
                 href="#categories"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-stone-900"
               >
                 Explore Capabilities
               </Link>
@@ -284,10 +284,10 @@ export default function DesignAndDevelopmentPage() {
               {valueProps.map((vp) => (
                 <div
                   key={vp.label}
-                  className="rounded-xl border border-white/[0.09] bg-white/[0.025] px-4 py-3"
+                  className="rounded-xl border border-stone-200 bg-white/60 px-4 py-3"
                 >
                   <p className="text-2xl font-bold text-[#50b444]">{vp.value}</p>
-                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-white/50">
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wider text-stone-500">
                     {vp.label}
                   </p>
                 </div>
@@ -299,7 +299,7 @@ export default function DesignAndDevelopmentPage() {
         <Reveal>
           <section
             aria-labelledby="industries-heading"
-            className="overflow-hidden rounded-3xl border border-white/[0.09] bg-transparent p-6 shadow-lg shadow-black/40 backdrop-blur sm:p-10"
+            className="overflow-hidden rounded-3xl border border-stone-200 bg-transparent p-6 shadow-lg shadow-stone-900/10 backdrop-blur sm:p-10"
           >
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#50b444]">
@@ -307,7 +307,7 @@ export default function DesignAndDevelopmentPage() {
               </p>
               <h2
                 id="industries-heading"
-                className="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+                className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl"
               >
                 Trusted across web, mobile and software projects
               </h2>
@@ -327,14 +327,14 @@ export default function DesignAndDevelopmentPage() {
                     {industries.map((ind) => (
                       <li
                         key={`${dup}-${ind.name}`}
-                        className="flex shrink-0 items-center gap-3 rounded-full border border-white/[0.09] bg-white/[0.035] px-5 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-400/25 hover:shadow-md"
+                        className="flex shrink-0 items-center gap-3 rounded-full border border-stone-200 bg-white px-5 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md"
                       >
                         <span
                           className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${ind.accent} text-white shadow-sm`}
                         >
                           <ind.Icon className="h-4 w-4" strokeWidth={2} />
                         </span>
-                        <span className="whitespace-nowrap text-sm font-semibold text-white">
+                        <span className="whitespace-nowrap text-sm font-semibold text-stone-900">
                           {ind.name}
                         </span>
                       </li>
@@ -352,7 +352,7 @@ export default function DesignAndDevelopmentPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#50b444]">
                 What we build
               </p>
-              <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              <h2 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
                 9 capabilities, one delivery team
               </h2>
             </div>
@@ -362,7 +362,7 @@ export default function DesignAndDevelopmentPage() {
                 <article
                   key={c.id}
                   id={c.id}
-                  className="group flex h-full scroll-mt-24 flex-col rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 text-sm shadow-sm shadow-black/40 transition hover:-translate-y-1 hover:border-emerald-400/25 hover:shadow-md hover:shadow-black/40"
+                  className="group flex h-full scroll-mt-24 flex-col rounded-2xl border border-stone-200 bg-white p-6 text-sm shadow-sm shadow-stone-900/10 transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md hover:shadow-stone-900/10"
                 >
                   <div className="flex items-start gap-3">
                     <div
@@ -371,16 +371,16 @@ export default function DesignAndDevelopmentPage() {
                       <c.Icon className="h-6 w-6" strokeWidth={1.75} />
                     </div>
                     <div className="min-w-0 space-y-1">
-                      <h3 className="text-base font-semibold tracking-tight text-white">
+                      <h3 className="text-base font-semibold tracking-tight text-stone-900">
                         {c.title}
                       </h3>
-                      <p className="text-xs font-semibold text-white/80">{c.kicker}</p>
+                      <p className="text-xs font-semibold text-stone-700">{c.kicker}</p>
                     </div>
                   </div>
 
-                  <p className="mt-4 text-sm leading-relaxed text-white/80">{c.description}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-stone-700">{c.description}</p>
 
-                  <ul className="mt-4 flex-1 space-y-2 text-xs text-white/65">
+                  <ul className="mt-4 flex-1 space-y-2 text-xs text-stone-600">
                     {c.items.map((item) => (
                       <li key={item} className="flex items-start gap-2">
                         <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#50b444]" />
@@ -392,7 +392,7 @@ export default function DesignAndDevelopmentPage() {
                   <div className="pt-5">
                     <Link
                       href={c.href}
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2 text-xs font-semibold lux-ghost text-white"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full px-4 py-2 text-xs font-semibold lux-ghost text-stone-900"
                     >
                       Learn more
                       <ArrowRight className="h-4 w-4" />
@@ -405,16 +405,16 @@ export default function DesignAndDevelopmentPage() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <section className="rounded-3xl border border-white/[0.09] bg-gradient-to-br from-white/[0.03] via-emerald-400/10 to-amber-400/10 p-8 shadow-lg shadow-black/40 sm:p-12">
+          <section className="rounded-3xl border border-stone-200 bg-gradient-to-br from-white via-emerald-50 to-amber-50 p-8 shadow-lg shadow-stone-900/10 sm:p-12">
             <div className="grid gap-6 lg:grid-cols-[1.4fr,1fr] lg:items-center">
               <div className="space-y-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#50b444]">
                   Have a product in mind?
                 </p>
-                <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                <h2 className="text-2xl font-semibold tracking-tight text-stone-900 sm:text-3xl">
                   Let&apos;s scope it together — for free.
                 </h2>
-                <p className="text-sm leading-relaxed text-white/65 sm:text-base">
+                <p className="text-sm leading-relaxed text-stone-600 sm:text-base">
                   Tell us what you&apos;re trying to build. We&apos;ll come back with a focused
                   scope, timeline and rough cost — no decks, no fluff, just clarity on what it
                   takes to ship.
@@ -433,7 +433,7 @@ export default function DesignAndDevelopmentPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold lux-ghost text-stone-900"
                 >
                   Send us a brief
                 </Link>

@@ -145,15 +145,15 @@ export default function AboutPage() {
         <div className="relative mx-auto w-full max-w-7xl">
           <Reveal>
             <LuxPill>Meet the team</LuxPill>
-            <h1 className="mt-8 max-w-5xl text-[clamp(3rem,7.4vw,7rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-white">
+            <h1 className="mt-8 max-w-5xl text-[clamp(3rem,7.4vw,7rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-stone-900">
               The Minds Behind
               <br />
               <span className="lux-gold-text font-serif font-normal italic tracking-[-0.02em]">the Metrics</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-[clamp(1rem,1.35vw,1.2rem)] leading-relaxed text-white/65">
+            <p className="mt-8 max-w-2xl text-[clamp(1rem,1.35vw,1.2rem)] leading-relaxed text-stone-600">
               We are a collective of strategists, creators, and data analysts. While we each have our own specialty,
               from color theory to keyword density, we&apos;re united by a single obsession:{" "}
-              <span className="font-serif text-[1.25em] italic text-lux-champagne">Growth.</span>
+              <span className="font-serif text-[1.25em] italic text-lux-bronze">Growth.</span>
             </p>
           </Reveal>
 
@@ -161,10 +161,10 @@ export default function AboutPage() {
             {PILLARS.map((pillar, i) => (
               <Reveal key={pillar.label} delay={0.08 * i}>
                 <div className="lux-panel flex items-center gap-5 px-6 py-5">
-                  <span className="font-serif text-4xl leading-none text-white/20">0{i + 1}</span>
+                  <span className="font-serif text-4xl leading-none text-stone-400">0{i + 1}</span>
                   <div>
                     <LuxEyebrow>{pillar.label}</LuxEyebrow>
-                    <p className="mt-1.5 text-sm font-medium text-white/85">{pillar.value}</p>
+                    <p className="mt-1.5 text-sm font-medium text-stone-700">{pillar.value}</p>
                   </div>
                 </div>
               </Reveal>
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <LuxEyebrow>The collective</LuxEyebrow>
-                <h2 className="mt-4 font-serif text-[clamp(2.4rem,5vw,4.25rem)] leading-[1.02] text-white">
+                <h2 className="mt-4 font-serif text-[clamp(2.4rem,5vw,4.25rem)] leading-[1.02] text-stone-900">
                   Five specialists. <span className="lux-gold-text italic">One obsession.</span>
                 </h2>
               </div>
@@ -210,24 +210,24 @@ export default function AboutPage() {
                         {initials(m.name)}
                       </span>
                       <span
-                        className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] ring-1 ring-inset ring-white/10"
-                        style={{ color: accent.from }}
+                        className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] ring-1 ring-inset ring-stone-200"
+                        style={{ color: accent.ink }}
                       >
                         <Icon className="h-3 w-3" />
                         {m.title}
                       </span>
                     </div>
 
-                    <h3 className="mt-7 text-2xl font-semibold tracking-[-0.02em] text-white">{m.name}</h3>
-                    <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-white/45">{m.role}</p>
+                    <h3 className="mt-7 text-2xl font-semibold tracking-[-0.02em] text-stone-900">{m.name}</h3>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-[0.14em] text-stone-500">{m.role}</p>
 
-                    <blockquote className="mt-6 border-l pl-4 font-serif text-xl italic leading-snug text-white/85" style={{ borderColor: accent.to }}>
+                    <blockquote className="mt-6 border-l pl-4 font-serif text-xl italic leading-snug text-stone-700" style={{ borderColor: accent.to }}>
                       &ldquo;{m.quote}&rdquo;
                     </blockquote>
 
-                    <p className="mt-6 flex-1 text-sm leading-relaxed text-white/60">{m.description}</p>
+                    <p className="mt-6 flex-1 text-sm leading-relaxed text-stone-600">{m.description}</p>
 
-                    <div className="mt-8 flex items-center justify-between gap-4 border-t border-white/[0.08] pt-6">
+                    <div className="mt-8 flex items-center justify-between gap-4 border-t border-stone-200 pt-6">
                       <div className="flex min-h-9 items-center gap-2">
                         {links.map(({ key, label, Icon: SocialIcon }) => (
                           <a
@@ -236,7 +236,7 @@ export default function AboutPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`${m.name} on ${label}`}
-                            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.04] text-white/65 ring-1 ring-inset ring-white/10 transition hover:bg-lux-gold hover:text-lux-ink hover:ring-lux-gold"
+                            className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-stone-600 ring-1 ring-inset ring-stone-200 transition hover:bg-lux-gold hover:text-lux-ink hover:ring-lux-gold"
                           >
                             <SocialIcon className="h-3.5 w-3.5" />
                           </a>
@@ -246,7 +246,7 @@ export default function AboutPage() {
                         href={HUBSPOT_MEETING_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-white/75 transition hover:text-lux-gold"
+                        className="group inline-flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-stone-700 transition hover:text-lux-bronze"
                       >
                         Work with us
                         <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
@@ -269,18 +269,18 @@ export default function AboutPage() {
               className="absolute inset-0 -z-10"
               style={{
                 background:
-                  "radial-gradient(ellipse at 0% 0%, rgba(221,191,93,0.26), transparent 55%), radial-gradient(ellipse at 100% 100%, rgba(108,71,255,0.22), transparent 55%), linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))",
+                  "radial-gradient(ellipse at 0% 0%, rgba(221,191,93,0.26), transparent 55%), radial-gradient(ellipse at 100% 100%, rgba(108,71,255,0.22), transparent 55%), linear-gradient(180deg, #ffffff, rgba(255,255,255,0.7))",
               }}
             />
-            <div aria-hidden className="absolute inset-0 -z-10 rounded-[40px] ring-1 ring-inset ring-white/10" />
+            <div aria-hidden className="absolute inset-0 -z-10 rounded-[40px] ring-1 ring-inset ring-stone-200" />
             <div>
               <LuxEyebrow>Join our squad</LuxEyebrow>
-              <h2 className="mt-5 font-serif text-[clamp(2.4rem,5vw,4.5rem)] leading-[1] text-white">
+              <h2 className="mt-5 font-serif text-[clamp(2.4rem,5vw,4.5rem)] leading-[1] text-stone-900">
                 Think you have <span className="lux-gold-text italic">what it takes?</span>
               </h2>
             </div>
             <div>
-              <p className="text-base leading-relaxed text-white/65">
+              <p className="text-base leading-relaxed text-stone-600">
                 We&apos;re always looking for ambitious talent to join our ranks. If you&apos;re obsessed with digital
                 culture and results-driven marketing, we want to hear from you.
               </p>

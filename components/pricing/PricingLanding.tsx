@@ -38,25 +38,25 @@ export default function PricingLanding() {
 
         <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.25fr,1fr] lg:gap-10">
           <Reveal>
-            <div className="inline-flex items-center gap-3 rounded-full bg-white/[0.04] py-1.5 pl-2 pr-4 ring-1 ring-inset ring-white/10 backdrop-blur">
+            <div className="inline-flex items-center gap-3 rounded-full bg-white py-1.5 pl-2 pr-4 ring-1 ring-inset ring-stone-200 backdrop-blur">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ddbf5d] opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#ddbf5d]" />
               </span>
-              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-white/70">
+              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-stone-600">
                 {PRICING_INTRO.eyebrow}
               </span>
             </div>
 
-            <h1 className="mt-7 text-[clamp(2.6rem,6.2vw,5.6rem)] font-semibold leading-[0.98] tracking-[-0.035em] text-white">
+            <h1 className="mt-7 text-[clamp(2.6rem,6.2vw,5.6rem)] font-semibold leading-[0.98] tracking-[-0.035em] text-stone-900">
               SEO,{" "}
               <span className="lux-gold-text font-serif italic">AI Automation</span>
               <br />
               and Web Development{" "}
-              <span className="font-serif italic text-white/90">Pricing</span>
+              <span className="font-serif italic text-stone-800">Pricing</span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-[clamp(1rem,1.3vw,1.15rem)] leading-relaxed text-white/70">
+            <p className="mt-7 max-w-2xl text-[clamp(1rem,1.3vw,1.15rem)] leading-relaxed text-stone-600">
               {PRICING_INTRO.body}
             </p>
 
@@ -70,7 +70,7 @@ export default function PricingLanding() {
               </a>
               <a
                 href="#plans"
-                className="lux-ghost inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-white"
+                className="lux-ghost inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-stone-900"
               >
                 Compare plans
               </a>
@@ -82,27 +82,27 @@ export default function PricingLanding() {
                   <span
                     key={code}
                     className={`rounded-md px-2 py-1 font-mono text-[11px] tracking-[0.14em] ${
-                      i === 0 ? "bg-[#ddbf5d] text-[#06070d]" : "bg-white/[0.05] text-white/60 ring-1 ring-inset ring-white/10"
+                      i === 0 ? "bg-[#ddbf5d] text-[#06070d]" : "bg-white text-stone-600 ring-1 ring-inset ring-stone-200"
                     }`}
                   >
                     {code}
                   </span>
                 ))}
               </div>
-              <p className="text-sm text-white/55">{PRICING_INTRO.currency}</p>
+              <p className="text-sm text-stone-500">{PRICING_INTRO.currency}</p>
             </div>
           </Reveal>
 
           <Reveal delay={0.15}>
             <div className="lux-panel p-6 sm:p-8">
               <div className="flex items-center justify-between">
-                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/50">Your route</p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#ddbf5d]">Audit first</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-stone-500">Your route</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-bronze">Audit first</p>
               </div>
               <div className="mt-4">
                 <PricingRouteMap />
               </div>
-              <p className="font-serif mt-6 text-center text-lg italic text-white/70">
+              <p className="font-serif mt-6 text-center text-lg italic text-stone-600">
                 Then choose the plan that fits your stage.
               </p>
             </div>
@@ -111,12 +111,12 @@ export default function PricingLanding() {
       </section>
 
       {/* Deliverables ticker */}
-      <div className="relative border-y border-white/[0.06] bg-white/[0.015] py-5">
+      <div className="relative border-y border-stone-200/70 bg-white/60 py-5">
         <div className="marquee-mask overflow-hidden">
           <div className="animate-marquee-ltr flex w-max items-center gap-10 [--marquee-duration:55s]">
             {[...DELIVERABLES, ...DELIVERABLES].map((item, i) => (
               <span key={i} className="flex items-center gap-10 whitespace-nowrap">
-                <span className="font-serif text-xl italic text-white/55">{item}</span>
+                <span className="font-serif text-xl italic text-stone-500">{item}</span>
                 <span aria-hidden className="h-1.5 w-1.5 rotate-45 bg-[#ddbf5d]/70" />
               </span>
             ))}
@@ -135,12 +135,12 @@ export default function PricingLanding() {
           <Reveal>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#ddbf5d]">Four ways in</p>
-                <h2 className="font-serif mt-3 text-[clamp(2.4rem,4.6vw,4rem)] leading-[1.02] text-white">
-                  Choose the plan that <span className="italic text-white/70">fits your stage</span>
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-bronze">Four ways in</p>
+                <h2 className="font-serif mt-3 text-[clamp(2.4rem,4.6vw,4rem)] leading-[1.02] text-stone-900">
+                  Choose the plan that <span className="italic text-stone-600">fits your stage</span>
                 </h2>
               </div>
-              <p className="max-w-md text-sm leading-relaxed text-white/55">
+              <p className="max-w-md text-sm leading-relaxed text-stone-500">
                 Every engagement starts with a fixed-scope audit, so you know what is holding back your rankings and
                 your leads before you commit to ongoing work.
               </p>
@@ -171,26 +171,26 @@ export default function PricingLanding() {
             <div className="lux-panel relative flex h-full flex-col overflow-hidden p-6 sm:p-8 lg:p-10">
               <span
                 aria-hidden
-                className="font-serif pointer-events-none absolute -top-4 right-6 select-none text-[14rem] leading-none text-white/[0.05]"
+                className="font-serif pointer-events-none absolute -top-4 right-6 select-none text-[14rem] leading-none text-stone-400"
               >
                 &ldquo;
               </span>
-              <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#ddbf5d]">Our word</p>
-              <h3 className="font-serif mt-3 text-[clamp(2rem,3.4vw,3rem)] leading-[1.05] text-white">
+              <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-bronze">Our word</p>
+              <h3 className="font-serif mt-3 text-[clamp(2rem,3.4vw,3rem)] leading-[1.05] text-stone-900">
                 {NO_PROMISE.title}
               </h3>
-              <p className="mt-5 text-[0.98rem] leading-relaxed text-white/70">{NO_PROMISE.body}</p>
+              <p className="mt-5 text-[0.98rem] leading-relaxed text-stone-600">{NO_PROMISE.body}</p>
 
               <div className="mt-auto pt-8">
-                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-white/40">We commit to</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-stone-400">We commit to</p>
                 <ul className="mt-4 space-y-2.5">
                   {NO_PROMISE.commitments.map((item) => (
                     <li
                       key={item}
-                      className="flex items-center justify-between rounded-xl bg-white/[0.03] px-4 py-3 ring-1 ring-inset ring-white/[0.07]"
+                      className="flex items-center justify-between rounded-xl bg-white px-4 py-3 ring-1 ring-inset ring-stone-200"
                     >
-                      <span className="font-serif text-xl italic text-white">{item}</span>
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#50b444]/20 text-[#7ee8a0]">
+                      <span className="font-serif text-xl italic text-stone-900">{item}</span>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#50b444]/20 text-stone-600">
                         <Check className="h-3.5 w-3.5" strokeWidth={3} />
                       </span>
                     </li>
@@ -221,12 +221,12 @@ export default function PricingLanding() {
               className="absolute inset-0 -z-10"
               style={{
                 background:
-                  "radial-gradient(ellipse at 50% 0%, rgba(221,191,93,0.28), transparent 60%), radial-gradient(ellipse at 50% 120%, rgba(80,180,68,0.22), transparent 55%), linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01))",
+                  "radial-gradient(ellipse at 50% 0%, rgba(221,191,93,0.28), transparent 60%), radial-gradient(ellipse at 50% 120%, rgba(80,180,68,0.22), transparent 55%), linear-gradient(180deg, #ffffff, rgba(255,255,255,0.7))",
               }}
             />
-            <div aria-hidden className="absolute inset-0 -z-10 rounded-[36px] ring-1 ring-inset ring-white/10" />
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-[#ddbf5d]">Step one</p>
-            <h2 className="font-serif mx-auto mt-4 max-w-3xl text-[clamp(2.4rem,5vw,4.5rem)] leading-[1.02] text-white">
+            <div aria-hidden className="absolute inset-0 -z-10 rounded-[36px] ring-1 ring-inset ring-stone-200" />
+            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-lux-bronze">Step one</p>
+            <h2 className="font-serif mx-auto mt-4 max-w-3xl text-[clamp(2.4rem,5vw,4.5rem)] leading-[1.02] text-stone-900">
               Find what is costing you <span className="lux-gold-text italic">rankings and leads.</span>
             </h2>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -241,7 +241,7 @@ export default function PricingLanding() {
               </a>
               <Link
                 href="/contact"
-                className="lux-ghost inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-semibold text-white"
+                className="lux-ghost inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-semibold text-stone-900"
               >
                 Talk to us first
               </Link>

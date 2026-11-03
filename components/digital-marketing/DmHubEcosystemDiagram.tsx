@@ -69,8 +69,8 @@ function SpokeCard({
       <span className={`flex h-8 w-8 items-center justify-center rounded-lg ${iconBg}`}>
         <Icon className={`h-4 w-4 ${iconText}`} strokeWidth={2} />
       </span>
-      <p className="mt-2 text-xs font-bold text-white sm:text-[13px]">{label}</p>
-      <p className="mt-0.5 text-[10px] leading-snug text-white/50 sm:text-[11px]">{desc}</p>
+      <p className="mt-2 text-xs font-bold text-stone-900 sm:text-[13px]">{label}</p>
+      <p className="mt-0.5 text-[10px] leading-snug text-stone-500 sm:text-[11px]">{desc}</p>
     </div>
   );
 }
@@ -110,7 +110,7 @@ export default function DmHubEcosystemDiagram() {
         <div className="absolute left-1/2 top-[44%] z-20 -translate-x-1/2 -translate-y-1/2">
           <div className="absolute inset-[-12%] rounded-full bg-violet-500/15 blur-2xl" aria-hidden />
           <div className="relative flex h-[5.5rem] w-[5.5rem] items-center justify-center rounded-full bg-gradient-to-br from-[#7c3aed] via-[#6366f1] to-[#4f46e5] shadow-[0_0_48px_rgba(99,102,241,0.45)] sm:h-[6rem] sm:w-[6rem]">
-            <span className="max-w-[4.5rem] text-center text-[10px] font-bold leading-tight text-white sm:text-[11px]">
+            <span className="max-w-[4.5rem] text-center text-[10px] font-bold leading-tight text-stone-900 sm:text-[11px]">
               {hubLabel}
             </span>
           </div>

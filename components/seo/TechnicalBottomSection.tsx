@@ -19,7 +19,7 @@ function CtaChart() {
       className="absolute bottom-6 right-6 flex h-[118px] w-[160px] items-end justify-end gap-2"
       aria-hidden
     >
-      <div className="absolute -top-2 right-0 flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 text-[9px] font-bold text-white/90">
+      <div className="absolute -top-2 right-0 flex items-center gap-1 rounded-full bg-stone-900/10 px-2 py-0.5 text-[9px] font-bold text-stone-800">
         <TrendingUp className="h-3 w-3" />
         +42%
       </div>
@@ -28,7 +28,7 @@ function CtaChart() {
         <div
           // eslint-disable-next-line react/no-array-index-key
           key={i}
-          className="w-[18px] rounded-t-sm bg-white/20"
+          className="w-[18px] rounded-t-sm bg-stone-900/10"
           style={{
             height: `${h}px`,
             background:
@@ -52,19 +52,19 @@ export default function TechnicalBottomSection() {
       <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-5">
         {/* Why Choose — 2×2 */}
         <Reveal>
-          <div className="h-full rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-sm">
-            <h2 className="text-lg font-bold text-white">{whyTitle}</h2>
+          <div className="h-full rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <h2 className="text-lg font-bold text-stone-900">{whyTitle}</h2>
             <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {whyItems.map((item) => {
                 const Icon = item.icon as LucideIcon;
                 return (
                   <div key={item.title} className="flex gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-400/10">
-                      <Icon className="h-5 w-5 text-violet-300" strokeWidth={2} />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-50">
+                      <Icon className="h-5 w-5 text-violet-700" strokeWidth={2} />
                     </span>
                     <div>
-                      <p className="text-xs font-bold text-white">{item.title}</p>
-                      <p className="mt-1 text-[11px] leading-relaxed text-white/50">
+                      <p className="text-xs font-bold text-stone-900">{item.title}</p>
+                      <p className="mt-1 text-[11px] leading-relaxed text-stone-500">
                         {item.description}
                       </p>
                     </div>
@@ -77,9 +77,9 @@ export default function TechnicalBottomSection() {
 
         {/* FAQ */}
         <Reveal delay={0.04}>
-          <div className="h-full rounded-2xl border border-white/[0.09] bg-white/[0.035] p-6 shadow-sm">
-            <h2 className="text-lg font-bold text-white">Frequently Asked Questions</h2>
-            <div className="mt-4 divide-y divide-white/[0.06]">
+          <div className="h-full rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <h2 className="text-lg font-bold text-stone-900">Frequently Asked Questions</h2>
+            <div className="mt-4 divide-y divide-stone-200/70">
               {technicalFaqs.map((item, index) => {
                 const isOpen = openIndex === index;
                 return (
@@ -90,7 +90,7 @@ export default function TechnicalBottomSection() {
                       className="flex w-full items-center justify-between gap-3 py-3.5 text-left"
                       aria-expanded={isOpen}
                     >
-                      <span className="text-[13px] font-semibold text-white">{item.q}</span>
+                      <span className="text-[13px] font-semibold text-stone-900">{item.q}</span>
                       <ChevronDown
                         className={`h-4 w-4 shrink-0 text-violet-500 transition-transform ${isOpen ? "rotate-180" : ""}`}
                       />
@@ -99,7 +99,7 @@ export default function TechnicalBottomSection() {
                       className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
                     >
                       <div className="overflow-hidden">
-                        <p className="pb-3 text-[11px] leading-relaxed text-white/65">{item.a}</p>
+                        <p className="pb-3 text-[11px] leading-relaxed text-stone-600">{item.a}</p>
                       </div>
                     </div>
                   </div>
@@ -113,18 +113,18 @@ export default function TechnicalBottomSection() {
         <Reveal delay={0.08}>
           <div className="relative flex h-full min-h-[18rem] flex-col overflow-hidden rounded-2xl lux-banner p-8 shadow-xl shadow-violet-400/30 sm:p-9">
             <div className="relative z-10 flex flex-1 flex-col">
-              <h2 className="text-[1.55rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[1.85rem]">
+              <h2 className="text-[1.55rem] font-bold leading-[1.15] tracking-tight text-stone-900 sm:text-[1.85rem]">
                 {title}
               </h2>
-              <p className="mt-4 max-w-[28ch] text-sm leading-relaxed text-white/90">
+              <p className="mt-4 max-w-[28ch] text-sm leading-relaxed text-stone-800">
                 {subtitle}
               </p>
 
               <ul className="mt-6 space-y-2">
                 {checklist.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-[13px] text-white/90">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15">
-                      <Check className="h-[14px] w-[14px] text-white" strokeWidth={3} />
+                  <li key={item} className="flex items-center gap-2 text-[13px] text-stone-800">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-stone-900/10">
+                      <Check className="h-[14px] w-[14px] text-stone-900" strokeWidth={3} />
                     </span>
                     {item}
                   </li>
@@ -136,7 +136,7 @@ export default function TechnicalBottomSection() {
                   href={HUBSPOT_MEETING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 rounded-xl bg-white/25 px-4 py-2.5 text-[13px] font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition hover:bg-white/30"
+                  className="inline-flex w-fit items-center gap-2 rounded-xl bg-stone-900/15 px-4 py-2.5 text-[13px] font-semibold text-stone-900 shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition hover:bg-white/30"
                 >
                   {primaryLabel}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />

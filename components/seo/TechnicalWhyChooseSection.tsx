@@ -17,10 +17,10 @@ export default function TechnicalWhyChooseSection() {
           return (
             <Reveal key={item.title} delay={i * 0.04}>
               <article className={`${TECH_CARD} h-full text-center sm:text-left`}>
-                <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-violet-400/10 sm:mx-0">
-                  <Icon className="h-5 w-5 text-violet-300" strokeWidth={2} />
+                <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl bg-violet-50 sm:mx-0">
+                  <Icon className="h-5 w-5 text-violet-700" strokeWidth={2} />
                 </span>
-                <h3 className="mt-4 text-sm font-bold text-white">{item.title}</h3>
+                <h3 className="mt-4 text-sm font-bold text-stone-900">{item.title}</h3>
                 <p className={`mt-2 ${TECH_BODY}`}>{item.description}</p>
               </article>
             </Reveal>

@@ -94,7 +94,7 @@ export const franchiseTrusted = {
       icon: Dumbbell,
       accent: "from-violet-500 to-purple-400",
       line: "bg-violet-500",
-      iconBg: "bg-violet-400/10 text-violet-300",
+      iconBg: "bg-violet-50 text-violet-700",
     },
     {
       title: "Healthcare Networks",
@@ -103,7 +103,7 @@ export const franchiseTrusted = {
       icon: HeartPulse,
       accent: "from-pink-500 to-rose-400",
       line: "bg-pink-500",
-      iconBg: "bg-pink-400/10 text-pink-300",
+      iconBg: "bg-pink-50 text-pink-700",
     },
     {
       title: "Restaurant Groups",
@@ -111,7 +111,7 @@ export const franchiseTrusted = {
       icon: UtensilsCrossed,
       accent: "from-amber-500 to-orange-400",
       line: "bg-amber-500",
-      iconBg: "bg-amber-400/10 text-amber-300",
+      iconBg: "bg-amber-50 text-amber-700",
     },
     {
       title: "Home Services",
@@ -119,7 +119,7 @@ export const franchiseTrusted = {
       icon: Home,
       accent: "from-sky-500 to-cyan-400",
       line: "bg-sky-500",
-      iconBg: "bg-sky-400/10 text-sky-300",
+      iconBg: "bg-sky-50 text-sky-700",
     },
     {
       title: "Retail Franchises",
@@ -127,7 +127,7 @@ export const franchiseTrusted = {
       icon: ShoppingBag,
       accent: "from-emerald-500 to-green-400",
       line: "bg-emerald-500",
-      iconBg: "bg-emerald-400/10 text-emerald-300",
+      iconBg: "bg-emerald-50 text-emerald-700",
     },
     {
       title: "Professional Services",
@@ -135,21 +135,21 @@ export const franchiseTrusted = {
       icon: Briefcase,
       accent: "from-indigo-600 to-violet-500",
       line: "bg-indigo-600",
-      iconBg: "bg-indigo-400/10 text-indigo-300",
+      iconBg: "bg-indigo-50 text-indigo-700",
     },
   ],
   stats: [
-    { value: "500+", label: "Locations Optimized", icon: MapPin, iconColor: "text-violet-300 bg-violet-400/10" },
-    { value: "250+", label: "Brands Scaled", icon: BarChart3, iconColor: "text-emerald-300 bg-emerald-400/10" },
-    { value: "1M+", label: "Customers Reached", icon: Users, iconColor: "text-pink-300 bg-pink-400/10" },
+    { value: "500+", label: "Locations Optimized", icon: MapPin, iconColor: "text-violet-700 bg-violet-50" },
+    { value: "250+", label: "Brands Scaled", icon: BarChart3, iconColor: "text-emerald-700 bg-emerald-50" },
+    { value: "1M+", label: "Customers Reached", icon: Users, iconColor: "text-pink-700 bg-pink-50" },
     {
       value: "180%+",
       label: "Average Traffic Growth",
       icon: TrendingUp,
-      iconColor: "text-violet-300 bg-violet-400/10",
+      iconColor: "text-violet-700 bg-violet-50",
     },
-    { value: "98%", label: "Client Satisfaction", icon: Star, iconColor: "text-amber-300 bg-amber-400/10" },
-    { value: "20+", label: "Countries Served", icon: Globe2, iconColor: "text-blue-300 bg-blue-400/10" },
+    { value: "98%", label: "Client Satisfaction", icon: Star, iconColor: "text-amber-700 bg-amber-50" },
+    { value: "20+", label: "Countries Served", icon: Globe2, iconColor: "text-blue-700 bg-blue-50" },
   ],
 } as const;
 
@@ -673,16 +673,16 @@ export const whyChooseUs = {
     emphasis2: "scalable long-term growth.",
   },
   stats: [
-    { value: "500+", label: "Locations Optimized", icon: MapPin, iconClass: "text-violet-300 bg-violet-400/10" },
-    { value: "250+", label: "Brands Served", icon: BarChart3, iconClass: "text-emerald-300 bg-emerald-400/10" },
-    { value: "1M+", label: "Customers Reached", icon: Users, iconClass: "text-pink-300 bg-pink-400/10" },
+    { value: "500+", label: "Locations Optimized", icon: MapPin, iconClass: "text-violet-700 bg-violet-50" },
+    { value: "250+", label: "Brands Served", icon: BarChart3, iconClass: "text-emerald-700 bg-emerald-50" },
+    { value: "1M+", label: "Customers Reached", icon: Users, iconClass: "text-pink-700 bg-pink-50" },
     {
       value: "180%+",
       label: "Average Traffic Growth",
       icon: TrendingUp,
-      iconClass: "text-orange-300 bg-orange-400/10",
+      iconClass: "text-orange-700 bg-orange-50",
     },
-    { value: "98%", label: "Client Satisfaction", icon: Star, iconClass: "text-amber-300 bg-amber-400/10" },
+    { value: "98%", label: "Client Satisfaction", icon: Star, iconClass: "text-amber-700 bg-amber-50" },
   ],
 } as const;
 

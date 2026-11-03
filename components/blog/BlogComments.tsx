@@ -73,11 +73,11 @@ export default function BlogComments({ slug, initialComments }: Props) {
   return (
     <section>
       <div className="flex items-center gap-2">
-        <MessageSquare className="h-5 w-5 text-lux-champagne" />
-        <h2 className="text-lg font-bold text-white">
+        <MessageSquare className="h-5 w-5 text-lux-bronze" />
+        <h2 className="text-lg font-bold text-stone-900">
           Comments
           {comments.length > 0 ? (
-            <span className="ml-2 text-sm font-normal text-white/50">
+            <span className="ml-2 text-sm font-normal text-stone-500">
               ({comments.length})
             </span>
           ) : null}
@@ -86,22 +86,22 @@ export default function BlogComments({ slug, initialComments }: Props) {
 
       <div className="mt-5 space-y-3">
         {loading && comments.length === 0 ? (
-          <p className="text-sm text-white/50">Loading comments…</p>
+          <p className="text-sm text-stone-500">Loading comments…</p>
         ) : comments.length === 0 ? (
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-stone-500">
             No comments yet. Be the first to share your thoughts.
           </p>
         ) : (
           comments.map((comment) => (
             <div
               key={comment.id}
-              className="rounded-xl border border-white/[0.09] bg-white/[0.035] p-4 shadow-sm"
+              className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm"
             >
               <div className="flex items-center justify-between gap-2">
-                <p className="text-sm font-semibold text-white">
+                <p className="text-sm font-semibold text-stone-900">
                   {comment.authorName}
                 </p>
-                <time className="text-[11px] text-white/50">
+                <time className="text-[11px] text-stone-500">
                   {new Date(comment.createdAt).toLocaleDateString("en-IN", {
                     year: "numeric",
                     month: "short",
@@ -109,7 +109,7 @@ export default function BlogComments({ slug, initialComments }: Props) {
                   })}
                 </time>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">
+              <p className="mt-2 text-sm leading-relaxed text-stone-600">
                 {comment.content}
               </p>
             </div>
@@ -119,10 +119,10 @@ export default function BlogComments({ slug, initialComments }: Props) {
 
       <form
         onSubmit={onSubmit}
-        className="mt-6 rounded-xl border border-white/[0.09] bg-white/[0.035] p-5 shadow-sm"
+        className="mt-6 rounded-xl border border-stone-200 bg-white p-5 shadow-sm"
       >
-        <p className="text-sm font-semibold text-white">Leave a comment</p>
-        <p className="mt-1 text-xs text-white/50">
+        <p className="text-sm font-semibold text-stone-900">Leave a comment</p>
+        <p className="mt-1 text-xs text-stone-500">
           Your comment may appear after moderation, depending on site settings.
         </p>
         <div className="mt-3 space-y-3">
@@ -133,7 +133,7 @@ export default function BlogComments({ slug, initialComments }: Props) {
               value={authorName}
               onChange={(e) => setAuthorName(e.target.value)}
               placeholder="Your name"
-              className="w-full rounded-lg border border-white/[0.09] px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400/25"
+              className="w-full rounded-lg border border-stone-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
             />
             <input
               type="email"
@@ -141,7 +141,7 @@ export default function BlogComments({ slug, initialComments }: Props) {
               value={authorEmail}
               onChange={(e) => setAuthorEmail(e.target.value)}
               placeholder="Your email"
-              className="w-full rounded-lg border border-white/[0.09] px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400/25"
+              className="w-full rounded-lg border border-stone-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
             />
           </div>
           <textarea
@@ -150,13 +150,13 @@ export default function BlogComments({ slug, initialComments }: Props) {
             onChange={(e) => setContent(e.target.value)}
             placeholder="Write a comment…"
             rows={3}
-            className="w-full rounded-lg border border-white/[0.09] px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400/25"
+            className="w-full rounded-lg border border-stone-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-200"
           />
           {message ? (
-            <p className="text-sm font-medium text-emerald-300">{message}</p>
+            <p className="text-sm font-medium text-emerald-700">{message}</p>
           ) : null}
           {error ? (
-            <p className="text-sm font-medium text-rose-300">{error}</p>
+            <p className="text-sm font-medium text-rose-700">{error}</p>
           ) : null}
           <button
             type="submit"

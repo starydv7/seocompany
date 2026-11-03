@@ -32,8 +32,8 @@ export default function SoftwareDevDevelopmentProcessSection({ variant = "card" 
       shellClassName={DPM_BG}
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        <div className="absolute -left-[8%] top-[6%] h-[45%] w-[42%] rounded-full bg-violet-400/10 blur-3xl" />
-        <div className="absolute -right-[6%] top-[14%] h-[40%] w-[38%] rounded-full bg-indigo-400/10 blur-3xl" />
+        <div className="absolute -left-[8%] top-[6%] h-[45%] w-[42%] rounded-full bg-violet-50 blur-3xl" />
+        <div className="absolute -right-[6%] top-[14%] h-[40%] w-[38%] rounded-full bg-indigo-50 blur-3xl" />
         <div
           className="absolute right-[4%] top-[10%] h-[45%] w-[28%] opacity-[0.18]"
           style={{
@@ -46,7 +46,7 @@ export default function SoftwareDevDevelopmentProcessSection({ variant = "card" 
       <div className="relative grid w-full items-start gap-[2%] lg:grid-cols-2 lg:items-start">
         <div className="min-w-0 space-y-4 sm:space-y-5 lg:pt-0">
           <span className={DPM_TAG}>
-            <PenTool className="h-3.5 w-3.5 text-violet-300" strokeWidth={2.5} />
+            <PenTool className="h-3.5 w-3.5 text-violet-700" strokeWidth={2.5} />
             {developmentProcessHero.badge}
           </span>
 
@@ -91,8 +91,8 @@ export default function SoftwareDevDevelopmentProcessSection({ variant = "card" 
               className={`${DPM_BTN_OUTLINE} gap-2`}
             >
               {developmentProcessHero.ctaSecondary}
-              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-400/25 bg-violet-400/10">
-                <Play className="h-3 w-3 fill-violet-600 text-violet-300" />
+              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-violet-200 bg-violet-50">
+                <Play className="h-3 w-3 fill-violet-600 text-violet-700" />
               </span>
             </Link>
           </div>
@@ -103,17 +103,17 @@ export default function SoftwareDevDevelopmentProcessSection({ variant = "card" 
         </div>
       </div>
 
-      <div className="relative mt-[2%] grid grid-cols-2 gap-3 border-t border-violet-400/25 pt-[2%] sm:grid-cols-4 sm:gap-4">
+      <div className="relative mt-[2%] grid grid-cols-2 gap-3 border-t border-violet-200 pt-[2%] sm:grid-cols-4 sm:gap-4">
         {developmentProcessHero.trust.map((item) => {
           const Icon = item.icon as LucideIcon;
           return (
             <div key={item.label} className={DPM_TRUST_CARD}>
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-400/10 sm:h-9 sm:w-9">
-                <Icon className="h-4 w-4 text-violet-300" strokeWidth={2} />
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-50 sm:h-9 sm:w-9">
+                <Icon className="h-4 w-4 text-violet-700" strokeWidth={2} />
               </span>
               <div className="min-w-0">
-                <p className="text-[10px] font-bold text-white sm:text-[11px]">{item.label}</p>
-                <p className="text-[8px] text-white/50 sm:text-[9px]">{item.sub}</p>
+                <p className="text-[10px] font-bold text-stone-900 sm:text-[11px]">{item.label}</p>
+                <p className="text-[8px] text-stone-500 sm:text-[9px]">{item.sub}</p>
               </div>
             </div>
           );

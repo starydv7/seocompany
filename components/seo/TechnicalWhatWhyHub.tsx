@@ -38,11 +38,11 @@ function hubEdge(tx: number, ty: number) {
 /** Icon on top, label below — matches reference spoke tiles */
 function SpokeTile({ label, icon: Icon }: { label: string; icon: LucideIcon }) {
   return (
-    <div className="flex w-[4.5rem] flex-col items-center rounded-xl border border-white/[0.06] bg-white/[0.035] px-2 py-2.5 shadow-[0_4px_18px_rgba(15,23,42,0.08)] sm:w-[5rem] sm:py-3">
-      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-400/10">
+    <div className="flex w-[4.5rem] flex-col items-center rounded-xl border border-stone-200/70 bg-white px-2 py-2.5 shadow-[0_4px_18px_rgba(15,23,42,0.08)] sm:w-[5rem] sm:py-3">
+      <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-50">
         <Icon className="h-[18px] w-[18px]" style={{ color: TECH_PURPLE }} strokeWidth={2} />
       </span>
-      <span className="mt-2 text-center text-[9px] font-semibold leading-tight text-white/80 sm:text-[10px]">
+      <span className="mt-2 text-center text-[9px] font-semibold leading-tight text-stone-700 sm:text-[10px]">
         {label}
       </span>
     </div>

@@ -21,7 +21,7 @@ export default function EnterpriseDmChallengesSection() {
           const Icon = item.icon as LucideIcon;
           return (
             <Reveal key={item.title} delay={i * 0.04} className="h-full">
-              <article className="flex h-full flex-col rounded-xl bg-white/[0.025] p-5 sm:p-6">
+              <article className="flex h-full flex-col rounded-xl bg-white/60 p-5 sm:p-6">
                 <span
                   className="flex h-11 w-11 items-center justify-center rounded-xl"
                   style={{ backgroundColor: item.bg }}
@@ -32,10 +32,10 @@ export default function EnterpriseDmChallengesSection() {
                     strokeWidth={2}
                   />
                 </span>
-                <h3 className="mt-4 text-sm font-bold leading-snug text-white">
+                <h3 className="mt-4 text-sm font-bold leading-snug text-stone-900">
                   {item.title}
                 </h3>
-                <p className="mt-2 flex-1 text-xs leading-relaxed text-white/50">
+                <p className="mt-2 flex-1 text-xs leading-relaxed text-stone-500">
                   {item.description}
                 </p>
               </article>

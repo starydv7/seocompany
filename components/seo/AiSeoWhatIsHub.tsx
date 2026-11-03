@@ -54,13 +54,13 @@ function SpokeCard({
 }) {
   const [iconText, iconBg] = color.split(" ");
   return (
-    <div className="flex w-[10.5rem] items-center gap-2.5 rounded-xl border border-white/[0.06] bg-white/[0.035] px-2.5 py-2 shadow-[0_2px_12px_rgba(15,23,42,0.06)] sm:w-[11.5rem] sm:px-3 sm:py-2.5">
+    <div className="flex w-[10.5rem] items-center gap-2.5 rounded-xl border border-stone-200/70 bg-white px-2.5 py-2 shadow-[0_2px_12px_rgba(15,23,42,0.06)] sm:w-[11.5rem] sm:px-3 sm:py-2.5">
       <span
         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${iconBg}`}
       >
         <Icon className={`h-4 w-4 ${iconText}`} strokeWidth={2} />
       </span>
-      <span className="text-[10px] font-semibold leading-snug text-white sm:text-[11px]">
+      <span className="text-[10px] font-semibold leading-snug text-stone-900 sm:text-[11px]">
         {label}
       </span>
     </div>
@@ -110,8 +110,8 @@ export default function AiSeoWhatIsHub() {
           <path className={THREAD} d={straightPath(ANCHORS.bottom.x, ANCHORS.bottom.y)} />
         </svg>
 
-        <div className="absolute left-1/2 top-[43.5%] z-10 flex h-[5.25rem] w-[5.25rem] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#4f46e5] via-[#6d28d9] to-[#7c3aed] shadow-[0_0_44px_rgba(124,58,237,0.5)] ring-[3px] ring-violet-400/25 sm:h-[5.75rem] sm:w-[5.75rem]">
-          <span className="text-center text-xs font-bold uppercase tracking-wide text-white sm:text-sm">
+        <div className="absolute left-1/2 top-[43.5%] z-10 flex h-[5.25rem] w-[5.25rem] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-[#4f46e5] via-[#6d28d9] to-[#7c3aed] shadow-[0_0_44px_rgba(124,58,237,0.5)] ring-[3px] ring-violet-200 sm:h-[5.75rem] sm:w-[5.75rem]">
+          <span className="text-center text-xs font-bold uppercase tracking-wide text-stone-900 sm:text-sm">
             {hubLabel}
           </span>
         </div>

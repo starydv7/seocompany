@@ -2,7 +2,7 @@ import SoftwareDevMobileSection from "@/components/design-and-development/Softwa
 
 export default function MobileAppDevLanding() {
   return (
-    <div className="w-full max-w-none overflow-x-hidden bg-white/[0.035]">
+    <div className="w-full max-w-none overflow-x-hidden bg-white">
       <SoftwareDevMobileSection variant="page" />
     </div>
   );

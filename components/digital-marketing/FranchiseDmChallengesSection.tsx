@@ -54,11 +54,11 @@ function ComparisonCard({
     <article
       className={`h-full rounded-2xl border p-[2%] sm:rounded-3xl ${
         isNegative
-          ? "border-red-400/25 bg-gradient-to-b from-red-400/10 to-rose-400/10"
-          : "border-emerald-400/25 bg-gradient-to-b from-emerald-400/10 to-teal-400/10"
+          ? "border-red-200 bg-gradient-to-b from-red-50 to-rose-50"
+          : "border-emerald-200 bg-gradient-to-b from-emerald-50 to-teal-50"
       }`}
     >
-      <header className="flex items-center gap-3 border-b border-white/[0.09] pb-5">
+      <header className="flex items-center gap-3 border-b border-stone-200 pb-5">
         <span
           className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
             isNegative ? "bg-red-500" : "bg-emerald-500"
@@ -66,29 +66,29 @@ function ComparisonCard({
         >
           <HeaderIcon className="h-5 w-5 text-white" strokeWidth={2.5} />
         </span>
-        <h3 className="text-base font-bold leading-snug text-white sm:text-lg">{title}</h3>
+        <h3 className="text-base font-bold leading-snug text-stone-900 sm:text-lg">{title}</h3>
       </header>
 
-      <ul className="mt-1 divide-y divide-white/[0.09]">
+      <ul className="mt-1 divide-y divide-stone-200">
         {items.map((item) => {
           const Icon = item.icon;
           return (
             <li key={item.title} className="flex gap-3.5 py-5 first:pt-4 last:pb-1 sm:gap-4 sm:py-5">
               <span
                 className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
-                  isNegative ? "bg-red-400/10" : "bg-emerald-400/10"
+                  isNegative ? "bg-red-50" : "bg-emerald-50"
                 }`}
               >
                 <Icon
-                  className={`h-[18px] w-[18px] ${isNegative ? "text-red-500" : "text-emerald-300"}`}
+                  className={`h-[18px] w-[18px] ${isNegative ? "text-red-500" : "text-emerald-700"}`}
                   strokeWidth={2}
                 />
               </span>
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-bold leading-snug text-white sm:text-[15px]">
+                <p className="text-sm font-bold leading-snug text-stone-900 sm:text-[15px]">
                   {item.title}
                 </p>
-                <p className="mt-1.5 text-xs leading-relaxed text-white/50 sm:text-sm">
+                <p className="mt-1.5 text-xs leading-relaxed text-stone-500 sm:text-sm">
                   {item.description}
                 </p>
               </div>
@@ -117,7 +117,7 @@ export default function FranchiseDmChallengesSection() {
       <Reveal className="w-full text-center">
         <p className={FDM_TAG}>{tag}</p>
         <h2 className={`mt-5 ${FDM_SECTION_TITLE}`}>{title}</h2>
-        <p className="mt-4 text-sm leading-relaxed text-white/50 sm:text-[15px]">{subtitle}</p>
+        <p className="mt-4 text-sm leading-relaxed text-stone-500 sm:text-[15px]">{subtitle}</p>
       </Reveal>
 
       <div className="relative mt-12 w-full lg:mt-14">
@@ -141,17 +141,17 @@ export default function FranchiseDmChallengesSection() {
       </div>
 
       <Reveal delay={0.1} className="mt-8 w-full lg:mt-10">
-        <div className="flex w-full flex-col gap-4 rounded-2xl border border-white/[0.09] bg-white/[0.035] p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.04)] sm:flex-row sm:items-center sm:gap-5 sm:rounded-3xl">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-400/10">
-            <TrendingUp className="h-5 w-5 text-violet-300" strokeWidth={2} />
+        <div className="flex w-full flex-col gap-4 rounded-2xl border border-stone-200 bg-white p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.04)] sm:flex-row sm:items-center sm:gap-5 sm:rounded-3xl">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-50">
+            <TrendingUp className="h-5 w-5 text-violet-700" strokeWidth={2} />
           </span>
           <div className="min-w-0">
-            <p className="text-xs font-bold uppercase tracking-wide text-violet-300">
+            <p className="text-xs font-bold uppercase tracking-wide text-violet-700">
               {bottomLine.label}
             </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-white/80 sm:text-[15px]">
+            <p className="mt-1.5 text-sm leading-relaxed text-stone-700 sm:text-[15px]">
               {bottomLine.textBefore}{" "}
-              <strong className="font-bold text-white">{bottomLine.highlight}</strong>{" "}
+              <strong className="font-bold text-stone-900">{bottomLine.highlight}</strong>{" "}
               {bottomLine.textAfter}
             </p>
           </div>

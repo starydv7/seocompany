@@ -53,12 +53,12 @@ export default function ContactPage() {
             <div className="flex justify-center">
               <LuxPill>Consultation</LuxPill>
             </div>
-            <h1 className="mt-8 text-[clamp(3rem,7.4vw,7rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-white">
+            <h1 className="mt-8 text-[clamp(3rem,7.4vw,7rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-stone-900">
               Book a
               <br />
               <span className="lux-gold-text font-serif font-normal italic tracking-[-0.02em]">Strategy Call</span>
             </h1>
-            <p className="mx-auto mt-8 max-w-2xl text-[clamp(1rem,1.35vw,1.2rem)] leading-relaxed text-white/65">
+            <p className="mx-auto mt-8 max-w-2xl text-[clamp(1rem,1.35vw,1.2rem)] leading-relaxed text-stone-600">
               Let&apos;s discuss your growth goals, identify opportunities, and build a roadmap tailored to your
               business, no commitment required.
             </p>
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 Schedule Meeting
                 <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
               </Link>
-              <p className="text-sm text-white/45">Free and paid clients can both schedule here.</p>
+              <p className="text-sm text-stone-500">Free and paid clients can both schedule here.</p>
             </div>
           </Reveal>
         </div>
@@ -87,8 +87,8 @@ export default function ContactPage() {
                 <span className="lux-check flex h-12 w-12 items-center justify-center rounded-2xl text-lux-ink">
                   <item.icon className="h-5 w-5" strokeWidth={2.25} />
                 </span>
-                <h2 className="mt-8 font-serif text-3xl leading-none text-white">{item.title}</h2>
-                <p className="mt-4 text-sm leading-relaxed text-white/60">{item.body}</p>
+                <h2 className="mt-8 font-serif text-3xl leading-none text-stone-900">{item.title}</h2>
+                <p className="mt-4 text-sm leading-relaxed text-stone-600">{item.body}</p>
               </LuxCard>
             </Reveal>
           ))}
@@ -101,21 +101,21 @@ export default function ContactPage() {
           <Reveal className="h-full">
             <div className="lux-panel h-full p-8 sm:p-10 lg:p-12">
               <LuxEyebrow>The agenda</LuxEyebrow>
-              <h2 className="mt-4 font-serif text-[clamp(2.2rem,4vw,3.5rem)] leading-[1.02] text-white">
-                What we&apos;ll cover <span className="italic text-white/60">in this call</span>
+              <h2 className="mt-4 font-serif text-[clamp(2.2rem,4vw,3.5rem)] leading-[1.02] text-stone-900">
+                What we&apos;ll cover <span className="italic text-stone-600">in this call</span>
               </h2>
               <ol className="mt-10 space-y-2">
                 {AGENDA.map((item, i) => (
                   <li
                     key={item.title}
-                    className="group flex gap-6 rounded-2xl px-4 py-5 transition hover:bg-white/[0.03]"
+                    className="group flex gap-6 rounded-2xl px-4 py-5 transition hover:bg-white"
                   >
-                    <span className="font-serif text-4xl leading-none text-lux-gold/70 transition group-hover:text-lux-gold">
+                    <span className="font-serif text-4xl leading-none text-lux-gold/70 transition group-hover:text-lux-bronze">
                       0{i + 1}
                     </span>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-white/55">{item.body}</p>
+                      <h3 className="text-lg font-semibold text-stone-900">{item.title}</h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-stone-500">{item.body}</p>
                     </div>
                   </li>
                 ))}
@@ -126,7 +126,7 @@ export default function ContactPage() {
           <Reveal className="h-full" delay={0.1}>
             <LuxCard featured className="flex h-full flex-col p-8 sm:p-10 lg:p-12">
               <LuxEyebrow>Schedule your meeting</LuxEyebrow>
-              <h2 className="mt-4 font-serif text-[clamp(2.2rem,4vw,3.25rem)] leading-[1.02] text-white">
+              <h2 className="mt-4 font-serif text-[clamp(2.2rem,4vw,3.25rem)] leading-[1.02] text-stone-900">
                 Book a slot <span className="lux-gold-text italic">instantly.</span>
               </h2>
               <Link
@@ -145,17 +145,17 @@ export default function ContactPage() {
                 <li>
                   <a
                     href="mailto:connect@brandmarketing.digital"
-                    className="flex items-center gap-3 text-white/75 transition hover:text-white"
+                    className="flex items-center gap-3 text-stone-700 transition hover:text-stone-900"
                   >
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.05] text-lux-gold ring-1 ring-inset ring-white/10">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-lux-bronze ring-1 ring-inset ring-stone-200">
                       <Mail className="h-4 w-4" />
                     </span>
                     connect@brandmarketing.digital
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+917003427553" className="flex items-center gap-3 text-white/75 transition hover:text-white">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.05] text-lux-gold ring-1 ring-inset ring-white/10">
+                  <a href="tel:+917003427553" className="flex items-center gap-3 text-stone-700 transition hover:text-stone-900">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-lux-bronze ring-1 ring-inset ring-stone-200">
                       <Phone className="h-4 w-4" />
                     </span>
                     +91 70034 27553
@@ -164,8 +164,8 @@ export default function ContactPage() {
               </ul>
 
               <div className="mt-auto pt-10">
-                <p className="rounded-2xl bg-white/[0.03] p-5 text-sm leading-relaxed text-white/60 ring-1 ring-inset ring-white/[0.07]">
-                  <span className="font-semibold text-white">No commitment required.</span> This is a free
+                <p className="rounded-2xl bg-white p-5 text-sm leading-relaxed text-stone-600 ring-1 ring-inset ring-stone-200">
+                  <span className="font-semibold text-stone-900">No commitment required.</span> This is a free
                   consultation to see if we&apos;re a good fit. We&apos;ll send you a recording and summary after the
                   call.
                 </p>

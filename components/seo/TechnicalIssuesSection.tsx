@@ -28,30 +28,30 @@ function ComparisonCard({
 
   return (
     <div
-      className={`overflow-hidden rounded-2xl border bg-white/[0.035] shadow-[0_4px_24px_rgba(15,23,42,0.05)] ${
-        isNeg ? "border-rose-400/25" : "border-emerald-400/25"
+      className={`overflow-hidden rounded-2xl border bg-white shadow-[0_4px_24px_rgba(15,23,42,0.05)] ${
+        isNeg ? "border-rose-200" : "border-emerald-200"
       }`}
     >
       <p
         className={`px-5 py-3.5 text-sm font-bold ${
-          isNeg ? "border-b border-rose-400/25 bg-rose-400/10 text-rose-300" : "border-b border-emerald-400/25 bg-emerald-400/10 text-emerald-300"
+          isNeg ? "border-b border-rose-200 bg-rose-50 text-rose-700" : "border-b border-emerald-200 bg-emerald-50 text-emerald-700"
         }`}
       >
         {title}
       </p>
-      <ul className="divide-y divide-white/[0.06]">
+      <ul className="divide-y divide-stone-200/70">
         {items.map((item) => {
           const Icon = item.icon;
           return (
             <li key={item.label} className="flex items-center gap-3 px-5 py-3.5">
               <span
                 className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
-                  isNeg ? "bg-rose-400/10 text-rose-500" : "bg-emerald-400/10 text-emerald-300"
+                  isNeg ? "bg-rose-50 text-rose-500" : "bg-emerald-50 text-emerald-700"
                 }`}
               >
                 <Icon className="h-[18px] w-[18px]" strokeWidth={2} />
               </span>
-              <span className="min-w-0 flex-1 text-sm font-medium text-white">
+              <span className="min-w-0 flex-1 text-sm font-medium text-stone-900">
                 {item.label}
               </span>
               <Arrow
@@ -87,7 +87,7 @@ export default function TechnicalIssuesSection() {
         <div className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <Reveal>
             <h2 className={`text-[1.65rem] leading-[1.2] sm:text-[1.85rem] lg:text-[2rem] ${TECH_TITLE}`}>
-              <span className="block text-white">{titleBefore}</span>
+              <span className="block text-stone-900">{titleBefore}</span>
               <span className={`block ${TECH_GRADIENT}`}>{titleAccent}</span>
             </h2>
             <p className={`mt-5 max-w-md leading-relaxed ${TECH_BODY}`}>{subtitle}</p>

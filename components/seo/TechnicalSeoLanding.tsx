@@ -34,7 +34,7 @@ export default function TechnicalSeoLanding() {
   } = technicalHero;
 
   return (
-    <div className="min-h-screen bg-transparent text-white">
+    <div className="min-h-screen bg-transparent text-stone-900">
       <section
         className={`relative overflow-hidden ${TECH_HERO_BG} ${TECH_PAD} pb-16 pt-10 sm:pb-20 sm:pt-14`}
       >
@@ -45,8 +45,8 @@ export default function TechnicalSeoLanding() {
 
         <div className="relative grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-x-[6%]">
           <Reveal className="min-w-0 lg:max-w-[34rem]">
-            <p className="inline-flex items-center gap-2 rounded-full bg-[#5b21b6]/80 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
-              <Zap className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
+            <p className="inline-flex items-center gap-2 rounded-full bg-violet-100 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-800 ring-1 ring-inset ring-violet-200">
+              <Zap className="h-3.5 w-3.5 text-stone-900" strokeWidth={2.5} />
               {eyebrow}
             </p>
 
@@ -61,7 +61,7 @@ export default function TechnicalSeoLanding() {
               </span>
             </h1>
 
-            <div className="mt-6 max-w-[54ch] space-y-4 text-sm leading-[1.7] text-white/90 sm:text-[15px]">
+            <div className="mt-6 max-w-[54ch] space-y-4 text-sm leading-[1.7] text-stone-800 sm:text-[15px]">
               <p>{paragraph1}</p>
               <p>{paragraph2}</p>
             </div>
@@ -72,9 +72,9 @@ export default function TechnicalSeoLanding() {
                 return (
                   <li
                     key={f.label}
-                    className="flex items-center gap-2 text-[11px] font-medium text-white sm:text-xs"
+                    className="flex items-center gap-2 text-[11px] font-medium text-stone-900 sm:text-xs"
                   >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-600/90 shadow-sm shadow-violet-900/50">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-violet-600/90 shadow-sm shadow-violet-900/20">
                       <Icon className="h-3.5 w-3.5 text-white" strokeWidth={2.5} />
                     </span>
                     {f.label}

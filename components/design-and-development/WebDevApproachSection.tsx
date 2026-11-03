@@ -24,8 +24,8 @@ export default function WebDevApproachSection() {
           const Icon = item.icon as LucideIcon;
           return (
             <article key={item.title} className={`${WDM_CARD} flex gap-4`}>
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-400/10">
-                <Icon className="h-5 w-5 text-violet-300" strokeWidth={1.75} />
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-violet-50">
+                <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
               </span>
               <div className="min-w-0">
                 <h3 className={WDM_FONT_CARD_TITLE}>{item.title}</h3>
@@ -44,7 +44,7 @@ export default function WebDevApproachSection() {
           <div className="relative min-w-0 overflow-x-auto pb-2">
             <div className="relative flex min-w-[44rem] items-start justify-between gap-1 sm:min-w-0 sm:gap-2">
               <div
-                className="absolute left-[4%] right-[4%] top-5 hidden h-px bg-white/10 sm:block"
+                className="absolute left-[4%] right-[4%] top-5 hidden h-px bg-white sm:block"
                 aria-hidden
               />
               {webDevApproach.steps.map((step) => {
@@ -60,11 +60,11 @@ export default function WebDevApproachSection() {
                     >
                       {step.num}
                     </span>
-                    <span className="mt-2 flex h-7 w-7 items-center justify-center rounded-lg bg-violet-400/10 sm:h-8 sm:w-8">
-                      <Icon className="h-3.5 w-3.5 text-violet-300 sm:h-4 sm:w-4" strokeWidth={2} />
+                    <span className="mt-2 flex h-7 w-7 items-center justify-center rounded-lg bg-violet-50 sm:h-8 sm:w-8">
+                      <Icon className="h-3.5 w-3.5 text-violet-700 sm:h-4 sm:w-4" strokeWidth={2} />
                     </span>
-                    <p className="mt-2 text-xs font-bold text-white sm:text-sm">{step.title}</p>
-                    <p className="mt-1 text-[10px] leading-snug text-white/50 sm:text-[11px]">{step.desc}</p>
+                    <p className="mt-2 text-xs font-bold text-stone-900 sm:text-sm">{step.title}</p>
+                    <p className="mt-1 text-[10px] leading-snug text-stone-500 sm:text-[11px]">{step.desc}</p>
                   </div>
                 );
               })}

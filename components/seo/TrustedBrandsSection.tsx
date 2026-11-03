@@ -43,7 +43,7 @@ export default function TrustedBrandsSection() {
 
       <div className={`relative ${FRANCHISE_INNER}`}>
         <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="inline-flex items-center gap-2 rounded-lg bg-violet-400/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-violet-300">
+          <p className="inline-flex items-center gap-2 rounded-lg bg-violet-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-violet-700">
             <ShieldCheck className="h-3.5 w-3.5" strokeWidth={2.5} />
             {badge}
           </p>
@@ -60,11 +60,11 @@ export default function TrustedBrandsSection() {
             const Icon = item.icon;
             return (
               <Reveal key={item.title} delay={i * 0.03} className="h-full">
-                <article className="flex h-full min-h-[10.5rem] flex-col items-center rounded-2xl border border-white/[0.06] bg-white/[0.035] p-[2%] text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)]">
+                <article className="flex h-full min-h-[10.5rem] flex-col items-center rounded-2xl border border-stone-200/70 bg-white p-[2%] text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)]">
                   <span
                     className={`flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br ${item.accent} shadow-md`}
                   >
-                    <Icon className="h-6 w-6 text-white" strokeWidth={2} />
+                    <Icon className="h-6 w-6 text-stone-900" strokeWidth={2} />
                   </span>
                   <h3 className={`mt-4 ${FRANCHISE_ITEM_TITLE}`}>{item.title}</h3>
                   <span className={`mt-3 block h-1 w-10 rounded-full ${item.line}`} aria-hidden />
@@ -78,13 +78,13 @@ export default function TrustedBrandsSection() {
         </div>
 
         <Reveal delay={0.12} className="mt-6 lg:mt-8">
-          <div className="grid grid-cols-2 gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.035] px-4 py-5 shadow-[0_4px_28px_rgba(15,23,42,0.07)] sm:grid-cols-3 lg:grid-cols-6 lg:gap-4 lg:px-6 lg:py-6">
+          <div className="grid grid-cols-2 gap-3 rounded-2xl border border-stone-200/70 bg-white px-4 py-5 shadow-[0_4px_28px_rgba(15,23,42,0.07)] sm:grid-cols-3 lg:grid-cols-6 lg:gap-4 lg:px-6 lg:py-6">
             {stats.map((stat) => {
               const Icon = stat.icon;
               return (
                 <div
                   key={stat.label}
-                  className="flex items-center gap-2.5 border-white/[0.06] sm:gap-3 [&:not(:last-child)]:lg:border-r [&:not(:last-child)]:lg:pr-4"
+                  className="flex items-center gap-2.5 border-stone-200/70 sm:gap-3 [&:not(:last-child)]:lg:border-r [&:not(:last-child)]:lg:pr-4"
                 >
                   <span
                     className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg sm:h-10 sm:w-10 ${stat.iconColor}`}
@@ -92,7 +92,7 @@ export default function TrustedBrandsSection() {
                     <Icon className="h-4 w-4 sm:h-[18px] sm:w-[18px]" strokeWidth={2} />
                   </span>
                   <div className="min-w-0">
-                    <p className="text-lg font-bold leading-none text-white">
+                    <p className="text-lg font-bold leading-none text-stone-900">
                       {stat.value}
                     </p>
                     <p className={`mt-1 ${FRANCHISE_ITEM_BODY}`}>

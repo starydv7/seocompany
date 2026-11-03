@@ -5,7 +5,7 @@ import { useId } from "react";
 import { technicalHero } from "@/lib/seo/technical-seo-content";
 
 const MINT = "#6ee7b7";
-const MINT_BRIGHT = "#86efac";
+const MINT_BRIGHT = "#15803d";
 const TRACK = "rgba(255,255,255,0.08)";
 
 function HealthGauge({ score, max }: { score: number; max: number }) {
@@ -32,7 +32,7 @@ function HealthGauge({ score, max }: { score: number; max: number }) {
         strokeDashoffset={offset}
         transform={`rotate(-90 ${cx} ${cy})`}
       />
-      <text x={cx} y={cy - 6} textAnchor="middle" fill="#fff" fontSize="28" fontWeight="700">
+      <text x={cx} y={cy - 6} textAnchor="middle" fill="#1c1917" fontSize="28" fontWeight="700">
         {score}
       </text>
       <text x={cx} y={cy + 16} textAnchor="middle" fill="#94a3b8" fontSize="13" fontWeight="500">
@@ -116,27 +116,27 @@ export default function TechnicalHeroDashboard() {
   const pagesPts = "0,36 20,30 40,26 60,20 80,14 100,10 120,6 140,4";
 
   return (
-    <div className="w-full overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0b0e14] shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+    <div className="w-full overflow-hidden rounded-2xl border border-stone-200/70 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
       {/* Top row — 2 columns */}
       <div className="grid grid-cols-1 sm:grid-cols-2">
         <div className="p-5 sm:p-6">
-          <p className="text-sm font-semibold text-white">{healthTitle}</p>
+          <p className="text-sm font-semibold text-stone-900">{healthTitle}</p>
           <div className="mt-5 flex flex-col items-center">
             <HealthGauge score={score} max={scoreMax} />
             <p className="mt-2 text-sm font-bold" style={{ color: MINT_BRIGHT }}>
               {scoreLabel}
             </p>
-            <p className="mt-1 text-xs text-white/40">{scoreDelta}</p>
+            <p className="mt-1 text-xs text-stone-400">{scoreDelta}</p>
           </div>
         </div>
 
-        <div className="flex flex-col justify-center border-t border-white/[0.06] p-5 sm:border-l sm:border-t-0 sm:p-6">
+        <div className="flex flex-col justify-center border-t border-stone-200/70 p-5 sm:border-l sm:border-t-0 sm:p-6">
           <div className="space-y-4">
             {bars.map((b) => (
               <div key={b.label}>
                 <div className="mb-2 flex items-center justify-between gap-3">
-                  <span className="text-xs font-medium text-slate-300">{b.label}</span>
-                  <span className="text-xs font-bold text-white">{b.pct}%</span>
+                  <span className="text-xs font-medium text-stone-500">{b.label}</span>
+                  <span className="text-xs font-bold text-stone-900">{b.pct}%</span>
                 </div>
                 <div className="h-2 overflow-hidden rounded-full" style={{ backgroundColor: TRACK }}>
                   <div
@@ -151,18 +151,18 @@ export default function TechnicalHeroDashboard() {
       </div>
 
       {/* Bottom row — 2 chart panels */}
-      <div className="grid grid-cols-2 border-t border-white/[0.06]">
-        <div className="border-r border-white/[0.06] p-4 sm:p-5">
-          <p className="text-xs font-semibold text-slate-300">{crawlErrors.label}</p>
+      <div className="grid grid-cols-2 border-t border-stone-200/70">
+        <div className="border-r border-stone-200/70 p-4 sm:p-5">
+          <p className="text-xs font-semibold text-stone-500">{crawlErrors.label}</p>
           <p className="mt-2 text-3xl font-bold leading-none text-[#ff4d4d] sm:text-[2rem]">
             {crawlErrors.value}
           </p>
           <p className="mt-1.5 flex flex-wrap items-center gap-1 text-[11px]">
-            <span className="inline-flex items-center gap-0.5 font-semibold text-emerald-400">
+            <span className="inline-flex items-center gap-0.5 font-semibold text-emerald-600">
               <ArrowDown className="h-3 w-3" strokeWidth={3} />
               -38%
             </span>
-            <span className="text-white/50">vs last 30 days</span>
+            <span className="text-stone-500">vs last 30 days</span>
           </p>
           <LineChart
             points={crawlPts}
@@ -173,11 +173,11 @@ export default function TechnicalHeroDashboard() {
         </div>
 
         <div className="p-4 sm:p-5">
-          <p className="text-xs font-semibold text-slate-300">{pagesIndexed.label}</p>
-          <p className="mt-2 text-3xl font-bold leading-none text-white sm:text-[2rem]">
+          <p className="text-xs font-semibold text-stone-500">{pagesIndexed.label}</p>
+          <p className="mt-2 text-3xl font-bold leading-none text-stone-900 sm:text-[2rem]">
             {pagesIndexed.value}
           </p>
-          <p className="mt-1.5 flex items-center gap-1 text-[11px] font-semibold text-emerald-400">
+          <p className="mt-1.5 flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
             <ArrowUp className="h-3 w-3" strokeWidth={3} />
             {pagesIndexed.delta}
           </p>

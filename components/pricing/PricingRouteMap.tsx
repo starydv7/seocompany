@@ -42,7 +42,7 @@ export default function PricingRouteMap() {
 
         {PATHS.map(({ to, d }) => (
           <g key={to}>
-            <path d={d} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={6} strokeLinecap="round" />
+            <path d={d} fill="none" stroke="rgba(41,37,36,0.08)" strokeWidth={6} strokeLinecap="round" />
             <path
               d={d}
               fill="none"
@@ -64,11 +64,11 @@ export default function PricingRouteMap() {
                 cx={node.x}
                 cy={node.y}
                 r={isStart ? 14 : 10}
-                fill="#06070d"
+                fill="#f7f2e7"
                 stroke={plan.accent.to}
                 strokeWidth={2}
               />
-              <circle cx={node.x} cy={node.y} r={isStart ? 6 : 4} fill={plan.accent.from} />
+              <circle cx={node.x} cy={node.y} r={isStart ? 6 : 4} fill={plan.accent.to} />
             </g>
           );
         })}
@@ -88,8 +88,8 @@ export default function PricingRouteMap() {
             style={{ left, top }}
             aria-label={`Jump to ${plan.title}`}
           >
-            <span className="font-mono text-[10px] tracking-[0.28em] text-white/45">{plan.index}</span>
-            <span className="whitespace-nowrap text-[13px] font-semibold text-white">{plan.tag}</span>
+            <span className="font-mono text-[10px] tracking-[0.28em] text-stone-500">{plan.index}</span>
+            <span className="whitespace-nowrap text-[13px] font-semibold text-stone-900">{plan.tag}</span>
           </a>
         );
       })}

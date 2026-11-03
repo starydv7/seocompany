@@ -41,10 +41,10 @@ export default function VisibilityRing({
           />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-xl font-bold text-white">{value}%</span>
+          <span className="text-xl font-bold text-stone-900">{value}%</span>
         </div>
       </div>
-      <p className="mt-3 max-w-[6.5rem] text-[11px] font-medium leading-snug text-white/90">{label}</p>
+      <p className="mt-3 max-w-[6.5rem] text-[11px] font-medium leading-snug text-stone-800">{label}</p>
     </div>
   );
 }

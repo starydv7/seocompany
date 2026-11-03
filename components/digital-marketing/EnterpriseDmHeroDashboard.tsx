@@ -54,7 +54,7 @@ function RevenueDonut({
           offset += dash;
           return el;
         })}
-        <text x={cx} y={cy - 4} textAnchor="middle" fill="#fff" fontSize="11" fontWeight="700">
+        <text x={cx} y={cy - 4} textAnchor="middle" fill="#1c1917" fontSize="11" fontWeight="700">
           {center}
         </text>
         <text x={cx} y={cy + 10} textAnchor="middle" fill="#94a3b8" fontSize="6">
@@ -64,11 +64,11 @@ function RevenueDonut({
       <ul className="min-w-0 flex-1 space-y-1">
         {segments.map((s) => (
           <li key={s.label} className="flex items-center justify-between gap-1 text-[9px]">
-            <span className="flex items-center gap-1 text-white/40">
+            <span className="flex items-center gap-1 text-stone-400">
               <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: s.color }} />
               {s.label}
             </span>
-            <span className="font-semibold text-slate-300">{s.pct}%</span>
+            <span className="font-semibold text-stone-500">{s.pct}%</span>
           </li>
         ))}
       </ul>
@@ -86,26 +86,26 @@ export default function EnterpriseDmHeroDashboard() {
   ];
 
   return (
-    <div className="w-full rounded-2xl border border-white/10 bg-white/[0.04] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-md sm:p-5">
+    <div className="w-full rounded-2xl border border-stone-200 bg-white p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-md sm:p-5">
       {/* Top metrics */}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         {metrics.map((m, i) => (
           <div
             key={m.label}
-            className="rounded-xl border border-white/[0.06] bg-white/[0.03] px-3 py-3"
+            className="rounded-xl border border-stone-200/70 bg-white px-3 py-3"
           >
-            <p className="text-[10px] font-medium text-white/40">{m.label}</p>
-            <p className="mt-1 text-lg font-bold text-emerald-400">{m.delta}</p>
-            <p className="text-[9px] text-white/50">{m.sub}</p>
+            <p className="text-[10px] font-medium text-stone-400">{m.label}</p>
+            <p className="mt-1 text-lg font-bold text-emerald-600">{m.delta}</p>
+            <p className="text-[9px] text-stone-500">{m.sub}</p>
             <MiniSparkline color={m.lineColor} points={sparkPoints[i]} />
           </div>
         ))}
       </div>
 
       {/* Middle row */}
-      <div className="mt-4 grid grid-cols-1 gap-4 border-t border-white/[0.06] pt-4 lg:grid-cols-2">
-        <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-white/40">
+      <div className="mt-4 grid grid-cols-1 gap-4 border-t border-stone-200/70 pt-4 lg:grid-cols-2">
+        <div className="rounded-xl border border-stone-200/70 bg-white/60 p-3">
+          <p className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-stone-400">
             Revenue Attribution
           </p>
           <RevenueDonut
@@ -115,18 +115,18 @@ export default function EnterpriseDmHeroDashboard() {
           />
         </div>
 
-        <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-          <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-white/40">
+        <div className="rounded-xl border border-stone-200/70 bg-white/60 p-3">
+          <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-stone-400">
             Channel Performance
           </p>
           <div className="space-y-2.5">
             {channels.map((c) => (
               <div key={c.label}>
                 <div className="mb-1 flex justify-between text-[10px]">
-                  <span className="text-white/40">{c.label}</span>
-                  <span className="font-bold text-white">{c.pct}%</span>
+                  <span className="text-stone-400">{c.label}</span>
+                  <span className="font-bold text-stone-900">{c.pct}%</span>
                 </div>
-                <div className="h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
+                <div className="h-1.5 overflow-hidden rounded-full bg-white">
                   <div
                     className="h-full rounded-full"
                     style={{ width: `${c.pct}%`, backgroundColor: c.color }}
@@ -139,8 +139,8 @@ export default function EnterpriseDmHeroDashboard() {
       </div>
 
       {/* Customer journey */}
-      <div className="mt-4 rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-        <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-white/40">
+      <div className="mt-4 rounded-xl border border-stone-200/70 bg-white/60 p-3">
+        <p className="mb-3 text-[10px] font-semibold uppercase tracking-wide text-stone-400">
           Customer Journey
         </p>
         <div className="relative flex items-start justify-between gap-1">
@@ -156,8 +156,8 @@ export default function EnterpriseDmHeroDashboard() {
               >
                 {j.step[0]}
               </span>
-              <p className="mt-2 text-[9px] font-semibold text-slate-300">{j.step}</p>
-              <p className="text-[10px] font-bold text-white">{j.value}</p>
+              <p className="mt-2 text-[9px] font-semibold text-stone-500">{j.step}</p>
+              <p className="text-[10px] font-bold text-stone-900">{j.value}</p>
             </div>
           ))}
         </div>

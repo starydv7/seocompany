@@ -11,20 +11,20 @@ export const FDM_INDIGO = "#6366f1";
 export const FDM_DARK = "#0f172a";
 export const FDM_NAVY = "#0c1a3a";
 export const FDM_HERO_BG =
-  "bg-gradient-to-b from-white/[0.03] via-violet-400/10 to-white/[0.03]";
-export const FDM_HERO_TITLE = "font-bold tracking-tight text-white";
-export const FDM_TITLE = "font-bold tracking-tight text-white";
+  "bg-gradient-to-b from-white via-violet-50 to-white";
+export const FDM_HERO_TITLE = "font-bold tracking-tight text-stone-900";
+export const FDM_TITLE = "font-bold tracking-tight text-stone-900";
 export const FDM_SECTION_TITLE = `text-[1.5rem] ${FDM_TITLE} sm:text-[1.75rem] lg:text-[2rem]`;
-export const FDM_BODY = "text-sm leading-relaxed text-white/65";
+export const FDM_BODY = "text-sm leading-relaxed text-stone-600";
 export const FDM_TAG =
-  "inline-flex items-center gap-2 rounded-full border border-violet-400/25 bg-violet-400/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-300";
+  "inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-700";
 export const FDM_TITLE_GRADIENT =
   "lux-gold-text";
 export const FDM_BTN_PRIMARY =
   "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold lux-cta text-lux-ink";
 export const FDM_BTN_OUTLINE =
-  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold lux-ghost text-white";
+  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold lux-ghost text-stone-900";
 export const FDM_FLOAT_CARD =
-  "rounded-2xl border border-white/[0.06] bg-white/[0.035] shadow-[0_12px_40px_rgba(99,102,241,0.1)]";
+  "rounded-2xl border border-stone-200/70 bg-white shadow-[0_12px_40px_rgba(99,102,241,0.1)]";
 export const FDM_CARD =
-  "rounded-2xl border border-white/[0.06] bg-white/[0.035] shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)] hover:border-violet-400/25";
+  "rounded-2xl border border-stone-200/70 bg-white shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)] hover:border-violet-200";

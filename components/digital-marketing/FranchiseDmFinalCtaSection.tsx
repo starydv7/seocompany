@@ -102,7 +102,7 @@ export default function FranchiseDmFinalCtaSection() {
   return (
     <section className={`${FDM_SECTION} pb-16 pt-4 sm:pb-20`}>
       <Reveal>
-        <div className="relative w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#0c1a3a] via-[#1e1b4b] to-[#0f172a] p-[2%]">
+        <div className="relative w-full overflow-hidden rounded-3xl bg-gradient-to-br from-white via-[#fbf8f1] to-[#f3ecdd] p-[2%]">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_50%,rgba(124,58,237,0.2),transparent_70%)]"
@@ -114,10 +114,10 @@ export default function FranchiseDmFinalCtaSection() {
 
           <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
             <div>
-              <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-[2.25rem]">
+              <h2 className="text-2xl font-bold leading-tight text-stone-900 sm:text-3xl lg:text-[2.25rem]">
                 {title}
               </h2>
-              <p className="mt-4 text-sm leading-relaxed text-slate-300 sm:text-[15px]">
+              <p className="mt-4 text-sm leading-relaxed text-stone-500 sm:text-[15px]">
                 {subtitle}
               </p>
               <div className="mt-8">
