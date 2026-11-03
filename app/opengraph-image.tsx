@@ -8,7 +8,8 @@ export const contentType = "image/png";
 const SERVICES = ["SEO & AI Search", "Web Development", "Mobile Apps", "PPC & Social"];
 
 export default async function OpengraphImage() {
-  const logo = await fetch(new URL("../public/assets/logo.png", import.meta.url)).then((r) => r.arrayBuffer());
+  // Small copy of the logo: the full-size PNG pushes this Edge Function past Vercel's size limit.
+  const logo = await fetch(new URL("../public/assets/logo-og.png", import.meta.url)).then((r) => r.arrayBuffer());
 
   return new ImageResponse(
     (
