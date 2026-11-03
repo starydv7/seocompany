@@ -18,14 +18,14 @@ export default function FranchiseIndustriesSection() {
   const subtitle = tabSubtitles[active];
 
   return (
-    <section className="w-full px-[2%] py-16 sm:py-20">
+    <section className="w-full px-[var(--lux-gutter)] py-16 sm:py-20">
       <Reveal>
         <h2 className="text-center text-lg font-bold text-stone-900 sm:text-xl">
           {titlePrefix} <span className={TITLE_GRADIENT}>{titleAccent}</span>
         </h2>
       </Reveal>
 
-      <Reveal delay={0.04} className="mx-auto mt-6 max-w-5xl">
+      <Reveal delay={0.04} className="mx-auto mt-6 ">
         <div className="flex w-full border-b border-stone-200">
           {tabs.map((tab) => {
             const Icon = tab.icon as LucideIcon;
@@ -50,7 +50,7 @@ export default function FranchiseIndustriesSection() {
         <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-stone-500">{subtitle}</p>
       </Reveal>
 
-      <Reveal delay={0.08} className="mx-auto mt-10 grid max-w-5xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
+      <Reveal delay={0.08} className="mx-auto mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
         <FranchiseSeoDashboard />
         <ul className="space-y-6">
           {benefits.map((item) => (
@@ -67,7 +67,7 @@ export default function FranchiseIndustriesSection() {
         </ul>
       </Reveal>
 
-      <Reveal delay={0.12} className="mx-auto mt-10 flex max-w-5xl flex-col items-stretch justify-between gap-4 rounded-2xl bg-white/60 px-5 py-4 sm:flex-row sm:items-center">
+      <Reveal delay={0.12} className="mx-auto mt-10 flex flex-col items-stretch justify-between gap-4 rounded-2xl bg-white/60 px-5 py-4 sm:flex-row sm:items-center">
         <div className="flex items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-600">
             <Star className="h-5 w-5 fill-white text-white" />

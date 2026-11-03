@@ -3,7 +3,7 @@
  * Typography inherits Inter from root layout — use these classes for consistency.
  */
 
-export const SDM_PAD = "px-[2%]";
+export const SDM_PAD = "px-[var(--lux-gutter)]";
 export const SDM_SECTION = `w-full max-w-none ${SDM_PAD}`;
 export const SDM_SECTION_PY = "py-10 sm:py-14 lg:py-16";
 
@@ -49,7 +49,7 @@ export function serviceSectionClass(variant: ServiceSectionVariant) {
     ? `${SDM_PAGE_HERO} relative overflow-hidden`
     : `${SDM_SERVICE_CARD} relative scroll-mt-24 overflow-hidden`;
 }
-export const SDM_SERVICE_SECTION = "w-full max-w-none bg-white px-[2%] py-[2%]";
+export const SDM_SERVICE_SECTION = "w-full max-w-none bg-white px-[var(--lux-gutter)] py-[2%]";
 export const SDM_SERVICE_CARD =
   "w-full overflow-visible rounded-2xl border border-stone-200 bg-white p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.06)]";
 export const SDM_CAP_CARD =

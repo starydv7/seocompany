@@ -1,4 +1,4 @@
-export const PPC_PAD = "px-[2%]";
+export const PPC_PAD = "px-[var(--lux-gutter)]";
 export const PPC_SECTION = `w-full max-w-none ${PPC_PAD}`;
 export const PPC_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const PPC_BG = "bg-transparent";

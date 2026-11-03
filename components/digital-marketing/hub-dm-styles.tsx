@@ -1,6 +1,6 @@
 /** Digital Marketing hub page tokens — full width, 2% padding */
 
-export const HUB_PAD = "px-[2%]";
+export const HUB_PAD = "px-[var(--lux-gutter)]";
 export const HUB_SECTION = `w-full max-w-none ${HUB_PAD}`;
 export const HUB_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const HUB_BG = "bg-transparent";

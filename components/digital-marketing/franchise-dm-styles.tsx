@@ -1,7 +1,7 @@
 /** Franchise Digital Marketing page tokens */
 
 /** Horizontal gutter — 2% from each side; content spans remaining width */
-export const FDM_PAD_X = "px-[2%]";
+export const FDM_PAD_X = "px-[var(--lux-gutter)]";
 export const FDM_PAD = FDM_PAD_X;
 export const FDM_SECTION = `w-full max-w-none ${FDM_PAD_X}`;
 export const FDM_INNER = `w-full min-w-0 ${FDM_PAD_X}`;

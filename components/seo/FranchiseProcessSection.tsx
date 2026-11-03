@@ -46,7 +46,7 @@ export default function FranchiseProcessSection() {
   const { badge, titlePrefix, titleAccent, subtitle, steps, features } = franchiseProcessSection;
 
   return (
-    <section className="w-full px-[2%] py-12 sm:py-16 lg:py-14">
+    <section className="w-full px-[var(--lux-gutter)] py-12 sm:py-16 lg:py-14">
       <Reveal className="mx-auto max-w-4xl text-center">
         <p className="inline-flex items-center gap-1.5 rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-violet-700 sm:text-[11px]">
           <Workflow className="h-3 w-3 shrink-0" strokeWidth={2} />
@@ -58,7 +58,7 @@ export default function FranchiseProcessSection() {
         <p className={`mx-auto mt-3 max-w-2xl ${SUBTITLE}`}>{subtitle}</p>
       </Reveal>
 
-      <Reveal delay={0.06} className="mx-auto mt-8 max-w-6xl sm:mt-10">
+      <Reveal delay={0.06} className="mx-auto mt-8 sm:mt-10">
         <div className="flex items-stretch gap-1 overflow-x-auto pb-2 sm:gap-1.5 lg:overflow-visible lg:pb-0">
           {steps.map((step, i) => (
             <div key={step.title} className="flex min-w-0 flex-1 items-stretch">
@@ -82,7 +82,7 @@ export default function FranchiseProcessSection() {
         </div>
       </Reveal>
 
-      <Reveal delay={0.1} className="mx-auto mt-8 max-w-6xl rounded-2xl border border-stone-200 bg-white/60 px-4 py-5 sm:mt-10 sm:px-6 sm:py-6">
+      <Reveal delay={0.1} className="mx-auto mt-8 rounded-2xl border border-stone-200 bg-white/60 px-4 py-5 sm:mt-10 sm:px-6 sm:py-6">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
           {features.map((feature) => (
             <div key={feature.title} className="flex items-start gap-2.5">

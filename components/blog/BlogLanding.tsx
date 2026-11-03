@@ -57,7 +57,7 @@ export default function BlogLanding({
           <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-lux-gold/10" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="relative mx-auto px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
             {/* Left — headline */}
             <div>
@@ -95,7 +95,7 @@ export default function BlogLanding({
       </section>
 
       {/* Posts grid */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+      <section className="mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         {/* Category / tag filters */}
         {(categories.length > 0 || tags.length > 0) ? (
           <div className="mb-8 flex flex-wrap items-center gap-2">
@@ -218,7 +218,7 @@ export default function BlogLanding({
 
       {/* CTA banner */}
       <section className="lux-banner">
-        <div className="mx-auto max-w-6xl px-4 py-14 text-center sm:px-6 sm:py-16 lg:px-8">
+        <div className="mx-auto px-4 py-14 text-center sm:px-6 sm:py-16 lg:px-8">
           <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-tight text-stone-900">
             Ready to level up your business?
           </h2>

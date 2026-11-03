@@ -111,7 +111,7 @@ export default function Footer() {
       />
       <div aria-hidden className="lux-grain" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto w-full px-4 sm:px-6 lg:px-8">
         {/* Statement CTA */}
         <div className="flex flex-col gap-10 border-b border-stone-200 py-16 lg:flex-row lg:items-end lg:justify-between lg:py-24">
           <div>
@@ -141,13 +141,13 @@ export default function Footer() {
 
         <div className="grid gap-12 py-14 lg:grid-cols-[1.2fr,2fr] lg:gap-16 lg:py-16">
           <div className="space-y-6">
-            <Link href="/" className="inline-flex items-center" aria-label="Home">
+            <Link href="/" className="-ml-3.5 inline-flex items-center sm:-ml-[18px]" aria-label="Home">
               <Image
                 src={BRAND_LOGO.src}
                 alt={BRAND_LOGO.alt}
                 width={BRAND_LOGO.width}
                 height={BRAND_LOGO.height}
-                className={BRAND_LOGO.className}
+                className={`${BRAND_LOGO.className} object-left`}
               />
             </Link>
 
@@ -220,7 +220,7 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-stone-200">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-stone-500 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full flex-col items-start justify-between gap-3 px-4 py-6 text-xs text-stone-500 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <p>© {year} BrandMarketing. All rights reserved.</p>
           <p>Built for brands that care about strategy, execution and measurable growth.</p>
         </div>

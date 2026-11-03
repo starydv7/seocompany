@@ -1,7 +1,7 @@
 /** Technical SEO page — dedicated tokens (not franchise/local) */
 
 export const TECH_PAD = "p-[2%]";
-export const TECH_SECTION = `w-full ${TECH_PAD}`;
+export const TECH_SECTION = "w-full px-[var(--lux-gutter)] py-[2%]";
 export const TECH_CARD =
   `w-full min-w-0 rounded-xl border border-stone-200 bg-white ${TECH_PAD} shadow-[0_2px_14px_rgba(15,23,42,0.05)]`;
 

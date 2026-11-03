@@ -80,7 +80,7 @@ export default function ContactPage() {
 
       {/* Benefits */}
       <section className="relative px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
-        <div className="mx-auto grid w-full max-w-7xl gap-6 md:grid-cols-3">
+        <div className="mx-auto grid w-full gap-6 md:grid-cols-3">
           {BENEFITS.map((item, i) => (
             <Reveal key={item.title} delay={0.08 * i} className="h-full">
               <LuxCard accent={item.accent} className="flex h-full flex-col p-8 sm:p-10">
@@ -97,7 +97,7 @@ export default function ContactPage() {
 
       {/* Agenda + schedule */}
       <section className="relative px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
-        <div className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.35fr,1fr]">
+        <div className="mx-auto grid w-full gap-6 lg:grid-cols-[1.35fr,1fr]">
           <Reveal className="h-full">
             <div className="lux-panel h-full p-8 sm:p-10 lg:p-12">
               <LuxEyebrow>The agenda</LuxEyebrow>

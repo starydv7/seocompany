@@ -63,7 +63,7 @@ export default function LocalSeoLanding() {
     <div className="relative min-h-screen text-stone-900">
       <OffWhiteSparkleBg />
       <div className="relative">
-      <section className="relative w-full px-[2%] pb-16 pt-10 sm:pb-20 sm:pt-12">
+      <section className="relative w-full px-[var(--lux-gutter)] pb-16 pt-10 sm:pb-20 sm:pt-12">
         <div className="relative grid w-full grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-x-[5%] xl:gap-x-[6%]">
           <Reveal className="flex min-w-0 flex-col lg:pr-[1%]">
             <div className="flex flex-1 flex-col space-y-5 sm:space-y-6">

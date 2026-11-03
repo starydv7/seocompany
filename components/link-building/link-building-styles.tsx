@@ -1,4 +1,4 @@
-export const LB_PAD = "px-[2%]";
+export const LB_PAD = "px-[var(--lux-gutter)]";
 export const LB_SECTION = `w-full max-w-none ${LB_PAD}`;
 export const LB_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const LB_BG = "bg-transparent";

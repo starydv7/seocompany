@@ -1,4 +1,4 @@
-export const DDM_PAD = "px-[2%]";
+export const DDM_PAD = "px-[var(--lux-gutter)]";
 export const DDM_SECTION = `w-full max-w-none ${DDM_PAD}`;
 export const DDM_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const DDM_BG = "bg-transparent";

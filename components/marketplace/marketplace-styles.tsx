@@ -1,4 +1,4 @@
-export const MP_PAD = "px-[2%]";
+export const MP_PAD = "px-[var(--lux-gutter)]";
 export const MP_SECTION = `w-full max-w-none ${MP_PAD}`;
 export const MP_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const MP_BG = "bg-transparent";

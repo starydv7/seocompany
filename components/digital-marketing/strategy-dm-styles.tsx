@@ -1,6 +1,6 @@
-/** Digital Marketing Strategy page tokens — full width, 2% padding all sides */
+/** Digital Marketing Strategy page tokens — full width, shared side gutter */
 
-export const DSM_PAD = "p-[2%]";
+export const DSM_PAD = "px-[var(--lux-gutter)] py-[2%]";
 export const DSM_SECTION = `w-full max-w-none ${DSM_PAD}`;
 export const DSM_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const DSM_PURPLE = "#7c3aed";

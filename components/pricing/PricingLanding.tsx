@@ -36,7 +36,7 @@ export default function PricingLanding() {
       <section className="relative isolate overflow-hidden px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
         <LuxBackdrop />
 
-        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.25fr,1fr] lg:gap-10">
+        <div className="relative mx-auto grid w-full items-center gap-14 lg:grid-cols-[1.25fr,1fr] lg:gap-10">
           <Reveal>
             <div className="inline-flex items-center gap-3 rounded-full bg-white py-1.5 pl-2 pr-4 ring-1 ring-inset ring-stone-200 backdrop-blur">
               <span className="relative flex h-2 w-2">
@@ -131,7 +131,7 @@ export default function PricingLanding() {
           className="pointer-events-none absolute left-1/2 top-0 h-[40rem] w-[60rem] -translate-x-1/2 rounded-full opacity-40 blur-[120px]"
           style={{ background: "radial-gradient(circle, rgba(221,191,93,0.25), transparent 60%)" }}
         />
-        <div className="relative mx-auto w-full max-w-7xl">
+        <div className="relative mx-auto w-full">
           <Reveal>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
@@ -162,7 +162,7 @@ export default function PricingLanding() {
 
       {/* Scope + honesty */}
       <section className="relative px-4 pb-20 sm:px-6 sm:pb-28 lg:px-8">
-        <div className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.45fr,1fr] lg:gap-7">
+        <div className="mx-auto grid w-full gap-6 lg:grid-cols-[1.45fr,1fr] lg:gap-7">
           <Reveal className="h-full">
             <PricingFactors />
           </Reveal>
@@ -204,7 +204,7 @@ export default function PricingLanding() {
 
       {/* FAQ */}
       <section className="relative px-4 pb-20 sm:px-6 sm:pb-28 lg:px-8">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto w-full">
           <div className="lux-hairline mb-16 sm:mb-20" aria-hidden />
           <Reveal>
             <PricingFaq />
@@ -215,7 +215,7 @@ export default function PricingLanding() {
       {/* Closing CTA */}
       <section className="relative px-4 pb-32 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-[36px] px-6 py-16 text-center sm:px-12 sm:py-20">
+          <div className="relative mx-auto w-full overflow-hidden rounded-[36px] px-6 py-16 text-center sm:px-12 sm:py-20">
             <div
               aria-hidden
               className="absolute inset-0 -z-10"

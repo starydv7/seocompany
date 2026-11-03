@@ -1,4 +1,4 @@
-export const ECM_PAD = "px-[2%]";
+export const ECM_PAD = "px-[var(--lux-gutter)]";
 export const ECM_SECTION = `w-full max-w-none ${ECM_PAD}`;
 export const ECM_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const ECM_BG = "bg-transparent";

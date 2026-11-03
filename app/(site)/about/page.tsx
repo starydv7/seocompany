@@ -142,7 +142,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative isolate overflow-hidden px-4 pb-24 pt-16 sm:px-6 sm:pb-32 sm:pt-24 lg:px-8">
         <LuxBackdrop />
-        <div className="relative mx-auto w-full max-w-7xl">
+        <div className="relative mx-auto w-full">
           <Reveal>
             <LuxPill>Meet the team</LuxPill>
             <h1 className="mt-8 max-w-5xl text-[clamp(3rem,7.4vw,7rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-stone-900">
@@ -175,7 +175,7 @@ export default function AboutPage() {
 
       {/* Team */}
       <section className="relative px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto w-full">
           <Reveal>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
@@ -263,7 +263,7 @@ export default function AboutPage() {
       {/* Join */}
       <section className="relative px-4 pb-32 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative mx-auto grid w-full max-w-7xl gap-10 overflow-hidden rounded-[40px] px-6 py-16 sm:px-12 sm:py-20 lg:grid-cols-[1.3fr,1fr] lg:items-end">
+          <div className="relative mx-auto grid w-full gap-10 overflow-hidden rounded-[40px] px-6 py-16 sm:px-12 sm:py-20 lg:grid-cols-[1.3fr,1fr] lg:items-end">
             <div
               aria-hidden
               className="absolute inset-0 -z-10"

@@ -177,7 +177,7 @@ export default function WhyLocalSeoSection() {
   const { title, subtitle, factors } = whyLocalSeo;
 
   return (
-    <section className="relative w-full px-[2%] py-14 sm:py-16 lg:py-20">
+    <section className="relative w-full px-[var(--lux-gutter)] py-14 sm:py-16 lg:py-20">
       <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_minmax(280px,340px)_minmax(300px,380px)] lg:gap-8 xl:gap-10">
         <Reveal className="min-w-0">
           <h2 className="text-2xl font-bold leading-tight text-stone-900 sm:text-3xl lg:text-[2rem]">

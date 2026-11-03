@@ -23,6 +23,27 @@ const SERVICES_TICKER = [
   "Branding",
 ];
 
+const HERO_HIGHLIGHTS = [
+  {
+    icon: Trophy,
+    title: (
+      <>
+        <span className="lux-gold-text">120+</span> Campaigns
+      </>
+    ),
+    caption: "Managed & scaled",
+  },
+  {
+    icon: Layers,
+    title: (
+      <>
+        Technical <span className="lux-gold-text italic">+</span> Content <span className="lux-gold-text italic">+</span> CRO
+      </>
+    ),
+    caption: "One full-funnel team",
+  },
+];
+
 const PHILOSOPHY = [
   { icon: Search, title: "We don't guess.", body: "Every decision is backed by data and research.", accent: LUX_ACCENTS.violet },
   { icon: Target, title: "We test.", body: "A/B testing & tracking power every move.", accent: LUX_ACCENTS.rose },
@@ -119,7 +140,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative isolate overflow-hidden px-4 pb-24 pt-14 sm:px-6 sm:pb-32 sm:pt-20 lg:px-8">
         <LuxBackdrop />
-        <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.25fr,0.95fr] lg:gap-12">
+        <div className="relative mx-auto grid w-full items-center gap-14 lg:grid-cols-[1.25fr,0.95fr] lg:gap-12">
           <Reveal>
             <LuxPill>BrandMarketing</LuxPill>
             <h1 className="mt-8 text-[clamp(3rem,7.4vw,7rem)] font-semibold leading-[0.92] tracking-[-0.045em] text-stone-900">
@@ -148,36 +169,18 @@ export default function Home() {
                 Explore pricing
               </Link>
             </div>
-            <div className="mt-12 grid max-w-2xl gap-4 sm:grid-cols-[auto,1fr]">
-              <div className="lux-plaque flex items-center gap-4 px-5 py-5 sm:px-6">
-                <span className="lux-medallion" aria-hidden>
-                  <Trophy className="h-5 w-5" strokeWidth={2} />
-                </span>
-                <div className="min-w-0">
-                  <p className="font-serif text-[2.75rem] leading-none tracking-[-0.02em]">
-                    <span className="lux-gold-text">120+</span>
-                  </p>
-                  <p className="mt-1.5 whitespace-nowrap text-[10.5px] font-semibold uppercase tracking-[0.24em] text-stone-500">
-                    Campaigns managed
-                  </p>
+            <div className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-2">
+              {HERO_HIGHLIGHTS.map(({ icon: Icon, title, caption }) => (
+                <div key={caption} className="lux-plaque flex items-center gap-3.5 px-4 py-3.5">
+                  <span className="lux-medallion" aria-hidden>
+                    <Icon className="h-4 w-4" strokeWidth={2} />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-balance font-serif text-[1.2rem] leading-[1.15] text-stone-900">{title}</p>
+                    <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-stone-500">{caption}</p>
+                  </div>
                 </div>
-                <span className="lux-plaque-index" aria-hidden>01</span>
-              </div>
-              <div className="lux-plaque flex items-center gap-4 px-5 py-5 sm:px-6">
-                <span className="lux-medallion" aria-hidden>
-                  <Layers className="h-5 w-5" strokeWidth={2} />
-                </span>
-                <div className="min-w-0">
-                  <p className="text-balance font-serif text-[1.5rem] leading-[1.05] tracking-[-0.01em] text-stone-900">
-                    Technical <span className="lux-gold-text italic">+</span> Content{" "}
-                    <span className="lux-gold-text italic">+</span> CRO
-                  </p>
-                  <p className="mt-1.5 text-[10.5px] font-semibold uppercase tracking-[0.24em] text-stone-500">
-                    One full-funnel team
-                  </p>
-                </div>
-                <span className="lux-plaque-index" aria-hidden>02</span>
-              </div>
+              ))}
             </div>
           </Reveal>
 
@@ -224,7 +227,7 @@ export default function Home() {
           className="pointer-events-none absolute right-0 top-10 h-[36rem] w-[36rem] rounded-full opacity-40 blur-[120px]"
           style={{ background: "radial-gradient(circle, rgba(108,71,255,0.35), transparent 60%)" }}
         />
-        <div className="relative mx-auto w-full max-w-7xl">
+        <div className="relative mx-auto w-full">
           <Reveal>
             <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-end">
               <div>
@@ -274,7 +277,7 @@ export default function Home() {
 
       {/* Why choose us */}
       <section className="relative px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto w-full">
           <Reveal>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeading eyebrow="Why we're different" title="Why Choose" accent="Us?" />
@@ -307,7 +310,7 @@ export default function Home() {
 
       {/* Process */}
       <section className="relative px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto w-full">
           <Reveal>
             <SectionHeading
               align="center"
@@ -344,7 +347,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="relative px-4 pb-24 sm:px-6 sm:pb-32 lg:px-8">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto w-full">
           <div className="lux-hairline mb-20" aria-hidden />
           <Reveal>
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -383,7 +386,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="relative px-4 pb-32 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-[40px] px-6 py-20 text-center sm:px-12 sm:py-28">
+          <div className="relative mx-auto w-full overflow-hidden rounded-[40px] px-6 py-20 text-center sm:px-12 sm:py-28">
             <div
               aria-hidden
               className="absolute inset-0 -z-10"

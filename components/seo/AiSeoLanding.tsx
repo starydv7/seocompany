@@ -13,7 +13,7 @@ import OffWhiteSparkleBg from "@/components/seo/OffWhiteSparkleBg";
 import { AI_HERO_TITLE, AI_LABEL_PURPLE } from "@/components/seo/ai-seo-styles";
 import { aiSeoHero } from "@/lib/seo/ai-seo-content";
 
-const HERO_PAD = "w-full p-[2%]";
+const HERO_PAD = "w-full px-[var(--lux-gutter)] py-[2%]";
 
 export default function AiSeoLanding() {
   const {

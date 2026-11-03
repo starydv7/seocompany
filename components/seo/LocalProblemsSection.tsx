@@ -250,7 +250,7 @@ export default function LocalProblemsSection() {
   const { title, subtitle, problems } = localProblemsSection;
 
   return (
-    <section className="w-full px-[2%] py-14 sm:py-16 lg:py-20">
+    <section className="w-full px-[var(--lux-gutter)] py-14 sm:py-16 lg:py-20">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2 className="text-xl font-bold tracking-tight text-stone-900 sm:text-2xl lg:text-[1.75rem]">
           {title}

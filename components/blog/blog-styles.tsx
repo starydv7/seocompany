@@ -1,4 +1,4 @@
-export const BLOG_PAD = "px-[2%]";
+export const BLOG_PAD = "px-[var(--lux-gutter)]";
 export const BLOG_SECTION = `w-full max-w-none ${BLOG_PAD}`;
 export const BLOG_HERO_TITLE =
   "text-[clamp(1.85rem,4.2vw,2.75rem)] font-bold leading-[1.1] tracking-tight text-stone-900";

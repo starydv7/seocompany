@@ -857,17 +857,18 @@ export default function Navbar() {
         <div aria-hidden className="lux-hairline absolute inset-x-0 bottom-0" />
         <nav
           id="site-navbar"
-          className={`relative mx-auto flex w-full items-center justify-between gap-3 pl-2 pr-4 transition-[padding] duration-500 sm:pr-6 lg:pr-8 ${
+          className={`relative mx-auto flex w-full items-center justify-between gap-3 px-[var(--lux-gutter)] transition-[padding] duration-500 ${
             elevated ? "py-1.5" : "py-3"
           }`}
         >
-          <Link href="/" className="flex shrink-0 items-center leading-none">
+          {/* Negative margin cancels the logo PNG's transparent left padding so the mark sits on the gutter */}
+          <Link href="/" className="-ml-5 flex shrink-0 items-center leading-none sm:-ml-[25px]">
             <Image
               src={BRAND_LOGO.src}
               alt={BRAND_LOGO.alt}
               width={BRAND_LOGO.width}
               height={BRAND_LOGO.height}
-              className={`${BRAND_LOGO.className} scale-[1.35] sm:scale-[1.4]`}
+              className={`${BRAND_LOGO.className} object-left scale-[1.35] sm:scale-[1.4]`}
               priority
             />
           </Link>

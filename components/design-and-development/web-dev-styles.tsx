@@ -1,4 +1,4 @@
-export const WDM_PAD = "px-[2%]";
+export const WDM_PAD = "px-[var(--lux-gutter)]";
 export const WDM_SECTION = `w-full max-w-none ${WDM_PAD}`;
 export const WDM_SECTION_PY = "py-12 sm:py-14 lg:py-16";
 

@@ -36,7 +36,7 @@ export default function TechnicalSeoLanding() {
   return (
     <div className="min-h-screen bg-transparent text-stone-900">
       <section
-        className={`relative overflow-hidden ${TECH_HERO_BG} ${TECH_PAD} pb-16 pt-10 sm:pb-20 sm:pt-14`}
+        className={`relative overflow-hidden ${TECH_HERO_BG} px-[var(--lux-gutter)] pb-16 pt-10 sm:pb-20 sm:pt-14`}
       >
         <div
           aria-hidden

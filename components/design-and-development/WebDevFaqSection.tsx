@@ -13,7 +13,7 @@ export default function WebDevFaqSection() {
         <h2 className={WDM_FONT_SECTION}>{webDevFaq.title}</h2>
         <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-[#7c3aed]" />
       </div>
-      <div className="mx-auto max-w-3xl">
+      <div className="w-full">
         <FaqAccordion items={[...webDevFaq.items]} />
       </div>
     </section>

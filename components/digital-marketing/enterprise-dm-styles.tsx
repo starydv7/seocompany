@@ -1,7 +1,7 @@
 /** Enterprise Digital Marketing page tokens */
 
 /** Horizontal gutter — 2% from each side; content spans remaining width */
-export const EDM_PAD_X = "px-[2%]";
+export const EDM_PAD_X = "px-[var(--lux-gutter)]";
 export const EDM_PAD = EDM_PAD_X;
 export const EDM_SECTION = `w-full max-w-none ${EDM_PAD_X}`;
 export const EDM_SECTION_PY = "py-16 sm:py-20 lg:py-24";

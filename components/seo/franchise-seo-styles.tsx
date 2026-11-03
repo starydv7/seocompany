@@ -1,9 +1,9 @@
 import type { LucideIcon } from "lucide-react";
 
-/** Franchise page: full-width blocks, 2% padding on all sides */
+/** Franchise page: full-width blocks on the shared side gutter */
 export const FRANCHISE_PAD = "p-[2%]";
-export const FRANCHISE_SECTION = `w-full ${FRANCHISE_PAD}`;
-export const FRANCHISE_INNER = `w-full min-w-0 ${FRANCHISE_PAD}`;
+export const FRANCHISE_SECTION = "w-full px-[var(--lux-gutter)] py-[2%]";
+export const FRANCHISE_INNER = "w-full min-w-0 py-[2%]";
 export const FRANCHISE_CARD =
   `w-full min-w-0 rounded-xl border border-stone-200 bg-white ${FRANCHISE_PAD} shadow-[0_2px_14px_rgba(15,23,42,0.05)]`;
 

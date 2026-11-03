@@ -1,4 +1,4 @@
-export const SMM_PAD = "px-[2%]";
+export const SMM_PAD = "px-[var(--lux-gutter)]";
 export const SMM_SECTION = `w-full max-w-none ${SMM_PAD}`;
 export const SMM_SECTION_PY = "py-12 sm:py-16 lg:py-20";
 export const SMM_BG = "bg-transparent";
