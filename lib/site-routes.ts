@@ -1,5 +1,11 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://brandmarketing.digital";
+function normalizeSiteUrl(raw: string | undefined) {
+  const value = raw?.trim().replace(/\/+$/, "");
+  if (!value) return "https://brandmarketing.digital";
+  return /^https?:\/\//i.test(value) ? value : `https://${value}`;
+}
+
+/** Tolerates env values set without a scheme (e.g. "brandmarketing.digital"), which would break `new URL()`. */
+export const SITE_URL = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL);
 
 /** Public, indexable routes (exclude redirect-only pages and duplicates that canonicalise elsewhere, e.g. /seo/aiseo). */
 export const PUBLIC_ROUTES: string[] = [
