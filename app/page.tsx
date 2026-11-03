@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, BarChart3, Rocket, Search, ShieldCheck, Target, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Layers, Rocket, Search, ShieldCheck, Target, TrendingUp, Trophy, Zap } from "lucide-react";
 import { HUBSPOT_MEETING_URL } from "@/lib/site";
+import AuditForm from "@/components/AuditForm";
 import Reveal from "@/components/Reveal";
 import LuxBackdrop from "@/components/lux/LuxBackdrop";
 import LuxCard from "@/components/lux/LuxCard";
@@ -88,13 +89,6 @@ const TESTIMONIALS = [
   },
 ];
 
-const AUDIT_FIELDS = [
-  { type: "text", label: "Full Name", required: true },
-  { type: "email", label: "Email Address", required: true },
-  { type: "text", label: "Website", required: true },
-  { type: "tel", label: "Phone Number", required: false },
-];
-
 function SectionHeading({
   eyebrow,
   title,
@@ -154,14 +148,36 @@ export default function Home() {
                 Explore pricing
               </Link>
             </div>
-            <div className="mt-12 flex flex-wrap gap-x-10 gap-y-4">
-              {["120+ campaigns managed", "Technical + content + CRO"].map((item, i) => (
-                <div key={item} className="flex items-center gap-3">
-                  <span className="font-mono text-[10px] tracking-[0.3em] text-lux-bronze">0{i + 1}</span>
-                  <span className="h-px w-6 bg-white" aria-hidden />
-                  <span className="text-sm text-stone-600">{item}</span>
+            <div className="mt-12 grid max-w-2xl gap-4 sm:grid-cols-[auto,1fr]">
+              <div className="lux-plaque flex items-center gap-4 px-5 py-5 sm:px-6">
+                <span className="lux-medallion" aria-hidden>
+                  <Trophy className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <div className="min-w-0">
+                  <p className="font-serif text-[2.75rem] leading-none tracking-[-0.02em]">
+                    <span className="lux-gold-text">120+</span>
+                  </p>
+                  <p className="mt-1.5 whitespace-nowrap text-[10.5px] font-semibold uppercase tracking-[0.24em] text-stone-500">
+                    Campaigns managed
+                  </p>
                 </div>
-              ))}
+                <span className="lux-plaque-index" aria-hidden>01</span>
+              </div>
+              <div className="lux-plaque flex items-center gap-4 px-5 py-5 sm:px-6">
+                <span className="lux-medallion" aria-hidden>
+                  <Layers className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-balance font-serif text-[1.5rem] leading-[1.05] tracking-[-0.01em] text-stone-900">
+                    Technical <span className="lux-gold-text italic">+</span> Content{" "}
+                    <span className="lux-gold-text italic">+</span> CRO
+                  </p>
+                  <p className="mt-1.5 text-[10.5px] font-semibold uppercase tracking-[0.24em] text-stone-500">
+                    One full-funnel team
+                  </p>
+                </div>
+                <span className="lux-plaque-index" aria-hidden>02</span>
+              </div>
             </div>
           </Reveal>
 
@@ -180,29 +196,7 @@ export default function Home() {
                 Boost your traffic, leads, and sales with our expert SEO and marketing audit. Start with a free,
                 no-obligation consultation.
               </p>
-              <div className="mt-6 space-y-3">
-                {AUDIT_FIELDS.map((field) => (
-                  <label key={field.label} className="block">
-                    <span className="sr-only">{field.label}</span>
-                    <input
-                      type={field.type}
-                      required={field.required}
-                      aria-required={field.required}
-                      placeholder={field.required ? `${field.label} *` : field.label}
-                      className="lux-input px-4 py-3 text-sm"
-                    />
-                  </label>
-                ))}
-                <a
-                  href={HUBSPOT_MEETING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="lux-cta mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold"
-                >
-                  Request Your Free Audit
-                  <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-                </a>
-              </div>
+              <AuditForm />
               <p className="mt-4 text-center text-xs text-stone-400">We respect your privacy. 100% spam-free.</p>
             </LuxCard>
           </Reveal>

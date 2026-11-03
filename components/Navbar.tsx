@@ -482,6 +482,7 @@ function MegaMenu({
   const panel = (
     <div
       id={panelId}
+      data-mega-open={open}
       onMouseEnter={openMenu}
       onMouseLeave={scheduleClose}
       style={{
@@ -593,16 +594,67 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [elevated, setElevated] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [scrolledAway, setScrolledAway] = useState(false);
+  const [pinned, setPinned] = useState(false);
+  const pointerInside = useRef(false);
+  const unpinTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setElevated(window.scrollY > 8);
-    window.addEventListener("scroll", onScroll);
+    let lastY = window.scrollY;
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const y = window.scrollY;
+      const delta = y - lastY;
+      setElevated(y > 8);
+      if (y < 140) {
+        setScrolledAway(false);
+        lastY = y;
+      } else if (Math.abs(delta) > 6) {
+        setScrolledAway(delta > 0);
+        if (delta > 0 && !pointerInside.current) setPinned(false);
+        lastY = y;
+      }
+    };
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const pin = useCallback(() => {
+    if (unpinTimer.current) clearTimeout(unpinTimer.current);
+    pointerInside.current = true;
+    setPinned(true);
+  }, []);
+
+  const unpin = useCallback(() => {
+    pointerInside.current = false;
+    if (unpinTimer.current) clearTimeout(unpinTimer.current);
+    const release = () => {
+      if (document.querySelector('[data-mega-open="true"]')) {
+        unpinTimer.current = setTimeout(release, 250);
+        return;
+      }
+      setPinned(false);
+    };
+    unpinTimer.current = setTimeout(release, 380);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (unpinTimer.current) clearTimeout(unpinTimer.current);
+    };
+  }, []);
+
+  const concealed = scrolledAway && !pinned && !open;
 
   useEffect(() => {
     const root = document.documentElement;
@@ -793,9 +845,13 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`lux-nav sticky top-0 z-50 transition-shadow duration-500 ${
-          elevated ? "shadow-[0_24px_60px_-20px_rgba(15,23,42,0.85)]" : ""
-        }`}
+        onMouseEnter={pin}
+        onMouseLeave={unpin}
+        onFocusCapture={pin}
+        onBlurCapture={unpin}
+        data-floating={elevated}
+        data-concealed={concealed}
+        className="lux-nav sticky top-0 z-50"
       >
         <div aria-hidden className="lux-nav-accent absolute inset-x-0 top-0" />
         <div aria-hidden className="lux-hairline absolute inset-x-0 bottom-0" />
@@ -879,6 +935,27 @@ export default function Navbar() {
           </button>
         </nav>
       </header>
+      <div
+        aria-hidden
+        onMouseEnter={pin}
+        onMouseLeave={unpin}
+        className={`fixed inset-x-0 top-0 z-50 h-4 ${concealed ? "block" : "hidden"}`}
+      />
+      <button
+        type="button"
+        aria-label="Show navigation"
+        aria-hidden={!concealed}
+        tabIndex={concealed ? 0 : -1}
+        onMouseEnter={pin}
+        onMouseLeave={unpin}
+        onFocus={pin}
+        onClick={pin}
+        data-visible={concealed}
+        className="lux-nav-handle fixed left-1/2 top-0 z-50 flex flex-col items-center gap-1 rounded-b-2xl px-6 pb-1.5 pt-2"
+      >
+        <span aria-hidden className="lux-nav-handle-bar" />
+        <ChevronDown aria-hidden className="lux-nav-handle-chevron h-3.5 w-3.5" strokeWidth={2.75} />
+      </button>
       {mobileMenu}
     </>
   );

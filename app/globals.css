@@ -266,11 +266,90 @@ html.lenis body {
   background: linear-gradient(90deg, transparent, rgba(221, 191, 93, 0.55), transparent);
 }
 
+/* Navbar states: solid at the top of the page, frosted glass once scrolled,
+   and concealed (slid up + faded) while scrolling down. */
 .lux-nav {
-  background: radial-gradient(55% 160% at 0% 0%, rgba(221, 191, 93, 0.16), transparent 62%),
+  background-color: #172033;
+  background-image: radial-gradient(55% 160% at 0% 0%, rgba(221, 191, 93, 0.16), transparent 62%),
     radial-gradient(45% 160% at 100% 0%, rgba(124, 92, 255, 0.18), transparent 62%),
-    linear-gradient(180deg, #1b2540 0%, #172033 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent);
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06), 0 18px 50px -24px rgba(15, 23, 42, 0.75);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), opacity 500ms ease, filter 600ms ease,
+    background-color 500ms ease, box-shadow 500ms ease;
+  will-change: transform;
+}
+
+.lux-nav[data-floating="true"] {
+  background-color: rgba(23, 32, 51, 0.93);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08), 0 24px 60px -20px rgba(15, 23, 42, 0.7);
+}
+
+.lux-nav[data-concealed="true"] {
+  transform: translate3d(0, calc(-100% - 12px), 0);
+  opacity: 0;
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.lux-nav-handle {
+  color: #ddbf5d;
+  background: rgba(23, 32, 51, 0.92);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 14px 34px -12px rgba(15, 23, 42, 0.65),
+    0 0 24px -6px rgba(221, 191, 93, 0.45);
+  transform: translate3d(-50%, -120%, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1), opacity 300ms ease, box-shadow 300ms ease;
+}
+
+.lux-nav-handle[data-visible="true"] {
+  transform: translate3d(-50%, 0, 0);
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 180ms, 180ms, 0ms;
+}
+
+.lux-nav-handle:hover,
+.lux-nav-handle:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1px rgba(221, 191, 93, 0.45), 0 18px 40px -12px rgba(15, 23, 42, 0.7),
+    0 0 40px -4px rgba(221, 191, 93, 0.7);
+}
+
+.lux-nav-handle-bar {
+  display: block;
+  width: 44px;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #ddbf5d, #50b444, #7c5cff, #ddbf5d);
+  background-size: 200% 100%;
+  animation: lux-handle-flow 3s linear infinite;
+}
+
+.lux-nav-handle-chevron {
+  animation: lux-handle-nudge 1.8s ease-in-out infinite;
+}
+
+@keyframes lux-handle-flow {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes lux-handle-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(2px);
+    opacity: 1;
+  }
 }
 
 .lux-nav-accent {
@@ -482,6 +561,98 @@ html.lenis body {
 
 .lux-cta:hover::after {
   left: 130%;
+}
+
+/* Hero credential plaques: ivory face, gilded edge, gold medallion, periodic light sweep */
+.lux-plaque {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 22px;
+  background: radial-gradient(120% 90% at 0% 0%, rgba(243, 227, 166, 0.45), transparent 55%),
+    linear-gradient(150deg, #fffdf7 0%, #fbf6e8 55%, #f5ebd0 100%);
+  box-shadow: inset 0 1px 0 #ffffff, 0 26px 50px -32px rgba(122, 90, 20, 0.55), 0 2px 6px -3px rgba(122, 90, 20, 0.18);
+  transition: transform 450ms var(--lux-ease), box-shadow 450ms ease;
+}
+
+.lux-plaque::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #e9cf7a 0%, rgba(243, 227, 166, 0.35) 38%, rgba(243, 227, 166, 0.35) 62%, #b08a2e 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.lux-plaque::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -60%;
+  width: 40%;
+  height: 140%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.85), transparent);
+  transform: skewX(-20deg);
+  animation: lux-plaque-sheen 7s var(--lux-ease) infinite;
+  pointer-events: none;
+}
+
+.lux-plaque + .lux-plaque::after {
+  animation-delay: 1.2s;
+}
+
+.lux-plaque:hover {
+  transform: translateY(-3px);
+  box-shadow: inset 0 1px 0 #ffffff, 0 34px 60px -30px rgba(122, 90, 20, 0.6), 0 0 0 4px rgba(221, 191, 93, 0.12);
+}
+
+@keyframes lux-plaque-sheen {
+  0%,
+  62% {
+    left: -60%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+.lux-plaque-index {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-family: var(--font-mono, ui-monospace), monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.3em;
+  color: rgba(143, 108, 29, 0.6);
+}
+
+.lux-medallion {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 9999px;
+  color: #172033;
+  background: radial-gradient(circle at 32% 26%, #fff7da 0%, #ecd283 38%, #c9a24b 72%, #9c7624 100%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 -3px 6px rgba(122, 90, 20, 0.35),
+    0 10px 22px -10px rgba(122, 90, 20, 0.7);
+}
+
+.lux-medallion::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(176, 138, 46, 0.35);
+  pointer-events: none;
 }
 
 .lux-ghost {
