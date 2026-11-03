@@ -13,6 +13,15 @@ import SoftwareDevProductEngineeringSection from "@/components/design-and-develo
 import SoftwareDevUiuxSection from "@/components/design-and-development/SoftwareDevUiuxSection";
 import SoftwareDevWebSection from "@/components/design-and-development/SoftwareDevWebSection";
 import SoftwareDevFinalCta from "@/components/design-and-development/SoftwareDevFinalCta";
+import { EliteFaq, EliteHireBand, EliteRelated } from "@/components/design-and-development/elite/EliteSections";
+import LuxBackdrop from "@/components/lux/LuxBackdrop";
+import LuxPage from "@/components/lux/LuxPage";
+import { SOFTWARE_DEV_FAQS } from "@/lib/design-and-development/elite-content";
+import {
+  MOBILE_APP_DEVELOPMENT_ROUTE,
+  PRODUCT_ENGINEERING_ROUTE,
+  WEB_DEVELOPMENT_ROUTE,
+} from "@/lib/design-and-development/service-routes";
 import {
   SDM_BTN_OUTLINE,
   SDM_BTN_PRIMARY,
@@ -36,10 +45,11 @@ import {
 
 export default function SoftwareDevLanding() {
   return (
-    <div className="w-full max-w-none overflow-x-hidden bg-white">
+    <LuxPage>
       {/* Hero */}
-      <section className={`${SDM_SECTION} ${SDM_SECTION_PY} bg-transparent pt-8 sm:pt-12`}>
-        <div className="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+      <section className={`${SDM_SECTION} ${SDM_SECTION_PY} relative isolate overflow-hidden bg-transparent pt-8 sm:pt-12`}>
+        <LuxBackdrop dust={false} />
+        <div className="relative grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           <div className="max-w-xl space-y-5">
             <span className={SDM_TAG}>{softwareDevHero.badge}</span>
             <h1 className={SDM_FONT_DISPLAY}>
@@ -141,10 +151,23 @@ export default function SoftwareDevLanding() {
         </div>
       </section>
 
+      <div className="pt-16 sm:pt-24">
+        <EliteHireBand
+          roleId="full-stack-developers"
+          title="Need a dedicated software team?"
+          body="Hire full-stack, backend and frontend developers who join your sprints and ship production software from week one."
+        />
+        <EliteFaq
+          faqs={SOFTWARE_DEV_FAQS}
+          body="Answers to the questions clients ask most about custom software development."
+        />
+        <EliteRelated routes={[WEB_DEVELOPMENT_ROUTE, MOBILE_APP_DEVELOPMENT_ROUTE, PRODUCT_ENGINEERING_ROUTE]} />
+      </div>
+
       {/* Final CTA */}
-      <section className={`${SDM_SECTION} pb-12 pt-2 sm:pb-16`}>
+      <section className={`${SDM_SECTION} pb-32 pt-2`}>
         <SoftwareDevFinalCta />
       </section>
-    </div>
+    </LuxPage>
   );
 }

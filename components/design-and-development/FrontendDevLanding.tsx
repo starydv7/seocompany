@@ -1,9 +1,7 @@
 import SoftwareDevFrontendSection from "@/components/design-and-development/SoftwareDevFrontendSection";
+import EliteServicePage from "@/components/design-and-development/elite/EliteServicePage";
+import { FRONTEND_ELITE } from "@/lib/design-and-development/elite-content";
 
 export default function FrontendDevLanding() {
-  return (
-    <div className="w-full max-w-none overflow-x-hidden bg-white">
-      <SoftwareDevFrontendSection variant="page" />
-    </div>
-  );
+  return <EliteServicePage hero={<SoftwareDevFrontendSection variant="page" />} service={FRONTEND_ELITE} />;
 }

@@ -40,7 +40,7 @@ export const SDM_BTN_OUTLINE =
 export const SDM_CARD =
   "rounded-2xl border border-stone-200 bg-white shadow-[0_4px_24px_rgba(15,23,42,0.07)]";
 export const SDM_SERVICE_STACK = "flex w-full flex-col gap-[3%]";
-export const SDM_PAGE_HERO = `w-full max-w-none ${SDM_PAD} py-10 sm:py-14 lg:py-16 bg-white`;
+export const SDM_PAGE_HERO = `w-full max-w-none ${SDM_PAD} py-10 sm:py-14 lg:py-16 bg-transparent`;
 
 export type ServiceSectionVariant = "card" | "page";
 
@@ -49,7 +49,7 @@ export function serviceSectionClass(variant: ServiceSectionVariant) {
     ? `${SDM_PAGE_HERO} relative overflow-hidden`
     : `${SDM_SERVICE_CARD} relative scroll-mt-24 overflow-hidden`;
 }
-export const SDM_SERVICE_SECTION = "w-full max-w-none bg-white px-[var(--lux-gutter)] py-[2%]";
+export const SDM_SERVICE_SECTION = "w-full max-w-none bg-transparent px-[var(--lux-gutter)] py-[2%]";
 export const SDM_SERVICE_CARD =
   "w-full overflow-visible rounded-2xl border border-stone-200 bg-white p-[2%] shadow-[0_4px_24px_rgba(15,23,42,0.06)]";
 export const SDM_CAP_CARD =

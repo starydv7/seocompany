@@ -9,6 +9,6 @@ export function JsonLd({ data }: { data: unknown }) {
   );
 }
 
-export default function PageJsonLd({ path }: { path: string }) {
-  return <JsonLd data={pageJsonLd(path)} />;
+export default function PageJsonLd({ path, faqs }: { path: string; faqs?: { q: string; a: string }[] }) {
+  return <JsonLd data={pageJsonLd(path, faqs)} />;
 }

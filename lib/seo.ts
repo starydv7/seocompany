@@ -389,7 +389,7 @@ function breadcrumbTrail(path: string) {
   return trail;
 }
 
-export function pageJsonLd(path: string) {
+export function pageJsonLd(path: string, faqs?: { q: string; a: string }[]) {
   const page = SEO_PAGES[path];
   if (!page) throw new Error(`Missing SEO_PAGES entry for ${path}`);
   const url = absoluteUrl(page.canonical ?? path);
@@ -430,6 +430,19 @@ export function pageJsonLd(path: string) {
       url,
       provider: { "@id": ORGANIZATION_ID },
       areaServed: { "@type": "Place", name: "Worldwide" },
+    });
+  }
+
+  if (faqs?.length) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${url}#faq`,
+      isPartOf: { "@id": `${url}#webpage` },
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
     });
   }
 

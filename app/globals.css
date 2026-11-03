@@ -821,6 +821,191 @@ html.lenis body {
   pointer-events: none;
 }
 
+/* Elite service sections: travelling light on process tracks, pulsing step nodes, orbiting gold border */
+.lux-flow-track {
+  position: absolute;
+  height: 3px;
+  margin-top: -1px;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(143, 108, 29, 0.12), rgba(143, 108, 29, 0.38), rgba(143, 108, 29, 0.12)) center / 100% 1px
+    no-repeat;
+}
+
+.lux-flow-track::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18%;
+  height: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, #ddbf5d, #50b444, transparent);
+  box-shadow: 0 0 14px rgba(221, 191, 93, 0.8);
+  animation: lux-flow 4.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes lux-flow {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(560%);
+  }
+}
+
+.lux-node::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 1px solid rgba(221, 191, 93, 0.6);
+  animation: lux-node-ring 3.2s ease-out infinite;
+  animation-delay: var(--node-delay, 0s);
+  pointer-events: none;
+}
+
+@keyframes lux-node-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+@property --lux-orbit-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.lux-orbit {
+  position: relative;
+  isolation: isolate;
+}
+
+.lux-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from var(--lux-orbit-angle), transparent 0deg, rgba(221, 191, 93, 0.95) 50deg, rgba(80, 180, 68, 0.7) 90deg, transparent 140deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: lux-orbit-spin 7s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes lux-orbit-spin {
+  to {
+    --lux-orbit-angle: 360deg;
+  }
+}
+
+.lux-tile {
+  transition: transform 450ms var(--lux-ease), box-shadow 450ms var(--lux-ease), background-color 300ms ease;
+}
+
+.lux-tile:hover {
+  transform: translateY(-4px);
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(221, 191, 93, 0.6), 0 22px 40px -26px rgba(80, 60, 20, 0.45);
+}
+
+/* Marketing hub: orbit rings, signal lines, self-drawing sparklines, rising bars, floating cards */
+.lux-ring-spin {
+  animation: lux-ring-spin 80s linear infinite;
+}
+
+.lux-ring-spin-rev {
+  animation: lux-ring-spin 120s linear infinite reverse;
+}
+
+@keyframes lux-ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lux-signal {
+  stroke-dasharray: 1.2 2.4;
+  animation: lux-signal 2.4s linear infinite;
+}
+
+@keyframes lux-signal {
+  to {
+    stroke-dashoffset: -7.2;
+  }
+}
+
+.lux-spark {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: lux-spark 5s var(--lux-ease) infinite;
+}
+
+@keyframes lux-spark {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  35%,
+  85% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+.lux-bar-rise {
+  transform-origin: bottom;
+  animation: lux-bar-rise 4.5s var(--lux-ease) infinite;
+}
+
+@keyframes lux-bar-rise {
+  0% {
+    transform: scaleY(0.15);
+  }
+  30%,
+  85% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.15);
+  }
+}
+
+.lux-bar-grow {
+  transform-origin: left;
+  animation: lux-bar-grow 1.6s var(--lux-ease) both;
+}
+
+@keyframes lux-bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+.lux-hover-float {
+  animation: lux-hover-float 6s ease-in-out infinite;
+}
+
+@keyframes lux-hover-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee-ltr,
   .lux-blob,

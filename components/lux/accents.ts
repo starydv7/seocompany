@@ -9,6 +9,8 @@ export const LUX_ACCENTS = {
   rose: { from: "#ffc2d6", to: "#ef5f9d", glow: "rgba(239,95,157,0.42)", ink: "#c2366f" },
 } satisfies Record<string, LuxAccent>;
 
+export type LuxAccentName = keyof typeof LUX_ACCENTS;
+
 export function withAlpha(rgba: string, alpha: number) {
   return rgba.replace(/[\d.]+\)$/, `${alpha})`);
 }

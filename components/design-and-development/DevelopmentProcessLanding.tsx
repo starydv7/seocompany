@@ -1,18 +1,7 @@
 import SoftwareDevDevelopmentProcessSection from "@/components/design-and-development/SoftwareDevDevelopmentProcessSection";
-
-
+import EliteServicePage from "@/components/design-and-development/elite/EliteServicePage";
+import { PROCESS_ELITE } from "@/lib/design-and-development/elite-content";
 
 export default function DevelopmentProcessLanding() {
-
-  return (
-
-    <div className="w-full max-w-none overflow-x-hidden bg-white">
-
-      <SoftwareDevDevelopmentProcessSection variant="page" />
-
-    </div>
-
-  );
-
+  return <EliteServicePage hero={<SoftwareDevDevelopmentProcessSection variant="page" />} service={PROCESS_ELITE} />;
 }
-
