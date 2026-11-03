@@ -216,7 +216,7 @@ export default function FrontendDevHeroVisual() {
   return (
     <div className="relative w-full" aria-hidden>
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-100 blur-3xl sm:h-72 sm:w-72" />
-      <div className="relative mx-auto min-h-[28rem] w-full max-w-xl sm:min-h-[32rem] lg:min-h-[34rem]">
+      <div className="relative mx-auto min-h-[28rem] w-full max-w-xl lg:mr-0 lg:mr-0 sm:min-h-[32rem] lg:min-h-[34rem]">
         <AnalyticsPhone />
         <MainPhone />
         <PerformancePhone />

@@ -78,7 +78,7 @@ export default function AiSeoHeroDiagram() {
   const { hubLabel, platforms, calloutTitle, calloutBody } = aiSeoHero;
 
   return (
-    <div className="relative w-full max-w-[30rem] lg:max-w-[32rem]">
+    <div className="relative w-full max-w-[30rem] lg:ml-auto lg:max-w-[32rem]">
       {/* Orbit — clipped, fixed height */}
       <div className="relative mx-auto aspect-square w-full max-w-[24rem] overflow-hidden sm:max-w-[26rem] lg:max-w-[28rem]">
         <div

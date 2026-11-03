@@ -96,7 +96,7 @@ export default function DevelopmentProcessHeroVisual() {
   }, []);
 
   return (
-    <div ref={boardRef} className="relative mx-auto w-full max-w-md perspective-[1400px] sm:max-w-lg">
+    <div ref={boardRef} className="relative mx-auto w-full max-w-md perspective-[1400px] sm:max-w-lg lg:mr-0 lg:mr-0">
       <div
         className="process-board-inner relative rotate-[-2deg] rounded-[1.25rem] border border-violet-200 bg-gradient-to-br from-white via-white to-violet-50 p-4 shadow-[0_20px_60px_rgba(124,58,237,0.12)] backdrop-blur-sm sm:rotate-[-3deg] sm:rounded-[1.5rem] sm:p-5"
         style={{ transformStyle: "preserve-3d" }}

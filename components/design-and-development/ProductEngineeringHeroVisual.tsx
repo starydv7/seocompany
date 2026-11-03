@@ -126,7 +126,7 @@ function LifecycleStack() {
 
 export default function ProductEngineeringHeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[1.25rem] border border-stone-200/70 bg-gradient-to-br from-white via-white to-white p-4 shadow-[0_12px_40px_rgba(15,23,42,0.09)] sm:rounded-[1.5rem] sm:p-5 lg:p-6">
+    <div className="relative mx-auto w-full max-w-xl overflow-hidden lg:mr-0 lg:mr-0 rounded-[1.25rem] border border-stone-200/70 bg-gradient-to-br from-white via-white to-white p-4 shadow-[0_12px_40px_rgba(15,23,42,0.09)] sm:rounded-[1.5rem] sm:p-5 lg:p-6">
       <div
         className="pointer-events-none absolute right-[4%] top-[5%] h-[38%] w-[32%] opacity-[0.22]"
         style={{

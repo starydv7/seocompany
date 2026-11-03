@@ -138,7 +138,7 @@ function PhoneDashboard() {
 
 export default function DmHubDeviceMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-[24rem] sm:max-w-[28rem] lg:max-w-[32rem]">
+    <div className="relative mx-auto w-full max-w-[24rem] sm:max-w-[28rem] lg:max-w-[32rem] lg:mr-0 lg:mr-0">
       <div className="relative z-10">
         <div className="rounded-t-[1.1rem] border border-stone-300 bg-gradient-to-b from-white to-white p-2 shadow-[0_24px_60px_rgba(15,23,42,0.15)] sm:rounded-t-[1.25rem] sm:p-2.5">
           <div className="overflow-hidden rounded-t-lg border border-stone-200 shadow-inner">

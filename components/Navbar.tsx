@@ -489,7 +489,7 @@ function MegaMenu({
         top: `${metrics.top}px`,
         maxHeight: metrics.maxHeight ? `${metrics.maxHeight}px` : undefined,
       }}
-      className={`fixed left-0 right-0 z-40 hidden overflow-y-auto overscroll-contain border-b border-stone-200 bg-[#f7f2e7]/95 p-4 shadow-[0_40px_120px_-40px_rgba(80,60,20,0.35)] backdrop-blur-2xl transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] lg:block [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+      className={`fixed left-0 right-0 z-40 hidden overflow-y-auto overscroll-contain border-b border-stone-200 bg-[#f7f2e7]/95 px-[var(--lux-gutter)] py-4 shadow-[0_40px_120px_-40px_rgba(80,60,20,0.35)] backdrop-blur-2xl transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] lg:block [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
         open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
       }`}
     >
@@ -726,19 +726,19 @@ export default function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
-          className={`absolute right-2 top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[min(100%,calc(100%-1rem))] min-w-0 flex-col overflow-hidden rounded-[24px] border border-stone-200 bg-[#f7f2e7]/95 shadow-2xl backdrop-blur-2xl transition-transform duration-300 ease-out ${
+          className={`absolute right-[var(--lux-gutter)] top-[max(0.5rem,env(safe-area-inset-top))] bottom-[max(0.5rem,env(safe-area-inset-bottom))] flex w-[calc(100%-2*var(--lux-gutter))] min-w-0 flex-col overflow-hidden rounded-[24px] border border-stone-200 bg-[#f7f2e7]/95 shadow-2xl backdrop-blur-2xl transition-transform duration-300 ease-out ${
             open ? "translate-x-0" : "translate-x-[calc(100%+0.75rem)]"
           }`}
         >
           {/* Sticky header: logo + close */}
           <div className="flex shrink-0 items-center justify-between border-b border-stone-200 px-3 py-3 sm:px-4">
-            <Link href="/" onClick={close} className="flex shrink-0 items-center leading-none">
+            <Link href="/" onClick={close} className="-ml-5 flex shrink-0 items-center leading-none sm:-ml-[25px]">
               <Image
                 src={BRAND_LOGO.src}
                 alt={BRAND_LOGO.alt}
                 width={BRAND_LOGO.width}
                 height={BRAND_LOGO.height}
-                className={`${BRAND_LOGO.className} scale-[1.35] sm:scale-[1.4]`}
+                className={`${BRAND_LOGO.className} object-left scale-[1.35] sm:scale-[1.4]`}
                 priority
               />
             </Link>

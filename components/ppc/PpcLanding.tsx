@@ -136,7 +136,7 @@ export default function PpcLanding() {
             );
           })}
         </div>
-        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mx-auto lg:max-w-[75%] lg:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {bottomServices.map((item) => {
             const Icon = item.icon as LucideIcon;
             return (

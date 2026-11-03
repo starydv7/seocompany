@@ -213,11 +213,11 @@ export default function DigitalMarketingHubLanding() {
           <h2 className={HUB_SECTION_TITLE}>{dmHubWhyChoose.title}</h2>
           <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-[#7c3aed]" />
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {dmHubWhyChoose.items.map((item) => {
             const Icon = item.icon as LucideIcon;
             return (
-              <div key={item.title} className="text-center">
+              <div key={item.title} className={`${HUB_CARD} text-center`}>
                 <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50">
                   <Icon className="h-5 w-5 text-violet-700" strokeWidth={1.75} />
                 </span>
@@ -235,11 +235,11 @@ export default function DigitalMarketingHubLanding() {
           <h2 className={HUB_SECTION_TITLE}>{dmHubIndustries.title}</h2>
           <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-[#7c3aed]" />
         </div>
-        <div className="flex flex-wrap items-start justify-center gap-x-8 gap-y-6 sm:gap-x-10">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8 lg:gap-4">
           {dmHubIndustries.items.map((ind) => {
             const Icon = ind.icon as LucideIcon;
             return (
-              <div key={ind.label} className="flex min-w-[5.5rem] flex-col items-center gap-2">
+              <div key={ind.label} className={`${HUB_CARD} flex flex-col items-center gap-2 px-3 py-4`}>
                 <Icon className="h-6 w-6 text-violet-700 sm:h-7 sm:w-7" strokeWidth={1.75} />
                 <span className="text-center text-[11px] font-semibold text-stone-700 sm:text-xs">{ind.label}</span>
               </div>

@@ -216,7 +216,7 @@ export default function MobileDevHeroPhones() {
         className="pointer-events-none absolute -right-4 top-8 h-40 w-40 rounded-full bg-violet-100 blur-3xl"
         aria-hidden
       />
-      <div className="relative mx-auto min-h-[22rem] w-full max-w-lg sm:min-h-[26rem] lg:min-h-[28rem]">
+      <div className="relative mx-auto min-h-[22rem] w-full max-w-lg lg:mr-0 lg:mr-0 sm:min-h-[26rem] lg:min-h-[28rem]">
         <AnalyticsPhone />
         <MainPhone />
         <DiscoverPhone />
