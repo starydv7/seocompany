@@ -32,6 +32,23 @@ import {
   Users,
   Briefcase,
   Building,
+  Activity,
+  BarChart3,
+  Blocks,
+  ClipboardList,
+  Code2,
+  Database,
+  FileSearch,
+  Globe,
+  Layers,
+  MonitorSmartphone,
+  Palette,
+  Plug,
+  Server,
+  ShoppingCart,
+  Sparkles,
+  TestTube2,
+  Wand2,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import LuxCard from "@/components/lux/LuxCard";
@@ -256,34 +273,122 @@ export function EliteProcess({ heading, steps }: { heading: EliteHeadingData; st
   );
 }
 
+/** First matching keyword in a stack group title picks its icon; order matters ("Cloud & Design" is cloud). */
+const STACK_ICONS: [RegExp, LucideIcon][] = [
+  [/front|interface/i, MonitorSmartphone],
+  [/cross-platform|application|frameworks?$/i, Layers],
+  [/mobile|native/i, Smartphone],
+  [/back|api|languages/i, Server],
+  [/data/i, Database],
+  [/cloud|devops|hosting/i, Cloud],
+  [/release|monitor/i, Activity],
+  [/quality|test/i, TestTube2],
+  [/research/i, FileSearch],
+  [/design|prototyp/i, Palette],
+  [/visual|motion|styling/i, Wand2],
+  [/cms|commerce/i, ShoppingCart],
+  [/integration/i, Plug],
+  [/analytics|product/i, BarChart3],
+  [/planning/i, ClipboardList],
+  [/collaboration/i, Users],
+  [/engineering|tools?$/i, Code2],
+  [/web/i, Globe],
+];
+
+const STACK_ACCENTS: LuxAccentName[] = ["sky", "emerald", "violet", "gold", "rose"];
+
+function stackIcon(title: string): LucideIcon {
+  return STACK_ICONS.find(([pattern]) => pattern.test(title))?.[1] ?? Blocks;
+}
+
 export function EliteStack({ heading, groups }: { heading: EliteHeadingData; groups: { title: string; items: string[] }[] }) {
+  const total = groups.reduce((sum, group) => sum + group.items.length, 0);
   return (
     <section className={`${ELITE_SECTION} pb-24 sm:pb-32`}>
-      <div className="lux-hairline mb-20" aria-hidden />
-      <Reveal>
-        <EliteHeading {...heading} />
-      </Reveal>
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {groups.map((group, i) => (
-          <Reveal key={group.title} delay={0.06 * i} className="h-full">
-            <div className="lux-panel lux-tile h-full p-6 sm:p-7">
-              <div className="flex items-center justify-between">
-                <h3 className="font-serif text-2xl text-stone-900">{group.title}</h3>
-                <span className="font-mono text-[10px] tracking-[0.3em] text-stone-400">{String(i + 1).padStart(2, "0")}</span>
+      <div
+        className="relative isolate overflow-hidden rounded-[40px] bg-gradient-to-br from-white via-[#fbf8f1] to-[#f1e8d4] px-6 py-14 ring-1 ring-inset ring-lux-gold/30 sm:px-12 lg:px-14 lg:py-16"
+        style={{ boxShadow: "0 40px 90px -60px rgba(120,90,30,0.55)" }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 opacity-60"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(143,108,29,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(143,108,29,0.07) 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+            maskImage: "radial-gradient(ellipse at 70% 0%, black 20%, transparent 75%)",
+            WebkitMaskImage: "radial-gradient(ellipse at 70% 0%, black 20%, transparent 75%)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-24 -top-32 -z-10 h-[26rem] w-[26rem] rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(221,191,93,0.35), transparent 65%)" }}
+        />
+
+        <Reveal>
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+            <EliteHeading {...heading} />
+            <dl className="flex shrink-0 items-stretch gap-8">
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.3em] text-stone-500">Technologies</dt>
+                <dd className="mt-2 font-serif text-6xl leading-none lux-gold-text">{total}</dd>
               </div>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {group.items.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-full bg-white px-3 py-1.5 text-xs font-medium text-stone-700 ring-1 ring-inset ring-stone-200 transition hover:-translate-y-0.5 hover:ring-lux-gold/70"
+              <span aria-hidden className="w-px bg-gradient-to-b from-transparent via-lux-gold/60 to-transparent" />
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.3em] text-stone-500">Disciplines</dt>
+                <dd className="mt-2 font-serif text-6xl leading-none text-stone-900">{String(groups.length).padStart(2, "0")}</dd>
+              </div>
+            </dl>
+          </div>
+        </Reveal>
+
+        <div className={`mt-14 grid gap-5 sm:grid-cols-2 ${PROCESS_COLS[groups.length] ?? "lg:grid-cols-4"}`}>
+          {groups.map((group, i) => {
+            const tone = LUX_ACCENTS[STACK_ACCENTS[i % STACK_ACCENTS.length]];
+            const Icon = stackIcon(group.title);
+            return (
+              <Reveal key={group.title} delay={0.06 * i} className="h-full">
+                <article className="lux-tile group relative flex h-full flex-col overflow-hidden rounded-[28px] bg-white/85 p-7 ring-1 ring-inset ring-stone-200/80 backdrop-blur transition hover:ring-lux-gold/60">
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-0 top-0 h-[3px]"
+                    style={{ background: `linear-gradient(90deg, ${tone.from}, ${tone.to})` }}
+                  />
+                  <span
+                    aria-hidden
+                    className="lux-outline-numeral pointer-events-none absolute -right-1 -top-5 select-none font-serif text-[6.5rem] leading-none"
                   >
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Reveal>
-        ))}
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className="flex h-12 w-12 items-center justify-center rounded-2xl"
+                    style={{ background: `linear-gradient(135deg, ${tone.from}, ${tone.to})`, boxShadow: `0 0 24px -4px ${tone.glow}` }}
+                  >
+                    <Icon className="h-5 w-5 text-lux-ink" strokeWidth={2.25} />
+                  </span>
+                  <h3 className="mt-7 font-serif text-[1.7rem] leading-tight text-stone-900">{group.title}</h3>
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.28em]" style={{ color: tone.ink }}>
+                    {group.items.length} tools
+                  </p>
+                  <div aria-hidden className="mt-5 h-px bg-gradient-to-r from-lux-gold/60 via-stone-200 to-transparent" />
+                  <ul className="mt-2 divide-y divide-stone-200/70">
+                    {group.items.map((tech) => (
+                      <li key={tech} className="flex items-center gap-3 py-2.5 text-sm font-medium text-stone-700 transition group-hover:text-stone-900">
+                        <span
+                          aria-hidden
+                          className="h-1.5 w-1.5 shrink-0 rotate-45"
+                          style={{ background: tone.to, boxShadow: `0 0 8px ${withAlpha(tone.glow, 0.9)}` }}
+                        />
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
