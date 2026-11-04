@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
+import EliteMarketingPage from "@/components/marketing/elite/EliteMarketingPage";
 import PageJsonLd from "@/components/seo/JsonLd";
+import { BUSINESS_PAGE } from "@/lib/design-and-development/pages/dd-pages";
 import { pageMetadata } from "@/lib/seo";
-import { BUSINESS_ELITE } from "@/lib/design-and-development/elite-content";
-import BusinessSolutionsLanding from "@/components/design-and-development/BusinessSolutionsLanding";
 
 export const metadata: Metadata = pageMetadata("/design-and-development/business-solutions");
 
 export default function BusinessSolutionsPage() {
   return (
     <>
-      <PageJsonLd path="/design-and-development/business-solutions" faqs={BUSINESS_ELITE.faqs} />
-      <BusinessSolutionsLanding />
+      <PageJsonLd path="/design-and-development/business-solutions" faqs={BUSINESS_PAGE.faqs} />
+      <EliteMarketingPage page={BUSINESS_PAGE} />
     </>
   );
 }

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import EliteMarketingPage from "@/components/marketing/elite/EliteMarketingPage";
 import PageJsonLd from "@/components/seo/JsonLd";
+import { DM_STRATEGY_PAGE } from "@/lib/marketing/pages/dm-pages";
 import { pageMetadata } from "@/lib/seo";
-import StrategyDmLanding from "@/components/digital-marketing/StrategyDmLanding";
 
 export const metadata: Metadata = pageMetadata("/digital-marketing/strategy");
 
 export default function DigitalMarketingStrategyPage() {
   return (
     <>
-      <PageJsonLd path="/digital-marketing/strategy" />
-      <StrategyDmLanding />
+      <PageJsonLd path="/digital-marketing/strategy" faqs={DM_STRATEGY_PAGE.faqs} />
+      <EliteMarketingPage page={DM_STRATEGY_PAGE} />
     </>
   );
 }

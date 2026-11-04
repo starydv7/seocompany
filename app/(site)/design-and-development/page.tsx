@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import DesignDevHubLanding from "@/components/design-and-development/DesignDevHubLanding";
+import EliteMarketingPage from "@/components/marketing/elite/EliteMarketingPage";
 import PageJsonLd from "@/components/seo/JsonLd";
-import { HUB_FAQS } from "@/lib/design-and-development/elite-content";
+import { DD_HUB_PAGE } from "@/lib/design-and-development/pages/dd-core-pages";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata("/design-and-development");
@@ -9,8 +9,8 @@ export const metadata: Metadata = pageMetadata("/design-and-development");
 export default function DesignAndDevelopmentPage() {
   return (
     <>
-      <PageJsonLd path="/design-and-development" faqs={HUB_FAQS} />
-      <DesignDevHubLanding />
+      <PageJsonLd path="/design-and-development" faqs={DD_HUB_PAGE.faqs} />
+      <EliteMarketingPage page={DD_HUB_PAGE} />
     </>
   );
 }

@@ -7,8 +7,18 @@ import {
   ChevronDown,
   Clapperboard,
   Cloud,
+  Car,
+  Coffee,
   Cpu,
+  Dumbbell,
+  Gem,
   MapPin,
+  Scale,
+  Shirt,
+  Smartphone,
+  Sofa,
+  UtensilsCrossed,
+  Wrench,
   Factory,
   GraduationCap,
   HeartPulse,
@@ -68,6 +78,16 @@ const INDUSTRY_ICONS: Record<string, LucideIcon> = {
   "Professional Services": Briefcase,
   Technology: Cpu,
   Franchises: MapPin,
+  Restaurants: UtensilsCrossed,
+  Fitness: Dumbbell,
+  "Home Services": Wrench,
+  Automotive: Car,
+  Beauty: Gem,
+  Legal: Scale,
+  Fashion: Shirt,
+  Electronics: Smartphone,
+  "Home & Living": Sofa,
+  "Food & Beverage": Coffee,
 };
 
 export function EliteHeading({
@@ -360,8 +380,25 @@ export function EliteFaq({ faqs, title = "Frequently Asked", accent = "Questions
   );
 }
 
-export function EliteRelated({ routes, heading }: { routes: string[]; heading?: EliteHeadingData }) {
-  const services = routes.map(ddService).filter((s): s is NonNullable<typeof s> => Boolean(s));
+export type EliteRelatedItem = {
+  href: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  accent: LuxAccentName;
+};
+
+export function EliteRelated({
+  routes,
+  heading,
+  catalog,
+}: {
+  routes: string[];
+  heading?: EliteHeadingData;
+  catalog?: EliteRelatedItem[];
+}) {
+  const lookup = (href: string) => (catalog ? catalog.find((item) => item.href === href) : ddService(href));
+  const services = routes.map(lookup).filter((s): s is NonNullable<typeof s> => Boolean(s));
   return (
     <section className={`${ELITE_SECTION} pb-24 sm:pb-32`}>
       <div className="lux-hairline mb-20" aria-hidden />
